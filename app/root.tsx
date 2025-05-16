@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { TripProvider } from "./lib/tripContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,16 +34,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
       </body>
     </html>
   );
 }
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from './lib/i18n/i18n';
+
 export default function App() {
-  return <Outlet />;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <TripProvider>
+        <Outlet />
+      </TripProvider>
+    </I18nextProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
