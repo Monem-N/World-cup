@@ -39,7 +39,7 @@ interface TimelineProps
  */
 const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
   ({ className, iconsize, size, children, ...props }, ref) => {
-    const items = React.Children.toArray(children);
+    const items = React.Children.toArray(children as React.ReactNode);
 
     if (items.length === 0) {
       return <TimelineEmpty />;
@@ -56,7 +56,7 @@ const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
         )}
         {...props}
       >
-        {React.Children.map(children, (child, index) => {
+        {React.Children.map(children as React.ReactNode, (child, index) => {
           if (
             React.isValidElement(child) &&
             typeof child.type !== 'string' &&
