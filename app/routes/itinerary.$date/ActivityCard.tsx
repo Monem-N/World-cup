@@ -52,14 +52,7 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
         )}
         <div className="flex items-center justify-between">
            <ChecklistItem activityId={activity.id} status={activity.status} />
-           {activity.notes && (
-          <button
-            className="text-sm text-blue-500 hover:text-blue-700"
-            onClick={() => setIsNotesOpen(true)}
-          >
-            View Notes
-          </button>
-        )}
+          
         <NotesDialog
           notes={activity.notes}
           open={isNotesOpen}

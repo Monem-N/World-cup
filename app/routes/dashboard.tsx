@@ -6,6 +6,7 @@ import DashboardHeader from '../components/dashboard/DashboardHeader';
 import type { TripInformation } from '../lib/types'; // Import TripInformation type
 import { useTranslation } from 'react-i18next';
 import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
+
 import { useTripInfo } from '../lib/tripContext';
 
 export default function Dashboard() {
@@ -32,7 +33,15 @@ const navigate = useNavigate();
     locations: tripInfo.destination,
     itinerary: tripInfo.itinerary,
     weather: tripInfo.weather,
-    essentials: tripInfo.essentials
+    essentials: tripInfo.essentials,
+    overview: {
+      title: tripInfo.overview.title,
+      location: tripInfo.destination,
+      participants: tripInfo.overview.participants,
+      duration: tripInfo.overview.duration,
+      dates: `${tripInfo.startDate} - ${tripInfo.endDate}`,
+      travelers: tripInfo.travelers
+    }
   }), [tripInfo.startDate, tripInfo.endDate, tripInfo.travelers, tripInfo.destination, tripInfo.itinerary, tripInfo.weather, tripInfo.essentials]);
 
   const activeTab = pathname.split('/').pop();

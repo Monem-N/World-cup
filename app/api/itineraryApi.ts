@@ -15,6 +15,49 @@ export const mockItineraryData: ItineraryData = {
   docs: ["hotel-checkin.pdf", "match-ticket.pdf"],
   items: [
     {
+      id: "breakfast1",
+      type: "meal",
+      title: "Breakfast at Airport",
+      time: "06:30",
+      duration: "1h",
+      location: {
+        name: "Heathrow Airport Terminal 5",
+        lat: 51.4700,
+        lng: -0.4543
+      },
+      notes: "Grab a quick breakfast before boarding",
+      status: "pending"
+    },
+    {
+      id: "lunch1",
+      type: "meal",
+      title: "Lunch at JFK",
+      time: "14:30",
+      duration: "1h",
+      location: {
+        name: "JFK Terminal 5",
+        lat: 40.6413,
+        lng: -73.7781
+      },
+      notes: "Have lunch after immigration",
+      status: "pending"
+    },
+    {
+      id: "meeting1",
+      type: "activity",
+      title: "Group Meeting at Hotel",
+      time: "19:00",
+      duration: "30m",
+      location: {
+        name: "Hotel XYZ Conference Room",
+        lat: 40.7128,
+        lng: -74.0060
+      },
+      notes: "Discuss match day plans",
+      status: "pending",
+      isGroupEvent: true
+    },
+    {
       id: "flight1",
       type: "transport",
       title: "Flight from London to New York",

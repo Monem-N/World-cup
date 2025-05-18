@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import type { UseQueryOptions } from '@tanstack/react-query';
+//import type { UseQueryOptions } from '@tanstack/react-query';
 import { useItineraryStoreActions } from '../../../stores/itinerary';
-import type { DayProgram, Activity } from '../../../stores/itinerary.types';
+import type { DayProgram } from '../../../stores/itinerary.types';
 import { fetchItinerary as fetchItineraryApi } from '../../api/itineraryApi';
 
 // Import components used in the route
@@ -84,6 +84,7 @@ export default function DayProgramPage() {
           <DayHeader data={data} />
           {/* Pass the items array to ActivityList and Timeline */}
           <ActivityList activities={data.items} />
+          {/* console.log("Timeline activities:", data.items)*/}
           <Timeline activities={data.items} />
         </>
     </div>

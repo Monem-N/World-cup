@@ -15,7 +15,7 @@ export interface ItineraryData {
 
 export interface Activity {
   id: string;
-  type: 'transport' | 'match' | 'meal' | 'hotel';
+  type: 'transport' | 'match' | 'meal' | 'hotel'| 'activity';
   title: string;
   time: string;
   duration?: string;

@@ -36,7 +36,6 @@ export default function TimelineItem({ activity }: TimelineItemProps) {
             {activity.transport?.mode && <p className="text-sm flex items-center gap-1"><Bus className="w-3 h-3" /> {activity.transport.mode}</p>}
             {activity.important && <p className="text-sm flex items-center gap-1"><AlertCircle className="w-3 h-3" /> Important</p>}
           </div>
-      {/* Render other timeline item details here */}
     </div>
   );
 }

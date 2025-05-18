@@ -7,21 +7,35 @@ export default [
   },
   {
     path: "/dashboard",
-    file: "routes/dashboard.tsx",
+    file: "routes/dashboard.tsx", // This might be a layout route for dashboard
     children: [
       {
-        index: true,
-        path: "overview",
+        index: true, // Renders at /dashboard
+        path: "overview", // Renders at /dashboard/overview
         file: "routes/dashboard/overview.tsx",
       },
       {
-        path: "itinerary",
-        file: "routes/dashboard/itinerary.tsx",
+        path: "itinerary", // Renders at /dashboard/itinerary
+        file: "routes/dashboard/itinerary-overview.tsx", // Assuming this is a list/overview page
       },
       {
-        path: "essentials",
+        path: "essentials", // Renders at /dashboard/essentials
         file: "routes/dashboard/essentials.tsx",
       },
+      // Add the dynamic itinerary detail page nested under /dashboard/itinerary
+      // OR as a top-level route if it's not strictly part of the dashboard layout
+      // Let's add it as a top-level route based on our previous discussion path /itinerary/:date
+
     ],
+  },
+  // Add the base itinerary route (Date Selector Page)
+  {
+    path: "/itinerary",
+    file: "routes/itinerary/index.tsx", // Path to your ItineraryDateSelectorPage
+  },
+  // Add the dynamic itinerary detail route (Day Program Detail Page)
+  {
+    path: "/itinerary/:date",
+    file: "routes/itinerary.$date/index.tsx", // Path to your DayProgramPage
   },
 ] satisfies RouteConfig;

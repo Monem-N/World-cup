@@ -39,6 +39,7 @@ export interface TripInformation {
     participants: string[];
     duration: number;
   };
+  dates: string;
   itinerary: ItineraryDay[];
   essentials: TravelEssential[];
   destination: string;
