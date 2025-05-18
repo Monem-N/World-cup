@@ -3,7 +3,7 @@
 import React from 'react';
 import { Timeline, TimelineItem } from './timeline';
 import { motion } from 'framer-motion';
-import type { TimelineElement } from '@/types';
+import type { TimelineElement } from '~/types';
 
 interface TimelineLayoutProps {
   items: TimelineElement[];

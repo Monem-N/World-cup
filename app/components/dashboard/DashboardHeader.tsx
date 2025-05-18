@@ -33,7 +33,7 @@ export default function DashboardHeader({ overview, tripStartDate, daysLeft, t }
             <span className="hidden md:inline">&bull;</span>
             <div className="flex items-center gap-1">
               <MapPin size={16} aria-hidden="true" />
-              <span className="text-sm">{overview.locations}</span>
+              <span className="text-sm">{overview.overview.location}</span>
             </div>
           </div>
         </div>
