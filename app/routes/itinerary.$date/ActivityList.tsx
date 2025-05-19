@@ -1,8 +1,9 @@
+import type { Activity } from '../../../stores/itinerary.types';
 import React from 'react';
 import Timeline from './components/Timeline';
 
 interface ActivityListProps {
-  activities: any[]; // Replace 'any' with the actual type for activities
+  activities: Activity[];
 }
 
 export default function ActivityList({ activities }: ActivityListProps) {

@@ -1,19 +1,29 @@
 import * as React from 'react';
-import type { Activity } from '../../../../../stores/itinerary.types';
 import { Timeline } from '~/components/ui/timeline';
-import TimelineItem from './TimelineItem';
+import { TimelineItemAdapter } from './TimelineItemAdapter';
+import type { TimelineProps } from './types';
 
-interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> {
-  activities: Activity[];
-}
+export default function ItineraryTimeline({ activities, ...props }: TimelineProps) {
+  // Check if we have activities
+  const hasActivities = activities && activities.length > 0;
 
-export default function ItineraryTimeline({ activities }: TimelineProps) {
   return (
-    <Timeline className="mb-6">
-      <h3 className="text-xl font-bold mb-4">Timeline</h3>
-      {activities.map(activity => (
-        <TimelineItem key={activity.id} activity={activity} />
-      ))}
-    </Timeline>
+    <div className="space-y-4">
+      <h3 className="text-xl font-bold">Timeline</h3>
+      <Timeline
+        className="mb-6"
+        expandable={true}
+        animate={true}
+        isLoading={!hasActivities && props.isLoading}
+        hasError={props.hasError}
+        errorMessage={props.errorMessage}
+      >
+        {hasActivities ? (
+          activities.map(activity => (
+            <TimelineItemAdapter key={activity.id} activity={activity} />
+          ))
+        ) : null}
+      </Timeline>
+    </div>
   );
 }

@@ -43,7 +43,6 @@ export const TimelineLayout = ({
             description={item.description}
             icon={typeof item.icon === 'function' ? item.icon() : item.icon || customIcon}
             iconColor={item.color || iconColor}
-            connectorColor={item.color || connectorColor}
             showConnector={index !== items.length - 1}
           />
         </motion.div>

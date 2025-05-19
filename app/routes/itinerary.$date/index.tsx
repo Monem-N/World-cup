@@ -1,3 +1,4 @@
+import SkeletonLoader from '../../components/SkeletonLoader';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
@@ -5,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useItineraryStoreActions } from '../../../stores/itinerary';
 import type { DayProgram } from '../../../stores/itinerary.types';
 import { fetchItinerary as fetchItineraryApi } from '../../api/itineraryApi';
+import ErrorComponent from '../../components/ErrorComponent';
 
 // Import components used in the route
 import DayHeader from './DayHeader';
@@ -12,6 +14,7 @@ import Timeline from './components/Timeline';
 
 // Move mock fetching logic out of component file (RECOMMENDED)
 // For demonstration, I'll keep it here momentarily but strongly advise moving it.
+/*
 async function fetchMockItinerary(date: string): Promise<DayProgram> {
   console.log(`Workspaceing mock data for date: ${date}`);
   // Simulate a network delay
@@ -27,9 +30,8 @@ async function fetchMockItinerary(date: string): Promise<DayProgram> {
     console.error("Error fetching mock itinerary:", error);
     throw error; // Re-throw to be caught by react-query
   }
-
 }
-
+*/
 
 export default function DayProgramPage() {
   // Get the date param
@@ -42,7 +44,7 @@ export default function DayProgramPage() {
   const { data, isLoading, error } = useQuery<DayProgram, Error>({
     queryKey: ['itinerary', date as string],
     // Use the fetching function
-    queryFn: () => fetchMockItinerary(date as string),
+    queryFn: () => fetchItineraryApi(date as string),
     // Only enable the query if date exists
     enabled: !!date,
     // Add placeholder/initial data if you want to show something immediately
@@ -59,12 +61,12 @@ export default function DayProgramPage() {
 
   if (isLoading) {
     // TODO: Replace with skeleton loader component
-    return <div>Loading...</div>;
+    return <SkeletonLoader />;
   }
 
   if (error) {
     // TODO: Replace with error handling component
-    return <div>Error: {error.message}</div>;
+    return <ErrorComponent message={error.message} />;
   }
 
   // If data is not available after loading (e.g., date param missing and enabled was false)
@@ -75,15 +77,24 @@ export default function DayProgramPage() {
 
   // Render the page content using the fetched data
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Day Program Detail Page for {date}</h1>
+    <div className="container mx-auto px-4 py-8 space-y-4" role="main">
+      <h1 className="text-3xl font-bold">Day Program Detail Page for {date}</h1>
+
+      {/* Data source indicator */}
+      <div className="text-sm px-3 py-1 rounded-full inline-flex items-center gap-1 mb-4">
+        <span className={`w-2 h-2 rounded-full ${data._source === 'supabase' ? 'bg-green-500' : 'bg-yellow-500'}`}></span>
+        <span>
+          Data source: {data._source === 'supabase' ? 'Supabase' : 'Mock Data'}
+        </span>
+      </div>
+
       {/* Render other components here, passing down data */}
-      <>
-        {/* Pass the entire data object or specific parts needed by DayHeader */}
-        <DayHeader data={data} />
-        {/* Pass the items array to Timeline */}
-        <Timeline activities={data.items} />
-      </>
+
+      {/* Pass the entire data object or specific parts needed by DayHeader */}
+      <DayHeader data={data} />
+      {/* Pass the items array to Timeline */}
+      <Timeline activities={data.items} />
+
     </div>
   );
 }

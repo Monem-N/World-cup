@@ -9,8 +9,16 @@ interface NotesDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
+
+interface NotesDialogProps {
+  notes?: string;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+
 export default function NotesDialog({ notes }: NotesDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const dialogContentRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <div>
@@ -41,10 +49,13 @@ export default function NotesDialog({ notes }: NotesDialogProps) {
             {notes || 'No notes available.'}
           </DialogDescription>
           <DialogFooter>
-            <Button onClick={() => setIsOpen(false)}>Close</Button>
+:start_line:44
+-------
+            <Button onClick={() => setIsOpen(false)} >Close</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      
     </div>
   );
 }

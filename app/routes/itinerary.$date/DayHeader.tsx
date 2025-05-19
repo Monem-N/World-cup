@@ -1,6 +1,7 @@
 import React from 'react';
 import WeatherInfo from './components/WeatherInfo';
 import ReminderStrip from './components/ReminderStrip';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../../components/ui/card";
 
 interface DayHeaderProps {
   data: any; // Replace 'any' with the actual type for day data
@@ -8,12 +9,16 @@ interface DayHeaderProps {
 
 export default function DayHeader({ data }: DayHeaderProps) {
   return (
-    <div className="mb-6">
-      <h2 className="text-2xl font-bold">{data?.title}</h2>
-      <p className="text-gray-600">{data?.summary}</p>
-      {/* Render weather and reminders here */}
-      {data?.weather && <WeatherInfo data={data.weather} />}
-      {data?.reminders && <ReminderStrip reminders={data.reminders} />}
-    </div>
+    <Card className="mb-6">
+      <CardHeader>
+        <CardTitle>{data?.title}</CardTitle>
+        <CardDescription>{data?.summary}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        {/* Render weather and reminders here */}
+        {data?.weather && <WeatherInfo data={data.weather} />}
+        {data?.reminders && <ReminderStrip reminders={data.reminders} />}
+      </CardContent>
+    </Card>
   );
 }

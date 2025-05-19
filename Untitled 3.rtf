@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import React from 'react';\
+import \{ Clock, MapPin, Bus, AlertCircle, Utensils, Activity as ActivityIcon, Trophy, Bed \} from 'lucide-react';\
+\
+export default function TimelineItem(\{ activity \}: TimelineItemProps) \{\
+  const [showActivityCard, setShowActivityCard] = useState(false);\
+\
+  const getIcon = (type: Activity['type']) => \{\
+    switch (type) \{\
+      case 'transport': return <Bus className="w-3 h-3 text-white" />;\
+      case 'match': return <Trophy className="w-3 h-3 text-white" />;\
+      case 'meal': return <Utensils className="w-3 h-3 text-white" />;\
+      case 'hotel': return <Bed className="w-3 h-3 text-white" />;\
+      case 'activity': return <ActivityIcon className="w-3 h-3 text-white" />;\
+      default: return <Clock className="w-3 h-3 text-white" />;\
+    \}\
+  \};\
+\
+\
+I'll help transform the Timeline component refactoring into actionable tasks. Based on the current implementation and documentation, we need to break this down into specific tasks focusing on proper component structure, styling, and functionality. The plan will include tasks for implementing proper Timeline and TimelineItem components using shadcn-timeline's features, setting up proper theming integration, and ensuring accessibility compliance. I'll organize these into sequential steps that can be executed one by one, starting with basic component structure and moving towards advanced features.\
+\
+          \
+Based on the refactoring plan and current codebase, I'll break down the Timeline component refactoring into specific, actionable tasks. Here's the sequential task list:\
+\
+1. **Timeline Component Structure**\
+   - Review and update the component hierarchy in `/app/routes/itinerary.$date/components/Timeline/`\
+   - Components to focus on:\
+     - `TimelineCard.tsx`\
+     - `TimelineItem.tsx`\
+     - `TimelineItemAdapter.tsx`\
+     - `Toggle.tsx`\
+     - `index.tsx`\
+\
+2. **Type Safety Implementation**\
+   - Define proper TypeScript interfaces for Timeline components\
+   - Replace any existing `any` types with proper type definitions\
+   - Ensure type consistency across component props\
+\
+3. **UI/UX Enhancement Tasks**\
+   - Implement consistent styling using shadcn/ui components\
+   - Add proper spacing and layout improvements\
+   - Enhance visual hierarchy in TimelineCard and TimelineItem\
+   - Implement smooth transitions and animations\
+\
+4. **Accessibility Improvements**\
+   - Add ARIA attributes to Timeline components\
+   - Implement keyboard navigation\
+   - Ensure proper focus management\
+   - Add screen reader support\
+\
+5. **Performance Optimization**\
+   - Implement proper component memoization\
+   - Optimize rendering performance\
+   - Add loading states and skeleton loaders\
+\
+6. **Testing and Documentation**\
+   - Add component documentation\
+   - Update REFACTORING_PLAN.md with progress\
+   - Test all new implementations\
+\
+Each task should be executed sequentially, with proper testing and documentation at each step. The tasks are organized to minimize dependencies and ensure a smooth refactoring process.\
+\
+To begin implementation:\
+1. Start with the type safety implementation as it forms the foundation\
+2. Move to UI/UX enhancements once types are properly defined\
+3. Implement accessibility features\
+4. Finally, optimize performance and add documentation\
+\
+Would you like to begin with the first task of implementing type safety for the Timeline components?\
+\
+        }

@@ -25,7 +25,7 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
     <Card className={cn("mb-4", {
       "border-2 border-yellow-400": activity.important,
       "border-2 border-blue-400": activity.requiresConfirmation
-    })}>
+    })} aria-label={activity.title}>
       <CardHeader>
         <CardTitle>{activity.title}</CardTitle>
         <p className="text-sm text-gray-500">Time: {activity.time}</p>
@@ -33,31 +33,32 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
       <CardContent className="grid gap-4">
         {/* Render other activity details here */}
         {activity.location && (
-          <div className="border-b pb-4 last:border-0">
-            <h5 className="text-md font-semibold mb-2">Location</h5>
+          <div className="pb-4 last:pb-0 mb-4">
+            <h5 className="text-lg font-semibold mb-2">Location</h5>
             <MapView location={activity.location} />
           </div>
         )}
         {activity.transport && (
-          <div className="border-b pb-4 last:border-0">
-            <h5 className="text-md font-semibold mb-2">Transport</h5>
+          <div className="pb-4 last:pb-0 mb-4">
+            <h5 className="text-lg font-semibold mb-2">Transport</h5>
             <TransportInfo transport={activity.transport} />
           </div>
         )}
         {activity.attachments && (
-          <div className="border-b pb-4 last:border-0">
-            <h5 className="text-md font-semibold mb-2">Documents</h5>
+          <div className="pb-4 last:pb-0 mb-4">
+            <h5 className="text-lg font-semibold mb-2">Documents</h5>
             <DocumentLinks attachments={activity.attachments} />
           </div>
         )}
         <div className="flex items-center justify-between">
            <ChecklistItem activityId={activity.id} status={activity.status} />
-          
-        <NotesDialog
-          notes={activity.notes}
-          open={isNotesOpen}
-          onOpenChange={setIsNotesOpen}
-        />
+
+          <NotesDialog
+            notes={activity.notes}
+            open={isNotesOpen}
+            onOpenChange={setIsNotesOpen}
+            aria-label="Activity Notes"
+          />
         </div>
       </CardContent>
     </Card>

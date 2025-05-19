@@ -2,9 +2,10 @@
 
 import * as React from 'react';
 import { cn } from '../../../lib/utils';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { motion, type HTMLMotionProps } from 'framer-motion';
+import { cva } from 'class-variance-authority';
 import { AlertCircle, Loader2 } from 'lucide-react';
+import { TimelineProvider, useTimelineContext } from './context';
+import type { TimelineProps } from './types';
 import type { TimelineColor } from '../../../lib/types';
 
 const timelineVariants = cva('flex flex-col relative', {
@@ -21,27 +22,98 @@ const timelineVariants = cva('flex flex-col relative', {
 });
 
 /**
- * Timeline component props interface
- * @interface TimelineProps
- * @extends {React.HTMLAttributes<HTMLOListElement>}
- * @extends {VariantProps<typeof timelineVariants>}
- */
-interface TimelineProps
-  extends React.HTMLAttributes<HTMLOListElement>,
-    VariantProps<typeof timelineVariants> {
-  /** Size of the timeline icons */
-  iconsize?: 'sm' | 'md' | 'lg';
-}
-
-/**
  * Timeline component for displaying a vertical list of events or items
  * @component
  */
 const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
-  ({ className, iconsize, size, children, ...props }, ref) => {
+  ({
+    className,
+    iconSize,
+    size = 'md',
+    animate = true,
+    showConnectors = true,
+    defaultIconColor = 'primary',
+    defaultStatus = 'completed',
+    clickable = false,
+    expandable = true,
+    isLoading = false,
+    hasError = false,
+    errorMessage = '',
+    children,
+    ...props
+  }, ref) => {
     const items = React.Children.toArray(children as React.ReactNode);
+    const isEmpty = items.length === 0;
 
-    if (items.length === 0) {
+    // Render the timeline with context provider
+    return (
+      <TimelineProvider
+        size={size}
+        iconSize={iconSize}
+        animate={animate}
+        showConnectors={showConnectors}
+        defaultIconColor={defaultIconColor}
+        defaultStatus={defaultStatus}
+        clickable={clickable}
+        expandable={expandable}
+        isLoading={isLoading}
+        hasError={hasError}
+        errorMessage={errorMessage}
+        isEmpty={isEmpty}
+      >
+        <TimelineList
+          ref={ref}
+          className={className}
+          items={items}
+          {...props}
+        />
+      </TimelineProvider>
+    );
+  },
+);
+Timeline.displayName = 'Timeline';
+
+/**
+ * Internal TimelineList component that consumes the context
+ * @component
+ */
+const TimelineList = React.forwardRef<HTMLOListElement, Omit<TimelineProps, 'size' | 'iconSize'> & { items: React.ReactNode[] }>(
+  ({ className, items, children, ...props }, ref) => {
+    const {
+      size,
+      iconSize,
+      isLoading,
+      hasError,
+      errorMessage,
+      isEmpty,
+      showConnectors
+    } = useTimelineContext();
+
+    // Loading state
+    if (isLoading) {
+      return (
+        <div className="w-full py-8 space-y-6">
+          <TimelineSkeleton />
+        </div>
+      );
+    }
+
+    // Error state
+    if (hasError) {
+      return (
+        <div
+          className="w-full p-6 border border-destructive/50 bg-destructive/10 rounded-md text-center"
+          role="alert"
+          aria-live="assertive"
+        >
+          <AlertCircle className="h-6 w-6 text-destructive mx-auto mb-2" />
+          <p className="text-destructive font-medium">{errorMessage || 'An error occurred loading the timeline'}</p>
+        </div>
+      );
+    }
+
+    // Empty state
+    if (isEmpty) {
       return <TimelineEmpty />;
     }
 
@@ -51,12 +123,12 @@ const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
         aria-label="Timeline"
         className={cn(
           timelineVariants({ size }),
-          'relative min-h-[600px] w-full max-w-2xl mx-auto py-8',
+          'relative w-full max-w-2xl mx-auto py-8',
           className
         )}
         {...props}
       >
-        {React.Children.map(children as React.ReactNode, (child, index) => {
+        {React.Children.map(items, (child, index) => {
           if (
             React.isValidElement(child) &&
             typeof child.type !== 'string' &&
@@ -64,214 +136,50 @@ const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
             child.type.displayName === 'TimelineItem'
           ) {
             return React.cloneElement(child, {
-              iconsize,
-              showConnector: index !== items.length - 1,
-            } as React.ComponentProps<typeof TimelineItem>);
+              iconSize,
+              showConnector: showConnectors && index !== items.length - 1,
+            } as any);
           }
           return child;
         })}
       </ol>
     );
-  },
+  }
 );
-Timeline.displayName = 'Timeline';
+TimelineList.displayName = 'TimelineList';
 
 /**
- * TimelineItem component props interface
- * @interface TimelineItemProps
- * @extends {Omit<HTMLMotionProps<"li">, "ref">}
+ * TimelineSkeleton component for displaying a loading state
+ * @component
  */
-interface TimelineItemProps extends Omit<HTMLMotionProps<'li'>, 'ref'> {
-  /** Date string for the timeline item */
-  date?: string;
-  /** Title of the timeline item */
-  title?: string;
-  /** Description text */
-  description?: string;
-  /** Custom icon element */
-  icon?: React.ReactNode;
-  /** Color theme for the icon */
-  iconColor?: TimelineColor;
-  /** Current status of the item */
-  status?: 'completed' | 'in-progress' | 'pending';
-  /** Color theme for the connector line */
-  connectorColor?: TimelineColor;
-  /** Whether to show the connector line */
-  showConnector?: boolean;
-  /** Size of the icon */
-  iconsize?: 'sm' | 'md' | 'lg';
-  /** Loading state */
-  loading?: boolean;
-  /** Error message */
-  error?: string;
-}
-
-const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
-  (
-    {
-      className,
-      date,
-      title,
-      description,
-      icon,
-      iconColor,
-      status = 'completed',
-      connectorColor,
-      showConnector = true,
-      iconsize,
-      loading,
-      error,
-      // Omit unused Framer Motion props
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      initial,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      animate,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      transition,
-      ...props
-    },
-    ref,
-  ) => {
-    const commonClassName = cn(
-      'relative w-full mb-8 last:mb-0',
-      className,
-    );
-
-    // Loading State
-    if (loading) {
-      return (
-        <motion.li
-          ref={ref}
-          className={commonClassName}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          role="status"
-          {...props}
-        >
-          <div className="grid grid-cols-[minmax(auto,8rem)_auto_1fr] items-start px-4">
-            <div className="pr-4 text-right">
-              <div className="h-4 w-24 animate-pulse rounded bg-muted" />
-            </div>
-
-            <div className="mx-3 flex flex-col items-center justify-start gap-y-2">
-              <div className="relative flex h-8 w-8 animate-pulse items-center justify-center rounded-full bg-muted ring-8 ring-background">
-                <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-              </div>
-              {showConnector && <div className="h-full w-0.5 animate-pulse bg-muted" />}
-            </div>
-
-            <div className="flex flex-col gap-2 pl-2">
-              <div className="space-y-2">
-                <div className="h-4 w-24 animate-pulse rounded bg-muted" />
-                <div className="h-3 w-48 animate-pulse rounded bg-muted" />
-              </div>
-            </div>
+const TimelineSkeleton = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn("space-y-8", className)}
+      role="status"
+      aria-label="Loading timeline"
+      {...props}
+    >
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="flex gap-4">
+          <div className="flex flex-col items-center">
+            <div className="h-8 w-8 rounded-full bg-muted animate-pulse" />
+            {i !== 3 && <div className="h-24 w-0.5 bg-muted mt-2" />}
           </div>
-        </motion.li>
-      );
-    }
-
-    // Error State
-    if (error) {
-      return (
-        <motion.li
-          ref={ref}
-          className={cn(commonClassName, 'border border-destructive/50 bg-destructive/10')}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          role="alert"
-          {...props}
-        >
-          <div className="grid grid-cols-[minmax(auto,8rem)_auto_1fr] items-start px-4">
-            <div className="pr-4 text-right">
-              <TimelineTime className="text-destructive">{date}</TimelineTime>
-            </div>
-
-            <div className="mx-3 flex flex-col items-center justify-start gap-y-2">
-              <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-destructive/20 ring-8 ring-background">
-                <AlertCircle className="h-4 w-4 text-destructive" />
-              </div>
-              {showConnector && <TimelineConnector status="pending" className="h-full" />}
-            </div>
-
-            <div className="flex flex-col gap-2 pl-2">
-              <TimelineHeader>
-                <TimelineTitle className="text-destructive">{title || 'Error'}</TimelineTitle>
-              </TimelineHeader>
-              <TimelineDescription className="text-destructive">{error}</TimelineDescription>
-            </div>
+          <div className="flex-1 space-y-2">
+            <div className="h-4 w-24 bg-muted rounded animate-pulse" />
+            <div className="h-12 bg-muted rounded animate-pulse" />
           </div>
-        </motion.li>
-      );
-    }
-
-    const content = (
-      <div
-        className="grid grid-cols-[1fr_auto_1fr] gap-4 items-start"
-        {...(status === 'in-progress' ? { 'aria-current': 'step' } : {})}
-      >
-        {/* Date */}
-        <div className="flex flex-col justify-start pt-1">
-          <TimelineTime className="text-right pr-4">{date}</TimelineTime>
         </div>
-
-        {/* Timeline dot and connector */}
-        <div className="flex flex-col items-center">
-          <div className="relative z-10">
-            <TimelineIcon icon={icon} color={iconColor} status={status} iconSize={iconsize} />
-          </div>
-          {showConnector && (
-            <div className="h-16 w-0.5 bg-border mt-2" />
-          )}
-        </div>
-
-        {/* Content */}
-        <TimelineContent>
-          <TimelineHeader>
-            <TimelineTitle>{title}</TimelineTitle>
-          </TimelineHeader>
-          <TimelineDescription>{description}</TimelineDescription>
-        </TimelineContent>
-      </div>
-    );
-
-    // Filter out Framer Motion specific props
-    const {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      style,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onDrag,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onDragStart,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onDragEnd,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onAnimationStart,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onAnimationComplete,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      transformTemplate,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      whileHover,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      whileTap,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      whileDrag,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      whileFocus,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      whileInView,
-      ...filteredProps
-    } = props;
-
-    return (
-      <li ref={ref} className={commonClassName} {...filteredProps}>
-        {content}
-      </li>
-    );
-  },
+      ))}
+    </div>
+  )
 );
-TimelineItem.displayName = 'TimelineItem';
+TimelineSkeleton.displayName = 'TimelineSkeleton';
+
+// Import the new TimelineItem implementation
+import { TimelineItem as TimelineItemImpl } from './timeline-item';
 
 interface TimelineTimeProps extends React.HTMLAttributes<HTMLTimeElement> {
   /** Date string, Date object, or timestamp */
@@ -309,10 +217,22 @@ const TimelineTime = React.forwardRef<HTMLTimeElement, TimelineTimeProps>(
       <time
         ref={ref}
         dateTime={date ? new Date(date).toISOString() : undefined}
-        className={cn('text-sm font-medium tracking-tight text-muted-foreground', className)}
+        className={cn(
+          'text-sm font-medium tracking-tight text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1',
+          className
+        )}
         {...props}
       >
         {children || formattedDate}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
       </time>
     );
   },
@@ -365,55 +285,71 @@ const TimelineTitle = React.forwardRef<
 ));
 TimelineTitle.displayName = 'TimelineTitle';
 
-const TimelineIcon = ({
-  icon,
-  color = 'primary',
-  status = 'completed',
-  iconSize = 'md',
-}: {
+interface TimelineIconProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Icon element - can be any valid React node */
   icon?: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'muted' | 'accent' | 'destructive';
-  status?: 'completed' | 'in-progress' | 'pending' | 'error';
+  /** Color theme using CSS variables */
+  color?: TimelineColor;
+  /** Current status */
+  status?: 'completed' | 'in-progress' | 'pending';
+  /** Icon size */
   iconSize?: 'sm' | 'md' | 'lg';
-}) => {
-  const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12',
-  };
+}
 
-  const iconSizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-5 w-5',
-    lg: 'h-6 w-6',
-  };
+const TimelineIcon = React.forwardRef<HTMLDivElement, TimelineIconProps>(
+  ({ className, icon, color = 'primary', status = 'completed', iconSize = 'md', ...props }, ref) => {
+    const sizeClasses = {
+      sm: 'h-6 w-6',
+      md: 'h-8 w-8',
+      lg: 'h-10 w-10',
+    };
 
-  const colorClasses = {
-    primary: 'bg-primary text-primary-foreground',
-    secondary: 'bg-secondary text-secondary-foreground',
-    muted: 'bg-muted text-muted-foreground',
-    accent: 'bg-accent text-accent-foreground',
-    destructive: 'bg-destructive text-destructive-foreground',
-  };
+    const iconSizeClasses = {
+      sm: 'h-3 w-3',
+      md: 'h-4 w-4',
+      lg: 'h-5 w-5',
+    };
 
-  return (
-    <div
-      className={cn(
-        'relative flex items-center justify-center rounded-full ring-8 ring-background shadow-sm',
-        sizeClasses[iconSize],
-        colorClasses[color],
-      )}
-    >
-      {icon ? (
-        <div className={cn('flex items-center justify-center', iconSizeClasses[iconSize])}>
-          {icon}
-        </div>
-      ) : (
-        <div className={cn('rounded-full', iconSizeClasses[iconSize])} />
-      )}
-    </div>
-  );
-};
+    // Enhanced color classes with better visual hierarchy and depth
+    const colorClasses = {
+      primary: 'bg-primary text-primary-foreground shadow-md shadow-primary/20',
+      secondary: 'bg-secondary text-secondary-foreground shadow-md shadow-secondary/20',
+      accent: 'bg-accent text-accent-foreground shadow-md shadow-accent/20',
+      muted: 'bg-muted text-muted-foreground shadow-sm shadow-muted/10',
+      destructive: 'bg-destructive text-destructive-foreground shadow-md shadow-destructive/20',
+    };
+
+    // Status-specific styling with visual indicators
+    const statusClasses = {
+      completed: 'ring-2 ring-primary/30 ring-offset-2 ring-offset-background',
+      'in-progress': 'ring-2 ring-accent/30 ring-offset-2 ring-offset-background animate-pulse',
+      pending: 'ring-1 ring-muted/20 ring-offset-1 ring-offset-background opacity-80',
+    };
+
+
+
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          'relative flex items-center justify-center rounded-full transition-all duration-300',
+          sizeClasses[iconSize],
+          colorClasses[color],
+          statusClasses[status],
+          className,
+        )}
+        {...props}
+      >
+        {icon ? (
+          <div className={cn('flex items-center justify-center text-current', iconSizeClasses[iconSize])}>
+            {icon}
+          </div>
+        ) : null}
+      </div>
+    );
+  },
+);
+TimelineIcon.displayName = 'TimelineIcon';
 
 const TimelineDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -445,7 +381,7 @@ TimelineEmpty.displayName = 'TimelineEmpty';
 
 export {
   Timeline,
-  TimelineItem,
+  TimelineItemImpl as TimelineItem,
   TimelineConnector,
   TimelineHeader,
   TimelineTitle,
@@ -454,4 +390,5 @@ export {
   TimelineContent,
   TimelineTime,
   TimelineEmpty,
+  TimelineSkeleton,
 };
