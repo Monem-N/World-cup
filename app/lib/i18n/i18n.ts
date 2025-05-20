@@ -1,33 +1,46 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Import translation files
-import enTranslation from '../../locales/en/translation.json';
-import arTranslation from '../../locales/ar/translation.json';
-import frTranslation from '../../locales/fr/translation.json';
+// Import translations - for now we'll use empty objects
+// In a production app, you would import real translation files
+const enCommon = {};
+const arCommon = {};
+const frCommon = {};
 
-const resources = {
-  en: {
-    translation: enTranslation,
-  },
-  ar: {
-    translation: arTranslation,
-  },
-  fr: {
-    translation: frTranslation,
-  },
+// Initialize i18next
+const initI18n = async () => {
+  await i18n
+    // detect user language
+    .use(LanguageDetector)
+    // pass the i18n instance to react-i18next
+    .use(initReactI18next)
+    // init i18next
+    .init({
+      debug: true,
+      fallbackLng: 'en',
+      interpolation: {
+        escapeValue: false, // not needed for react as it escapes by default
+      },
+      resources: {
+        en: {
+          common: enCommon
+        },
+        ar: {
+          common: arCommon
+        },
+        fr: {
+          common: frCommon
+        }
+      },
+      defaultNS: 'common',
+      initAsync: true, // Ensure initialization is async
+    });
+
+  return i18n;
 };
 
-i18n
-  .use(initReactI18next) // passes i18n to react-i18next
-  .init({
-    resources,
-    lng: 'en', // default language
-    fallbackLng: 'en', // fallback language if translation is not found
-
-    interpolation: {
-      escapeValue: false, // react already safes from xss
-    },
-  });
+// Initialize i18n
+initI18n();
 
 export default i18n;

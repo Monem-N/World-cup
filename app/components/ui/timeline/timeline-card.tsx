@@ -10,6 +10,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../too
 import { Skeleton } from '../skeleton';
 import type { TimelineCardProps } from './types';
 import { useTimelineContext } from './context';
+import { TimelineTime } from './timeline';
 
 /**
  * TimelineCard component for displaying detailed timeline item information
@@ -82,7 +83,7 @@ const TimelineCardBase = React.forwardRef<HTMLDivElement, TimelineCardProps>((
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <div>
             <CardTitle className="text-sm font-medium">{title}</CardTitle>
-            <CardDescription className="text-sm text-muted-foreground">{time}</CardDescription>
+            {time && <TimelineTime date={time} className="text-sm text-muted-foreground" />}
           </div>
           {expandable && hasDetails && (
             <CollapsibleTrigger asChild>

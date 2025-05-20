@@ -136,7 +136,7 @@ const TimelineList = React.forwardRef<HTMLOListElement, Omit<TimelineProps, 'siz
             child.type.displayName === 'TimelineItem'
           ) {
             return React.cloneElement(child, {
-              iconSize,
+              iconsize: iconSize, // lowercase to match DOM attribute naming
               showConnector: showConnectors && index !== items.length - 1,
             } as any);
           }

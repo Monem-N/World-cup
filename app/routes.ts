@@ -3,7 +3,7 @@ import type { RouteConfig } from "@react-router/dev/routes";
 export default [
   {
     path: "/",
-    file: "routes/home.tsx",
+    file: "routes/index.tsx",
   },
   {
     path: "/dashboard",
@@ -28,14 +28,25 @@ export default [
 
     ],
   },
-  // Add the base itinerary route (Date Selector Page)
+  // Itinerary routes with layout
   {
     path: "/itinerary",
-    file: "routes/itinerary/index.tsx", // Path to your ItineraryDateSelectorPage
-  },
-  // Add the dynamic itinerary detail route (Day Program Detail Page)
-  {
-    path: "/itinerary/:date",
-    file: "routes/itinerary.$date/index.tsx", // Path to your DayProgramPage
+    file: "routes/itinerary.tsx", // Layout route
+    children: [
+      {
+        index: true, // Renders at /itinerary
+        file: "routes/itinerary/index.tsx", // Path to your ItineraryDateSelectorPage
+      },
+      {
+        path: ":date", // Renders at /itinerary/:date
+        file: "routes/itinerary.$date.tsx", // Layout for date page
+        children: [
+          {
+            index: true, // Renders at /itinerary/:date
+            file: "routes/itinerary.$date/index.tsx", // Path to your DayProgramPage
+          }
+        ]
+      }
+    ]
   },
 ] satisfies RouteConfig;

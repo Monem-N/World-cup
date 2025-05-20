@@ -5,7 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "react-router";
+} from "react-router-dom";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -45,10 +45,45 @@ export function Layout({ children }: { children: React.ReactNode }) {
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './lib/i18n/i18n';
+import { useEffect, useState } from 'react';
 
 const queryClient = new QueryClient();
 
 export default function App() {
+  const [i18nInitialized, setI18nInitialized] = useState(false);
+
+  useEffect(() => {
+    // Check if i18n is initialized
+    if (i18n.isInitialized) {
+      setI18nInitialized(true);
+    } else {
+      // Add event listener for initialization
+      const handleInitialized = () => {
+        setI18nInitialized(true);
+      };
+
+      i18n.on('initialized', handleInitialized);
+
+      // If already initialized but event didn't fire
+      if (i18n.isInitialized) {
+        setI18nInitialized(true);
+      }
+
+      return () => {
+        i18n.off('initialized', handleInitialized);
+      };
+    }
+  }, []);
+
+  // Show loading state while i18n is initializing
+  if (!i18nInitialized) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
