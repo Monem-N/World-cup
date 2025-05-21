@@ -1,0 +1,118 @@
+{
+  "id": "9968f398-00d6-4aec-9a11-40f49c79b262",
+  "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
+  "date": "2025-06-25",
+  "title": "Derniers instants à New York & Vol retour (JFK)",
+  "summary": "derniers instants à New York & Vol retour (JFK)",
+  "reminders": [],
+  "activities": [
+    {
+      "id": "61eb0857-1f16-4bfb-bb42-e89827181e8e",
+      "type": "activity",
+      "title": "Petit-déjeuner & valises",
+      "time": "09:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "activity-breakfast-packing-20250625",
+      "duration": "1h30",
+      "notes": "Check-out prévu **avant 11h00**",
+      "location": {
+        "name": "Jersey City"
+      }
+    },
+    {
+      "id": "6776b36f-b254-4091-ba54-6da8ad13ff42",
+      "type": "activity",
+      "title": "Retour voiture (si applicable)",
+      "time": "10:30:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "activity-carrental-return-20250625",
+      "duration": "1h30",
+      "notes": "Alternative : retour voiture à JFK directement",
+      "location": {
+        "name": "Location Jersey City"
+      }
+    },
+    {
+      "id": "d59e17c4-dca5-4f38-92e3-e9bf7b58c5c6",
+      "type": "transport",
+      "title": "Transfert vers JFK",
+      "time": "12:00:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "transport-departure-jfk-20250625",
+      "duration": "2h30",
+      "notes": "Compter 1h15 à 2h selon le trafic",
+      "transport": {
+        "mode": "Uber or shuttle"
+      }
+    },
+    {
+      "id": "d2b42975-be70-430c-95b1-baab883f6b47",
+      "type": "activity",
+      "title": "Dernière pause ou duty-free",
+      "time": "15:00:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "activity-airport-freetime-20250625",
+      "duration": "2h",
+      "notes": "Temps libre après enregistrement des bagages",
+      "location": {
+        "name": "JFK Terminal 4"
+      }
+    },
+    {
+      "id": "452605ea-8c96-45fb-b963-a437576aa92c",
+      "type": "transport",
+      "title": "✈️ Vol retour DL0140 (JFK → BRU)",
+      "time": "18:55:00",
+      "status": "confirmed",
+      "sequence_order": 5,
+      "original_id": "transport-flight-jfk-bru-20250625",
+      "notes": "Fin de l’aventure… mais souvenirs infinis 🧳✨",
+      "important": true,
+      "transport": {
+        "mode": "Flight",
+        "carrier": "Delta Air Lines",
+        "booking_reference": "DL0140"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.524Z",
+    "updated_at": "2025-05-21T09:30:44.524Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "24_25-06.json",
+    "additional_data": {
+      "practicalActions": [
+        {
+          "action": "🚗 Réserver voiture pour le 24 juin",
+          "details": "Location 1 jour, prise et retour à Jersey City **ou** JFK selon ton confort"
+        },
+        {
+          "action": "🎟️ Checker les billets du match EST vs Chelsea",
+          "details": "Bien vérifier le QR code, l’entrée exacte du stade"
+        },
+        {
+          "action": "⏰ Organiser le timing du retour (24 au soir)",
+          "details": "Fatigue + circulation à anticiper"
+        },
+        {
+          "action": "🧳 Organiser les valises le 25 matin",
+          "details": "Tu peux demander un **late check-out** ou un **stockage temporaire**"
+        },
+        {
+          "action": "🚕 Réserver à l’avance un Uber/Taxi pour JFK",
+          "details": "Depuis Jersey City jusqu’au Terminal 4 JFK (environ \\$80–\\$100 selon l'heure)"
+        }
+      ],
+      "concludingRemarks": [
+        "🥂 Le 24 juin, tu célèbres **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
+        "✈️ Le 25 juin, tu repars **avec l’Amérique dans les yeux et dans la valise.**"
+      ]
+    }
+  }
+}

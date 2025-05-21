@@ -1,0 +1,127 @@
+{
+  "id": "f449fb70-bdc5-42d0-b813-047c03f5781e",
+  "trip_id": "b920089f-b491-4af6-94b4-807f1897a027",
+  "date": "2025-06-18",
+  "title": "Harlem, Nature & Sunset Rooftop",
+  "summary": "Une journée immersive explorant la richesse culturelle de Harlem, la beauté naturelle du nord de Central Park, et des vues spectaculaires depuis un rooftop new-yorkais, avec une option nocturne à Times Square.",
+  "reminders": [
+    "Confirmer la réservation du rooftop bar",
+    "Vérifier le solde OMNY ou charger la MetroCard",
+    "Prévoir des chaussures confortables",
+    "Vérifier la météo et adapter la tenue",
+    "Emporter une batterie externe pour le téléphone"
+  ],
+  "weather": {
+    "temperature": 28,
+    "condition": "Ensoleillé",
+    "icon": "01d"
+  },
+  "activities": [
+    {
+      "id": "8b3cafdb-341f-4ba0-9135-526643e6c7e0",
+      "type": "transport",
+      "title": "Départ vers Harlem",
+      "time": "09:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "transport": {
+        "mode": "Bus NJ Transit + PATH",
+        "carrier": "NJ Transit",
+        "estimated_cost": 3.5,
+        "notes": "Bus 126 depuis Journal Square → PATH vers 33rd St"
+      },
+      "location": {
+        "name": "Journal Square Transportation Center",
+        "latitude": 40.7387,
+        "longitude": -74.0597
+      }
+    },
+    {
+      "id": "a053641d-bcbe-4ed1-ad7e-f1325fcd98cf",
+      "type": "activity",
+      "title": "Exploration de Harlem",
+      "time": "10:15:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "duration": "1h45",
+      "notes": "Visite de l'Apollo Theater, déjeuner à Sylvia's Restaurant, découverte des brownstones et street art",
+      "location": {
+        "name": "Harlem",
+        "latitude": 40.8116,
+        "longitude": -73.9465,
+        "recommendations": [
+          {"name": "Sylvia's Restaurant", "address": "328 Malcolm X Blvd", "notes": "Réserver pour midi"}
+        ]
+      }
+    },
+    {
+      "id": "80b07ebf-5b53-409a-a35a-8c8c77f678dc",
+      "type": "meal",
+      "title": "Déjeuner soul food",
+      "time": "12:00:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "duration": "1h15",
+      "location": {
+        "name": "Sylvia's Restaurant",
+        "latitude": 40.8030,
+        "longitude": -73.9503,
+        "address": "328 Malcolm X Blvd, New York, NY 10027"
+      },
+      "notes": "Budget : $$ (25-45 USD par personne)"
+    },
+    {
+      "id": "d05b2e99-f23d-45da-9614-6f497bb4b41a",
+      "type": "activity",
+      "title": "Flânerie à Central Park (entrée nord)",
+      "time": "13:30:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "duration": "~45 min",
+      "notes": "Découverte du Conservatory Garden, Harlem Meer et North Woods",
+      "location": {
+        "name": "Central Park - Entrée Nord",
+        "latitude": 40.7961,
+        "longitude": -73.9554
+      }
+    },
+    {
+      "id": "7de150e1-d027-464e-af23-fd7067aaf177",
+      "type": "activity",
+      "title": "🍸 Rooftop Sunset & Cocktails",
+      "time": "18:30:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "important": true,
+      "duration": "1h30",
+      "location": {
+        "name": "230 Fifth Rooftop Bar",
+        "latitude": 40.7484,
+        "longitude": -73.9857,
+        "address": "230 5th Ave, New York, NY 10001",
+        "recommendations": [
+          {"name": "The Press Lounge", "notes": "Dress code strict, réservation essentielle"}
+        ]
+      },
+      "notes": "Budget : $$$ (cocktails 18-25 USD)"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.498Z",
+    "updated_at": "2025-05-21T09:30:44.498Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "America/New_York",
+    "additional_data": {
+      "tips": [
+        "Utiliser Google Maps en mode offline pour les déplacements",
+        "Éviter de marcher dans Central Park après la tombée de la nuit",
+        "Prévoir 20 USD en espèces pour les pourboires et petits achats"
+      ],
+      "weather_contingency": {
+        "rain": "Alternative : Visite du MoMA ou du MET Breuer",
+        "heat": "Hydratation régulière et pauses dans les commerces climatisés"
+      }
+    }
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "id": "a4631f75-4f03-4ae3-8518-d3d85d2e544d",
+  "trip_id": "bd57a5a3-4d1e-4c0e-a428-c138ae29d767",
+  "date": "2025-06-17",
+  "title": "Journée NYC Vibes",
+  "summary": "Une journée dédiée à l'exploration de quartiers emblématiques de New York (Greenwich Village, SoHo, Harlem, Williamsburg) pour découvrir des lieux non touristiques, beaux et culturels, culminant avec la magie de Times Square la nuit.",
+  "weather": {
+    "temperature": 24,
+    "condition": "Partiellement nuageux",
+    "icon": "04d"
+  },
+  "reminders": [
+    "Assurez-vous que votre MetroCard est chargée ou utilisez OMNY pour les transports en commun.",
+    "Portez des chaussures de marche confortables, la journée est longue.",
+    "Téléchargez Google Maps ou Citymapper pour faciliter la navigation.",
+    "Soyez flexible avec l'itinéraire, il y a beaucoup à voir !"
+  ],
+  "activities": [
+    {
+      "id": "47ec187c-adcf-449c-b109-5335bd8c9077",
+      "type": "transport",
+      "title": "Départ depuis l'hébergement vers Manhattan",
+      "time": "08:30:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "transport-departure-accommodation-20250617",
+      "notes": "Petit-déjeuner rapide à l'hébergement ou en route. Prenez le PATH train de Jersey City vers Christopher Street ou 9th Street pour Greenwich Village.",
+      "transport": {
+        "mode": "PATH Train / Metro",
+        "carrier": "PATH / MTA",
+        "estimated_cost": 2.75,
+        "pickup_location": "Départ de la station PATH la plus proche de votre hébergement à Jersey City."
+      },
+      "location": {
+        "name": "Grove Street PATH Station",
+        "latitude": 40.7196,
+        "longitude": -74.0431,
+        "address": "100 Christopher Columbus Dr, Jersey City, NJ 07302, USA"
+      }
+    },
+    {
+      "id": "e59e62c9-37b4-448c-90ea-4fe7d8c1259c",
+      "type": "activity",
+      "title": "Exploration de Greenwich Village",
+      "time": "09:00:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "activity-greenwich-village-20250617",
+      "duration": "1h30",
+      "notes": "Flânez autour de Washington Square Park, découvrez les cafés bohèmes, l'histoire de la musique live et l'ambiance artistique. C'est un quartier charmant pour se promener.",
+      "transport": {
+        "mode": "Metro"
+      },
+      "location": {
+        "name": "Washington Square Park",
+        "latitude": 40.7308,
+        "longitude": -73.9973,
+        "address": "Washington Square N, New York, NY 10012, USA",
+        "website": "https://www.nycgovparks.org/parks/washington-square-park"
+      }
+    },
+    {
+      "id": "5a5e92aa-a223-4d98-9963-c8d7e9736885",
+      "type": "activity",
+      "title": "Shopping et Art à SoHo / Nolita",
+      "time": "10:45:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "activity-soho-nolita-20250617",
+      "duration": "1h45",
+      "notes": "Découvrez les boutiques stylées, l'art de rue vibrant, les galeries d'art et l'architecture unique en fonte (cast-iron). Idéal pour le lèche-vitrine ou trouver des pièces uniques.",
+      "transport": {
+        "mode": "Walking"
+      },
+      "location": {
+        "name": "SoHo District (Broadway & Prince St area)",
+        "latitude": 40.7248,
+        "longitude": -74.0018,
+        "address": "SoHo, New York, NY, USA",
+        "website": "https://www.nycgo.com/neighborhoods/soho/"
+      }
+    },
+    {
+      "id": "6010de3f-18b5-4568-84a4-be4ff67fbb57",
+      "type": "meal",
+      "title": "Déjeuner à Chinatown + Little Italy",
+      "time": "12:45:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "meal-chinatown-littleitaly-20250617",
+      "duration": "1h30",
+      "notes": "Déjeuner avec des dumplings authentiques à Chinatown, suivi d'un espresso et d'un cannoli à Little Italy. Profitez de l'ambiance chaotique mais savoureuse de ces quartiers culturels.",
+      "transport": {
+        "mode": "Walking"
+      },
+      "location": {
+        "name": "Chinatown / Little Italy",
+        "latitude": 40.7180,
+        "longitude": -73.9971,
+        "address": "Canal St & Mott St, New York, NY, USA",
+        "website": "https://www.nycgo.com/neighborhoods/chinatown-little-italy/"
+      }
+    },
+    {
+      "id": "38e094c5-0640-457f-82e4-f1d81548a2ba",
+      "type": "activity",
+      "title": "Découverte de Harlem",
+      "time": "14:30:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "original_id": "activity-harlem-explore-20250617",
+      "duration": "1h30",
+      "notes": "Plongez dans l'histoire et la culture de Harlem. Admirez l'architecture brownstone, et visitez l'emblématique Apollo Theater. Si possible, assistez à une performance de gospel ou de jazz (vérifier les horaires).",
+      "transport": {
+        "mode": "Metro",
+        "estimated_cost": 2.75,
+        "pickup_location": "Prendre le métro (lignes A, B, C, D) depuis Lower Manhattan."
+      },
+      "location": {
+        "name": "Apollo Theater, Harlem",
+        "latitude": 40.8102,
+        "longitude": -73.9496,
+        "address": "253 W 125th St, New York, NY 10027, USA",
+        "website": "https://www.apollotheater.org/"
+      }
+    },
+    {
+      "id": "1f036371-2277-44d4-99e6-31c0f208634b",
+      "type": "activity",
+      "title": "Ambiance branchée à Williamsburg (Brooklyn)",
+      "time": "16:30:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "activity-williamsburg-explore-20250617",
+      "duration": "2h",
+      "notes": "Explorez le quartier branché de Williamsburg à Brooklyn. Découvrez les friperies, le street art, les galeries indépendantes et l'ambiance décontractée. Terminez par un verre dans un rooftop bar comme *Westlight* pour une vue imprenable sur Manhattan.",
+      "transport": {
+        "mode": "Metro (L train)",
+        "estimated_cost": 2.75,
+        "pickup_location": "Prendre la ligne L depuis Manhattan (Union Square) jusqu'à Bedford Ave."
+      },
+      "location": {
+        "name": "Williamsburg, Brooklyn (Bedford Ave area)",
+        "latitude": 40.7081,
+        "longitude": -73.9571,
+        "address": "Bedford Ave & N 7th St, Brooklyn, NY 11211, USA",
+        "website": "https://www.nycgo.com/neighborhoods/williamsburg/"
+      }
+    },
+    {
+      "id": "b618e795-585a-41ab-a746-b020d2f47d92",
+      "type": "meal",
+      "title": "Dîner à Hell's Kitchen",
+      "time": "19:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "original_id": "meal-dinner-hellskitchen-20250617",
+      "duration": "1h",
+      "notes": "Hell's Kitchen est réputé pour sa diversité culinaire. Choisissez parmi une multitude de cuisines du monde (thaï, burgers, mexicain, libanais…). Ambiance décontractée et animée.",
+      "transport": {
+        "mode": "Metro",
+        "estimated_cost": 2.75,
+        "pickup_location": "Prendre le métro (lignes A, C, E) jusqu'à la 42nd Street-Port Authority Bus Terminal."
+      },
+      "location": {
+        "name": "Hell's Kitchen (Restaurant Row)",
+        "latitude": 40.7636,
+        "longitude": -73.9918,
+        "address": "W 46th St, New York, NY, USA",
+        "website": "https://www.nycgo.com/neighborhoods/hells-kitchen/"
+      }
+    },
+    {
+      "id": "9a95b69e-03ed-487c-96e9-004399550d47",
+      "type": "activity",
+      "title": "Final : Times Square de nuit",
+      "time": "20:15:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "original_id": "activity-timessquare-night-20250617",
+      "duration": "1h45",
+      "notes": "Terminez la journée par une immersion spectaculaire dans les néons éblouissants de Times Square. Idéal pour une photo collective mémorable et une balade jusqu'à la 42nd Street.",
+      "transport": {
+        "mode": "Walking"
+      },
+      "location": {
+        "name": "Times Square",
+        "latitude": 40.7580,
+        "longitude": -73.9855,
+        "address": "Manhattan, NY 10036, USA",
+        "website": "https://www.timessquarenyc.org/"
+      }
+    },
+    {
+      "id": "f502212d-c6b5-4435-9d59-a0865144a910",
+      "type": "transport",
+      "title": "Retour à l'hébergement (Jersey City)",
+      "time": "22:00:00",
+      "status": "pending",
+      "sequence_order": 9,
+      "original_id": "transport-return-accommodation-20250617",
+      "notes": "Retour à Jersey City via le PATH train. Vérifiez les horaires des derniers trains, surtout en semaine.",
+      "transport": {
+        "mode": "PATH Train",
+        "carrier": "PATH",
+        "estimated_cost": 2.75,
+        "duration_minutes": 20,
+        "pickup_location": "Départ de la station 33rd Street ou 42nd Street (Port Authority Bus Terminal) à Manhattan."
+      },
+      "location": {
+        "name": "Times Square / Port Authority Bus Terminal",
+        "latitude": 40.7575,
+        "longitude": -73.9900,
+        "address": "625 8th Ave, New York, NY 10018, USA"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.495Z",
+    "updated_at": "2025-05-21T09:30:44.495Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "17-06.json",
+    "additional_data": {
+      "tips": [
+        "Utilisez la carte MetroCard ou le paiement sans contact (OMNY) pour le métro et les bus. C'est le moyen le plus efficace de se déplacer à New York.",
+        "Prévoyez des chaussures confortables. Cette journée implique beaucoup de marche.",
+        "Téléchargez les applications de transport (MTA, Citymapper, Google Maps) pour faciliter vos déplacements.",
+        "Soyez flexible : cet itinéraire est dense. N'hésitez pas à adapter selon votre énergie et vos découvertes inattendues.",
+        "À Chinatown/Little Italy, n'hésitez pas à essayer plusieurs petits stands pour goûter différentes spécialités.",
+        "Pour Williamsburg, si vous visitez un rooftop bar, vérifiez les exigences d'âge et de tenue."
+      ],
+      "checklist": [
+        { "item": "MetroCard/OMNY chargée", "is_completed": false },
+        { "item": "Chaussures de marche confortables", "is_completed": false },
+        { "item": "Applications de transport installées", "is_completed": false },
+        { "item": "Vérifier les horaires du dernier PATH train", "is_completed": false }
+      ],
+      "mapView": {
+        "center_coordinates": { "lat": 40.73, "lng": -73.99 },
+        "zoom_level": 12,
+        "markers": [
+          { "label": "Washington Square Park", "coordinates": { "lat": 40.7308, "lng": -73.9973 }, "icon": "park" },
+          { "label": "SoHo District", "coordinates": { "lat": 40.7248, "lng": -74.0018 }, "icon": "shopping" },
+          { "label": "Chinatown / Little Italy", "coordinates": { "lat": 40.7180, "lng": -73.9971 }, "icon": "restaurant" },
+          { "label": "Apollo Theater", "coordinates": { "lat": 40.8102, "lng": -73.9496 }, "icon": "theater" },
+          { "label": "Williamsburg, Brooklyn", "coordinates": { "lat": 40.7081, "lng": -73.9571 }, "icon": "neighborhood" },
+          { "label": "Hell's Kitchen", "coordinates": { "lat": 40.7636, "lng": -73.9918 }, "icon": "restaurant" },
+          { "label": "Times Square", "coordinates": { "lat": 40.7580, "lng": -73.9855 }, "icon": "landmark" }
+        ],
+        "routeSuggestions": [
+          {
+            "from_label": "Jersey City (Grove St PATH)",
+            "to_label": "Washington Square Park",
+            "mode": "PATH Train",
+            "estimated_time": "20-25m",
+            "google_map_link": "https://www.google.com/maps/dir/40.7196,-74.0431/Washington+Square+Park,+New+York,+NY",
+            "cost_estimate": { "amount": 2.75, "currency": "USD" },
+            "notes": "Direct PATH train to Christopher St or 9th St, then short walk to Washington Square Park."
+          },
+          {
+            "from_label": "Harlem (Apollo Theater)",
+            "to_label": "Williamsburg (Bedford Ave)",
+            "mode": "Metro (A/C + L lines)",
+            "estimated_time": "40-50m",
+            "google_map_link": "https://www.google.com/maps/dir/Apollo+Theater,+Harlem/Bedford+Ave,+Brooklyn,+NY",
+            "cost_estimate": { "amount": 2.75, "currency": "USD" },
+            "notes": "Take A/C to 14th St-Union Square, then transfer to L train to Bedford Ave."
+          },
+          {
+            "from_label": "Hell's Kitchen",
+            "to_label": "Times Square",
+            "mode": "Walking",
+            "estimated_time": "10-15m",
+            "google_map_link": "https://www.google.com/maps/dir/Hell's+Kitchen,+New+York,+NY/Times+Square,+New+York,+NY",
+            "cost_estimate": { "amount": 0, "currency": "USD" },
+            "notes": "Short walk from Restaurant Row to Times Square."
+          },
+          {
+            "from_label": "Times Square",
+            "to_label": "Jersey City (Grove St PATH)",
+            "mode": "PATH Train",
+            "estimated_time": "20-25m",
+            "google_map_link": "https://www.google.com/maps/dir/Times+Square,+New+York,+NY/Grove+Street+PATH+Station,+Jersey+City,+NJ",
+            "cost_estimate": { "amount": 2.75, "currency": "USD" },
+            "notes": "PATH trains run frequently from 33rd St or Port Authority."
+          }
+        ]
+      },
+      "emergency_info": {
+        "local_emergency_number": "911",
+        "embassy_contact": { "country": "Belgique", "phone": "+1-212-586-8800", "notes": "Consulat Général de Belgique à New York" },
+        "travel_insurance_contact": { "provider": "Example Insurance", "phone": "+1-800-123-4567", "policy_number": "POL-XYZ-789" }
+      }
+    }
+  }
+}

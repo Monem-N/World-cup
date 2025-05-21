@@ -49,4 +49,14 @@ export default [
       }
     ]
   },
+  // API Routes
+  {
+    path: "/api/itineraries/dates",
+    file: "routes/api.itineraries.dates.ts",
+  },
+  {
+    path: "/api/itineraries/:date",
+    file: "routes/api.itineraries.$date.ts",
+  },
+
 ] satisfies RouteConfig;

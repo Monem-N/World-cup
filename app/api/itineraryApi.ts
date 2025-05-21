@@ -1,6 +1,7 @@
 import type { DayProgram, WeatherInfo } from '../lib/types';
 import { supabase } from '../lib/supabase';
 import type { CompleteItineraryDay } from '../../src/types/database.types';
+import { loadStandardizedItinerary, getAvailableDates } from './standardizedItineraryLoader.browser';
 
 // Keep the mock data for fallback and testing
 const mockWeatherDay1: WeatherInfo = {
@@ -223,7 +224,18 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
   console.log(`Fetching itinerary data for date: ${date}`);
 
   try {
-    // For testing purposes, let's directly query the itinerary_days table by date
+    // First, try to load from standardized files
+    console.log('Trying to load from standardized files...');
+    const standardizedData = await loadStandardizedItinerary(date);
+
+    if (standardizedData) {
+      console.log('Successfully loaded data from standardized files');
+      return standardizedData;
+    }
+
+    console.log('No standardized data found, trying Supabase...');
+
+    // If no standardized data, try Supabase
     const { data: days, error: daysError } = await supabase
       .from('itinerary_days')
       .select('id')
@@ -428,5 +440,42 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
     console.log('Falling back to mock data');
     const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
     return { ...mockData, _source: 'mock' };
+  }
+}
+
+/**
+ * Gets all available itinerary dates
+ *
+ * @returns Promise resolving to an array of date strings in YYYY-MM-DD format
+ */
+export async function getAvailableItineraryDates(): Promise<string[]> {
+  try {
+    // First, get dates from standardized files
+    const standardizedDates = await getAvailableDates();
+
+    if (standardizedDates.length > 0) {
+      return standardizedDates;
+    }
+
+    // If no standardized dates, try Supabase
+    const { data, error } = await supabase
+      .from('itinerary_days')
+      .select('date')
+      .order('date');
+
+    if (error) {
+      console.warn('Error fetching dates from Supabase:', error);
+      return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
+    }
+
+    if (!data || data.length === 0) {
+      console.warn('No dates found in Supabase');
+      return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
+    }
+
+    return data.map(item => item.date);
+  } catch (error) {
+    console.error('Error getting available dates:', error);
+    return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
   }
 }

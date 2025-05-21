@@ -1,0 +1,70 @@
+{
+  "id": "9fc79ce1-5035-4003-84a9-445d5f8facb2",
+  "trip_id": "a17ca9d5-5bed-4448-9b7f-d77fa2ad012b",
+  "date": "2025-06-19",
+  "title": "Arrivée & check-in tranquille",
+  "summary": "Vous arrivez tard, l'objectif est une transition douce et une bonne nuit de repos avant la journée chargée.",
+  "reminders": [],
+  "activities": [
+    {
+      "id": "0e4d4049-b0c3-4ed6-b29f-aced82edc150",
+      "type": "transport",
+      "title": "Arrivée à BNA (Nashville)",
+      "time": "23:15:00",
+      "status": "confirmed",
+      "sequence_order": 1,
+      "original_id": "transport-flight-ewr-bna-20250619",
+      "important": true,
+      "transport": {
+        "mode": "Flight",
+        "booking_reference": "UA2038"
+      }
+    },
+    {
+      "id": "a9b41c4c-0bec-46c6-8261-76f3826b4842",
+      "type": "activity",
+      "title": "Récupération de la voiture de location",
+      "time": "23:30:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "activity-carrental-pickup-20250619",
+      "notes": "Accès facile depuis le terminal",
+      "location": {
+        "name": "Aéroport (BNA)",
+        "latitude": 36.1263,
+        "longitude": -86.6774
+      },
+      "transport": {
+        "mode": "Rental Car"
+      }
+    },
+    {
+      "id": "7dba6d5f-b230-4244-90fd-3c1db9f3a857",
+      "type": "hotel",
+      "title": "Check-in à l’hôtel",
+      "time": "00:00:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "hotel-checkin-nashville-20250619",
+      "location": {
+        "name": "Red Roof Inn PLUS+, proche de l’aéroport"
+      },
+      "transport": {
+        "mode": "Car"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.500Z",
+    "updated_at": "2025-05-21T09:30:44.500Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "19_20-06.json",
+    "additional_data": {
+      "tips": [
+        "Petite collation au *Waffle House* ou *Cook Out* si vous avez un creux après l’atterrissage !"
+      ]
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "26b4c715-a3b8-4225-8aa6-dc37788e38a5",
+  "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
+  "date": "2025-06-24",
+  "title": "Match de clôture à Philadelphie : EST vs Chelsea FC",
+  "summary": "derniers instants à New York & Vol retour (JFK)",
+  "reminders": [],
+  "activities": [
+    {
+      "id": "b2c8b099-d268-4ce0-9ad9-ccfb60e3d8da",
+      "type": "activity",
+      "title": "Location de voiture",
+      "time": "10:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "activity-carrental-pickup-20250624",
+      "duration": "1h",
+      "notes": "Près de ton hébergement – idéalement tôt pour être tranquille",
+      "location": {
+        "name": "Jersey City"
+      }
+    },
+    {
+      "id": "b079be8e-eaac-40aa-bece-d82d9881a8b6",
+      "type": "transport",
+      "title": "Trajet vers Philadelphie",
+      "time": "11:00:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "transport-departure-philadelphia-20250624",
+      "duration": "1h45",
+      "notes": "Pause déjeuner possible en route ou en ville"
+    },
+    {
+      "id": "f80ac768-f8ae-40c5-ae8f-02b18abd8332",
+      "type": "activity",
+      "title": "Temps libre à Philadelphie",
+      "time": "13:00:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "activity-philadelphia-freetime-20250624",
+      "duration": "4h",
+      "notes": "Dernière balade dans Philly ? Cheesesteak ou musée",
+      "location": {
+        "name": "Center City ou Old City"
+      }
+    },
+    {
+      "id": "ac86f87a-7adc-4841-bd9c-2e11ad220e3e",
+      "type": "meal",
+      "title": "Dîner pré-match",
+      "time": "17:00:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "meal-dinner-prematch-20250624",
+      "duration": "1h30",
+      "notes": "*Xfinity Live!* : food court + bars + ambiance foot 🔥",
+      "location": {
+        "name": "Proche du stade"
+      }
+    },
+    {
+      "id": "58c13d52-da5b-4459-965b-a2b945d9004a",
+      "type": "match",
+      "title": "⚽ Match : EST vs Chelsea FC",
+      "time": "21:00:00",
+      "status": "confirmed",
+      "sequence_order": 5,
+      "original_id": "match-est-chelseafc-20250624",
+      "duration": "2h",
+      "notes": "Le bouquet final ! Ambiance électrique garantie",
+      "important": true,
+      "location": {
+        "name": "Lincoln Financial Field"
+      }
+    },
+    {
+      "id": "3a48a42b-4a99-4680-a469-23e990e103bb",
+      "type": "transport",
+      "title": "Retour à Jersey City",
+      "time": "23:15:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "transport-return-jerseycity-20250624",
+      "duration": "1h45",
+      "notes": "Attention à la fatigue – possible conducteur désigné 👍",
+      "transport": {
+        "mode": "Car"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.524Z",
+    "updated_at": "2025-05-21T09:30:44.524Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "24_25-06.json",
+    "additional_data": {
+      "tips": [
+        "prépare quelques snacks et bouteilles d’eau pour le trajet retour — la route de nuit peut être longue !"
+      ],
+      "practicalActions": [
+        {
+          "action": "🚗 Réserver voiture pour le 24 juin",
+          "details": "Location 1 jour, prise et retour à Jersey City **ou** JFK selon ton confort"
+        },
+        {
+          "action": "🎟️ Checker les billets du match EST vs Chelsea",
+          "details": "Bien vérifier le QR code, l’entrée exacte du stade"
+        },
+        {
+          "action": "⏰ Organiser le timing du retour (24 au soir)",
+          "details": "Fatigue + circulation à anticiper"
+        },
+        {
+          "action": "🧳 Organiser les valises le 25 matin",
+          "details": "Tu peux demander un **late check-out** ou un **stockage temporaire**"
+        },
+        {
+          "action": "🚕 Réserver à l’avance un Uber/Taxi pour JFK",
+          "details": "Depuis Jersey City jusqu’au Terminal 4 JFK (environ \\$80–\\$100 selon l'heure)"
+        }
+      ],
+      "concludingRemarks": [
+        "🥂 Le 24 juin, tu célèbres **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
+        "✈️ Le 25 juin, tu repars **avec l’Amérique dans les yeux et dans la valise.**"
+      ]
+    }
+  }
+}

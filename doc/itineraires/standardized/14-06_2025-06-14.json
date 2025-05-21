@@ -1,0 +1,226 @@
+{
+  "id": "b75fdb9a-58ac-48f0-bce9-f2bf65ef2af5",
+  "trip_id": "8e50b73f-9cb8-42b9-a337-75425ba41bbf",
+  "date": "2025-06-14",
+  "title": "Jour 1 : Arrivée et installation",
+  "summary": "Arrivée à New York et installation à l'hébergement",
+  "reminders": [
+    "Check-in : Communiquez avec l'hôte pour confirmer l'arrivée et recevoir les instructions.",
+    "Règlement intérieur: Arrivée après 16:00, Départ avant 11:00.",
+    "Politique d'annulation: Remboursement à hauteur de 100% si l'annulation est effectuée jusqu'au 31 mai 2025 à 23 h 59 (heure locale de la propriété).",
+    "Politique d'annulation: Remboursement à hauteur de 50% si l'annulation est effectuée jusqu'au 7 juin 2025 à 23 h 59 (heure locale de la propriété)."
+  ],
+  "activities": [
+    {
+      "id": "955f49d6-59ea-40f7-9682-b8e3d0bf5f8a",
+      "type": "transport",
+      "title": "Départ de Bruxelles",
+      "time": "10:45:00",
+      "status": "confirmed",
+      "sequence_order": 1,
+      "original_id": "transport-flight-bru-jfk-20250614",
+      "important": true,
+      "transport": {
+        "mode": "Flight",
+        "carrier": "Delta Airlines",
+        "booking_reference": "TTA4RV",
+        "flight_number": "DL0141",
+        "departure_airport_code": "BRU",
+        "departure_airport_name": "Bruxelles National Airport",
+        "departure_time": "10:45:00",
+        "arrival_airport_code": "JFK",
+        "arrival_airport_name": "New York John F. Kennedy Intl Airport 4",
+        "arrival_time": "13:00:00",
+        "duration_minutes": 135,
+        "class": "L",
+        "cabin": "Main cabin",
+        "status": "OK",
+        "passenger_name": "ABDELMONEME NAIFER",
+        "ticket_number": "057 233 470 143 3",
+        "baggage_allowance": "1x23 Kg",
+        "notes": "Check-in opens 3 hours before departure. Allow extra time for security (EU citizens lane available)."
+      },
+      "location": {
+        "name": "Brussels Airport",
+        "latitude": 50.9010,
+        "longitude": 4.4856
+      },
+      "attachments": [
+        {
+          "file_name": "Billet_électronique_airfrance.pdf"
+        }
+      ]
+    },
+    {
+      "id": "b14c938c-a9dd-4b64-8164-2cf69fc38e45",
+      "type": "transport",
+      "title": "Arrivée à New York",
+      "time": "13:00:00",
+      "status": "confirmed",
+      "sequence_order": 2,
+      "original_id": "transport-arrival-jfk-20250614",
+      "transport": {
+        "mode": "Flight",
+        "flight_number": "DL0141",
+        "arrival_airport_code": "JFK",
+        "arrival_airport_name": "John F. Kennedy Intl Airport 4",
+        "arrival_time": "13:00:00"
+      },
+      "location": {
+        "name": "JFK Airport",
+        "latitude": 40.6413,
+        "longitude": -73.7781
+      }
+    },
+    {
+      "id": "b6b3937a-30d1-43ab-8337-5734ffe5f87c",
+      "type": "activity",
+      "title": "Passage immigration + récupération bagages",
+      "time": "13:30:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "activity-immigration-baggage-20250614",
+      "duration": "45m",
+      "notes": "Expect queues at immigration. Have passport and ESTA/visa ready.",
+      "location": {
+        "name": "JFK Airport Immigration",
+        "latitude": 40.6413,
+        "longitude": -73.7781
+      }
+    },
+    {
+      "id": "cf78d6d9-66e4-48c4-9da7-a153d40fd797",
+      "type": "transport",
+      "title": "Départ vers Jersey City (Uber/Taxi recommandé)",
+      "time": "14:15:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "transport-jfk-jerseycity-20250614",
+      "duration": "1h15m",
+      "transport": {
+        "mode": "Uber / Taxi / Transport en commun",
+        "estimated_cost": 70,
+        "pickup_location": "Follow signs for Ground Transportation at JFK Terminal 4."
+      },
+      "location": {
+        "name": "JFK Airport Ground Transportation",
+        "latitude": 40.6413,
+        "longitude": -73.7781
+      }
+    },
+    {
+      "id": "30f6d768-2547-40df-bb63-a52b5c48a100",
+      "type": "activity",
+      "title": "Arrivée et attente pour check-in",
+      "time": "15:45:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "original_id": "activity-arrival-wait-checkin-20250614",
+      "duration": "30m",
+      "notes": "The property check-in is at 16:00. We might arrive slightly early.",
+      "location": {
+        "name": "Jersey City Accommodation",
+        "latitude": 40.7015,
+        "longitude": -74.0807
+      }
+    },
+    {
+      "id": "d8ee3e01-203f-40e0-80e3-4c55be44c99f",
+      "type": "hotel",
+      "title": "Check-in à l'hébergement",
+      "time": "16:00:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "hotel-checkin-20250614",
+      "location": {
+        "name": "Jersey City Accommodation",
+        "latitude": 40.7015,
+        "longitude": -74.0807,
+        "address": "35 Dwight St, Jersey City, NJ 07305, États-Unis"
+      },
+      "notes": "Ensure all 7 adults are registered for check-in. Confirm access code before arrival."
+    },
+    {
+      "id": "4f102a0d-5935-4de7-a360-c55871135af6",
+      "type": "activity",
+      "title": "Installation + détente",
+      "time": "17:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "original_id": "activity-installation-relax-20250614",
+      "duration": "2h",
+      "notes": "Time to unpack, relax, and get comfortable after the journey.",
+      "location": {
+        "name": "Jersey City Accommodation",
+        "latitude": 40.7015,
+        "longitude": -74.0807
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.477Z",
+    "updated_at": "2025-05-21T09:30:44.485Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "14-06.json",
+    "additional_data": {
+      "tips": [
+        "Transport : Réserver à l'avance un Uber XL ou un van via app (Uber/Lyft). Ou acheter une MetroCard pour le métro si vous préférez le transport en commun.",
+        "Check-in : Communiquez avec l'hôte pour confirmer l'arrivée et recevoir les instructions.",
+        "Documents : Passeport, ESTA ou visa, confirmation de logement, assurance voyage.",
+        "Paiements : Prévoir quelques dollars en espèces + cartes bancaires (Visa, Mastercard, etc.)",
+        "Téléphonie & Internet : Acheter une eSIM ou activer le roaming pour rester connectés."
+      ],
+      "day_notes": "A relaxed first day, focusing on settling in and light exploration. Remember to activate eSIM upon arrival and manage transport from JFK.",
+      "day_status": "in_progress",
+      "weather": {
+        "temperature_celsius": null,
+        "temperature_fahrenheit": null,
+        "condition": null,
+        "icon_code": null,
+        "precipitation_chance": null,
+        "humidity": null,
+        "wind_speed_kph": null,
+        "wind_direction": null,
+        "sunrise_time": null,
+        "sunset_time": null
+      },
+      "checklist": [
+        { "item": "Passeport, ESTA ou visa", "is_completed": false },
+        { "item": "Confirmation de logement", "is_completed": false },
+        { "item": "Assurance voyage", "is_completed": false }
+      ],
+      "mapView": {
+        "markers": [
+          {
+            "label": "JFK Airport",
+            "coordinates": {
+              "lat": 40.6413,
+              "lng": -73.7781
+            },
+            "icon": "plane"
+          },
+          {
+            "label": "Hébergement (Jersey City)",
+            "coordinates": {
+              "lat": 40.7015,
+              "lng": -74.0807
+            },
+            "icon": "hotel"
+          }
+        ],
+        "routeSuggestion": {
+          "mode": "Taxi / Uber",
+          "estimatedTime": "1h15",
+          "googleMapLink": "https://maps.app.goo.gl/EPVhCuftwyMQNqj27 "
+        }
+      },
+      "emergency_info": {
+        "local_emergency_number": "911",
+        "embassy_contact": { "country": "Belgium", "phone": "+1-212-586-8800", "notes": "Consulate General of Belgium in New York" },
+        "travel_insurance_contact": { "provider": "Example Insurance", "phone": "+1-800-123-4567", "policy_number": "POL-XYZ-789" }
+      }
+    }
+  }
+}

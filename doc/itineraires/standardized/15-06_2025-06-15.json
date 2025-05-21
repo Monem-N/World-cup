@@ -1,0 +1,295 @@
+{
+  "id": "c4ba2f1f-486d-416f-b806-fcf5ee67fa29",
+  "trip_id": "17daa515-6832-4fab-b358-ab03cf903f8f",
+  "date": "2025-06-15",
+  "title": "Exploration de Manhattan",
+  "summary": "Une journée complète à explorer les sites emblématiques de Midtown Manhattan, des bibliothèques et musées aux avenues commerçantes et Times Square.",
+  "reminders": [
+    "Acheter une MetroCard pour le métro/PATH.",
+    "Réserver les billets pour le musée Intrepid en ligne.",
+    "Décider entre l'Empire State Building et SUMMIT One Vanderbilt pour les vues du soir.",
+    "Vérifier l'horaire du ferry pour le retour à Jersey City."
+  ],
+  "activities": [
+    {
+      "id": "d028af87-74d3-4f03-b601-aa77f875ff88",
+      "type": "transport",
+      "title": "Départ pour Manhattan",
+      "time": "08:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "transport-departure-manhattan-20250615",
+      "transport": {
+        "mode": "Public Transport (PATH train)",
+        "duration_minutes": 15,
+        "pickup_location": "Grove Street PATH Station, Jersey City",
+        "notes": "Train PATH jusqu'à 33rd Street (Herald Square) ou 14th Street pour un accès facile à Midtown."
+      },
+      "location": {
+        "name": "Grove Street PATH Station",
+        "latitude": 40.7196,
+        "longitude": -74.0431,
+        "address": "100 Christopher Columbus Dr, Jersey City, NJ 07302, USA"
+      }
+    },
+    {
+      "id": "150bafa8-be9a-4694-8cef-059c472d4f5a",
+      "type": "meal",
+      "title": "Petit-déjeuner à Bryant Park",
+      "time": "09:00:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "meal-breakfast-bryantpark-20250615",
+      "duration": "30m",
+      "transport": {
+        "mode": "Walking",
+        "duration_minutes": 10,
+        "notes": "Courte marche depuis la station de métro 42nd Street-Bryant Park."
+      },
+      "location": {
+        "name": "Bryant Park (divers cafés)",
+        "latitude": 40.7535,
+        "longitude": -73.9832,
+        "address": "42nd Street and 6th Avenue, New York, NY 10018, USA",
+        "website": "https://bryantpark.org/"
+      },
+      "notes": "Profitez du petit-déjeuner depuis un kiosque ou un café à proximité avec vue sur le parc."
+    },
+    {
+      "id": "982a1936-8010-42b8-9781-ce51f65d7cd1",
+      "type": "activity",
+      "title": "Visite de la New York Public Library",
+      "time": "10:00:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "activity-nypl-visit-20250615",
+      "duration": "1h",
+      "location": {
+        "name": "New York Public Library - Stephen A. Schwarzman Building",
+        "latitude": 40.7531,
+        "longitude": -73.9822,
+        "address": "476 5th Ave, New York, NY 10018, USA",
+        "website": "https://www.nypl.org/"
+      },
+      "notes": "Explorez l'emblématique Rose Main Reading Room et l'architecture Beaux-Arts. Entrée gratuite."
+    },
+    {
+      "id": "1d94713b-741c-4fae-b4a7-62694ef8dfd3",
+      "type": "activity",
+      "title": "Visite de l'Intrepid Sea, Air & Space Museum",
+      "time": "11:00:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "activity-intrepid-visit-20250615",
+      "duration": "2h30m",
+      "location": {
+        "name": "Intrepid Sea, Air & Space Museum",
+        "latitude": 40.7645,
+        "longitude": -74.0012,
+        "address": "Pier 86, W 46th St, New York, NY 10036, USA",
+        "website": "https://www.intrepidmuseum.org/"
+      },
+      "notes": "Explorez un porte-avions historique, le Concorde et la navette spatiale Enterprise. Une expérience interactive et des vues imprenables sur le fleuve Hudson. Prix d'entrée adulte estimé: 36 USD."
+    },
+    {
+      "id": "fcfbc350-67c6-4248-a3f7-3bb1c12c3fea",
+      "type": "meal",
+      "title": "Déjeuner",
+      "time": "13:30:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "original_id": "meal-lunch-20250615",
+      "duration": "45m",
+      "location": {
+        "name": "Restaurant local",
+        "latitude": 40.7550,
+        "longitude": -73.9800
+      },
+      "notes": "Expérience culinaire de rue emblématique de New York. Attendez-vous à une file d'attente, mais elle avance rapidement. Options végétariennes disponibles. Coût estimé par personne: 15 USD."
+    },
+    {
+      "id": "dc72da15-ede2-4ecb-aa25-29b788381948",
+      "type": "activity",
+      "title": "Shopping sur la Cinquième Avenue",
+      "time": "14:30:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "activity-shopping-5thave-20250615",
+      "duration": "1h30m",
+      "location": {
+        "name": "Fifth Avenue (section Midtown)",
+        "latitude": 40.758,
+        "longitude": -73.9785,
+        "address": "Fifth Avenue, New York, NY, USA (entre les 49e et 60e Rues)",
+        "website": "https://www.nycgo.com/attractions/fifth-avenue/"
+      },
+      "notes": "Faites du lèche-vitrine ou visitez les célèbres magasins de luxe et grands magasins. Préparez-vous à la foule."
+    },
+    {
+      "id": "0c79ce4a-89dc-496c-9a22-368ae5a28c47",
+      "type": "activity",
+      "title": "Visite de St. Patrick's Cathedral",
+      "time": "16:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "original_id": "activity-stpatrick-visit-20250615",
+      "duration": "45m",
+      "location": {
+        "name": "Cathédrale Saint-Patrick",
+        "latitude": 40.7584,
+        "longitude": -73.976,
+        "address": "5th Ave, New York, NY 10022, USA",
+        "website": "https://www.saintpatrickscathedral.org/"
+      },
+      "notes": "Admirez la magnifique architecture néo-gothique. Entrée gratuite, mais les dons sont les bienvenus."
+    },
+    {
+      "id": "a8995e61-bb8d-4832-a55c-34d6b6fd579f",
+      "type": "activity",
+      "title": "Balade à Central Park",
+      "time": "17:00:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "original_id": "activity-centralpark-stroll-20250615",
+      "duration": "1h30m",
+      "location": {
+        "name": "Central Park (Entrée Sud près de Grand Army Plaza)",
+        "latitude": 40.7678,
+        "longitude": -73.9716,
+        "address": "Central Park S, New York, NY 10019, USA",
+        "website": "https://www.centralparknyc.org/"
+      },
+      "notes": "Entrez près de Grand Army Plaza. Explorez des lieux emblématiques comme The Pond, Gapstow Bridge, et profitez de l'oasis urbaine."
+    },
+    {
+      "id": "109f66a8-3632-4ee9-8892-bd091ed12fa2",
+      "type": "activity",
+      "title": "Visite de l'Empire State Building ou SUMMIT One",
+      "time": "18:30:00",
+      "status": "pending",
+      "sequence_order": 9,
+      "original_id": "activity-esb-summit-visit-20250615",
+      "duration": "1h30m",
+      "location": {
+        "name": "Empire State Building",
+        "latitude": 40.7484,
+        "longitude": -73.9857,
+        "address": "20 W 34th St, New York, NY 10001, USA",
+        "website": "https://www.esbnyc.com/"
+      },
+      "notes": "Choisissez entre le classique Empire State Building ou le plus récent et immersif SUMMIT One Vanderbilt (situé au 45 E 42nd St). Les deux offrent des vues incroyables sur la ville. Réservez vos billets à l'avance, surtout pour le coucher du soleil. Prix d'entrée adulte estimé: 47 USD."
+    },
+    {
+      "id": "c6f3a744-a359-4d1e-898c-be06ec59347d",
+      "type": "meal",
+      "title": "Dîner à Times Square",
+      "time": "20:00:00",
+      "status": "pending",
+      "sequence_order": 10,
+      "original_id": "meal-dinner-timessquare-20250615",
+      "duration": "1h30m",
+      "location": {
+        "name": "Ellen's Stardust Diner",
+        "latitude": 40.7607,
+        "longitude": -73.9866,
+        "address": "1650 Broadway, New York, NY 10019, USA",
+        "website": "https://www.ellensstardustdiner.com/"
+      },
+      "notes": "Découvrez un diner classique de Times Square avec des serveurs chanteurs. Attendez-vous à une attente, surtout aux heures de pointe. Coût estimé par personne: 50 USD."
+    },
+    {
+      "id": "90776f16-6ae2-4b8d-baf7-80c9cdd7ec59",
+      "type": "activity",
+      "title": "Balade nocturne à Times Square",
+      "time": "21:30:00",
+      "status": "pending",
+      "sequence_order": 11,
+      "original_id": "activity-timessquare-night-20250615",
+      "duration": "1h",
+      "location": {
+        "name": "Times Square",
+        "latitude": 40.7579,
+        "longitude": -73.9855,
+        "address": "Manhattan, NY 10036, USA",
+        "website": "https://www.timessquarenyc.org/"
+      },
+      "notes": "Plongez dans les lumières éblouissantes et l'énergie vibrante de Times Square la nuit. Idéal pour les photos !"
+    },
+    {
+      "id": "f502212d-c6b5-4435-9d59-a0865144a910",
+      "type": "transport",
+      "title": "Retour en ferry jusqu'à Jersey City",
+      "time": "22:30:00",
+      "status": "pending",
+      "sequence_order": 12,
+      "original_id": "transport-ferry-jerseycity-20250615",
+      "transport": {
+        "mode": "Ferry",
+        "carrier": "NY Waterway",
+        "duration_minutes": 15,
+        "pickup_location": "Midtown / W 39th St Ferry Terminal, Manhattan",
+        "notes": "Vérifiez les derniers horaires de ferry. Offre de superbes vues sur la skyline de Manhattan."
+      },
+      "location": {
+        "name": "Midtown / W 39th St Ferry Terminal (Manhattan)",
+        "latitude": 40.7643,
+        "longitude": -74.0016,
+        "address": "480 W 39th St, New York, NY 10018, USA"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.489Z",
+    "updated_at": "2025-05-21T09:30:44.489Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "15-06.json",
+    "additional_data": {
+      "tips": [
+        "Transport : Privilégiez les transports en commun pour économiser de l'argent et éviter les embouteillages.",
+        "Planification : Organisez vos activités à l'avance pour maximiser votre temps.",
+        "Documents : Ayez toujours vos documents de voyage et une carte de la ville avec vous.",
+        "Paiements : Prévoyez des dollars en espèces et des cartes bancaires pour vos dépenses.",
+        "Connectivité : Assurez-vous d'avoir une connexion internet pour la navigation et l'utilisation des applications de transport.",
+        "Marche : Portez des chaussures confortables, vous marcherez beaucoup aujourd'hui."
+      ],
+      "day_notes": "Portez des chaussures confortables car cette journée implique beaucoup de marche. Utilisez les transports en commun (métro/PATH) pour plus d'efficacité. Pensez à acheter les billets pour les musées/attractions à l'avance pour gagner du temps.",
+      "day_status": "planned",
+      "weather": {
+        "temperature_celsius": null,
+        "temperature_fahrenheit": null,
+        "condition": null,
+        "icon_code": null,
+        "precipitation_chance": null,
+        "humidity": null,
+        "wind_speed_kph": null,
+        "wind_direction": null,
+        "sunrise_time": null,
+        "sunset_time": null
+      },
+      "checklist": [
+        { "item": "MetroCard achetée/chargée", "is_completed": false },
+        { "item": "Billets Intrepid réservés", "is_completed": false },
+        { "item": "Billets d'observatoire réservés (ESB/SUMMIT)", "is_completed": false },
+        { "item": "Vérifier l'horaire de retour du ferry", "is_completed": false }
+      ],
+      "mapView": {
+        "center_coordinates": { "lat": 40.755, "lng": -73.985 },
+        "zoom_level": 14,
+        "markers": [
+          { "label": "Bryant Park", "coordinates": { "lat": 40.7535, "lng": -73.9832 }, "icon": "park" },
+          { "label": "NY Public Library", "coordinates": { "lat": 40.7531, "lng": -73.9822 }, "icon": "library" },
+          { "label": "Intrepid Museum", "coordinates": { "lat": 40.7645, "lng": -74.0012 }, "icon": "museum" },
+          { "label": "The Halal Guys", "coordinates": { "lat": 40.7578, "lng": -73.9793 }, "icon": "restaurant" },
+          { "label": "Fifth Avenue", "coordinates": { "lat": 40.758, "lng": -73.9785 }, "icon": "shopping" },
+          { "label": "Cathédrale Saint-Patrick", "coordinates": { "lat": 40.7584, "lng": -73.976 }, "icon": "church" },
+          { "label": "Central Park (Sud)", "coordinates": { "lat": 40.7678, "lng": -73.9716 }, "icon": "park" },
+          { "label": "Empire State Building", "coordinates": { "lat": 40.7484, "lng": -73.9857 }, "icon": "building" },
+          { "label": "Times Square", "coordinates": { "lat": 40.7579, "lng": -73.9855 }, "icon": "landmark" },
+          { "label": "Terminal Ferry Midtown", "coordinates": { "lat": 40.7643, "lng": -74.0016 }, "icon": "ferry" }
+        ]
+      }
+    }
+  }
+}

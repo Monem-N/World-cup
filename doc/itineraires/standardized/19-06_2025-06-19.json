@@ -1,0 +1,180 @@
+{
+  "id": "2c5b9d3a-6e4f-1a2b-3c4d-5e6f7a8b9c0d",
+  "trip_id": "b920089f-b491-4af6-94b4-807f1897a027",
+  "date": "2025-06-19",
+  "title": "Dernier jour à NYC : Chelsea, High Line & Vol vers Nashville",
+  "summary": "Journée de transition avec exploration de Manhattan, retour à Jersey City, et vol domestique vers Nashville.",
+  "reminders": [
+    "Vérifier l'état du service PATH et moyen de paiement (TAPP/SmartLink)",
+    "Préparer pièce d'identité et carte d'embarquement",
+    "Planifier récupération des bagages avant transfert à EWR"
+  ],
+  "weather": {
+    "temperature": 27,
+    "condition": "Ensoleillé",
+    "icon": "01d"
+  },
+  "activities": [
+    {
+      "id": "641954d1-2f12-490b-b341-07261b48e2a6",
+      "type": "activity",
+      "title": "Petit-déjeuner + check-out",
+      "time": "07:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "duration": "1h",
+      "notes": "Stocker les bagages à l'hôtel ou consigne sécurisée",
+      "location": {
+        "name": "Hôtel à Jersey City",
+        "latitude": 40.7195,
+        "longitude": -74.0537
+      }
+    },
+    {
+      "id": "c0846a27-019b-4d28-9d17-e666fb5ce43f",
+      "type": "transport",
+      "title": "Transfert vers Manhattan",
+      "time": "08:30:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "duration": "30m",
+      "transport": {
+        "mode": "PATH Train",
+        "carrier": "PATH",
+        "estimated_cost": 2.75,
+        "notes": "Direction World Trade Center, puis transfert à 14th St Station"
+      }
+    },
+    {
+      "id": "decb2d49-4386-497c-8d6e-b8b2c93eba09",
+      "type": "activity",
+      "title": "Exploration Chelsea + High Line",
+      "time": "09:15:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "duration": "2h",
+      "notes": "Parcours depuis Gansevoort St jusqu'à 34th St avec arrêts photo",
+      "location": {
+        "name": "High Line",
+        "latitude": 40.7480,
+        "longitude": -74.0048
+      }
+    },
+    {
+      "id": "d6ca97e1-b924-4e07-b091-2cd2ae4f49ac",
+      "type": "meal",
+      "title": "Déjeuner à Chelsea Market",
+      "time": "11:30:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "duration": "1h",
+      "notes": "$$ (variable selon les stands)",
+      "location": {
+        "name": "Chelsea Market",
+        "latitude": 40.7425,
+        "longitude": -74.0063
+      }
+    },
+    {
+      "id": "e568020b-5be8-4e93-b616-45eb62321b58",
+      "type": "transport",
+      "title": "Retour à Jersey City",
+      "time": "12:45:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "duration": "1h15m",
+      "transport": {
+        "mode": "PATH + Bus",
+        "notes": "Retour à Journal Square pour récupération des bagages"
+      }
+    },
+    {
+      "id": "9b8c8cd6-e414-4b6c-b5a5-e011c2c43ff9",
+      "type": "transport",
+      "title": "Transfert vers Liberty State Park",
+      "time": "14:15:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "duration": "40m",
+      "transport": {
+        "mode": "Light Rail",
+        "carrier": "NJ Transit",
+        "estimated_cost": 3.25
+      }
+    },
+    {
+      "id": "3c860dca-2139-4489-89e4-fafd13bf92cb",
+      "type": "activity",
+      "title": "Liberty State Park",
+      "time": "15:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "duration": "1h45m",
+      "notes": "Vue sur la skyline de NYC et Statue de la Liberté",
+      "location": {
+        "name": "Liberty State Park",
+        "latitude": 40.7145,
+        "longitude": -74.0329
+      }
+    },
+    {
+      "id": "7bf2d15d-d598-4ce4-9ad8-38c282891e35",
+      "type": "meal",
+      "title": "Dîner rapide à Jersey City",
+      "time": "17:00:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "duration": "45m",
+      "location": {
+        "name": "Restaurant local",
+        "latitude": 40.7200,
+        "longitude": -74.0550
+      }
+    },
+    {
+      "id": "408c8a13-4252-4f40-8817-e9a383b3d656",
+      "type": "transport",
+      "title": "Transfert vers EWR",
+      "time": "18:00:00",
+      "status": "pending",
+      "sequence_order": 9,
+      "duration": "45m",
+      "transport": {
+        "mode": "NJ Transit Train + AirTrain",
+        "estimated_cost": 15.00
+      }
+    },
+    {
+      "id": "1cb00937-3f67-44e5-9a37-cf156d228317",
+      "type": "activity",
+      "title": "Vol UA2038 → Nashville",
+      "time": "21:42:00",
+      "status": "confirmed",
+      "sequence_order": 10,
+      "duration": "2h30m",
+      "important": true,
+      "location": {
+        "name": "Aéroport de Newark (EWR)",
+        "latitude": 40.6925,
+        "longitude": -74.1686
+      },
+      "notes": "Arrivée à Nashville (BNA) à 23:12 CDT"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.492Z",
+    "updated_at": "2025-05-21T09:30:44.492Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "America/New_York",
+    "additional_data": {
+      "tips": [
+        "Éviter les heures de pointe sur les routes vers EWR (17h-19h)",
+        "Prévoir 2h avant le vol pour le check-in et la sécurité",
+        "Utiliser les consignes de l'aéroport si nécessaire"
+      ],
+      "transportNotes": "PATH accepte TAPP (carte sans contact) et SmartLink",
+      "concludingRemarks": "Profitez des dernières vues de NYC depuis Liberty State Park"
+    }
+  }
+}

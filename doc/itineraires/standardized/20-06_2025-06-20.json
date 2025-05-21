@@ -1,0 +1,305 @@
+{
+  "id": "274b4681-f041-475f-aac8-e8b05d9cbee3",
+  "trip_id": "6e5ec677-0c1d-4cd4-b2a0-fe7bfdf3a69b",
+  "date": "2025-06-20",
+  "title": "Nashville Express & World Cup Match",
+  "summary": "A memorable day blending Nashville's vibrant culture with international football. This itinerary includes exploring downtown Nashville, enjoying local cuisine, and attending a World Cup match at GEODIS Park, followed by a late-night departure from Nashville International Airport (BNA).",
+  "weather": {
+    "temperature": 31,
+    "condition": "Sunny",
+    "icon": "01d",
+    "notes": "Expect hot and humid weather typical for Nashville in June. Stay hydrated and dress in light clothing."
+  },
+  "reminders": [
+    "Check Johnny Cash Museum hours & consider pre-booking tickets online if planning an internal visit.",
+    "Verify brunch spot hours & reservation policy; make a reservation if possible, especially for popular places.",
+    "GEODIS Park: Confirm bag policy, gate opening times (typically 90 minutes before kickoff), and explore pre-purchased parking options.",
+    "Ensure phone is fully charged for e-tickets, navigation, and photos. Consider a portable power bank.",
+    "Pack essential overnight items (toothbrush, change of clothes) in a carry-on due to late flight and potential airport wait.",
+    "Confirm rental car return procedure, location, and operating hours at BNA. Allow ample time for drop-off and shuttle to terminal."
+  ],
+  "documents": [
+    {
+      "file_name": "GEODIS_Park_Tickets.pdf",
+      "file_path": "path/to/documents/GEODIS_Park_Tickets.pdf",
+      "file_type": "application/pdf"
+    },
+    {
+      "file_name": "BNA_Rental_Car_Confirmation.pdf",
+      "file_path": "path/to/documents/BNA_Rental_Car_Confirmation.pdf",
+      "file_type": "application/pdf"
+    }
+  ],
+  "activities": [
+    {
+      "id": "da506f4c-d036-4141-bb67-b3fd5cbff4ba",
+      "type": "transport",
+      "title": "Hotel Departure to Downtown Nashville",
+      "time": "09:30:00",
+      "duration": "30m",
+      "notes": "Depart from your hotel (e.g., The Hermitage or hotel area) towards downtown Nashville. Plan for luggage storage for the day if you are checking out before the match. Utilize hotel's baggage hold or consider a luggage storage service in downtown.",
+      "status": "pending",
+      "sequence_order": 1,
+      "location": {
+        "name": "Downtown Nashville",
+        "latitude": 36.1627,
+        "longitude": -86.7816,
+        "address": "Broadway, Nashville, TN"
+      },
+      "transport": {
+        "mode": "Car",
+        "estimated_cost": 15.00,
+        "notes": "Parking downtown can be expensive. Consider public parking garages or ride-sharing services."
+      }
+    },
+    {
+      "id": "6fb8d99a-0eea-4ef4-bbc4-2f5132b3cf42",
+      "type": "activity",
+      "title": "Downtown Nashville Express Visit",
+      "time": "10:00:00",
+      "duration": "2h00m",
+      "notes": "Focus on walking Broadway to experience the Honky-Tonk atmosphere and a quick photo opportunity at popular murals (e.g., 'What Lifts You' wings mural at The Gulch) or museum exteriors if time is limited for internal visits. Immerse in the live music scene.",
+      "status": "pending",
+      "sequence_order": 2,
+      "location": {
+        "name": "Broadway Street & Surrounding Area",
+        "address": "119 3rd Ave S, Nashville, TN 37201 (Johnny Cash Museum - for reference)",
+        "latitude": 36.1600,
+        "longitude": -86.7760,
+        "venue_type": "Cultural/Entertainment District"
+      },
+      "transport": {
+        "mode": "Walking",
+        "notes": "The core downtown area is highly walkable. Wear comfortable shoes."
+      },
+      "estimated_cost": 0.00
+    },
+    {
+      "id": "65435dbc-b1df-4cde-baa8-5c4e7e5f40a8",
+      "type": "meal",
+      "title": "Southern Brunch Experience",
+      "time": "12:00:00",
+      "duration": "1h30m",
+      "notes": "A must-try for those who enjoy biscuits, bacon, and syrup. Loveless Cafe requires significant travel time (approx. 30-40 min drive each way) - choose alternatives if the schedule is tight. Biscuit Love Gulch is a popular option walkable/short ride from downtown.",
+      "status": "pending",
+      "sequence_order": 3,
+      "location": {
+        "name": "Biscuit Love Gulch (Recommended)",
+        "address": "316 11th Ave S, Nashville, TN 37203",
+        "latitude": 36.1517,
+        "longitude": -86.7865,
+        "contact": "+1-615-499-4700",
+        "website": "https://biscuitlove.com",
+        "venue_type": "Restaurant",
+        "notes": "Expect a wait, but worth it. The Gulch area is vibrant."
+      },
+      "transport": {
+        "mode": "Walking / Ride-share",
+        "notes": "Biscuit Love Gulch is about a 15-20 min walk from central Broadway, or a short ride-share."
+      },
+      "estimated_cost": 30.00
+    },
+    {
+      "id": "a9e5b8c1-d2f3-4e0a-b1c2-3d4e5f6a7b8c",
+      "type": "activity",
+      "title": "Afternoon Leisure / Further Exploration",
+      "time": "14:00:00",
+      "duration": "2h30m",
+      "notes": "This afternoon offers flexibility: Options include the Country Music Hall of Fame and Museum for a deeper dive into Nashville's musical heritage, a tour of the historic Ryman Auditorium, shopping in The Gulch, or simply relaxing before heading to the stadium. Choose based on interest and energy levels.",
+      "status": "pending",
+      "sequence_order": 4,
+      "location": {
+        "name": "Downtown / The Gulch Area Options",
+        "address": "222 5th Ave S, Nashville, TN 37203 (Country Music Hall of Fame and Museum)",
+        "latitude": 36.1593,
+        "longitude": -86.7788,
+        "venue_type": "Cultural/Shopping District"
+      },
+      "transport": {
+        "mode": "Walking / Ride-share",
+        "notes": "Most attractions are relatively close within downtown/Gulch, but ride-sharing can save time and energy."
+      },
+      "estimated_cost": 30.00
+    },
+    {
+      "id": "6cab746c-1bc6-493e-a3b9-37897b749ca7",
+      "type": "transport",
+      "title": "Travel to GEODIS Park",
+      "time": "17:00:00",
+      "duration": "30m",
+      "notes": "Drive to GEODIS Park. Ample parking is available on-site, but check parking cost and consider pre-booking online to secure a spot and potentially save time on match day.",
+      "status": "pending",
+      "sequence_order": 5,
+      "location": {
+        "name": "GEODIS Park",
+        "address": "501 Benton Ave, Nashville, TN 37203",
+        "latitude": 36.130426502994894,
+        "longitude": -86.76556832575382,
+        "venue_type": "Stadium",
+        "website": "https://www.geodispark.com/"
+      },
+      "transport": {
+        "mode": "Car",
+        "estimated_cost": 25.00,
+        "notes": "Parking can vary from $20-40. Arrive early to navigate traffic and parking."
+      }
+    },
+    {
+      "id": "b8c40ffb-1d22-4f97-88ac-918635ea64d2",
+      "type": "match",
+      "title": "⚽ FIFA World Cup Match: Club León vs EST",
+      "time": "18:00:00",
+      "duration": "2h00m",
+      "notes": "Experience the vibrant international and local atmosphere! The 2-hour duration is for the match itself; allow extra time for entry, finding seats, and post-match exit. Gates typically open 90 minutes before kickoff.",
+      "status": "confirmed",
+      "sequence_order": 6,
+      "important": true,
+      "is_group_event": true,
+      "location": {
+        "name": "GEODIS Park",
+        "address": "501 Benton Ave, Nashville, TN 37203",
+        "latitude": 36.130426502994894,
+        "longitude": -86.76556832575382,
+        "venue_type": "Stadium",
+        "website": "https://www.geodispark.com/",
+        "confirmation_number": "GEODISTIX87654"
+      },
+      "attachments": [
+        {
+          "file_name": "Match_Tickets.jpg",
+          "file_path": "path/to/attachments/Match_Tickets.jpg",
+          "file_type": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "97e3468d-baff-49b4-a91c-02ded047c3e0",
+      "type": "meal",
+      "title": "Post-Match Dinner",
+      "time": "20:30:00",
+      "duration": "1h30m",
+      "notes": "Grab a quick dinner after the match. Hattie B's Hot Chicken is a Nashville staple, or explore other local spots near the stadium or en route to the airport.",
+      "status": "pending",
+      "sequence_order": 7,
+      "location": {
+        "name": "Hattie B's Hot Chicken - Melrose (Suggested)",
+        "address": "2222 8th Ave S, Nashville, TN 37204",
+        "latitude": 36.1187,
+        "longitude": -86.7824,
+        "venue_type": "Restaurant",
+        "contact": "+1-615-678-4795"
+      },
+      "transport": {
+        "mode": "Car",
+        "notes": "A short drive from GEODIS Park, offers authentic Nashville cuisine."
+      },
+      "estimated_cost": 25.00
+    },
+    {
+      "id": "31d46e27-e794-4cc9-a036-0ffdbb81c29b",
+      "type": "transport",
+      "title": "Return to Nashville International Airport (BNA)",
+      "time": "22:30:00",
+      "duration": "30m",
+      "notes": "Proceed to BNA for rental car return and flight check-in. Your JetBlue flight B61074 departs at 06:00 on June 21st. Aim to arrive at the airport at least 2 hours before your flight for car return, check-in, and security clearance, especially for an international flight.",
+      "status": "pending",
+      "sequence_order": 8,
+      "important": true,
+      "location": {
+        "name": "Nashville International Airport (BNA)",
+        "address": "1 Terminal Dr, Nashville, TN 37214",
+        "latitude": 36.1264,
+        "longitude": -86.6782,
+        "venue_type": "Airport",
+        "website": "https://flynashville.com/"
+      },
+      "transport": {
+        "mode": "Car",
+        "carrier": "JetBlue",
+        "booking_reference": "JETBLUEABC123",
+        "flight_number": "B61074",
+        "notes": "Check-in for flight B61074 departing BNA to [Next Destination] at 06:00 AM on June 21st. Rental car return is typically well-marked upon arrival at the airport."
+      },
+      "attachments": [
+        {
+          "file_name": "JetBlue_Boarding_Pass.pdf",
+          "file_path": "path/to/attachments/JetBlue_Boarding_Pass.pdf",
+          "file_type": "application/pdf"
+        }
+      ]
+    }
+  ],
+  "travel_essentials": [
+    {
+      "id": "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+      "name": "Passport",
+      "category": "Documents",
+      "packed": false
+    },
+    {
+      "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "name": "E-tickets (Match & Flight)",
+      "category": "Documents",
+      "packed": false
+    },
+    {
+      "id": "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+      "name": "Portable Phone Charger",
+      "category": "Electronics",
+      "packed": false
+    },
+    {
+      "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "name": "Comfortable Walking Shoes",
+      "category": "Clothing",
+      "packed": false
+    },
+    {
+      "id": "6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+      "name": "Lightweight Clothing (for warm weather)",
+      "category": "Clothing",
+      "packed": false
+    },
+    {
+      "id": "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e",
+      "name": "Small Backpack/Crossbody Bag",
+      "category": "Accessories",
+      "packed": false
+    },
+    {
+      "id": "8c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+      "name": "Water Bottle (refillable)",
+      "category": "Health & Safety",
+      "packed": false
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.504Z",
+    "updated_at": "2025-05-21T21:03:20.000Z",
+    "source": "json_conversion_and_enhancement",
+    "version": "1.1",
+    "timezone": "America/Chicago",
+    "original_filename": "20_21-06.json",
+    "additional_data": {
+      "tips": [
+        "Pack smart: a carry-on with essentials is key for airport overnight stays and quick transitions.",
+        "Nashville is spread out; a rental car or strategic use of ride-shares is highly recommended. Always account for parking costs and availability.",
+        "Stay well-hydrated, especially with walking and outdoor activities in potentially hot weather.",
+        "For car safety, always lock doors and keep valuables out of sight when parking in public areas."
+      ],
+      "emergency_contacts": [
+        {
+          "name": "Emergency Services (USA)",
+          "phone": "911",
+          "notes": "For Police, Fire, or Medical emergencies. Always dial 911 in the United States."
+        },
+        {
+          "name": "French Embassy in Washington D.C.",
+          "phone": "+1-202-944-6000",
+          "website": "https://fr.usembassy.gov/",
+          "notes": "Nearest consular services for French citizens in case of extreme emergency."
+        }
+      ]
+    }
+  }
+}

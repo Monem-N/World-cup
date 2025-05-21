@@ -1,0 +1,129 @@
+{
+  "id": "ade907df-9390-46c5-9b7a-9fd5e5732488",
+  "trip_id": "6befa61c-dd73-4ac3-9536-8d92eb832005",
+  "date": "2025-06-22",
+  "title": "Dimanche \"New York Hors-Cadre\" : Bronx + Roosevelt Island",
+  "summary": "explorer des lieux non touristiques, beaux, et culturels",
+  "reminders": [],
+  "activities": [
+    {
+      "id": "28bf843e-2dec-409d-921c-2f7d97a410c1",
+      "type": "transport",
+      "title": "Départ pour le Bronx",
+      "time": "09:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "transport-departure-bronx-20250622",
+      "duration": "45 minutes",
+      "transport": {
+        "mode": "PATH + Metro"
+      }
+    },
+    {
+      "id": "13435532-444d-4c43-9fad-8ec95a410192",
+      "type": "activity",
+      "title": "🌿 New York Botanical Garden",
+      "time": "10:00:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "activity-nybg-visit-20250622",
+      "duration": "2h",
+      "notes": "Un des plus grands jardins botaniques du monde, parfait pour un matin tranquille",
+      "location": {
+        "name": "Bronx"
+      }
+    },
+    {
+      "id": "5f8aee9b-7098-4105-a690-f43f97fb495a",
+      "type": "meal",
+      "title": "🍝 Déjeuner sur Arthur Avenue",
+      "time": "12:00:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "meal-lunch-arthurave-20250622",
+      "duration": "1h30",
+      "notes": "Ambiance old-school, trattorias et boulangeries italiennes authentiques",
+      "location": {
+        "name": "Bronx (Little Italy locale)"
+      }
+    },
+    {
+      "id": "d50d8259-a5f4-49eb-b803-35dbb7caaafc",
+      "type": "activity",
+      "title": "⚾ Yankee Stadium Tour (optionnel)",
+      "time": "14:00:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "activity-yankeestadium-tour-20250622",
+      "duration": "1h30",
+      "notes": "Idéal si amateurs de sport ou de légendes américaines",
+      "location": {
+        "name": "Bronx"
+      }
+    },
+    {
+      "id": "80551e6e-0a96-4da5-9871-064f64effdaf",
+      "type": "transport",
+      "title": "Métro vers Midtown Est",
+      "time": "15:30:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "original_id": "transport-metro-midtown-20250622",
+      "duration": "45 minutes",
+      "transport": {
+        "mode": "Metro"
+      }
+    },
+    {
+      "id": "d4e9da2a-f9f7-4b5c-915b-9e4c206655e0",
+      "type": "activity",
+      "title": "🚡 Roosevelt Island en téléphérique",
+      "time": "16:30:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "activity-rooseveltisland-tramway-20250622",
+      "duration": "1h30",
+      "notes": "Vue aérienne unique sur l’East River, balade au calme",
+      "transport": {
+        "mode": "Tramway"
+      }
+    },
+    {
+      "id": "11d65d4d-2fe7-4412-bb16-e286dbc466b5",
+      "type": "meal",
+      "title": "🍽️ Dîner sur Roosevelt Island ou à Long Island City",
+      "time": "18:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "original_id": "meal-dinner-rooseveltisland-20250622",
+      "duration": "1h30",
+      "notes": "Ambiance élégante, coucher de soleil tranquille",
+      "location": {
+        "name": "Ex : Panorama Room rooftop (vue skyline)"
+      }
+    },
+    {
+      "id": "0886238c-9542-4fe9-82b1-bde3b056a74c",
+      "type": "transport",
+      "title": "Retour à Jersey City",
+      "time": "19:30:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "original_id": "transport-return-jerseycity-20250622",
+      "duration": "1h",
+      "notes": "Trajet direct vers Journal Square",
+      "transport": {
+        "mode": "Tramway + Metro + PATH"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.509Z",
+    "updated_at": "2025-05-21T09:30:44.509Z",
+    "source": "json_conversion",
+    "version": "1.0",
+    "timezone": "Europe/Paris",
+    "original_filename": "22-06.json",
+    "additional_data": {}
+  }
+}

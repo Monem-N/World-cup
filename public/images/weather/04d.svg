@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Partly cloudy icon -->
+  <circle cx="40" cy="40" r="20" fill="#FFD700" stroke="#FF8C00" stroke-width="2"/>
+  <path d="M30,60 Q45,70 60,60 Q75,50 70,35 Q65,20 50,25 Q35,30 30,45 Q25,55 30,60 Z" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  <path d="M40,70 Q55,80 70,70 Q85,60 80,45 Q75,30 60,35 Q45,40 40,55 Q35,65 40,70 Z" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+</svg>

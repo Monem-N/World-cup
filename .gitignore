@@ -9,3 +9,11 @@
 /.vercel/
 doc/*
 .env
+# Un-ignore the 'itineraires' directory, so Git can look inside it
+!doc/itineraires/
+
+# Un-ignore the 'standardized' directory itself
+!doc/itineraires/standardized/
+
+# Un-ignore all files and subdirectories within 'standardized'
+!doc/itineraires/standardized/**

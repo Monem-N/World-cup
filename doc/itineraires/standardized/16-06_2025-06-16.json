@@ -1,0 +1,261 @@
+{
+  "id": "48dc6265-ba52-4507-9daf-1ef5ad3adbde",
+  "trip_id": "157f32c8-94cd-4e22-93db-37f020d84584",
+  "date": "2025-06-16",
+  "title": "Aventure à Philadelphie : Journée du Match de Football",
+  "summary": "Journée complète à Philadelphie, combinant une exploration historique du centre-ville avec l'apogée d'un match de football passionnant au Lincoln Financial Field.",
+  "weather": {
+    "temperature": 26,
+    "condition": "Ensoleillé",
+    "icon": "01d"
+  },
+  "reminders": [
+    "Acheter les billets de match à l'avance",
+    "Vérifier les horaires des trains/bus pour le trajet Jersey City-Philadelphie",
+    "Réserver les billets pour Independence Hall si nécessaire"
+  ],
+  "activities": [
+    {
+      "id": "3c860dca-2139-4489-89e4-fafd13bf92cb",
+      "type": "transport",
+      "title": "Départ pour Philadelphie",
+      "time": "08:00:00",
+      "status": "pending",
+      "sequence_order": 1,
+      "original_id": "transport-departure-philadelphia-250616",
+      "transport": {
+        "mode": "Train (Amtrak)",
+        "carrier": "Amtrak",
+        "estimated_cost": 30.00,
+        "pickup_location": "New York Penn Station",
+        "notes": "Arriver 30 minutes avant le départ pour l'embarquement."
+      },
+      "location": {
+        "name": "New York Penn Station",
+        "latitude": 40.7505,
+        "longitude": -73.9935,
+        "address": "34th St & 7th Ave, New York, NY 10001, USA"
+      }
+    },
+    {
+      "id": "7bf2d15d-d598-4ce4-9ad8-38c282891e35",
+      "type": "activity",
+      "title": "Arrivée et visite du centre-ville",
+      "time": "10:30:00",
+      "status": "pending",
+      "sequence_order": 2,
+      "original_id": "activity-arrival-center-250616",
+      "duration": "1h",
+      "notes": "Commencez par une balade dans le quartier historique, près de l'Independence Hall.",
+      "location": {
+        "name": "Centre Historique de Philadelphie",
+        "latitude": 39.9496,
+        "longitude": -75.1503,
+        "address": "Philadelphia, PA, USA"
+      }
+    },
+    {
+      "id": "408c8a13-4252-4f40-8817-e9a383b3d656",
+      "type": "activity",
+      "title": "Exploration de l'Independence Hall",
+      "time": "11:30:00",
+      "status": "pending",
+      "sequence_order": 3,
+      "original_id": "activity-independencehall-explore-250616",
+      "duration": "1h",
+      "notes": "Site historique où la Déclaration d'Indépendance et la Constitution ont été signées. Billets gratuits requis, à réserver à l'avance en ligne pour les visites guidées. Plus d'infos sur : https://www.nps.gov/inde/index.htm",
+      "location": {
+        "name": "Independence Hall",
+        "latitude": 39.9489,
+        "longitude": -75.1500,
+        "address": "520 Chestnut St, Philadelphia, PA 19106, USA"
+      }
+    },
+    {
+      "id": "1cb00937-3f67-44e5-9a37-cf156d228317",
+      "type": "activity",
+      "title": "Visite de la Liberty Bell",
+      "time": "12:30:00",
+      "status": "pending",
+      "sequence_order": 4,
+      "original_id": "activity-libertybell-visit-250616",
+      "duration": "30m",
+      "notes": "Cloche emblématique de la liberté américaine, située en face de l'Independence Hall. Entrée gratuite. Plus d'infos sur : https://www.nps.gov/inde/learn/historyculture/libertybell.htm",
+      "location": {
+        "name": "Liberty Bell Center",
+        "latitude": 39.9493,
+        "longitude": -75.1502,
+        "address": "526 Market St, Philadelphia, PA 19106, USA"
+      }
+    },
+    {
+      "id": "fd9c6d59-926e-4fb0-9187-b4bf24fa3b2a",
+      "type": "activity",
+      "title": "Découverte de la Betsy Ross House",
+      "time": "13:00:00",
+      "status": "pending",
+      "sequence_order": 5,
+      "original_id": "activity-betsyrosshouse-discover-250616",
+      "duration": "30m",
+      "notes": "Maison de la couturière Betsy Ross, réputée pour avoir cousu le premier drapeau américain. Petite visite historique. Plus d'infos sur : https://historicphiladelphia.org/betsy-ross-house/what-to-see/",
+      "location": {
+        "name": "Betsy Ross House",
+        "latitude": 39.9525,
+        "longitude": -75.1456,
+        "address": "239 Arch St, Philadelphia, PA 19106, USA"
+      }
+    },
+    {
+      "id": "2a8a10fe-446c-4762-9f64-7a2e346d40d6",
+      "type": "activity",
+      "title": "Promenade dans Elfreth's Alley",
+      "time": "13:30:00",
+      "status": "pending",
+      "sequence_order": 6,
+      "original_id": "activity-elfreths-alley-stroll-250616",
+      "duration": "30m",
+      "notes": "La plus ancienne rue résidentielle habitée des États-Unis. Charmante pour une promenade et des photos. Plus d'infos sur : https://www.elfrethsalley.org/",
+      "location": {
+        "name": "Elfreth's Alley",
+        "latitude": 39.9522,
+        "longitude": -75.1437,
+        "address": "126 Elfreth's Alley, Philadelphia, PA 19106, USA"
+      }
+    },
+    {
+      "id": "c0846a27-019b-4d28-9d17-e666fb5ce43f",
+      "type": "meal",
+      "title": "Déjeuner au Reading Terminal Market",
+      "time": "14:00:00",
+      "status": "pending",
+      "sequence_order": 7,
+      "original_id": "meal-lunch-readingterminal-250616",
+      "duration": "1h",
+      "notes": "Marché couvert historique avec une grande variété de stands de nourriture, de produits frais et d'artisanat. Idéal pour un déjeuner décontracté. Plus d'infos sur : https://readingterminalmarket.org/",
+      "location": {
+        "name": "Reading Terminal Market",
+        "latitude": 39.9532,
+        "longitude": -75.1584,
+        "address": "1131 Arch St, Philadelphia, PA 19107, USA"
+      }
+    },
+    {
+      "id": "e568020b-5be8-4e93-b616-45eb62321b58",
+      "type": "transport",
+      "title": "Départ pour le Lincoln Financial Field",
+      "time": "15:00:00",
+      "status": "pending",
+      "sequence_order": 8,
+      "original_id": "transport-departure-stadium-250616",
+      "transport": {
+        "mode": "Métro (SEPTA Broad Street Line)",
+        "carrier": "SEPTA",
+        "estimated_cost": 2.50,
+        "duration_minutes": 20,
+        "pickup_location": "Prendre la ligne Broad Street (Orange Line) direction sud jusqu'à la station NRG (dernière station) depuis City Hall."
+      },
+      "location": {
+        "name": "Station City Hall (SEPTA)",
+        "latitude": 39.9523,
+        "longitude": -75.1636,
+        "address": "1400 John F Kennedy Blvd, Philadelphia, PA 19107, USA"
+      }
+    },
+    {
+      "id": "641954d1-2f12-490b-b341-07261b48e2a6",
+      "type": "activity",
+      "title": "Temps libre et exploration autour du stade",
+      "time": "15:30:00",
+      "status": "pending",
+      "sequence_order": 9,
+      "original_id": "activity-stadium-explore-250616",
+      "duration": "1h30m",
+      "notes": "Profitez de l'ambiance d'avant-match, des fan zones et des boutiques de souvenirs autour du complexe sportif. Plus d'infos sur : https://www.lincolnfinancialfield.com/",
+      "location": {
+        "name": "Lincoln Financial Field (environs)",
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+      }
+    },
+    {
+      "id": "decb2d49-4386-497c-8d6e-b8b2c93eba09",
+      "type": "meal",
+      "title": "Dîner près du stade / Concessions",
+      "time": "17:00:00",
+      "status": "pending",
+      "sequence_order": 10,
+      "original_id": "meal-dinner-stadium-250616",
+      "notes": "Options de restauration rapide ou concessions à l'intérieur et autour du stade.",
+      "location": {
+        "name": "Lincoln Financial Field (Concessions)",
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+      }
+    },
+    {
+      "id": "d6ca97e1-b924-4e07-b091-2cd2ae4f49ac",
+      "type": "match",
+      "title": "Match de football : CR Flamengo vs EST",
+      "time": "18:30:00",
+      "status": "confirmed",
+      "sequence_order": 11,
+      "original_id": "match-flamengo-est-250616",
+      "important": true,
+      "duration": "2h",
+      "notes": "Match de football passionnant. Arriver tôt pour trouver sa place et profiter de l'ambiance.",
+      "location": {
+        "name": "Lincoln Financial Field",
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+      },
+      "attachments": [
+        {
+          "file_name": "Flamengo-EST_ticket.pdf",
+          "file_path": "/documents/tickets/flamengo_est_20250616.pdf",
+          "file_type": "application/pdf"
+        }
+      ]
+    },
+    {
+      "id": "9b8c8cd6-e414-4b6c-b5a5-e011c2c43ff9",
+      "type": "transport",
+      "title": "Retour à l'hébergement",
+      "time": "20:30:00",
+      "status": "pending",
+      "sequence_order": 12,
+      "original_id": "transport-return-jerseycity-250616",
+      "transport": {
+        "mode": "Uber / Taxi / Train",
+        "estimated_cost": 100.00,
+        "duration_minutes": 90,
+        "pickup_location": "Départ du Lincoln Financial Field. Les taxis/Uber peuvent être difficiles à trouver après le match, prévoir un délai. Alternative : métro SEPTA puis PATH train."
+      },
+      "location": {
+        "name": "Lincoln Financial Field",
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-21T09:30:44.492Z",
+    "updated_at": "2025-05-21T09:30:44.492Z",
+    "source": "FIFA_2026_schedule",
+    "version": "2.0",
+    "timezone": "America/New_York",
+    "additional_data": {
+      "tips": [
+        "Transport : L'Uber direct est le plus simple, mais les transports en commun (métro SEPTA à Philadelphie) sont économiques pour les déplacements locaux.",
+        "Jour de match : Arrivez tôt au stade pour profiter de l'ambiance et éviter la foule.",
+        "Planification : La journée est dense. Pour Independence Hall, vérifiez si des billets gratuits sont nécessaires et réservez-les à l'avance.",
+        "Confort : Portez des chaussures confortables, car la visite du centre-ville implique beaucoup de marche.",
+        "Paiements : Ayez des dollars en espèces et des cartes bancaires pour toutes vos dépenses.",
+        "Connectivité : Assurez-vous d'avoir une connexion internet pour la navigation et les applications de transport."
+      ]
+    }
+  }
+}

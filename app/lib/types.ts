@@ -101,7 +101,8 @@ export interface DayProgram {
   reminders?: string[];
   docs?: string[];
   items: Activity[];
-  _source?: 'supabase' | 'mock'; // Indicates where the data came from
+  _source?: 'supabase' | 'mock' | 'standardized'; // Indicates where the data came from
+  _additionalData?: Record<string, any>; // Additional data that doesn't fit in the standard schema
 }
 
 export interface ItineraryState {
