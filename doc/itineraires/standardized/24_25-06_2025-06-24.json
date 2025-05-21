@@ -3,128 +3,245 @@
   "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
   "date": "2025-06-24",
   "title": "Match de clôture à Philadelphie : EST vs Chelsea FC",
-  "summary": "derniers instants à New York & Vol retour (JFK)",
-  "reminders": [],
+  "summary": "Une journée épique pour clôturer le séjour : récupération d'une voiture de location, trajet vers Philadelphie pour explorer ses sites historiques, puis un dîner pré-match vibrant avant d'assister à l'affrontement entre l'EST et Chelsea FC au Lincoln Financial Field, couronnant ainsi votre voyage par une expérience sportive inoubliable.",
+  "weather": {
+    "temperature": 30,
+    "condition": "Ensoleillé et chaud",
+    "icon": "01d",
+    "notes": "Journée très ensoleillée et chaude attendue à Philadelphie. Hydratez-vous et protégez-vous du soleil, surtout l'après-midi."
+  },
+  "reminders": [
+    "Ayez votre permis de conduire et la confirmation de réservation de la voiture à portée de main.",
+    "Prévoyez de la monnaie ou une carte de crédit pour les péages sur la route de Philadelphie.",
+    "Si vous visitez des sites historiques à Philadelphie comme l'Independence Hall, réservez vos billets à l'avance.",
+    "Vérifiez la politique des sacs et articles interdits au Lincoln Financial Field avant de partir.",
+    "Assurez-vous d'avoir vos billets de match (version numérique sur votre téléphone ou imprimée) prêts.",
+    "Hydratez-vous régulièrement tout au long de la journée, surtout avec la chaleur."
+  ],
+  "documents": [
+    {
+      "file_name": "Car_Rental_Confirmation.pdf",
+      "file_path": "chemin/vers/documents/Car_Rental_Confirmation.pdf",
+      "file_type": "application/pdf"
+    },
+    {
+      "file_name": "Match_Tickets_EST_Chelsea.pdf",
+      "file_path": "chemin/vers/documents/Match_Tickets_EST_Chelsea.pdf",
+      "file_type": "application/pdf"
+    }
+  ],
   "activities": [
     {
       "id": "b2c8b099-d268-4ce0-9ad9-ccfb60e3d8da",
       "type": "activity",
-      "title": "Location de voiture",
+      "title": "Location de voiture à Jersey City",
       "time": "10:00:00",
+      "duration": "1h00m",
+      "notes": "Récupération de la voiture de location. Il est conseillé de choisir une agence proche de votre hébergement pour plus de commodité. Arriver tôt vous permettra de partir sereinement et d'éviter les files d'attente. Vérifiez l'état du véhicule avant de partir.",
       "status": "pending",
       "sequence_order": 1,
-      "original_id": "activity-carrental-pickup-20250624",
-      "duration": "1h",
-      "notes": "Près de ton hébergement – idéalement tôt pour être tranquille",
+      "requires_confirmation": true,
       "location": {
-        "name": "Jersey City"
-      }
+        "name": "Agence de location de voiture (Jersey City)",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA (point de départ approximatif)",
+        "latitude": 40.7178,
+        "longitude": -74.0431,
+        "venue_type": "Agence de location"
+      },
+      "estimated_cost": 120.00
     },
     {
       "id": "b079be8e-eaac-40aa-bece-d82d9881a8b6",
       "type": "transport",
-      "title": "Trajet vers Philadelphie",
+      "title": "Trajet en voiture vers Philadelphie",
       "time": "11:00:00",
+      "duration": "1h45m",
+      "notes": "Départ de Jersey City en direction de Philadelphie. Le trajet prend environ 1h45 à 2h15 sans trafic intense. Prévoyez des péages (environ 15-25$ aller-retour, notamment le Delaware Memorial Bridge ou des portions du New Jersey Turnpike). Une pause déjeuner rapide en route ou dès votre arrivée à Philly peut être envisagée.",
       "status": "pending",
       "sequence_order": 2,
-      "original_id": "transport-departure-philadelphia-20250624",
-      "duration": "1h45",
-      "notes": "Pause déjeuner possible en route ou en ville"
+      "location": {
+        "name": "De Jersey City au centre de Philadelphie",
+        "address": "Jersey City, NJ, USA vers Philadelphie, PA, USA",
+        "latitude": 39.9526,
+        "longitude": -75.1652
+      },
+      "transport": {
+        "mode": "Voiture de location",
+        "estimated_cost": 20.00
+      }
     },
     {
       "id": "f80ac768-f8ae-40c5-ae8f-02b18abd8332",
       "type": "activity",
-      "title": "Temps libre à Philadelphie",
+      "title": "Temps libre et exploration à Philadelphie",
       "time": "13:00:00",
+      "duration": "4h00m",
+      "notes": "Profitez de l'après-midi pour explorer le cœur historique de Philadelphie. Visitez l'Independence Hall (réservez vos billets à l'avance), la Liberty Bell et le National Constitution Center à Old City. Alternativement, flânez à Reading Terminal Market pour découvrir des spécialités locales et des options de déjeuner, ou visitez le 'Rocky Steps' au Philadelphia Museum of Art. N'oubliez pas de goûter un authentique 'Philly Cheesesteak' !",
       "status": "pending",
       "sequence_order": 3,
-      "original_id": "activity-philadelphia-freetime-20250624",
-      "duration": "4h",
-      "notes": "Dernière balade dans Philly ? Cheesesteak ou musée",
       "location": {
-        "name": "Center City ou Old City"
-      }
+        "name": "Center City ou Old City, Philadelphie",
+        "address": "Independence Hall, 520 Chestnut St, Philadelphia, PA 19106, USA",
+        "latitude": 39.9489,
+        "longitude": -75.1500,
+        "website": "https://www.nps.gov/inde/index.htm",
+        "venue_type": "Quartier historique / Culturel"
+      },
+      "estimated_cost": 15.00
     },
     {
       "id": "ac86f87a-7adc-4841-bd9c-2e11ad220e3e",
       "type": "meal",
-      "title": "Dîner pré-match",
+      "title": "Dîner pré-match à Xfinity Live!",
       "time": "17:00:00",
+      "duration": "1h30m",
+      "notes": "Dirigez-vous vers Xfinity Live! pour un dîner et une immersion dans l'ambiance pré-match. Ce complexe de divertissement situé juste à côté du stade propose plusieurs restaurants, bars et un grand food court. L'atmosphère est électrique et idéale pour se préparer à l'événement sportif.",
       "status": "pending",
       "sequence_order": 4,
-      "original_id": "meal-dinner-prematch-20250624",
-      "duration": "1h30",
-      "notes": "*Xfinity Live!* : food court + bars + ambiance foot 🔥",
       "location": {
-        "name": "Proche du stade"
-      }
+        "name": "Xfinity Live!",
+        "address": "1100 Pattison Ave, Philadelphia, PA 19148, USA",
+        "latitude": 39.9022,
+        "longitude": -75.1746,
+        "website": "https://www.xfinitylive.com/",
+        "venue_type": "Complexe de divertissement / Food court"
+      },
+      "transport": {
+        "mode": "Voiture de location",
+        "notes": "Court trajet en voiture depuis Center City/Old City jusqu'au complexe sportif du sud de Philadelphie. Prévoyez un parking payant sur place."
+      },
+      "estimated_cost": 55.00
     },
     {
       "id": "58c13d52-da5b-4459-965b-a2b945d9004a",
       "type": "match",
       "title": "⚽ Match : EST vs Chelsea FC",
       "time": "21:00:00",
+      "duration": "2h00m",
+      "notes": "Le bouquet final de votre séjour ! Assurez-vous d'arriver au Lincoln Financial Field au moins 1 heure avant le coup d'envoi pour trouver votre place, profiter de l'ambiance et passer les contrôles de sécurité. Vérifiez la politique du stade concernant les sacs et objets autorisés. Préparez-vous à une ambiance électrique !",
       "status": "confirmed",
       "sequence_order": 5,
-      "original_id": "match-est-chelseafc-20250624",
-      "duration": "2h",
-      "notes": "Le bouquet final ! Ambiance électrique garantie",
       "important": true,
       "location": {
-        "name": "Lincoln Financial Field"
-      }
+        "name": "Lincoln Financial Field",
+        "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA",
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "website": "https://www.lincolnfinancialfield.com/",
+        "venue_type": "Stade de football américain"
+      },
+      "estimated_cost": 100.00
     },
     {
       "id": "3a48a42b-4a99-4680-a469-23e990e103bb",
       "type": "transport",
-      "title": "Retour à Jersey City",
+      "title": "Retour en voiture à Jersey City",
       "time": "23:15:00",
+      "duration": "1h45m",
+      "notes": "Départ du stade après le match pour un retour en voiture vers Jersey City. Le trajet de nuit peut être long après une journée chargée et un match intense. Assurez-vous que le conducteur désigné est bien reposé. Prévoyez quelques snacks et bouteilles d'eau pour la route. Le trafic devrait être minime à cette heure.",
       "status": "pending",
       "sequence_order": 6,
-      "original_id": "transport-return-jerseycity-20250624",
-      "duration": "1h45",
-      "notes": "Attention à la fatigue – possible conducteur désigné 👍",
+      "location": {
+        "name": "Du Lincoln Financial Field à l'hébergement à Jersey City",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+        "latitude": 40.7178,
+        "longitude": -74.0431
+      },
       "transport": {
-        "mode": "Car"
+        "mode": "Voiture de location",
+        "estimated_cost": 20.00
       }
+    }
+  ],
+  "travel_essentials": [
+    {
+      "id": "c1d2e3f4-a5b6-c7d8-e9f0-a1b2c3d4e5f6",
+      "name": "Permis de conduire valide",
+      "category": "Documents & Voyage",
+      "packed": false
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      "name": "Confirmation de location de voiture",
+      "category": "Documents & Voyage",
+      "packed": false
+    },
+    {
+      "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "name": "Billets de match (numérique ou imprimé)",
+      "category": "Documents & Voyage",
+      "packed": false
+    },
+    {
+      "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "name": "Chargeur de téléphone portable / Batterie externe",
+      "category": "Électronique",
+      "packed": false
+    },
+    {
+      "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8a9",
+      "name": "Bouteille d'eau et quelques snacks pour le trajet",
+      "category": "Nourriture & Boissons",
+      "packed": false
+    },
+    {
+      "id": "e5f6a7b8-c9d0-e1f2-a3b4-c5d6e7f8a9b0",
+      "name": "Crème solaire et chapeau",
+      "category": "Santé & Sécurité",
+      "packed": false
     }
   ],
   "metadata": {
     "created_at": "2025-05-21T09:30:44.524Z",
-    "updated_at": "2025-05-21T09:30:44.524Z",
-    "source": "json_conversion",
-    "version": "1.0",
-    "timezone": "Europe/Paris",
+    "updated_at": "2025-05-21T23:02:26.000Z",
+    "source": "json_enhancement",
+    "version": "1.1",
+    "timezone": "America/New_York",
     "original_filename": "24_25-06.json",
     "additional_data": {
       "tips": [
-        "prépare quelques snacks et bouteilles d’eau pour le trajet retour — la route de nuit peut être longue !"
+        "Préparez quelques snacks et bouteilles d’eau pour le trajet retour — la route de nuit peut être longue !",
+        "Le parking autour du Lincoln Financial Field est vaste mais peut être coûteux. Arrivez tôt pour trouver une place plus facilement.",
+        "Si vous explorez Philadelphie avant le match, envisagez de vous garer dans un parking central et d'utiliser un service de VTC ou le métro vers le complexe sportif, ou de prévoir un parking près du stade pour la journée."
       ],
       "practicalActions": [
         {
           "action": "🚗 Réserver voiture pour le 24 juin",
-          "details": "Location 1 jour, prise et retour à Jersey City **ou** JFK selon ton confort"
+          "details": "Location 1 jour, prise et retour à Jersey City. Confirmez la politique de carburant et d'assurance."
         },
         {
-          "action": "🎟️ Checker les billets du match EST vs Chelsea",
-          "details": "Bien vérifier le QR code, l’entrée exacte du stade"
+          "action": "🎟️ Confirmer et télécharger les billets du match EST vs Chelsea",
+          "details": "Vérifiez bien le QR code, l’entrée exacte du stade et la politique des sacs."
         },
         {
-          "action": "⏰ Organiser le timing du retour (24 au soir)",
-          "details": "Fatigue + circulation à anticiper"
+          "action": "⏰ Organiser le timing du retour (nuit du 24 au 25)",
+          "details": "Fatigue potentielle + circulation à anticiper. Désignez un conducteur reposé."
         },
         {
           "action": "🧳 Organiser les valises le 25 matin",
-          "details": "Tu peux demander un **late check-out** ou un **stockage temporaire**"
+          "details": "Vous pouvez demander un **late check-out** à votre hébergement ou un **stockage temporaire des bagages** si nécessaire."
         },
         {
-          "action": "🚕 Réserver à l’avance un Uber/Taxi pour JFK",
-          "details": "Depuis Jersey City jusqu’au Terminal 4 JFK (environ \\$80–\\$100 selon l'heure)"
+          "action": "🚕 Réserver à l’avance un Uber/Taxi pour JFK (si départ le 25)",
+          "details": "Depuis Jersey City jusqu’au Terminal 4 JFK (environ 80–100$ selon l'heure et le trafic)."
         }
       ],
       "concludingRemarks": [
-        "🥂 Le 24 juin, tu célèbres **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
-        "✈️ Le 25 juin, tu repars **avec l’Amérique dans les yeux et dans la valise.**"
+        "🥂 Le 24 juin, vous célébrez **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
+        "✈️ Le 25 juin, vous repartez **avec l’Amérique dans les yeux et dans la valise.**"
+      ],
+      "emergency_contacts": [
+        {
+          "name": "Services d'Urgence (USA)",
+          "phone": "911",
+          "notes": "Pour la police, les pompiers ou les urgences médicales. Composez toujours le 911 aux États-Unis."
+        },
+        {
+          "name": "Consulat Général de France à New York",
+          "phone": "+1-212-606-3600",
+          "website": "https://newyork.consulfrance.org/",
+          "notes": "Pour l'assistance consulaire aux citoyens français à New York."
+        }
       ]
     }
   }

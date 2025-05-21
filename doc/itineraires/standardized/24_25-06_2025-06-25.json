@@ -3,115 +3,187 @@
   "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
   "date": "2025-06-25",
   "title": "Derniers instants à New York & Vol retour (JFK)",
-  "summary": "derniers instants à New York & Vol retour (JFK)",
-  "reminders": [],
+  "summary": "Profitez de vos dernières heures à New York avant de prendre votre vol retour depuis JFK. L'itinéraire prévoit un petit-déjeuner tranquille, la restitution de la voiture de location (si applicable), et un transfert aisé vers l'aéroport, vous laissant suffisamment de temps pour vous détendre ou faire quelques achats de dernière minute avant votre départ.",
+  "weather": {
+    "temperature": 28,
+    "condition": "Partiellement nuageux",
+    "icon": "03d",
+    "notes": "Météo clémente pour votre départ. Température agréable, mais quelques nuages pourraient être présents."
+  },
+  "reminders": [
+    "Confirmez l'heure limite de check-out à votre hébergement et organisez le stockage de vos bagages si nécessaire.",
+    "Si vous avez loué une voiture, vérifiez l'adresse et les horaires de l'agence de restitution.",
+    "Réservez votre transfert vers JFK à l'avance pour éviter le stress de dernière minute.",
+    "Consultez le statut de votre vol (DL0140) pour d'éventuels retards ou changements de terminal.",
+    "Préparez vos documents de voyage (passeport, billet d'avion) et assurez-vous qu'ils sont facilement accessibles.",
+    "Prévoyez une marge de temps confortable à l'aéroport pour l'enregistrement, la sécurité et les éventuels achats de dernière minute."
+  ],
+  "documents": [],
   "activities": [
     {
       "id": "61eb0857-1f16-4bfb-bb42-e89827181e8e",
       "type": "activity",
-      "title": "Petit-déjeuner & valises",
+      "title": "Petit-déjeuner & Préparation des bagages",
       "time": "09:00:00",
+      "duration": "1h30m",
+      "notes": "Profitez d'un dernier petit-déjeuner tranquille à Jersey City. Organisez vos bagages et préparez-vous pour le check-out (prévu avant 11h00). Vous pouvez demander un late check-out ou un stockage temporaire de vos bagages si nécessaire.",
       "status": "pending",
       "sequence_order": 1,
-      "original_id": "activity-breakfast-packing-20250625",
-      "duration": "1h30",
-      "notes": "Check-out prévu **avant 11h00**",
       "location": {
-        "name": "Jersey City"
-      }
+        "name": "Votre hébergement à Jersey City",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+        "latitude": 40.7178,
+        "longitude": -74.0431
+      },
+      "estimated_cost": 15.00
     },
     {
       "id": "6776b36f-b254-4091-ba54-6da8ad13ff42",
       "type": "activity",
-      "title": "Retour voiture (si applicable)",
+      "title": "Restitution de la voiture de location (si applicable)",
       "time": "10:30:00",
+      "duration": "1h00m",
+      "notes": "Si vous avez loué une voiture, restituez-la à l'agence de location à Jersey City. Alternativement, vous pouvez la restituer directement à l'aéroport JFK pour gagner du temps, mais cela pourrait affecter votre timing de transfert. Vérifiez les conditions de votre contrat de location.",
       "status": "pending",
       "sequence_order": 2,
-      "original_id": "activity-carrental-return-20250625",
-      "duration": "1h30",
-      "notes": "Alternative : retour voiture à JFK directement",
+      "requires_confirmation": true,
       "location": {
-        "name": "Location Jersey City"
-      }
+        "name": "Agence de location de voiture (Jersey City)",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA (point de départ approximatif)",
+        "latitude": 40.7178,
+        "longitude": -74.0431,
+        "venue_type": "Agence de location"
+      },
+      "estimated_cost": 0.00
     },
     {
       "id": "d59e17c4-dca5-4f38-92e3-e9bf7b58c5c6",
       "type": "transport",
-      "title": "Transfert vers JFK",
+      "title": "Transfert vers l'aéroport JFK",
       "time": "12:00:00",
+      "duration": "2h30m",
+      "notes": "Prévoyez un transfert confortable vers l'aéroport JFK. Le trajet dure généralement entre 1h15 et 2h, mais le trafic peut être imprévisible. Un Uber ou un service de navette réservé à l'avance est recommandé. Le coût estimé est d'environ 80-100$ depuis Jersey City.",
       "status": "pending",
       "sequence_order": 3,
-      "original_id": "transport-departure-jfk-20250625",
-      "duration": "2h30",
-      "notes": "Compter 1h15 à 2h selon le trafic",
+      "location": {
+        "name": "De Jersey City à l'aéroport JFK (Terminal 4)",
+        "address": "Jersey City, NJ, USA vers JFK Airport, Queens, NY 11430, USA (Terminal 4)",
+        "latitude": 40.6413,
+        "longitude": -73.7781
+      },
       "transport": {
-        "mode": "Uber or shuttle"
+        "mode": "Uber / Navette",
+        "estimated_cost": 90.00
       }
     },
     {
       "id": "d2b42975-be70-430c-95b1-baab883f6b47",
       "type": "activity",
-      "title": "Dernière pause ou duty-free",
+      "title": "Dernière pause à JFK (Terminal 4)",
       "time": "15:00:00",
+      "duration": "2h00m",
+      "notes": "Après l'enregistrement de vos bagages et le passage de la sécurité, profitez de votre temps libre au Terminal 4 de JFK. Vous pouvez vous détendre, manger un morceau, faire quelques achats de dernière minute au duty-free, ou simplement vous préparer pour votre vol.",
       "status": "pending",
       "sequence_order": 4,
-      "original_id": "activity-airport-freetime-20250625",
-      "duration": "2h",
-      "notes": "Temps libre après enregistrement des bagages",
       "location": {
-        "name": "JFK Terminal 4"
-      }
+        "name": "JFK Terminal 4",
+        "address": "JFK Airport, Queens, NY 11430, USA",
+        "latitude": 40.6413,
+        "longitude": -73.7781,
+        "venue_type": "Terminal d'aéroport"
+      },
+      "estimated_cost": 20.00
     },
     {
       "id": "452605ea-8c96-45fb-b963-a437576aa92c",
       "type": "transport",
       "title": "✈️ Vol retour DL0140 (JFK → BRU)",
       "time": "18:55:00",
+      "duration": "8h00m",
+      "notes": "Embarquement et départ de votre vol retour vers Bruxelles (BRU) avec Delta Air Lines (DL0140). Profitez de votre vol et des souvenirs de votre voyage.",
       "status": "confirmed",
       "sequence_order": 5,
-      "original_id": "transport-flight-jfk-bru-20250625",
-      "notes": "Fin de l’aventure… mais souvenirs infinis 🧳✨",
       "important": true,
+      "location": {
+        "name": "JFK Terminal 4",
+        "address": "JFK Airport, Queens, NY 11430, USA",
+        "latitude": 40.6413,
+        "longitude": -73.7781
+      },
       "transport": {
-        "mode": "Flight",
+        "mode": "Avion",
         "carrier": "Delta Air Lines",
-        "booking_reference": "DL0140"
-      }
+        "flight_number": "DL0140",
+        "departure_time": "18:55:00",
+        "arrival_time": "08:55:00+1"
+      },
+      "estimated_cost": 0.00
+    }
+  ],
+  "travel_essentials": [
+    {
+      "id": "f1g2h3i4-j5k6-l7m8-n9o0-p1q2r3s4t5u6",
+      "name": "Passeport",
+      "category": "Documents & Voyage",
+      "packed": false
+    },
+    {
+      "id": "v7w8x9y0-z1a2-b3c4-d5e6-f7g8h9i0j1k2",
+      "name": "Billet d'avion (numérique ou imprimé)",
+      "category": "Documents & Voyage",
+      "packed": false
+    },
+    {
+      "id": "l3m4n5o6-p7q8-r9s0-t1u2-v3w4x5y6z7a8",
+      "name": "Chargeur de téléphone portable / Adaptateur",
+      "category": "Électronique",
+      "packed": false
+    },
+    {
+      "id": "b9c0d1e2-f3g4-h5i6-j7k8-l9m0n1o2p3q4",
+      "name": "Adaptateur de prise (si nécessaire)",
+      "category": "Électronique",
+      "packed": false
     }
   ],
   "metadata": {
     "created_at": "2025-05-21T09:30:44.524Z",
-    "updated_at": "2025-05-21T09:30:44.524Z",
-    "source": "json_conversion",
-    "version": "1.0",
-    "timezone": "Europe/Paris",
+    "updated_at": "2025-05-21T23:04:12.000Z",
+    "source": "json_enhancement",
+    "version": "1.1",
+    "timezone": "America/New_York",
     "original_filename": "24_25-06.json",
     "additional_data": {
       "practicalActions": [
         {
-          "action": "🚗 Réserver voiture pour le 24 juin",
-          "details": "Location 1 jour, prise et retour à Jersey City **ou** JFK selon ton confort"
+          "action": "🚗 Confirmer la restitution de la voiture de location (si applicable)",
+          "details": "Vérifiez l'heure et le lieu de restitution, ainsi que la politique de carburant."
         },
         {
-          "action": "🎟️ Checker les billets du match EST vs Chelsea",
-          "details": "Bien vérifier le QR code, l’entrée exacte du stade"
+          "action": "🚕 Réserver à l’avance un Uber/Taxi ou une navette pour JFK",
+          "details": "Surtout si vous avez des bagages volumineux ou si vous voyagez en groupe. Indiquez votre heure de prise en charge et votre terminal (Terminal 4)."
         },
         {
-          "action": "⏰ Organiser le timing du retour (24 au soir)",
-          "details": "Fatigue + circulation à anticiper"
-        },
-        {
-          "action": "🧳 Organiser les valises le 25 matin",
-          "details": "Tu peux demander un **late check-out** ou un **stockage temporaire**"
-        },
-        {
-          "action": "🚕 Réserver à l’avance un Uber/Taxi pour JFK",
-          "details": "Depuis Jersey City jusqu’au Terminal 4 JFK (environ \\$80–\\$100 selon l'heure)"
+          "action": "🧳 Organiser les valises et vérifier le poids autorisé",
+          "details": "Évitez les surprises à l'aéroport."
         }
       ],
       "concludingRemarks": [
-        "🥂 Le 24 juin, tu célèbres **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
-        "✈️ Le 25 juin, tu repars **avec l’Amérique dans les yeux et dans la valise.**"
+        "🥂 Le 24 juin, vous avez célébré **deux semaines de découvertes, d’émotions sportives et de souvenirs inoubliables**.",
+        "✈️ Le 25 juin, vous repartez **avec l’Amérique dans les yeux et dans la valise.**"
+      ],
+      "emergency_contacts": [
+        {
+          "name": "Services d'Urgence (USA)",
+          "phone": "911",
+          "notes": "Pour la police, les pompiers ou les urgences médicales. Composez toujours le 911 aux États-Unis."
+        },
+        {
+          "name": "Consulat Général de France à New York",
+          "phone": "+1-212-606-3600",
+          "website": "https://newyork.consulfrance.org/",
+          "notes": "Pour l'assistance consulaire aux citoyens français à New York."
+        }
       ]
     }
   }

@@ -3,127 +3,270 @@
   "trip_id": "6befa61c-dd73-4ac3-9536-8d92eb832005",
   "date": "2025-06-22",
   "title": "Dimanche \"New York Hors-Cadre\" : Bronx + Roosevelt Island",
-  "summary": "explorer des lieux non touristiques, beaux, et culturels",
-  "reminders": [],
+  "summary": "Une journée dédiée à l'exploration de facettes moins touristiques mais culturellement riches de New York, incluant la sérénité des jardins botaniques du Bronx, l'authenticité de la Little Italy locale, et des vues imprenables depuis Roosevelt Island.",
+  "weather": {
+    "temperature": 27,
+    "condition": "Ensoleillé avec quelques nuages",
+    "icon": "02d",
+    "notes": "Journée typique de fin juin à NYC, potentiellement chaude et humide. Prévoyez de l'eau et des vêtements légers."
+  },
+  "reminders": [
+    "Rechargez votre MetroCard/OMNY ou assurez-vous d'avoir une carte de crédit/débit compatible pour les transports en commun.",
+    "Achetez vos billets pour le New York Botanical Garden en ligne à l'avance pour éviter les files d'attente.",
+    "Si vous envisagez le Yankee Stadium Tour, vérifiez les horaires et réservez à l'avance, surtout le week-end.",
+    "Portez des chaussures confortables, car cette journée implique beaucoup de marche et de déplacements.",
+    "N'oubliez pas la crème solaire, un chapeau et des lunettes de soleil pour les activités en extérieur.",
+    "Pensez à prendre une batterie externe pour votre téléphone."
+  ],
+  "documents": [
+    {
+      "file_name": "NYBG_Tickets.pdf",
+      "file_path": "chemin/vers/documents/NYBG_Tickets.pdf",
+      "file_type": "application/pdf"
+    },
+    {
+      "file_name": "NYC_Metro_Map.pdf",
+      "file_path": "chemin/vers/documents/NYC_Metro_Map.pdf",
+      "file_type": "application/pdf"
+    }
+  ],
   "activities": [
     {
       "id": "28bf843e-2dec-409d-921c-2f7d97a410c1",
       "type": "transport",
-      "title": "Départ pour le Bronx",
+      "title": "Départ pour le Bronx (New York Botanical Garden)",
       "time": "09:00:00",
+      "duration": "45m",
+      "notes": "Prenez le PATH depuis Journal Square (Jersey City) jusqu'à Manhattan (station 33rd St ou WTC), puis changez pour le métro (lignes B, D ou 4) jusqu'à la station 'Botanical Garden'. Vérifiez les correspondances sur Google Maps ou l'application MTA.",
       "status": "pending",
       "sequence_order": 1,
-      "original_id": "transport-departure-bronx-20250622",
-      "duration": "45 minutes",
+      "location": {
+        "name": "De l'hébergement à Jersey City au Jardin Botanique de New York",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+        "latitude": 40.7178,
+        "longitude": -74.0431
+      },
       "transport": {
-        "mode": "PATH + Metro"
+        "mode": "PATH + Métro",
+        "carrier": "PATH / MTA NYC Transit",
+        "estimated_cost": 5.65,
+        "notes": "Coût basé sur 1 trajet PATH (~2.75$) et 1 trajet métro (~2.90$ avec OMNY/MetroCard)."
       }
     },
     {
       "id": "13435532-444d-4c43-9fad-8ec95a410192",
       "type": "activity",
-      "title": "🌿 New York Botanical Garden",
+      "title": "🌿 Visite du New York Botanical Garden",
       "time": "10:00:00",
+      "duration": "2h00m",
+      "notes": "Explorez l'un des plus grands jardins botaniques du monde, offrant une évasion paisible de l'agitation de la ville. Ne manquez pas le Conservatoire Enid A. Haupt et le Thain Family Forest. Idéal pour un matin tranquille. Prévoyez d'acheter vos billets en ligne à l'avance pour gagner du temps et potentiellement économiser.",
       "status": "pending",
       "sequence_order": 2,
-      "original_id": "activity-nybg-visit-20250622",
-      "duration": "2h",
-      "notes": "Un des plus grands jardins botaniques du monde, parfait pour un matin tranquille",
       "location": {
-        "name": "Bronx"
-      }
+        "name": "New York Botanical Garden",
+        "address": "2900 Southern Blvd, Bronx, NY 10458, USA",
+        "latitude": 40.8624,
+        "longitude": -73.8824,
+        "website": "https://www.nybg.org/",
+        "venue_type": "Jardin botanique"
+      },
+      "estimated_cost": 30.00
     },
     {
       "id": "5f8aee9b-7098-4105-a690-f43f97fb495a",
       "type": "meal",
-      "title": "🍝 Déjeuner sur Arthur Avenue",
+      "title": "🍝 Déjeuner sur Arthur Avenue (Little Italy du Bronx)",
       "time": "12:00:00",
+      "duration": "1h30m",
+      "notes": "Découvrez l'authentique Little Italy du Bronx. Arthur Avenue est réputée pour son ambiance old-school et ses trattorias italiennes. Suggestions de restaurants : Roberto's Restaurant (pour une expérience plus haut de gamme) ou Mario's Restaurant (plus traditionnel). N'oubliez pas les boulangeries et les marchés locaux.",
       "status": "pending",
       "sequence_order": 3,
-      "original_id": "meal-lunch-arthurave-20250622",
-      "duration": "1h30",
-      "notes": "Ambiance old-school, trattorias et boulangeries italiennes authentiques",
       "location": {
-        "name": "Bronx (Little Italy locale)"
-      }
+        "name": "Arthur Avenue, Bronx (Little Italy)",
+        "address": "2344 Arthur Ave, Bronx, NY 10458, USA (adresse approximative du cœur du quartier)",
+        "latitude": 40.8587,
+        "longitude": -73.8833,
+        "venue_type": "Quartier gastronomique"
+      },
+      "transport": {
+        "mode": "Marche / Taxi local",
+        "notes": "Arthur Avenue est à une courte distance en taxi ou à 15-20 minutes à pied du Jardin Botanique."
+      },
+      "estimated_cost": 40.00
     },
     {
       "id": "d50d8259-a5f4-49eb-b803-35dbb7caaafc",
       "type": "activity",
       "title": "⚾ Yankee Stadium Tour (optionnel)",
       "time": "14:00:00",
+      "duration": "1h30m",
+      "notes": "Pour les amateurs de sport ou d'histoire américaine. Visitez ce stade emblématique, domicile des New York Yankees. Vérifiez les horaires des visites guidées et réservez en ligne, surtout un dimanche, car les places peuvent être limitées.",
       "status": "pending",
       "sequence_order": 4,
-      "original_id": "activity-yankeestadium-tour-20250622",
-      "duration": "1h30",
-      "notes": "Idéal si amateurs de sport ou de légendes américaines",
+      "requires_confirmation": true,
       "location": {
-        "name": "Bronx"
-      }
+        "name": "Yankee Stadium",
+        "address": "1 E 161st St, Bronx, NY 10451, USA",
+        "latitude": 40.8292,
+        "longitude": -73.9262,
+        "website": "https://www.mlb.com/yankees/ballpark/tours",
+        "venue_type": "Stade de baseball"
+      },
+      "transport": {
+        "mode": "Métro / Marche",
+        "notes": "Accessible en métro (lignes B, D ou 4) depuis Arthur Avenue ou en taxi. Environ 15-20 min de métro."
+      },
+      "estimated_cost": 35.00
     },
     {
       "id": "80551e6e-0a96-4da5-9871-064f64effdaf",
       "type": "transport",
-      "title": "Métro vers Midtown Est",
+      "title": "Métro du Bronx vers Midtown East (Téléphérique Roosevelt Island)",
       "time": "15:30:00",
+      "duration": "45m",
+      "notes": "Prenez le métro (lignes 4, 5 ou 6) depuis le Bronx (par exemple, station 161 St-Yankee Stadium si vous avez fait le tour, ou depuis une station plus au sud si non) jusqu'à la station 'Lexington Av / 59 St' à Midtown East, où se trouve le départ du téléphérique de Roosevelt Island.",
       "status": "pending",
       "sequence_order": 5,
-      "original_id": "transport-metro-midtown-20250622",
-      "duration": "45 minutes",
+      "location": {
+        "name": "De Yankee Stadium/Bronx à la station de téléphérique Roosevelt Island",
+        "address": "591 E 59th St, New York, NY 10022, USA (départ du téléphérique)",
+        "latitude": 40.7583,
+        "longitude": -73.9632
+      },
       "transport": {
-        "mode": "Metro"
+        "mode": "Métro",
+        "carrier": "MTA NYC Transit",
+        "estimated_cost": 2.90
       }
     },
     {
       "id": "d4e9da2a-f9f7-4b5c-915b-9e4c206655e0",
       "type": "activity",
-      "title": "🚡 Roosevelt Island en téléphérique",
+      "title": "🚡 Découverte de Roosevelt Island en téléphérique",
       "time": "16:30:00",
+      "duration": "1h30m",
+      "notes": "Empruntez le téléphérique de Roosevelt Island pour une traversée spectaculaire offrant des vues aériennes uniques sur l’East River, le Queensboro Bridge et le skyline de Manhattan. Une fois sur l'île, baladez-vous au calme vers le Franklin D. Roosevelt Four Freedoms Park au sud ou le phare au nord, et profitez de la tranquillité.",
       "status": "pending",
       "sequence_order": 6,
-      "original_id": "activity-rooseveltisland-tramway-20250622",
-      "duration": "1h30",
-      "notes": "Vue aérienne unique sur l’East River, balade au calme",
+      "location": {
+        "name": "Roosevelt Island Tramway & Roosevelt Island",
+        "address": "591 E 59th St, New York, NY 10022, USA (départ du téléphérique)",
+        "latitude": 40.7583,
+        "longitude": -73.9632,
+        "website": "https://rioc.ny.gov/302/Tramway",
+        "venue_type": "Ile / Attraction touristique"
+      },
       "transport": {
-        "mode": "Tramway"
-      }
+        "mode": "Téléphérique",
+        "notes": "Le téléphérique est accessible avec une MetroCard/OMNY, comme un trajet de métro standard."
+      },
+      "estimated_cost": 2.90
     },
     {
       "id": "11d65d4d-2fe7-4412-bb16-e286dbc466b5",
       "type": "meal",
       "title": "🍽️ Dîner sur Roosevelt Island ou à Long Island City",
       "time": "18:00:00",
+      "duration": "1h30m",
+      "notes": "Profitez d'une ambiance élégante et potentiellement d'un coucher de soleil. Le Panorama Room rooftop sur Roosevelt Island offre une vue incroyable sur la skyline. Alternativement, de nombreux restaurants à Long Island City (juste de l'autre côté de l'eau, accessible via le pont ou le métro) proposent une grande variété de cuisines et sont parfaits pour le dîner.",
       "status": "pending",
       "sequence_order": 7,
-      "original_id": "meal-dinner-rooseveltisland-20250622",
-      "duration": "1h30",
-      "notes": "Ambiance élégante, coucher de soleil tranquille",
       "location": {
-        "name": "Ex : Panorama Room rooftop (vue skyline)"
-      }
+        "name": "Panorama Room (Roosevelt Island) ou Long Island City",
+        "address": "455 Main St, Roosevelt Island, NY 10044, USA (Panorama Room)",
+        "latitude": 40.7629,
+        "longitude": -73.9510,
+        "website": "https://panoramaroom.com/",
+        "venue_type": "Restaurant / Bar rooftop"
+      },
+      "transport": {
+        "mode": "Marche / Téléphérique / Métro",
+        "notes": "Le Panorama Room est à quelques minutes à pied de la station de téléphérique sur Roosevelt Island. Pour Long Island City, prenez le F train depuis Roosevelt Island."
+      },
+      "estimated_cost": 70.00
     },
     {
       "id": "0886238c-9542-4fe9-82b1-bde3b056a74c",
       "type": "transport",
       "title": "Retour à Jersey City",
       "time": "19:30:00",
+      "duration": "1h00m",
+      "notes": "Depuis Roosevelt Island (ou Long Island City), retournez à Manhattan via le métro (ligne F depuis Roosevelt Island, ou E/M/R/N/W depuis LIC). De Manhattan, reprenez le PATH jusqu'à Journal Square ou la station la plus proche de votre hébergement à Jersey City.",
       "status": "pending",
       "sequence_order": 8,
-      "original_id": "transport-return-jerseycity-20250622",
-      "duration": "1h",
-      "notes": "Trajet direct vers Journal Square",
+      "location": {
+        "name": "De Roosevelt Island à l'hébergement à Jersey City",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+        "latitude": 40.7178,
+        "longitude": -74.0431
+      },
       "transport": {
-        "mode": "Tramway + Metro + PATH"
+        "mode": "Téléphérique + Métro + PATH",
+        "carrier": "MTA NYC Transit / PATH",
+        "estimated_cost": 5.65,
+        "notes": "Le trajet peut être long, assurez-vous d'avoir suffisamment de crédit sur votre MetroCard/OMNY ou un pass journalier si vous en utilisez un."
       }
+    }
+  ],
+  "travel_essentials": [
+    {
+      "id": "abc1d2e3-f4a5-b6c7-d8e9-f0a1b2c3d4e5",
+      "name": "MetroCard ou carte de crédit/débit OMNY compatible",
+      "category": "Transport",
+      "packed": false
+    },
+    {
+      "id": "def6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+      "name": "Chaussures de marche confortables",
+      "category": "Vêtements",
+      "packed": false
+    },
+    {
+      "id": "u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6",
+      "name": "Crème solaire et lunettes de soleil",
+      "category": "Santé & Sécurité",
+      "packed": false
+    },
+    {
+      "id": "k7l8m9n0-o1p2-q3r4-s5t6-u7v8w9x0y1z2",
+      "name": "Bouteille d'eau réutilisable",
+      "category": "Santé & Sécurité",
+      "packed": false
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      "name": "Batterie externe pour téléphone",
+      "category": "Électronique",
+      "packed": false
     }
   ],
   "metadata": {
     "created_at": "2025-05-21T09:30:44.509Z",
-    "updated_at": "2025-05-21T09:30:44.509Z",
-    "source": "json_conversion",
-    "version": "1.0",
-    "timezone": "Europe/Paris",
+    "updated_at": "2025-05-21T22:55:55.000Z",
+    "source": "json_enhancement",
+    "version": "1.1",
+    "timezone": "America/New_York",
     "original_filename": "22-06.json",
-    "additional_data": {}
+    "additional_data": {
+      "tips": [
+        "Pour optimiser les déplacements, utilisez Google Maps ou l'application MTA (MyMTA) pour les itinéraires en temps réel.",
+        "Le New York Pass ou d'autres pass touristiques peuvent inclure l'entrée au Jardin Botanique, vérifiez si cela est avantageux pour votre séjour global.",
+        "Le dimanche, les transports peuvent être moins fréquents ou subir des travaux, vérifiez les avis de service de la MTA.",
+        "N'hésitez pas à demander de l'aide aux locaux si vous êtes perdu ou avez besoin de recommandations, les New-Yorkais sont souvent serviables."
+      ],
+      "emergency_contacts": [
+        {
+          "name": "Services d'Urgence (USA)",
+          "phone": "911",
+          "notes": "Pour la police, les pompiers ou les urgences médicales. Composez toujours le 911 aux États-Unis."
+        },
+        {
+          "name": "Consulat Général de France à New York",
+          "phone": "+1-212-606-3600",
+          "website": "https://newyork.consulfrance.org/",
+          "notes": "Pour l'assistance consulaire aux citoyens français à New York."
+        }
+      ]
+    }
   }
 }

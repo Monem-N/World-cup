@@ -2,101 +2,237 @@
   "id": "ad168299-f2ac-4c52-ae50-67163c18d178",
   "trip_id": "a95a3b03-b1fd-420b-a22f-253361cc0e1e",
   "date": "2025-06-23",
-  "title": "Hoboken + Weehawken + Jersey waterfront chill",
-  "summary": "",
-  "reminders": [],
+  "title": "Hoboken & Weehawken : Détente sur le Waterfront du New Jersey",
+  "summary": "Profitez d'une journée relaxante et pittoresque en explorant Hoboken et Weehawken. Au programme : brunch local, balade sur le front de mer avec des vues imprenables sur Manhattan, et dîner au bord de l'eau dans une ambiance décontractée.",
+  "weather": {
+    "temperature": 26,
+    "condition": "Ensoleillé",
+    "icon": "01d",
+    "notes": "Journée agréable et ensoleillée attendue. Idéal pour les balades en bord de l'eau. Prévoyez des protections solaires."
+  },
+  "reminders": [
+    "Portez des chaussures confortables pour la marche le long du waterfront et dans les parcs.",
+    "Si vous choisissez un brunch populaire, envisagez de réserver à l'avance, surtout un dimanche.",
+    "Vérifiez les horaires et les arrêts des bus locaux (NJ Transit) si vous prévoyez de les utiliser entre Hoboken et Weehawken/Jersey City Heights.",
+    "N'oubliez pas votre appareil photo ou votre téléphone pour capturer les vues magnifiques sur Manhattan."
+  ],
+  "documents": [],
   "activities": [
     {
       "id": "96c9e0aa-ff97-4b0f-b750-01521731c39b",
       "type": "meal",
       "title": "Brunch à Hoboken",
       "time": "10:00:00",
+      "duration": "1h30m",
+      "notes": "Débutez la journée avec un brunch dans une ambiance locale, chic et détendue. Anthony David’s est réputé pour son brunch italien raffiné, tandis que La Isla offre des saveurs cubaines authentiques. Réservation fortement recommandée le dimanche.",
       "status": "pending",
       "sequence_order": 1,
-      "original_id": "meal-brunch-hoboken-20250623",
-      "duration": "1h30",
-      "notes": "Ambiance locale, chic et détendue",
       "location": {
-        "name": "Anthony David’s, La Isla"
-      }
+        "name": "Anthony David’s ou La Isla (Hoboken)",
+        "address": "953 Bloomfield St, Hoboken, NJ 07030 (Anthony David’s) ou 104 Washington St, Hoboken, NJ 07030 (La Isla)",
+        "latitude": 40.7505,
+        "longitude": -74.0270,
+        "contact": "+1-201-222-8399 (Anthony David’s)",
+        "website": "https://anthonydavids.com/",
+        "venue_type": "Restaurant"
+      },
+      "transport": {
+        "mode": "Marche",
+        "notes": "Facilement accessible à pied depuis votre hébergement à Jersey City si proche de la limite Hoboken/JC, ou un court trajet en VTC."
+      },
+      "estimated_cost": 40.00
     },
     {
       "id": "38c0bb2e-82c9-4177-a896-b0e5f0e69f8e",
       "type": "activity",
       "title": "Balade sur le Hoboken Waterfront Walkway",
       "time": "11:30:00",
+      "duration": "1h30m",
+      "notes": "Profitez d'une balade paisible le long du front de mer de Hoboken. La promenade offre des vues époustouflantes et ininterrompues sur le skyline de Manhattan et l'Hudson River. Parfait pour des photos, la détente ou une pause lecture au bord de l'eau.",
       "status": "pending",
       "sequence_order": 2,
-      "original_id": "activity-hoboken-waterfront-stroll-20250623",
-      "duration": "1h30",
-      "notes": "Vue époustouflante sur Manhattan. Parfait pour photos, détente, pause lecture",
       "location": {
-        "name": "Hoboken Waterfront Walkway"
-      }
+        "name": "Hoboken Waterfront Walkway (autour de Pier A Park)",
+        "address": "100 Sinatra Dr, Hoboken, NJ 07030 (Pier A Park)",
+        "latitude": 40.7381,
+        "longitude": -74.0298,
+        "venue_type": "Sentier pédestre / Parc"
+      },
+      "transport": {
+        "mode": "Marche",
+        "notes": "La promenade est directement accessible depuis le centre d'Hoboken."
+      },
+      "estimated_cost": 0.00
     },
     {
       "id": "55e36cf4-1b3a-4ffb-bbed-e29074cf80c7",
       "type": "meal",
-      "title": "Déjeuner léger ou café",
-      "time": "13:00:00",
+      "title": "Déjeuner léger ou café au Blue Eyes Café",
+      "time": "13:30:00",
+      "duration": "1h30m",
+      "notes": "Profitez d'un déjeuner léger ou d'un café au Blue Eyes Café, un spot prisé avec une vue imprenable sur la skyline de Manhattan. Ils proposent des pizzas, des pâtes et des desserts dans une ambiance décontractée.",
       "status": "pending",
       "sequence_order": 3,
-      "original_id": "meal-lunch-blueeyescafe-20250623",
-      "duration": "1h30",
-      "notes": "Option pizza, pasta, dessert avec vue",
       "location": {
-        "name": "Blue Eyes Café (vue sur skyline)"
+        "name": "Blue Eyes Café",
+        "address": "525 Sinatra Dr, Hoboken, NJ 07030, USA",
+        "latitude": 40.7410,
+        "longitude": -74.0290,
+        "contact": "+1-201-683-6861",
+        "website": "https://blueeyesrestaurant.com/",
+        "venue_type": "Café / Restaurant"
+      },
+      "transport": {
+        "mode": "Marche",
+        "notes": "Situé directement sur le Waterfront Walkway à Hoboken."
+      },
+      "estimated_cost": 25.00
+    },
+    {
+      "id": "e9f0a1b2-c3d4-e5f6-a7b8-c9d0e1f2a3b4",
+      "type": "transport",
+      "title": "Transport Hoboken vers Hamilton Park (Jersey City Heights)",
+      "time": "15:00:00",
+      "duration": "15m",
+      "notes": "Prenez un taxi/VTC ou un bus local (ex: NJ Transit bus 88 ou 89, vérifiez les horaires de dimanche) depuis Hoboken pour rejoindre Hamilton Park. Le trajet est court et offre déjà de belles vues en montant vers les hauteurs de Jersey City.",
+      "status": "pending",
+      "sequence_order": 4,
+      "location": {
+        "name": "De Hoboken à Hamilton Park",
+        "address": "Hoboken, NJ, USA vers 499 Manhattan Ave, Jersey City, NJ 07307, USA",
+        "latitude": 40.7441,
+        "longitude": -74.0324
+      },
+      "transport": {
+        "mode": "Taxi / VTC / Bus",
+        "carrier": "NJ Transit (Bus)",
+        "estimated_cost": 8.00,
+        "notes": "Le coût peut varier entre 5-15$ pour un taxi/VTC ou environ 2$ pour le bus local."
       }
     },
     {
       "id": "5d5075cd-496d-40fb-a29e-8d79568f07ff",
       "type": "activity",
-      "title": "Hamilton Park + Weehawken Viewpoints",
-      "time": "15:00:00",
+      "title": "Hamilton Park & Weehawken Viewpoints",
+      "time": "15:30:00",
+      "duration": "1h30m",
+      "notes": "Explorez Hamilton Park, un petit parc 'suspendu' qui offre une vue panoramique à 180° sur la skyline de Manhattan, incluant l'Empire State Building, le Chrysler Building et le One World Trade Center. C'est l'un des points de vue les plus photographiés de la région. D'autres points de vue le long de Weehawken Blvd valent également le détour.",
       "status": "pending",
-      "sequence_order": 4,
-      "original_id": "activity-hamiltonpark-weehawken-20250623",
-      "duration": "2h",
-      "notes": "Petit parc suspendu avec vue 180° sur l’île",
+      "sequence_order": 5,
       "location": {
-        "name": "Weehawken"
-      }
+        "name": "Hamilton Park",
+        "address": "499 Manhattan Ave, Jersey City, NJ 07307, USA",
+        "latitude": 40.7431,
+        "longitude": -74.0409,
+        "venue_type": "Parc / Point de vue"
+      },
+      "estimated_cost": 0.00
     },
     {
       "id": "c45967b5-fa42-4d7d-9b99-ab17f5140a1e",
       "type": "meal",
       "title": "Apéro / Dîner rooftop ou bord de l’eau",
       "time": "17:00:00",
+      "duration": "1h30m",
+      "notes": "Terminez la journée avec un apéritif ou un dîner décontracté. City Bistro à Hoboken propose un agréable rooftop. Pour une ambiance plus festive en plein air, Pier 13 à Hoboken est un 'biergarten' avec food trucks et une superbe vue sur l'eau, idéal pour un coucher de soleil.",
       "status": "pending",
-      "sequence_order": 5,
-      "original_id": "meal-aperitif-dinner-hoboken-20250623",
-      "duration": "1h30",
-      "notes": "Cocktails en plein air ou food truck festif",
+      "sequence_order": 6,
       "location": {
-        "name": "City Bistro, Pier 13 à Hoboken"
-      }
+        "name": "City Bistro (Hoboken) ou Pier 13 (Hoboken)",
+        "address": "56 14th St, Hoboken, NJ 07030, USA (City Bistro) ou 1301 Sinatra Dr N, Hoboken, NJ 07030, USA (Pier 13)",
+        "latitude": 40.7510,
+        "longitude": -74.0264,
+        "contact": "+1-201-963-8200 (City Bistro)",
+        "website": "https://citybistrohoboken.com/ / http://www.pier13hoboken.com/",
+        "venue_type": "Restaurant / Bar / Biergarten"
+      },
+      "transport": {
+        "mode": "Taxi / VTC / Bus",
+        "notes": "Accessible en taxi/VTC ou bus depuis Hamilton Park vers Hoboken."
+      },
+      "estimated_cost": 60.00
     },
     {
       "id": "6ae7b207-8970-4c28-b741-9927d3d916ec",
       "type": "transport",
       "title": "Retour à Jersey City",
       "time": "19:00:00",
+      "duration": "15m",
+      "notes": "Fin paisible de la journée et retour à votre hébergement. Le trajet est court et facile, soit à pied si votre hébergement est proche du centre d'Hoboken, soit en bus local (NJ Transit bus) si plus éloigné ou si vous préférez ne pas marcher.",
       "status": "pending",
-      "sequence_order": 6,
-      "original_id": "transport-return-jerseycity-20250623",
-      "notes": "Fin paisible de la journée",
+      "sequence_order": 7,
+      "location": {
+        "name": "De Hoboken à l'hébergement à Jersey City",
+        "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+        "latitude": 40.7178,
+        "longitude": -74.0431
+      },
       "transport": {
-        "mode": "Walking or light bus"
+        "mode": "Marche / Bus local",
+        "carrier": "NJ Transit (Bus)",
+        "estimated_cost": 2.00
       }
+    }
+  ],
+  "travel_essentials": [
+    {
+      "id": "e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6",
+      "name": "Chaussures de marche confortables",
+      "category": "Vêtements",
+      "packed": false
+    },
+    {
+      "id": "u7v8w9x0-y1z2-a3b4-c5d6-e7f8g9h0i1j2",
+      "name": "Crème solaire et lunettes de soleil",
+      "category": "Santé & Sécurité",
+      "packed": false
+    },
+    {
+      "id": "k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8",
+      "name": "Batterie externe pour téléphone",
+      "category": "Électronique",
+      "packed": false
+    },
+    {
+      "id": "a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4",
+      "name": "Appareil photo",
+      "category": "Électronique",
+      "packed": false
+    },
+    {
+      "id": "q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0",
+      "name": "Petite bouteille d'eau réutilisable",
+      "category": "Santé & Sécurité",
+      "packed": false
     }
   ],
   "metadata": {
     "created_at": "2025-05-21T09:30:44.520Z",
-    "updated_at": "2025-05-21T09:30:44.520Z",
-    "source": "json_conversion",
-    "version": "1.0",
-    "timezone": "Europe/Paris",
+    "updated_at": "2025-05-21T22:58:03.000Z",
+    "source": "json_enhancement",
+    "version": "1.1",
+    "timezone": "America/New_York",
     "original_filename": "23-06.json",
-    "additional_data": {}
+    "additional_data": {
+      "tips": [
+        "Les vues sur Manhattan sont les meilleures depuis le New Jersey, surtout au lever et au coucher du soleil. Préparez-vous à prendre de superbes photos.",
+        "Hoboken est très agréable à explorer à pied. De nombreux petits commerces et cafés se trouvent le long de Washington Street.",
+        "Le PATH et les bus NJ Transit sont des moyens de transport efficaces entre Jersey City et Hoboken.",
+        "N'hésitez pas à explorer les rues secondaires de Hoboken pour découvrir son architecture charmante et ses boutiques locales."
+      ],
+      "emergency_contacts": [
+        {
+          "name": "Services d'Urgence (USA)",
+          "phone": "911",
+          "notes": "Pour la police, les pompiers ou les urgences médicales. Composez toujours le 911 aux États-Unis."
+        },
+        {
+          "name": "Consulat Général de France à New York",
+          "phone": "+1-212-606-3600",
+          "website": "https://newyork.consulfrance.org/",
+          "notes": "Pour l'assistance consulaire aux citoyens français à New York."
+        }
+      ]
+    }
   }
 }
