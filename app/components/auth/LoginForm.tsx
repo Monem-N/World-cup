@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router';
 import { signIn, signInWithMagicLink } from '../../api/authApi';
 import { useAuth } from '../../api/authContext';
 import { Button } from '../ui/button';

@@ -1,5 +1,5 @@
-import { Outlet, redirect } from "react-router-dom";
-import type { LoaderFunctionArgs } from "react-router-dom";
+import { Outlet, redirect } from "react-router";
+import type { LoaderFunctionArgs } from "react-router";
 import { PageLayout } from "~/components/layout/PageLayout";
 import { isAuthenticated } from "~/api/authApi";
 

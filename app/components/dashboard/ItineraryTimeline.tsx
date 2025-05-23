@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import type { ItineraryDay, TripEvent } from '../../lib/types';
 import { Timeline, TimelineItem } from '../ui/timeline';
 // Uncomment when i18n is implemented

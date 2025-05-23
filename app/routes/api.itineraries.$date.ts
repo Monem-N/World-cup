@@ -2,7 +2,7 @@
  * API route for getting itinerary data for a specific date
  */
 
-import type { LoaderFunctionArgs } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router';
 import { loadStandardizedItineraryRaw } from '~/server/itineraryServer';
 
 // Helper function to create JSON responses

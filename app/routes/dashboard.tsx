@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, redirect } from 'react-router-dom';
-import { Outlet, useLocation } from 'react-router-dom';
-import type { LoaderFunctionArgs } from 'react-router-dom';
+import { useNavigate, redirect } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
+import type { LoaderFunctionArgs } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useTripInfo } from '../lib/tripContext';
 import type { TripInformation } from '../lib/types';
