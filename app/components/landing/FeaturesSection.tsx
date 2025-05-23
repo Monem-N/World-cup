@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Trophy, Calendar, MapPin, Users, Target, BarChart3, Star, Heart, Shield } from "lucide-react";
+import { Trophy, Calendar, Users, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 // Background pattern component
 const FootballPattern = () => {
@@ -20,9 +20,26 @@ const FootballPattern = () => {
 };
 
 // Animated card component
-const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
+interface FeatureCardProps {
+  feature: {
+    icon: React.ComponentType<{ className?: string }>;
+    titleKey: string;
+    defaultTitle: string;
+    descriptionKey: string;
+    defaultDescription: string;
+    gradient: { from: string; to: string };
+    accentColor: string;
+    stats: string[];
+  };
+  index: number;
+  isHovered: boolean;
+  onHover: (index: number) => void;
+  onLeave: () => void;
+}
+
+const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }: FeatureCardProps) => {
   const { t } = useTranslation();
-  
+
   return (
     <motion.div
       className="group relative overflow-hidden"
@@ -37,7 +54,7 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
       <motion.div
         className="relative h-full p-8 rounded-3xl border border-white/10 backdrop-blur-xl transition-all duration-500"
         style={{
-          background: isHovered 
+          background: isHovered
             ? `linear-gradient(135deg, ${feature.gradient.from}, ${feature.gradient.to})`
             : 'rgba(255, 255, 255, 0.05)'
         }}
@@ -47,39 +64,39 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
         <motion.div
           className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10"
           style={{ background: feature.accentColor }}
-          animate={{ 
+          animate={{
             scale: isHovered ? [1, 1.2, 1] : 1,
-            rotate: isHovered ? [0, 180, 360] : 0 
+            rotate: isHovered ? [0, 180, 360] : 0
           }}
           transition={{ duration: 2, repeat: isHovered ? Infinity : 0 }}
         />
-        
+
         {/* Icon container with floating effect */}
         <motion.div
           className="relative z-10 mb-6"
-          animate={{ 
+          animate={{
             y: isHovered ? [-5, 5, -5] : 0,
           }}
           transition={{ duration: 2, repeat: isHovered ? Infinity : 0, ease: "easeInOut" }}
         >
-          <div 
+          <div
             className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl"
-            style={{ 
+            style={{
               background: `linear-gradient(135deg, ${feature.gradient.from}, ${feature.gradient.to})`,
               boxShadow: `0 10px 30px ${feature.accentColor}40`
             }}
           >
             <feature.icon className="w-8 h-8 text-white" />
           </div>
-          
+
           {/* Floating particles around icon */}
           {isHovered && [...Array(6)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 rounded-full"
               style={{ backgroundColor: feature.accentColor }}
-              initial={{ 
-                x: 32, y: 32, scale: 0, opacity: 0 
+              initial={{
+                x: 32, y: 32, scale: 0, opacity: 0
               }}
               animate={{
                 x: 32 + Math.cos(i * 60 * Math.PI / 180) * 40,
@@ -99,15 +116,15 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
 
         {/* Content */}
         <div className="relative z-10">
-          <motion.h3 
+          <motion.h3
             className="text-2xl font-bold text-white mb-4"
             animate={{ scale: isHovered ? 1.05 : 1 }}
             transition={{ duration: 0.3 }}
           >
             {t(feature.titleKey, feature.defaultTitle)}
           </motion.h3>
-          
-          <motion.p 
+
+          <motion.p
             className="text-gray-200 leading-relaxed mb-6"
             animate={{ opacity: isHovered ? 1 : 0.8 }}
           >
@@ -123,7 +140,7 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
           >
             {feature.stats.map((stat, statIndex) => (
               <div key={statIndex} className="flex items-center space-x-1 text-gray-300">
-                <div 
+                <div
                   className="w-2 h-2 rounded-full"
                   style={{ backgroundColor: feature.accentColor }}
                 />
@@ -136,7 +153,7 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
         {/* Hover glow effect */}
         <motion.div
           className="absolute inset-0 rounded-3xl opacity-0 pointer-events-none"
-          style={{ 
+          style={{
             boxShadow: `0 0 50px ${feature.accentColor}30, inset 0 0 50px ${feature.accentColor}10`
           }}
           animate={{ opacity: isHovered ? 1 : 0 }}
@@ -149,7 +166,7 @@ const FeatureCard = ({ feature, index, isHovered, onHover, onLeave }) => {
 
 export function FeaturesSection() {
   const { t } = useTranslation();
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const features = [
     {
@@ -182,7 +199,7 @@ export function FeaturesSection() {
       accentColor: '#f59e0b',
       stats: ['30 Matchs/Saison', 'Résultats Live', 'Notifications']
     }/*,
-    
+
     {
       icon: BarChart3,
       titleKey: 'landing.feature4Title',
@@ -216,13 +233,13 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section 
-      className="relative py-24 md:py-32 bg-gradient-to-br from-black via-red-950 to-yellow-900 overflow-hidden"
+    <section
+      className="relative py-section bg-gradient-features overflow-hidden"
       aria-labelledby="features-heading"
     >
       {/* Background elements */}
       <FootballPattern />
-      
+
       {/* Animated background shapes */}
       <div className="absolute inset-0">
         {[...Array(8)].map((_, i) => (
@@ -234,7 +251,7 @@ export function FeaturesSection() {
               height: Math.random() * 200 + 100,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: i % 2 === 0 ? '#dc2626' : '#fbbf24'
+              background: i % 2 === 0 ? 'var(--animation-color-primary)' : 'var(--animation-color-secondary)'
             }}
             animate={{
               scale: [1, 1.2, 1],
@@ -267,16 +284,16 @@ export function FeaturesSection() {
             <Shield className="w-5 h-5 text-yellow-400" />
             <span className="text-yellow-400 font-semibold">Excellence Sportive</span>
           </motion.div>
-          
-          <h2 
-            id="features-heading" 
+
+          <h2
+            id="features-heading"
             className="text-4xl md:text-6xl font-black tracking-tight text-center mb-6"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400">
               {t('landing.features', 'Univers Taraji')}
             </span>
           </h2>
-          
+
           <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
@@ -284,7 +301,7 @@ export function FeaturesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Plongez dans l'univers complet d'Espérance Sportive de Tunis avec des fonctionnalités 
+            Plongez dans l'univers complet d'Espérance Sportive de Tunis avec des fonctionnalités
             exclusives conçues pour les vrais supporters taraji.
           </motion.p>
         </motion.div>
@@ -313,7 +330,7 @@ export function FeaturesSection() {
         >
           <motion.div
             className="inline-flex items-center space-x-4 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full px-8 py-4 text-white font-bold text-lg shadow-2xl"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(220, 38, 38, 0.3)"
             }}

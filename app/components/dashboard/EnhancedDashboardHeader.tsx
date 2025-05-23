@@ -54,7 +54,7 @@ export function EnhancedDashboardHeader({ overview, tripStartDate, daysLeft }: E
   };
 
   return (
-    <Card className="border-0 shadow-md bg-gradient-to-r from-primary/5 to-secondary/5">
+    <Card className="border-0 shadow-md bg-gradient-card">
       <CardHeader className="pb-2">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div>

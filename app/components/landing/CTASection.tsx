@@ -4,15 +4,14 @@ import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { 
-  Heart, 
-  Users, 
-  Star, 
-  Trophy, 
-  Zap, 
+import {
+  Heart,
+  Users,
+  Star,
+  Trophy,
+  Zap,
   ArrowRight,
-  Flame,
-  Target
+  Flame
 } from "lucide-react";
 
 // Animated stadium crowd effect
@@ -29,11 +28,11 @@ const StadiumCrowd = () => {
           <motion.div
             key={i}
             className="flex-1 bg-gradient-to-t from-red-900/80 to-yellow-600/60 min-h-[20px]"
-            style={{ 
+            style={{
               height: `${Math.random() * 60 + 20}px`,
               transformOrigin: 'bottom'
             }}
-            animate={{ 
+            animate={{
               scaleY: [1, 1.2, 1],
               opacity: [0.6, 1, 0.6]
             }}
@@ -53,7 +52,7 @@ const StadiumCrowd = () => {
 // Floating chant bubbles
 const ChantBubbles = () => {
   const chants = ["TARAJI!", "ALLEZ!", "EST!", "ROUGE ET OR!", "CHAMPION!"];
-  
+
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {chants.map((chant, i) => (
@@ -95,7 +94,7 @@ const EnergyRings = () => {
           key={i}
           className="absolute rounded-full border-2 border-yellow-400/30"
           initial={{ scale: 0, opacity: 1 }}
-          animate={{ 
+          animate={{
             scale: [0, 2, 3],
             opacity: [1, 0.5, 0]
           }}
@@ -116,23 +115,29 @@ const EnergyRings = () => {
 };
 
 // Statistics counter animation
-const StatCounter = ({ end, label, duration = 2 }) => {
+interface StatCounterProps {
+  end: number;
+  label: string;
+  duration?: number;
+}
+
+const StatCounter = ({ end, label, duration = 2 }: StatCounterProps) => {
   const [count, setCount] = useState(0);
-  
+
   useEffect(() => {
-    let startTime = null;
-    const animate = (currentTime) => {
+    let startTime: number | null = null;
+    const animate = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
       setCount(Math.floor(progress * end));
-      
+
       if (progress < 1) {
         requestAnimationFrame(animate);
       }
     };
     requestAnimationFrame(animate);
   }, [end, duration]);
-  
+
   return (
     <motion.div
       className="text-center"
@@ -151,23 +156,17 @@ const StatCounter = ({ end, label, duration = 2 }) => {
 
 export function CTASection() {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
-    <section 
-      className="relative py-24 md:py-32 bg-gradient-to-br from-black via-red-950 to-black overflow-hidden"
+    <section
+      className="relative py-section bg-gradient-cta overflow-hidden"
       aria-labelledby="cta-heading"
     >
       {/* Animated background elements */}
       <ChantBubbles />
       <EnergyRings />
       <StadiumCrowd />
-      
+
       {/* Dynamic gradient overlay */}
       <motion.div
         className="absolute inset-0 opacity-40"
@@ -187,7 +186,7 @@ export function CTASection() {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          
+
           {/* Pre-header with flame icon */}
           <motion.div
             className="flex items-center justify-center space-x-3 mb-8"
@@ -214,8 +213,8 @@ export function CTASection() {
           </motion.div>
 
           {/* Main headline */}
-          <motion.h2 
-            id="cta-heading" 
+          <motion.h2
+            id="cta-heading"
             className="text-4xl md:text-7xl font-black tracking-tight mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +224,7 @@ export function CTASection() {
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400">
               {t('landing.ctaTitle', 'Rejoins la Légende')}
             </span>
-            <motion.span 
+            <motion.span
               className="block text-3xl md:text-5xl text-white/90 font-light mt-4"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -237,7 +236,7 @@ export function CTASection() {
           </motion.h2>
 
           {/* Description */}
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +300,7 @@ export function CTASection() {
                   <ArrowRight className="w-6 h-6 ml-3 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              
+
               {/* Pulsing ring */}
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-yellow-400/50 -m-2"
@@ -362,8 +361,8 @@ export function CTASection() {
 
       {/* Bottom decorative wave */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg 
-          viewBox="0 0 1200 120" 
+        <svg
+          viewBox="0 0 1200 120"
           className="w-full h-16 fill-current text-red-600/20"
           preserveAspectRatio="none"
         >

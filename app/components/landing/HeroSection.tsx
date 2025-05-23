@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
-import { SparklesIcon, ChartBarIcon, TrophyIcon, PlayIcon } from "@heroicons/react/24/solid";
+import { BarChart3, Trophy, Play } from "lucide-react";
 import { motion } from "framer-motion";
 
 const TRANSLATION_KEYS = {
@@ -86,9 +86,9 @@ export function HeroSection() {
       {/* Animated background elements */}
       <StadiumLights />
       <FloatingParticles />
-      
+
       {/* Dynamic mesh gradient overlay */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 opacity-60"
         style={{
           background: `
@@ -118,7 +118,7 @@ export function HeroSection() {
       />
 
       {/* Stadium crowd silhouette */}
-      <div 
+      <div
         className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent"
         style={{
           clipPath: 'polygon(0 100%, 5% 80%, 15% 85%, 25% 75%, 35% 90%, 45% 70%, 55% 85%, 65% 75%, 75% 90%, 85% 80%, 95% 85%, 100% 100%)'
@@ -127,7 +127,7 @@ export function HeroSection() {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex items-center">
         <div className="max-w-5xl mx-auto text-center">
-          
+
           {/* Team Logo/Badge Animation */}
           <motion.div
             className="mb-8 flex justify-center"
@@ -138,7 +138,7 @@ export function HeroSection() {
             <div className="relative">
               <motion.div
                 className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-red-600 rounded-full flex items-center justify-center shadow-2xl"
-                animate={{ 
+                animate={{
                   boxShadow: [
                     "0 0 20px rgba(255, 215, 0, 0.5)",
                     "0 0 40px rgba(220, 20, 60, 0.8)",
@@ -147,7 +147,7 @@ export function HeroSection() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <TrophyIcon className="w-12 h-12 text-white" />
+                <Trophy className="w-12 h-12 text-white" />
               </motion.div>
               {/* Rotating ring */}
               <motion.div
@@ -173,7 +173,7 @@ export function HeroSection() {
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-red-500 to-yellow-400 drop-shadow-2xl">
                 ESPÉRANCE
               </span>
-              <motion.span 
+              <motion.span
                 className="block text-4xl md:text-6xl text-white/90 font-light mt-2"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -281,11 +281,11 @@ function HeroActions() {
                 ease: "linear",
               }}
             />
-            <PlayIcon className="w-5 h-5 mr-3 relative z-10" />
+            <Play className="w-5 h-5 mr-3 relative z-10" />
             <span className="relative z-10">{t(TRANSLATION_KEYS.GET_STARTED, "Découvrir l'Équipe")}</span>
           </Link>
         </Button>
-        
+
         {/* Glowing ring effect */}
         <motion.div
           className="absolute inset-0 rounded-full border-2 border-yellow-400/50 -m-1"
@@ -315,7 +315,7 @@ function HeroActions() {
           "before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
         )}>
           <Link to="/dashboard">
-            <ChartBarIcon className="w-5 h-5 mr-3 relative z-10 text-yellow-400 group-hover:text-white transition-colors" />
+            <BarChart3 className="w-5 h-5 mr-3 relative z-10 text-yellow-400 group-hover:text-white transition-colors" />
             <span className="relative z-10">{t(TRANSLATION_KEYS.VIEW_DASHBOARD, "Statistiques")}</span>
           </Link>
         </Button>

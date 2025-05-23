@@ -1,0 +1,219 @@
+/* Theme Variables - Centralized theming system */
+
+:root {
+  /* Brand Colors - World Cup Theme */
+  --brand-primary: #dc2626; /* Red */
+  --brand-secondary: #fbbf24; /* Gold/Yellow */
+  --brand-tertiary: #059669; /* Green */
+  --brand-accent: #3b82f6; /* Blue */
+
+  /* Semantic Activity Colors */
+  --activity-transport: var(--brand-accent);
+  --activity-match: var(--brand-tertiary);
+  --activity-meal: var(--brand-secondary);
+  --activity-hotel: #06b6d4; /* Cyan */
+  --activity-default: #6b7280; /* Gray */
+  --activity-weather: var(--activity-default);
+
+  /* UI Component Colors */
+  --countdown-bg: #fed7aa; /* Orange-200 */
+  --countdown-text: #c2410c; /* Orange-700 */
+
+  /* Background Gradients */
+  --gradient-hero-light: linear-gradient(135deg, #000 0%, #7f1d1d 50%, #000 100%);
+  --gradient-cta-light: linear-gradient(135deg, #000 0%, #7f1d1d 25%, #92400e 100%);
+  --gradient-features-light: linear-gradient(135deg, #000 0%, #7f1d1d 25%, #92400e 100%);
+  --gradient-card-light: linear-gradient(135deg, var(--primary)/5 0%, var(--secondary)/5 100%);
+  --gradient-header-light: linear-gradient(90deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);
+
+  /* Animation Colors */
+  --animation-color-primary: var(--brand-primary);
+  --animation-color-secondary: var(--brand-secondary);
+
+  /* Spacing System */
+  --space-section-sm: 4rem;
+  --space-section-md: 6rem;
+  --space-section-lg: 8rem;
+  --space-container-sm: 1rem;
+  --space-container-md: 1.5rem;
+  --space-container-lg: 2rem;
+
+  /* Typography Scale */
+  --text-hero-sm: 2.5rem;
+  --text-hero-md: 3.5rem;
+  --text-hero-lg: 4.5rem;
+  --text-heading-sm: 1.875rem;
+  --text-heading-md: 2.25rem;
+  --text-heading-lg: 3rem;
+
+  /* Animation Timing */
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Shadow System */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 20px var(--brand-primary);
+
+  /* Border Radius System */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  /* Activity Colors - Dark Mode Variants */
+  --activity-transport: #60a5fa; /* Lighter blue */
+  --activity-match: #34d399; /* Lighter green */
+  --activity-meal: #fcd34d; /* Lighter yellow */
+  --activity-hotel: #22d3ee; /* Lighter cyan */
+  --activity-default: #9ca3af; /* Lighter gray */
+  --activity-weather: var(--activity-default);
+
+  /* UI Component Colors - Dark Mode */
+  --countdown-bg: #431407; /* Orange-900 */
+  --countdown-text: #fed7aa; /* Orange-200 */
+
+  /* Background Gradients - Dark Mode */
+  --gradient-hero-light: linear-gradient(135deg, #000 0%, #1f2937 50%, #000 100%);
+  --gradient-cta-light: linear-gradient(135deg, #000 0%, #1f2937 25%, #374151 100%);
+  --gradient-features-light: linear-gradient(135deg, #000 0%, #1f2937 25%, #374151 100%);
+  --gradient-header-light: linear-gradient(90deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);
+
+  /* Animation Colors - Dark Mode */
+  --animation-color-primary: #ef4444; /* Lighter red */
+  --animation-color-secondary: #fbbf24; /* Keep yellow */
+
+  /* Shadow System - Dark Mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  --shadow-glow: 0 0 20px var(--brand-primary);
+}
+
+/* Responsive Spacing */
+@media (min-width: 640px) {
+  :root {
+    --space-section-sm: 5rem;
+    --space-section-md: 7rem;
+    --space-section-lg: 9rem;
+    --space-container-sm: 1.5rem;
+    --space-container-md: 2rem;
+    --space-container-lg: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-section-sm: 6rem;
+    --space-section-md: 8rem;
+    --space-section-lg: 10rem;
+    --space-container-sm: 2rem;
+    --space-container-md: 2.5rem;
+    --space-container-lg: 3rem;
+  }
+}
+
+/* Utility Classes for Theme Variables */
+@layer utilities {
+  /* Activity Type Colors */
+  .text-activity-transport { color: var(--activity-transport); }
+  .text-activity-match { color: var(--activity-match); }
+  .text-activity-meal { color: var(--activity-meal); }
+  .text-activity-hotel { color: var(--activity-hotel); }
+  .text-activity-default { color: var(--activity-default); }
+  .text-activity-weather { color: var(--activity-weather); }
+
+  .bg-activity-transport { background-color: var(--activity-transport); }
+  .bg-activity-match { background-color: var(--activity-match); }
+  .bg-activity-meal { background-color: var(--activity-meal); }
+  .bg-activity-hotel { background-color: var(--activity-hotel); }
+  .bg-activity-default { background-color: var(--activity-default); }
+
+  .border-activity-transport { border-color: var(--activity-transport); }
+  .border-activity-match { border-color: var(--activity-match); }
+  .border-activity-meal { border-color: var(--activity-meal); }
+  .border-activity-hotel { border-color: var(--activity-hotel); }
+  .border-activity-default { border-color: var(--activity-default); }
+
+  /* UI Component Utilities */
+  .bg-countdown { background-color: var(--countdown-bg); }
+  .text-countdown { color: var(--countdown-text); }
+
+  /* Background Gradients */
+  .bg-gradient-hero { background: var(--gradient-hero-light); }
+  .bg-gradient-cta { background: var(--gradient-cta-light); }
+  .bg-gradient-features { background: var(--gradient-features-light); }
+  .bg-gradient-card { background: var(--gradient-card-light); }
+  .bg-gradient-header { background: var(--gradient-header-light); }
+
+  /* Spacing */
+  .py-section-sm { padding-top: var(--space-section-sm); padding-bottom: var(--space-section-sm); }
+  .py-section-md { padding-top: var(--space-section-md); padding-bottom: var(--space-section-md); }
+  .py-section-lg { padding-top: var(--space-section-lg); padding-bottom: var(--space-section-lg); }
+
+  .px-container-sm { padding-left: var(--space-container-sm); padding-right: var(--space-container-sm); }
+  .px-container-md { padding-left: var(--space-container-md); padding-right: var(--space-container-md); }
+  .px-container-lg { padding-left: var(--space-container-lg); padding-right: var(--space-container-lg); }
+
+  /* Typography */
+  .text-hero-sm { font-size: var(--text-hero-sm); }
+  .text-hero-md { font-size: var(--text-hero-md); }
+  .text-hero-lg { font-size: var(--text-hero-lg); }
+  .text-heading-sm { font-size: var(--text-heading-sm); }
+  .text-heading-md { font-size: var(--text-heading-md); }
+  .text-heading-lg { font-size: var(--text-heading-lg); }
+
+  /* Animations */
+  .transition-theme-fast { transition: all var(--duration-fast) var(--ease-smooth); }
+  .transition-theme-normal { transition: all var(--duration-normal) var(--ease-smooth); }
+  .transition-theme-slow { transition: all var(--duration-slow) var(--ease-smooth); }
+  .transition-theme-bounce { transition: all var(--duration-normal) var(--ease-bounce); }
+
+  /* Shadows */
+  .shadow-theme-sm { box-shadow: var(--shadow-sm); }
+  .shadow-theme-md { box-shadow: var(--shadow-md); }
+  .shadow-theme-lg { box-shadow: var(--shadow-lg); }
+  .shadow-theme-xl { box-shadow: var(--shadow-xl); }
+  .shadow-theme-glow { box-shadow: var(--shadow-glow); }
+
+  /* Border Radius */
+  .rounded-theme-xs { border-radius: var(--radius-xs); }
+  .rounded-theme-sm { border-radius: var(--radius-sm); }
+  .rounded-theme-md { border-radius: var(--radius-md); }
+  .rounded-theme-lg { border-radius: var(--radius-lg); }
+  .rounded-theme-xl { border-radius: var(--radius-xl); }
+  .rounded-theme-2xl { border-radius: var(--radius-2xl); }
+  .rounded-theme-full { border-radius: var(--radius-full); }
+}
+
+/* Animation Keyframes using Theme Variables */
+@keyframes theme-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes theme-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes theme-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--brand-primary); }
+  50% { box-shadow: 0 0 20px var(--brand-primary), 0 0 30px var(--brand-primary); }
+}
+
+.animate-theme-pulse { animation: theme-pulse 2s infinite; }
+.animate-theme-bounce { animation: theme-bounce 1s infinite; }
+.animate-theme-glow { animation: theme-glow 2s infinite; }

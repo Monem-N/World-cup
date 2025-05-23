@@ -39,8 +39,8 @@ export default function DashboardHeader({ overview, tripStartDate, daysLeft, t }
         </div>
 
         {tripStartDate && daysLeft != null && daysLeft > 0 && (
-          <div className="mt-4 rounded-md bg-orange-50 px-4 py-2 text-center md:mt-0">
-            <p className="text-sm font-medium text-orange-700">
+          <div className="mt-4 rounded-md bg-countdown px-4 py-2 text-center md:mt-0">
+            <p className="text-sm font-medium text-countdown">
               {t('dashboard.countdown')}
             </p>
             <div className="text-2xl font-bold">

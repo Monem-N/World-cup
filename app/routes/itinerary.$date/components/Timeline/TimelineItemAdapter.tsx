@@ -1,20 +1,13 @@
 import * as React from 'react';
 import { TimelineItem } from '~/components/ui/timeline';
 import type { Activity, TimelineColor } from '~/lib/types';
+import { getActivityTimelineColor } from '~/lib/theme-utils';
 import MapView from '../MapView';
 import TransportInfo from '../TransportInfo';
 
 interface TimelineItemAdapterProps {
   activity: Activity;
 }
-
-const activityTypeToIcon: Record<Activity['type'], TimelineColor> = {
-  transport: 'accent',
-  match: 'primary',
-  meal: 'secondary',
-  hotel: 'muted',
-  activity: 'primary',
-};
 
 export function TimelineItemAdapter({ activity }: TimelineItemAdapterProps) {
   const {
@@ -33,7 +26,7 @@ export function TimelineItemAdapter({ activity }: TimelineItemAdapterProps) {
       data={activity}
       title={title}
       time={time}
-      iconColor={activityTypeToIcon[type]}
+      iconColor={getActivityTimelineColor(type)}
       status={status === 'confirmed' ? 'completed' : status === 'pending' ? 'pending' : 'in-progress'}
       location={location ? {
         name: location.name,
