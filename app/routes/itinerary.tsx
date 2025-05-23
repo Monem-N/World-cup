@@ -1,5 +1,20 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, redirect } from "react-router-dom";
+import type { LoaderFunctionArgs } from "react-router-dom";
 import { PageLayout } from "~/components/layout/PageLayout";
+import { isAuthenticated } from "~/api/authApi";
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const authenticated = await isAuthenticated();
+
+  if (!authenticated) {
+    // Store the attempted location for redirect after login
+    const url = new URL(request.url);
+    const from = encodeURIComponent(url.pathname + url.search);
+    return redirect(`/auth/login?from=${from}`);
+  }
+
+  return null;
+}
 
 export function handle() {
   return {

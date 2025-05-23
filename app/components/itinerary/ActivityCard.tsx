@@ -7,23 +7,37 @@ import {
   ChevronUpIcon,
   CheckCircleIcon,
   CircleIcon,
-  HelpCircleIcon
+  HelpCircleIcon,
+  PencilIcon,
+  TrashIcon,
+  MoreHorizontalIcon
 } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
 import { Badge } from '~/components/ui/badge';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu";
 import { LocationDetails } from './LocationDetails';
 import { TransportDetails } from './TransportDetails';
+import { EditActivityDialog } from '~/components/dialogs/EditActivityDialog';
+import { DeleteConfirmationDialog } from '~/components/dialogs/DeleteConfirmationDialog';
 import type { Activity } from '~/lib/types';
 
 interface ActivityCardProps {
   activity: Activity;
   className?: string;
   onStatusChange?: (id: string, status: Activity['status']) => void;
+  itineraryDate: string;
 }
 
-export function ActivityCard({ activity, className, onStatusChange }: ActivityCardProps) {
+export function ActivityCard({ activity, className, onStatusChange, itineraryDate }: ActivityCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
 
   return (
     <Card className={`w-full overflow-hidden border-l-4 ${getBorderColorForType(activity.type)} ${className}`}>
@@ -52,9 +66,29 @@ export function ActivityCard({ activity, className, onStatusChange }: ActivityCa
           </div>
 
           <div className="flex flex-col items-end gap-2">
-            <Badge variant={getStatusVariant(activity.status)}>
-              {formatStatus(activity.status)}
-            </Badge>
+            <div className="flex items-center gap-2">
+              <Badge variant={getStatusVariant(activity.status)}>
+                {formatStatus(activity.status)}
+              </Badge>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-6 w-6">
+                    <MoreHorizontalIcon className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem onClick={() => setIsEditOpen(true)}>
+                    <PencilIcon className="h-4 w-4 mr-2" />
+                    Edit
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setIsDeleteOpen(true)} className="text-destructive">
+                    <TrashIcon className="h-4 w-4 mr-2" />
+                    Delete
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
 
             {onStatusChange && (
               <div className="flex gap-1 mt-1">
@@ -142,6 +176,22 @@ export function ActivityCard({ activity, className, onStatusChange }: ActivityCa
           )}
         </Button>
       </CardFooter>
+
+      {/* Edit Activity Dialog */}
+      <EditActivityDialog
+        activity={activity}
+        itineraryDate={itineraryDate}
+        open={isEditOpen}
+        onOpenChange={setIsEditOpen}
+      />
+
+      {/* Delete Confirmation Dialog */}
+      <DeleteConfirmationDialog
+        activity={activity}
+        itineraryDate={itineraryDate}
+        open={isDeleteOpen}
+        onOpenChange={setIsDeleteOpen}
+      />
     </Card>
   );
 }

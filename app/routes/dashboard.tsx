@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, redirect } from 'react-router-dom';
 import { Outlet, useLocation } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTripInfo } from '../lib/tripContext';
 import type { TripInformation } from '../lib/types';
 import { PageLayout } from '~/components/layout/PageLayout';
+import { isAuthenticated } from '~/api/authApi';
 
 // UI Components
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/ui/tabs';
@@ -36,6 +38,19 @@ import {
 import { EnhancedDashboardHeader } from '../components/dashboard/EnhancedDashboardHeader';
 import { CountdownTimer } from '../components/dashboard/CountdownTimer';
 import { TripProgressTracker } from '../components/dashboard/TripProgressTracker';
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const authenticated = await isAuthenticated();
+
+  if (!authenticated) {
+    // Store the attempted location for redirect after login
+    const url = new URL(request.url);
+    const from = encodeURIComponent(url.pathname + url.search);
+    return redirect(`/auth/login?from=${from}`);
+  }
+
+  return null;
+}
 
 /**
  * Enhanced Dashboard Page

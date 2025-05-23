@@ -2,11 +2,10 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Import translations - for now we'll use empty objects
-// In a production app, you would import real translation files
-const enCommon = {};
-const arCommon = {};
-const frCommon = {};
+// Import translations
+import enCommon from '../../locales/en/translation.json';
+import arCommon from '../../locales/ar/translation.json';
+import frCommon from '../../locales/fr/translation.json';
 
 // Initialize i18next
 const initI18n = async () => {

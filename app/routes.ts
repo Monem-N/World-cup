@@ -49,6 +49,58 @@ export default [
       }
     ]
   },
+  // Authentication routes with layout
+  {
+    path: "/auth",
+    file: "routes/auth.tsx", // Layout route for authentication
+    children: [
+      {
+        path: "login", // Renders at /auth/login
+        file: "routes/auth.login.tsx",
+      },
+      {
+        path: "register", // Renders at /auth/register
+        file: "routes/auth.register.tsx",
+      },
+      {
+        path: "profile", // Renders at /auth/profile
+        file: "routes/auth.profile.tsx",
+      },
+      {
+        path: "reset-password", // Renders at /auth/reset-password
+        file: "routes/auth.reset-password.tsx",
+      },
+      {
+        path: "callback", // Renders at /auth/callback
+        file: "routes/auth.callback.tsx",
+      },
+    ]
+  },
+  // Venues route
+  {
+    path: "/venues",
+    file: "routes/venues.tsx",
+  },
+  // Teams route
+  {
+    path: "/teams",
+    file: "routes/teams.tsx",
+  },
+  // Settings route
+  {
+    path: "/settings",
+    file: "routes/settings.tsx",
+  },
+
+  // Test routes (for development/testing)
+  {
+    path: "/supabase-test",
+    file: "routes/supabase-test.tsx",
+  },
+  {
+    path: "/auth-test",
+    file: "routes/auth-test.tsx",
+  },
   // API Routes
   {
     path: "/api/itineraries/dates",

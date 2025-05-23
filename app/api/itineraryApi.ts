@@ -1,7 +1,12 @@
 import type { DayProgram, WeatherInfo } from '../lib/types';
 import { supabase } from '../lib/supabase';
-import type { CompleteItineraryDay } from '../../src/types/database.types';
 import { loadStandardizedItinerary, getAvailableDates } from './standardizedItineraryLoader.browser';
+import {
+  getItineraryOffline,
+  saveItineraryOffline,
+  getAvailableDatesOffline,
+  processSyncQueue
+} from './syncUtils';
 
 // Keep the mock data for fallback and testing
 const mockWeatherDay1: WeatherInfo = {
@@ -220,16 +225,54 @@ async function fetchMockDayProgram(date: string): Promise<DayProgram> {
   return date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
 }
 
+/**
+ * Fetches an itinerary for a specific date
+ *
+ * Uses a cascading data source strategy:
+ * 1. Try offline storage first (if offline)
+ * 2. Try standardized files
+ * 3. Try Supabase
+ * 4. Fall back to mock data
+ *
+ * @param date - Date string in YYYY-MM-DD format
+ * @returns Promise resolving to the DayProgram for the specified date
+ */
 export async function fetchItinerary(date: string): Promise<DayProgram> {
   console.log(`Fetching itinerary data for date: ${date}`);
 
   try {
+    // Check if we're offline
+    if (!navigator.onLine) {
+      console.log('Device is offline, checking offline storage...');
+      const offlineData = getItineraryOffline(date);
+
+      if (offlineData) {
+        console.log('Successfully loaded data from offline storage');
+        return offlineData;
+      }
+
+      console.log('No offline data found, falling back to mock data');
+      const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
+      return { ...mockData, _source: 'mock' };
+    }
+
+    // Try to sync any pending changes
+    try {
+      const syncResults = await processSyncQueue();
+      console.log('Sync results:', syncResults);
+    } catch (syncError) {
+      console.warn('Error syncing data:', syncError);
+      // Continue with fetching even if sync fails
+    }
+
     // First, try to load from standardized files
     console.log('Trying to load from standardized files...');
     const standardizedData = await loadStandardizedItinerary(date);
 
     if (standardizedData) {
       console.log('Successfully loaded data from standardized files');
+      // Save to offline storage for future offline access
+      saveItineraryOffline(date, standardizedData);
       return standardizedData;
     }
 
@@ -244,6 +287,14 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
 
     if (daysError) {
       console.warn(`Error querying itinerary days:`, daysError);
+
+      // Check offline storage before falling back to mock data
+      const offlineData = getItineraryOffline(date);
+      if (offlineData) {
+        console.log('Found data in offline storage');
+        return offlineData;
+      }
+
       console.log('Falling back to mock data');
       const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
       return { ...mockData, _source: 'mock' };
@@ -251,6 +302,14 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
 
     if (!days || days.length === 0) {
       console.warn(`No itinerary found for date: ${date}`);
+
+      // Check offline storage before falling back to mock data
+      const offlineData = getItineraryOffline(date);
+      if (offlineData) {
+        console.log('Found data in offline storage');
+        return offlineData;
+      }
+
       console.log('Falling back to mock data');
       const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
       return { ...mockData, _source: 'mock' };
@@ -260,8 +319,26 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
     console.log(`Found itinerary day with ID: ${dayId}`);
 
     try {
-      // Instead of using the RPC function, let's query the data directly
-      console.log('Fetching day details directly...');
+      // Try the RPC function first as it's more efficient
+      console.log('Fetching day details using RPC function...');
+
+      const { data: rpcData, error: rpcError } = await supabase
+        .rpc('get_itinerary_day', { day_id: dayId });
+
+      if (!rpcError && rpcData) {
+        console.log('Successfully fetched data using RPC function');
+
+        // Transform the data to DayProgram format
+        const transformedData = transformSupabaseData(rpcData, date);
+
+        // Save to offline storage
+        saveItineraryOffline(date, transformedData);
+
+        return transformedData;
+      }
+
+      // If RPC fails, fall back to direct queries
+      console.log('RPC function failed, falling back to direct queries...');
 
       // Get the day details
       const { data: dayData, error: dayError } = await supabase
@@ -302,8 +379,6 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
         // Continue without weather data
       }
 
-      // Weather is optional, so we don't throw on error
-
       // Get the reminders
       const { data: remindersData, error: remindersError } = await supabase
         .from('reminders')
@@ -333,13 +408,21 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
 
       if (!combinedData) {
         console.warn('No data returned from direct queries');
+
+        // Check offline storage before falling back to mock data
+        const offlineData = getItineraryOffline(date);
+        if (offlineData) {
+          console.log('Found data in offline storage');
+          return offlineData;
+        }
+
         console.log('Falling back to mock data');
         const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
         return { ...mockData, _source: 'mock' };
       }
 
       // Transform the data from Supabase format to DayProgram format
-      return {
+      const transformedData = {
         date: combinedData.date,
         title: combinedData.title,
         summary: combinedData.summary || '',
@@ -366,77 +449,37 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
           requiresConfirmation: item.requires_confirmation,
           isGroupEvent: item.is_group_event
         })),
-        _source: 'supabase' // Indicate this data came from Supabase
+        _source: 'supabase' as const // Indicate this data came from Supabase
       };
+
+      // Save to offline storage
+      saveItineraryOffline(date, transformedData);
+
+      return transformedData;
     } catch (queryError) {
-      console.error('Error with direct queries:', queryError);
-      console.log('Trying RPC function as fallback...');
+      console.error('Error with queries:', queryError);
 
-      // Try the RPC function as a fallback
-      const { data, error } = await supabase
-        .rpc('get_itinerary_day', { day_id: dayId });
-
-      if (error) {
-        console.warn('Error fetching itinerary day details:', error);
-        console.log('Falling back to mock data');
-        const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
-        return { ...mockData, _source: 'mock' };
+      // Check offline storage before falling back to mock data
+      const offlineData = getItineraryOffline(date);
+      if (offlineData) {
+        console.log('Found data in offline storage');
+        return offlineData;
       }
 
-      if (!data) {
-        console.warn('No data returned from get_itinerary_day function');
-        console.log('Falling back to mock data');
-        const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
-        return { ...mockData, _source: 'mock' };
-      }
-
-      // Return the data from the RPC function
-      return {
-        ...data,
-        _source: 'supabase-rpc'
-      };
+      console.log('Falling back to mock data');
+      const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
+      return { ...mockData, _source: 'mock' };
     }
-
-    // This code is unreachable - we need to remove it
-    // The function will return from either the try block or the catch block above
-    /*
-    console.log('Successfully fetched data from Supabase');
-
-    // Transform the data from Supabase format to DayProgram format
-    const itineraryDay = data as CompleteItineraryDay;
-
-    return {
-      date: itineraryDay.date,
-      title: itineraryDay.title,
-      summary: itineraryDay.summary || '',
-      weather: itineraryDay.weather ? {
-        date: itineraryDay.date,
-        temperature: itineraryDay.weather.temperature,
-        condition: itineraryDay.weather.condition,
-        icon: itineraryDay.weather.icon
-      } : undefined,
-      reminders: itineraryDay.reminders || [],
-      docs: itineraryDay.docs || [],
-      items: itineraryDay.items ? itineraryDay.items.map((item: any) => ({
-        id: item.id,
-        type: item.type,
-        title: item.title,
-        time: item.time,
-        duration: item.duration,
-        location: item.location,
-        transport: item.transport,
-        notes: item.notes,
-        attachments: item.attachments,
-        status: item.status,
-        important: item.important,
-        requiresConfirmation: item.requires_confirmation,
-        isGroupEvent: item.is_group_event
-      })) : [],
-      _source: 'supabase' // Indicate this data came from Supabase
-    };
-    */
   } catch (error) {
     console.error('Error fetching itinerary:', error);
+
+    // Check offline storage before falling back to mock data
+    const offlineData = getItineraryOffline(date);
+    if (offlineData) {
+      console.log('Found data in offline storage');
+      return offlineData;
+    }
+
     console.log('Falling back to mock data');
     const mockData = date === "2025-06-01" ? mockDayProgramDay1 : mockDayProgramDay2;
     return { ...mockData, _source: 'mock' };
@@ -444,12 +487,68 @@ export async function fetchItinerary(date: string): Promise<DayProgram> {
 }
 
 /**
+ * Transforms data from Supabase RPC function to DayProgram format
+ */
+function transformSupabaseData(data: any, date: string): DayProgram {
+  return {
+    date: data.date,
+    title: data.title,
+    summary: data.summary || '',
+    weather: data.weather ? {
+      date: date,
+      temperature: data.weather.temperature,
+      condition: data.weather.condition,
+      icon: data.weather.icon
+    } : undefined,
+    reminders: data.reminders || [],
+    docs: data.docs || [],
+    items: data.activities ? data.activities.map((item: any) => ({
+      id: item.id,
+      type: item.type,
+      title: item.title,
+      time: item.time,
+      duration: item.duration,
+      location: item.location,
+      transport: item.transport,
+      notes: item.notes,
+      attachments: item.attachments ? item.attachments.map((a: any) => a.file_name) : [],
+      status: item.status,
+      important: item.important,
+      requiresConfirmation: item.requires_confirmation,
+      isGroupEvent: item.is_group_event
+    })) : [],
+    _source: 'supabase' as const,
+    _additionalData: data.metadata?.additional_data
+  };
+}
+
+/**
  * Gets all available itinerary dates
+ *
+ * Uses a cascading data source strategy:
+ * 1. Try offline storage first (if offline)
+ * 2. Try standardized files
+ * 3. Try Supabase
+ * 4. Fall back to mock data
  *
  * @returns Promise resolving to an array of date strings in YYYY-MM-DD format
  */
 export async function getAvailableItineraryDates(): Promise<string[]> {
   try {
+    // Check if we're offline
+    if (!navigator.onLine) {
+      console.log('Device is offline, checking offline storage for dates...');
+      const offlineDates = getAvailableDatesOffline();
+
+      if (offlineDates.length > 0) {
+        console.log('Successfully loaded dates from offline storage');
+        return offlineDates;
+      }
+
+      console.log('No offline dates found, falling back to mock dates');
+      return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
+    }
+
     // First, get dates from standardized files
     const standardizedDates = await getAvailableDates();
 
@@ -465,17 +564,379 @@ export async function getAvailableItineraryDates(): Promise<string[]> {
 
     if (error) {
       console.warn('Error fetching dates from Supabase:', error);
+
+      // Check offline storage before falling back to mock dates
+      const offlineDates = getAvailableDatesOffline();
+      if (offlineDates.length > 0) {
+        console.log('Found dates in offline storage');
+        return offlineDates;
+      }
+
       return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
     }
 
     if (!data || data.length === 0) {
       console.warn('No dates found in Supabase');
+
+      // Check offline storage before falling back to mock dates
+      const offlineDates = getAvailableDatesOffline();
+      if (offlineDates.length > 0) {
+        console.log('Found dates in offline storage');
+        return offlineDates;
+      }
+
       return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
     }
 
     return data.map(item => item.date);
   } catch (error) {
     console.error('Error getting available dates:', error);
+
+    // Check offline storage before falling back to mock dates
+    const offlineDates = getAvailableDatesOffline();
+    if (offlineDates.length > 0) {
+      console.log('Found dates in offline storage');
+      return offlineDates;
+    }
+
     return ["2025-06-01", "2025-06-02"]; // Return mock dates as fallback
+  }
+}
+
+/**
+ * Creates a new itinerary day
+ *
+ * @param tripId - The ID of the trip to associate with
+ * @param data - The itinerary data to create
+ * @returns Promise resolving to the created itinerary day
+ */
+export async function createItinerary(tripId: string, data: Partial<DayProgram>): Promise<DayProgram> {
+  try {
+    // Check if we're online
+    if (!navigator.onLine) {
+      throw new Error('Cannot create itinerary while offline');
+    }
+
+    // Generate a UUID for the new itinerary day
+    const dayId = crypto.randomUUID();
+
+    // Insert the itinerary day
+    const { data: dayData, error: dayError } = await supabase
+      .from('itinerary_days')
+      .insert({
+        id: dayId,
+        trip_id: tripId,
+        date: data.date,
+        title: data.title || `Itinerary for ${data.date}`,
+        summary: data.summary || '',
+        source: 'api_creation',
+        version: '1.0',
+        timezone: 'America/New_York',
+        additional_data: {}
+      })
+      .select()
+      .single();
+
+    if (dayError) {
+      throw dayError;
+    }
+
+    // Insert weather if available
+    if (data.weather) {
+      const { error: weatherError } = await supabase
+        .from('weather')
+        .insert({
+          itinerary_day_id: dayId,
+          temperature: data.weather.temperature,
+          condition: data.weather.condition,
+          icon: data.weather.icon
+        });
+
+      if (weatherError) {
+        console.warn('Error creating weather:', weatherError);
+        // Continue without weather
+      }
+    }
+
+    // Insert reminders if available
+    if (data.reminders && data.reminders.length > 0) {
+      const remindersToInsert = data.reminders.map(text => ({
+        itinerary_day_id: dayId,
+        text
+      }));
+
+      const { error: remindersError } = await supabase
+        .from('reminders')
+        .insert(remindersToInsert);
+
+      if (remindersError) {
+        console.warn('Error creating reminders:', remindersError);
+        // Continue without reminders
+      }
+    }
+
+    // Insert activities if available
+    if (data.items && data.items.length > 0) {
+      for (let i = 0; i < data.items.length; i++) {
+        const item = data.items[i];
+
+        // Insert the activity
+        const { data: activityData, error: activityError } = await supabase
+          .from('activities')
+          .insert({
+            id: item.id || crypto.randomUUID(),
+            itinerary_day_id: dayId,
+            type: item.type,
+            title: item.title,
+            time: item.time,
+            duration: item.duration || null,
+            notes: item.notes || null,
+            status: item.status || 'pending',
+            important: item.important || false,
+            requires_confirmation: item.requiresConfirmation || false,
+            is_group_event: item.isGroupEvent || false,
+            sequence_order: i
+          })
+          .select()
+          .single();
+
+        if (activityError) {
+          console.warn('Error creating activity:', activityError);
+          continue; // Skip to the next activity
+        }
+
+        // Insert location if available
+        if (item.location) {
+          const { error: locationError } = await supabase
+            .from('locations')
+            .insert({
+              activity_id: activityData.id,
+              name: item.location.name,
+              address: item.location.address || null,
+              latitude: item.location.lat || 0,
+              longitude: item.location.lng || 0,
+              contact: item.location.contact || null,
+              confirmation_number: item.location.confirmationNumber || null,
+              website: item.location.website || null,
+              map_url: item.location.mapUrl || null,
+              venue_type: item.location.venueType || null
+            });
+
+          if (locationError) {
+            console.warn('Error creating location:', locationError);
+            // Continue without location
+          }
+        }
+
+        // Insert transport details if available
+        if (item.transport) {
+          const { error: transportError } = await supabase
+            .from('transport_details')
+            .insert({
+              activity_id: activityData.id,
+              mode: item.transport.mode,
+              carrier: item.transport.carrier || null,
+              booking_reference: item.transport.bookingReference || null,
+              pickup_time: item.transport.pickup_time || null,
+              pickup_location: item.transport.pickup_location || null,
+              estimated_cost: item.transport.estimated_cost || null,
+              notes: item.transport.notes || null
+            });
+
+          if (transportError) {
+            console.warn('Error creating transport details:', transportError);
+            // Continue without transport details
+          }
+        }
+      }
+    }
+
+    // Fetch the created itinerary
+    return await fetchItinerary(data.date as string);
+  } catch (error) {
+    console.error('Error creating itinerary:', error);
+    throw error;
+  }
+}
+
+/**
+ * Updates an existing itinerary day
+ *
+ * @param date - The date of the itinerary to update
+ * @param data - The updated itinerary data
+ * @returns Promise resolving to the updated itinerary day
+ */
+export async function updateItinerary(date: string, data: Partial<DayProgram>): Promise<DayProgram> {
+  try {
+    // Check if we're online
+    if (!navigator.onLine) {
+      // Save to offline storage and queue for sync
+      const currentData = await fetchItinerary(date);
+      const updatedData = { ...currentData, ...data };
+      saveItineraryOffline(date, updatedData);
+      return updatedData;
+    }
+
+    // Find the itinerary day ID
+    const { data: days, error: daysError } = await supabase
+      .from('itinerary_days')
+      .select('id')
+      .eq('date', date)
+      .limit(1);
+
+    if (daysError) {
+      throw daysError;
+    }
+
+    if (!days || days.length === 0) {
+      throw new Error(`No itinerary found for date: ${date}`);
+    }
+
+    const dayId = days[0].id;
+
+    // Update the itinerary day
+    const { error: updateError } = await supabase
+      .from('itinerary_days')
+      .update({
+        title: data.title,
+        summary: data.summary,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', dayId);
+
+    if (updateError) {
+      throw updateError;
+    }
+
+    // Update weather if available
+    if (data.weather) {
+      // Check if weather exists
+      const { data: existingWeather, error: weatherCheckError } = await supabase
+        .from('weather')
+        .select('id')
+        .eq('itinerary_day_id', dayId)
+        .limit(1);
+
+      if (weatherCheckError) {
+        console.warn('Error checking weather:', weatherCheckError);
+      } else {
+        if (existingWeather && existingWeather.length > 0) {
+          // Update existing weather
+          const { error: weatherUpdateError } = await supabase
+            .from('weather')
+            .update({
+              temperature: data.weather.temperature,
+              condition: data.weather.condition,
+              icon: data.weather.icon,
+              updated_at: new Date().toISOString()
+            })
+            .eq('itinerary_day_id', dayId);
+
+          if (weatherUpdateError) {
+            console.warn('Error updating weather:', weatherUpdateError);
+          }
+        } else {
+          // Insert new weather
+          const { error: weatherInsertError } = await supabase
+            .from('weather')
+            .insert({
+              itinerary_day_id: dayId,
+              temperature: data.weather.temperature,
+              condition: data.weather.condition,
+              icon: data.weather.icon
+            });
+
+          if (weatherInsertError) {
+            console.warn('Error creating weather:', weatherInsertError);
+          }
+        }
+      }
+    }
+
+    // Update reminders if available
+    if (data.reminders) {
+      // Delete existing reminders
+      const { error: deleteRemindersError } = await supabase
+        .from('reminders')
+        .delete()
+        .eq('itinerary_day_id', dayId);
+
+      if (deleteRemindersError) {
+        console.warn('Error deleting reminders:', deleteRemindersError);
+      } else if (data.reminders.length > 0) {
+        // Insert new reminders
+        const remindersToInsert = data.reminders.map(text => ({
+          itinerary_day_id: dayId,
+          text
+        }));
+
+        const { error: remindersInsertError } = await supabase
+          .from('reminders')
+          .insert(remindersToInsert);
+
+        if (remindersInsertError) {
+          console.warn('Error creating reminders:', remindersInsertError);
+        }
+      }
+    }
+
+    // Fetch the updated itinerary
+    return await fetchItinerary(date);
+  } catch (error) {
+    console.error('Error updating itinerary:', error);
+    throw error;
+  }
+}
+
+/**
+ * Deletes an itinerary day
+ *
+ * @param date - The date of the itinerary to delete
+ * @returns Promise resolving to a success message
+ */
+export async function deleteItinerary(date: string): Promise<{ success: boolean, message: string }> {
+  try {
+    // Check if we're online
+    if (!navigator.onLine) {
+      throw new Error('Cannot delete itinerary while offline');
+    }
+
+    // Find the itinerary day ID
+    const { data: days, error: daysError } = await supabase
+      .from('itinerary_days')
+      .select('id')
+      .eq('date', date)
+      .limit(1);
+
+    if (daysError) {
+      throw daysError;
+    }
+
+    if (!days || days.length === 0) {
+      throw new Error(`No itinerary found for date: ${date}`);
+    }
+
+    const dayId = days[0].id;
+
+    // Delete the itinerary day (cascade will delete related records)
+    const { error: deleteError } = await supabase
+      .from('itinerary_days')
+      .delete()
+      .eq('id', dayId);
+
+    if (deleteError) {
+      throw deleteError;
+    }
+
+    return {
+      success: true,
+      message: `Itinerary for ${date} deleted successfully`
+    };
+  } catch (error: any) {
+    console.error('Error deleting itinerary:', error);
+    return {
+      success: false,
+      message: error.message || 'Failed to delete itinerary'
+    };
   }
 }

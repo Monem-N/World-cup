@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLoadScript } from '@react-google-maps/api';
+import type { Libraries } from '@react-google-maps/api';
 
 // Define the libraries we want to load
-const libraries: ("places" | "drawing" | "geometry" | "localContext" | "visualization")[] = ["places"];
+const libraries: Libraries = ['places'] as Libraries;
 
 // Create a context to provide Google Maps loading state
 export const GoogleMapsContext = React.createContext<{

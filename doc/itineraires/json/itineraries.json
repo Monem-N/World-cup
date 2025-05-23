@@ -1,0 +1,3049 @@
+[
+  {
+    "id": "b75fdb9a-58ac-48f0-bce9-f2bf65ef2af5",
+    "trip_id": "8e50b73f-9cb8-42b9-a337-75425ba41bbf",
+    "date": "2025-06-14",
+    "title": "Jour 1 : Arriv\u00e9e et installation",
+    "summary": "Arriv\u00e9e \u00e0 New York et installation \u00e0 l'h\u00e9bergement",
+    "reminders": [
+      "Check-in : Communiquez avec l'h\u00f4te pour confirmer l'arriv\u00e9e et recevoir les instructions.",
+      "R\u00e8glement int\u00e9rieur: Arriv\u00e9e apr\u00e8s 16:00, D\u00e9part avant 11:00.",
+      "Politique d'annulation: Remboursement \u00e0 hauteur de 100% si l'annulation est effectu\u00e9e jusqu'au 31 mai 2025 \u00e0 23 h 59 (heure locale de la propri\u00e9t\u00e9).",
+      "Politique d'annulation: Remboursement \u00e0 hauteur de 50% si l'annulation est effectu\u00e9e jusqu'au 7 juin 2025 \u00e0 23 h 59 (heure locale de la propri\u00e9t\u00e9)."
+    ],
+    "activities": [
+      {
+        "id": "955f49d6-59ea-40f7-9682-b8e3d0bf5f8a",
+        "type": "transport",
+        "title": "D\u00e9part de Bruxelles",
+        "time": "10:45:00",
+        "status": "confirmed",
+        "sequence_order": 1,
+        "original_id": "transport-flight-bru-jfk-20250614",
+        "important": true,
+        "transport": {
+          "mode": "Flight",
+          "carrier": "Delta Airlines",
+          "booking_reference": "TTA4RV",
+          "flight_number": "DL0141",
+          "departure_airport_code": "BRU",
+          "departure_airport_name": "Bruxelles National Airport",
+          "departure_time": "10:45:00",
+          "arrival_airport_code": "JFK",
+          "arrival_airport_name": "New York John F. Kennedy Intl Airport 4",
+          "arrival_time": "13:00:00",
+          "duration_minutes": 135,
+          "class": "L",
+          "cabin": "Main cabin",
+          "status": "OK",
+          "passenger_name": "ABDELMONEME NAIFER",
+          "ticket_number": "057 233 470 143 3",
+          "baggage_allowance": "1x23 Kg",
+          "notes": "Check-in opens 3 hours before departure. Allow extra time for security (EU citizens lane available)."
+        },
+        "location": {
+          "name": "Brussels Airport",
+          "latitude": 50.901,
+          "longitude": 4.4856
+        },
+        "attachments": [
+          {
+            "file_name": "Billet_\u00e9lectronique_airfrance.pdf"
+          }
+        ]
+      },
+      {
+        "id": "b14c938c-a9dd-4b64-8164-2cf69fc38e45",
+        "type": "transport",
+        "title": "Arriv\u00e9e \u00e0 New York",
+        "time": "13:00:00",
+        "status": "confirmed",
+        "sequence_order": 2,
+        "original_id": "transport-arrival-jfk-20250614",
+        "transport": {
+          "mode": "Flight",
+          "flight_number": "DL0141",
+          "arrival_airport_code": "JFK",
+          "arrival_airport_name": "John F. Kennedy Intl Airport 4",
+          "arrival_time": "13:00:00"
+        },
+        "location": {
+          "name": "JFK Airport",
+          "latitude": 40.6413,
+          "longitude": -73.7781
+        }
+      },
+      {
+        "id": "b6b3937a-30d1-43ab-8337-5734ffe5f87c",
+        "type": "activity",
+        "title": "Passage immigration + r\u00e9cup\u00e9ration bagages",
+        "time": "13:30:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "original_id": "activity-immigration-baggage-20250614",
+        "duration": "45m",
+        "notes": "Expect queues at immigration. Have passport and ESTA/visa ready.",
+        "location": {
+          "name": "JFK Airport Immigration",
+          "latitude": 40.6413,
+          "longitude": -73.7781
+        }
+      },
+      {
+        "id": "cf78d6d9-66e4-48c4-9da7-a153d40fd797",
+        "type": "transport",
+        "title": "D\u00e9part vers Jersey City (Uber/Taxi recommand\u00e9)",
+        "time": "14:15:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "original_id": "transport-jfk-jerseycity-20250614",
+        "duration": "1h15m",
+        "transport": {
+          "mode": "Uber / Taxi / Transport en commun",
+          "estimated_cost": 70,
+          "pickup_location": "Follow signs for Ground Transportation at JFK Terminal 4."
+        },
+        "location": {
+          "name": "JFK Airport Ground Transportation",
+          "latitude": 40.6413,
+          "longitude": -73.7781
+        }
+      },
+      {
+        "id": "30f6d768-2547-40df-bb63-a52b5c48a100",
+        "type": "activity",
+        "title": "Arriv\u00e9e et attente pour check-in",
+        "time": "15:45:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "original_id": "activity-arrival-wait-checkin-20250614",
+        "duration": "30m",
+        "notes": "The property check-in is at 16:00. We might arrive slightly early.",
+        "location": {
+          "name": "Jersey City Accommodation",
+          "latitude": 40.7015,
+          "longitude": -74.0807
+        }
+      },
+      {
+        "id": "d8ee3e01-203f-40e0-80e3-4c55be44c99f",
+        "type": "hotel",
+        "title": "Check-in \u00e0 l'h\u00e9bergement",
+        "time": "16:00:00",
+        "status": "pending",
+        "sequence_order": 6,
+        "original_id": "hotel-checkin-20250614",
+        "location": {
+          "name": "Jersey City Accommodation",
+          "latitude": 40.7015,
+          "longitude": -74.0807,
+          "address": "35 Dwight St, Jersey City, NJ 07305, \u00c9tats-Unis"
+        },
+        "notes": "Ensure all 7 adults are registered for check-in. Confirm access code before arrival."
+      },
+      {
+        "id": "4f102a0d-5935-4de7-a360-c55871135af6",
+        "type": "activity",
+        "title": "Installation + d\u00e9tente",
+        "time": "17:00:00",
+        "status": "pending",
+        "sequence_order": 7,
+        "original_id": "activity-installation-relax-20250614",
+        "duration": "2h",
+        "notes": "Time to unpack, relax, and get comfortable after the journey.",
+        "location": {
+          "name": "Jersey City Accommodation",
+          "latitude": 40.7015,
+          "longitude": -74.0807
+        }
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.477Z",
+      "updated_at": "2025-05-21T09:30:44.485Z",
+      "source": "json_conversion",
+      "version": "1.0",
+      "timezone": "Europe/Paris",
+      "original_filename": "14-06.json",
+      "additional_data": {
+        "tips": [
+          "Transport : R\u00e9server \u00e0 l'avance un Uber XL ou un van via app (Uber/Lyft). Ou acheter une MetroCard pour le m\u00e9tro si vous pr\u00e9f\u00e9rez le transport en commun.",
+          "Check-in : Communiquez avec l'h\u00f4te pour confirmer l'arriv\u00e9e et recevoir les instructions.",
+          "Documents : Passeport, ESTA ou visa, confirmation de logement, assurance voyage.",
+          "Paiements : Pr\u00e9voir quelques dollars en esp\u00e8ces + cartes bancaires (Visa, Mastercard, etc.)",
+          "T\u00e9l\u00e9phonie & Internet : Acheter une eSIM ou activer le roaming pour rester connect\u00e9s."
+        ],
+        "day_notes": "A relaxed first day, focusing on settling in and light exploration. Remember to activate eSIM upon arrival and manage transport from JFK.",
+        "day_status": "in_progress",
+        "weather": {
+          "temperature_celsius": null,
+          "temperature_fahrenheit": null,
+          "condition": null,
+          "icon_code": null,
+          "precipitation_chance": null,
+          "humidity": null,
+          "wind_speed_kph": null,
+          "wind_direction": null,
+          "sunrise_time": null,
+          "sunset_time": null
+        },
+        "checklist": [
+          {
+            "item": "Passeport, ESTA ou visa",
+            "is_completed": false
+          },
+          {
+            "item": "Confirmation de logement",
+            "is_completed": false
+          },
+          {
+            "item": "Assurance voyage",
+            "is_completed": false
+          }
+        ],
+        "mapView": {
+          "markers": [
+            {
+              "label": "JFK Airport",
+              "coordinates": {
+                "lat": 40.6413,
+                "lng": -73.7781
+              },
+              "icon": "plane"
+            },
+            {
+              "label": "H\u00e9bergement (Jersey City)",
+              "coordinates": {
+                "lat": 40.7015,
+                "lng": -74.0807
+              },
+              "icon": "hotel"
+            }
+          ],
+          "routeSuggestion": {
+            "mode": "Taxi / Uber",
+            "estimatedTime": "1h15",
+            "googleMapLink": "https://maps.app.goo.gl/EPVhCuftwyMQNqj27 "
+          }
+        },
+        "emergency_info": {
+          "local_emergency_number": "911",
+          "embassy_contact": {
+            "country": "Belgium",
+            "phone": "+1-212-586-8800",
+            "notes": "Consulate General of Belgium in New York"
+          },
+          "travel_insurance_contact": {
+            "provider": "Example Insurance",
+            "phone": "+1-800-123-4567",
+            "policy_number": "POL-XYZ-789"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "c4ba2f1f-486d-416f-b806-fcf5ee67fa29",
+    "trip_id": "17daa515-6832-4fab-b358-ab03cf903f8f",
+    "date": "2025-06-15",
+    "title": "Exploration de Manhattan",
+    "summary": "Une journ\u00e9e compl\u00e8te \u00e0 explorer les sites embl\u00e9matiques de Midtown Manhattan, des biblioth\u00e8ques et mus\u00e9es aux avenues commer\u00e7antes et Times Square.",
+    "reminders": [
+      "Acheter une MetroCard pour le m\u00e9tro/PATH.",
+      "R\u00e9server les billets pour le mus\u00e9e Intrepid en ligne.",
+      "D\u00e9cider entre l'Empire State Building et SUMMIT One Vanderbilt pour les vues du soir.",
+      "V\u00e9rifier l'horaire du ferry pour le retour \u00e0 Jersey City."
+    ],
+    "activities": [
+      {
+        "id": "d028af87-74d3-4f03-b601-aa77f875ff88",
+        "type": "transport",
+        "title": "D\u00e9part pour Manhattan",
+        "time": "08:00:00",
+        "status": "pending",
+        "sequence_order": 1,
+        "original_id": "transport-departure-manhattan-20250615",
+        "transport": {
+          "mode": "Public Transport (PATH train)",
+          "duration_minutes": 15,
+          "pickup_location": "Grove Street PATH Station, Jersey City",
+          "notes": "Train PATH jusqu'\u00e0 33rd Street (Herald Square) ou 14th Street pour un acc\u00e8s facile \u00e0 Midtown."
+        },
+        "location": {
+          "name": "Grove Street PATH Station",
+          "latitude": 40.7196,
+          "longitude": -74.0431,
+          "address": "100 Christopher Columbus Dr, Jersey City, NJ 07302, USA"
+        }
+      },
+      {
+        "id": "150bafa8-be9a-4694-8cef-059c472d4f5a",
+        "type": "meal",
+        "title": "Petit-d\u00e9jeuner \u00e0 Bryant Park",
+        "time": "09:00:00",
+        "status": "pending",
+        "sequence_order": 2,
+        "original_id": "meal-breakfast-bryantpark-20250615",
+        "duration": "30m",
+        "transport": {
+          "mode": "Walking",
+          "duration_minutes": 10,
+          "notes": "Courte marche depuis la station de m\u00e9tro 42nd Street-Bryant Park."
+        },
+        "location": {
+          "name": "Bryant Park (divers caf\u00e9s)",
+          "latitude": 40.7535,
+          "longitude": -73.9832,
+          "address": "42nd Street and 6th Avenue, New York, NY 10018, USA",
+          "website": "https://bryantpark.org/"
+        },
+        "notes": "Profitez du petit-d\u00e9jeuner depuis un kiosque ou un caf\u00e9 \u00e0 proximit\u00e9 avec vue sur le parc."
+      },
+      {
+        "id": "982a1936-8010-42b8-9781-ce51f65d7cd1",
+        "type": "activity",
+        "title": "Visite de la New York Public Library",
+        "time": "10:00:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "original_id": "activity-nypl-visit-20250615",
+        "duration": "1h",
+        "location": {
+          "name": "New York Public Library - Stephen A. Schwarzman Building",
+          "latitude": 40.7531,
+          "longitude": -73.9822,
+          "address": "476 5th Ave, New York, NY 10018, USA",
+          "website": "https://www.nypl.org/"
+        },
+        "notes": "Explorez l'embl\u00e9matique Rose Main Reading Room et l'architecture Beaux-Arts. Entr\u00e9e gratuite."
+      },
+      {
+        "id": "1d94713b-741c-4fae-b4a7-62694ef8dfd3",
+        "type": "activity",
+        "title": "Visite de l'Intrepid Sea, Air & Space Museum",
+        "time": "11:00:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "original_id": "activity-intrepid-visit-20250615",
+        "duration": "2h30m",
+        "location": {
+          "name": "Intrepid Sea, Air & Space Museum",
+          "latitude": 40.7645,
+          "longitude": -74.0012,
+          "address": "Pier 86, W 46th St, New York, NY 10036, USA",
+          "website": "https://www.intrepidmuseum.org/"
+        },
+        "notes": "Explorez un porte-avions historique, le Concorde et la navette spatiale Enterprise. Une exp\u00e9rience interactive et des vues imprenables sur le fleuve Hudson. Prix d'entr\u00e9e adulte estim\u00e9: 36 USD."
+      },
+      {
+        "id": "fcfbc350-67c6-4248-a3f7-3bb1c12c3fea",
+        "type": "meal",
+        "title": "D\u00e9jeuner",
+        "time": "13:30:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "original_id": "meal-lunch-20250615",
+        "duration": "45m",
+        "location": {
+          "name": "Restaurant local",
+          "latitude": 40.755,
+          "longitude": -73.98
+        },
+        "notes": "Exp\u00e9rience culinaire de rue embl\u00e9matique de New York. Attendez-vous \u00e0 une file d'attente, mais elle avance rapidement. Options v\u00e9g\u00e9tariennes disponibles. Co\u00fbt estim\u00e9 par personne: 15 USD."
+      },
+      {
+        "id": "dc72da15-ede2-4ecb-aa25-29b788381948",
+        "type": "activity",
+        "title": "Shopping sur la Cinqui\u00e8me Avenue",
+        "time": "14:30:00",
+        "status": "pending",
+        "sequence_order": 6,
+        "original_id": "activity-shopping-5thave-20250615",
+        "duration": "1h30m",
+        "location": {
+          "name": "Fifth Avenue (section Midtown)",
+          "latitude": 40.758,
+          "longitude": -73.9785,
+          "address": "Fifth Avenue, New York, NY, USA (entre les 49e et 60e Rues)",
+          "website": "https://www.nycgo.com/attractions/fifth-avenue/"
+        },
+        "notes": "Faites du l\u00e8che-vitrine ou visitez les c\u00e9l\u00e8bres magasins de luxe et grands magasins. Pr\u00e9parez-vous \u00e0 la foule."
+      },
+      {
+        "id": "0c79ce4a-89dc-496c-9a22-368ae5a28c47",
+        "type": "activity",
+        "title": "Visite de St. Patrick's Cathedral",
+        "time": "16:00:00",
+        "status": "pending",
+        "sequence_order": 7,
+        "original_id": "activity-stpatrick-visit-20250615",
+        "duration": "45m",
+        "location": {
+          "name": "Cath\u00e9drale Saint-Patrick",
+          "latitude": 40.7584,
+          "longitude": -73.976,
+          "address": "5th Ave, New York, NY 10022, USA",
+          "website": "https://www.saintpatrickscathedral.org/"
+        },
+        "notes": "Admirez la magnifique architecture n\u00e9o-gothique. Entr\u00e9e gratuite, mais les dons sont les bienvenus."
+      },
+      {
+        "id": "a8995e61-bb8d-4832-a55c-34d6b6fd579f",
+        "type": "activity",
+        "title": "Balade \u00e0 Central Park",
+        "time": "17:00:00",
+        "status": "pending",
+        "sequence_order": 8,
+        "original_id": "activity-centralpark-stroll-20250615",
+        "duration": "1h30m",
+        "location": {
+          "name": "Central Park (Entr\u00e9e Sud pr\u00e8s de Grand Army Plaza)",
+          "latitude": 40.7678,
+          "longitude": -73.9716,
+          "address": "Central Park S, New York, NY 10019, USA",
+          "website": "https://www.centralparknyc.org/"
+        },
+        "notes": "Entrez pr\u00e8s de Grand Army Plaza. Explorez des lieux embl\u00e9matiques comme The Pond, Gapstow Bridge, et profitez de l'oasis urbaine."
+      },
+      {
+        "id": "109f66a8-3632-4ee9-8892-bd091ed12fa2",
+        "type": "activity",
+        "title": "Visite de l'Empire State Building ou SUMMIT One",
+        "time": "18:30:00",
+        "status": "pending",
+        "sequence_order": 9,
+        "original_id": "activity-esb-summit-visit-20250615",
+        "duration": "1h30m",
+        "location": {
+          "name": "Empire State Building",
+          "latitude": 40.7484,
+          "longitude": -73.9857,
+          "address": "20 W 34th St, New York, NY 10001, USA",
+          "website": "https://www.esbnyc.com/"
+        },
+        "notes": "Choisissez entre le classique Empire State Building ou le plus r\u00e9cent et immersif SUMMIT One Vanderbilt (situ\u00e9 au 45 E 42nd St). Les deux offrent des vues incroyables sur la ville. R\u00e9servez vos billets \u00e0 l'avance, surtout pour le coucher du soleil. Prix d'entr\u00e9e adulte estim\u00e9: 47 USD."
+      },
+      {
+        "id": "c6f3a744-a359-4d1e-898c-be06ec59347d",
+        "type": "meal",
+        "title": "D\u00eener \u00e0 Times Square",
+        "time": "20:00:00",
+        "status": "pending",
+        "sequence_order": 10,
+        "original_id": "meal-dinner-timessquare-20250615",
+        "duration": "1h30m",
+        "location": {
+          "name": "Ellen's Stardust Diner",
+          "latitude": 40.7607,
+          "longitude": -73.9866,
+          "address": "1650 Broadway, New York, NY 10019, USA",
+          "website": "https://www.ellensstardustdiner.com/"
+        },
+        "notes": "D\u00e9couvrez un diner classique de Times Square avec des serveurs chanteurs. Attendez-vous \u00e0 une attente, surtout aux heures de pointe. Co\u00fbt estim\u00e9 par personne: 50 USD."
+      },
+      {
+        "id": "90776f16-6ae2-4b8d-baf7-80c9cdd7ec59",
+        "type": "activity",
+        "title": "Balade nocturne \u00e0 Times Square",
+        "time": "21:30:00",
+        "status": "pending",
+        "sequence_order": 11,
+        "original_id": "activity-timessquare-night-20250615",
+        "duration": "1h",
+        "location": {
+          "name": "Times Square",
+          "latitude": 40.7579,
+          "longitude": -73.9855,
+          "address": "Manhattan, NY 10036, USA",
+          "website": "https://www.timessquarenyc.org/"
+        },
+        "notes": "Plongez dans les lumi\u00e8res \u00e9blouissantes et l'\u00e9nergie vibrante de Times Square la nuit. Id\u00e9al pour les photos !"
+      },
+      {
+        "id": "f502212d-c6b5-4435-9d59-a0865144a910",
+        "type": "transport",
+        "title": "Retour en ferry jusqu'\u00e0 Jersey City",
+        "time": "22:30:00",
+        "status": "pending",
+        "sequence_order": 12,
+        "original_id": "transport-ferry-jerseycity-20250615",
+        "transport": {
+          "mode": "Ferry",
+          "carrier": "NY Waterway",
+          "duration_minutes": 15,
+          "pickup_location": "Midtown / W 39th St Ferry Terminal, Manhattan",
+          "notes": "V\u00e9rifiez les derniers horaires de ferry. Offre de superbes vues sur la skyline de Manhattan."
+        },
+        "location": {
+          "name": "Midtown / W 39th St Ferry Terminal (Manhattan)",
+          "latitude": 40.7643,
+          "longitude": -74.0016,
+          "address": "480 W 39th St, New York, NY 10018, USA"
+        }
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.489Z",
+      "updated_at": "2025-05-21T09:30:44.489Z",
+      "source": "json_conversion",
+      "version": "1.0",
+      "timezone": "Europe/Paris",
+      "original_filename": "15-06.json",
+      "additional_data": {
+        "tips": [
+          "Transport : Privil\u00e9giez les transports en commun pour \u00e9conomiser de l'argent et \u00e9viter les embouteillages.",
+          "Planification : Organisez vos activit\u00e9s \u00e0 l'avance pour maximiser votre temps.",
+          "Documents : Ayez toujours vos documents de voyage et une carte de la ville avec vous.",
+          "Paiements : Pr\u00e9voyez des dollars en esp\u00e8ces et des cartes bancaires pour vos d\u00e9penses.",
+          "Connectivit\u00e9 : Assurez-vous d'avoir une connexion internet pour la navigation et l'utilisation des applications de transport.",
+          "Marche : Portez des chaussures confortables, vous marcherez beaucoup aujourd'hui."
+        ],
+        "day_notes": "Portez des chaussures confortables car cette journ\u00e9e implique beaucoup de marche. Utilisez les transports en commun (m\u00e9tro/PATH) pour plus d'efficacit\u00e9. Pensez \u00e0 acheter les billets pour les mus\u00e9es/attractions \u00e0 l'avance pour gagner du temps.",
+        "day_status": "planned",
+        "weather": {
+          "temperature_celsius": null,
+          "temperature_fahrenheit": null,
+          "condition": null,
+          "icon_code": null,
+          "precipitation_chance": null,
+          "humidity": null,
+          "wind_speed_kph": null,
+          "wind_direction": null,
+          "sunrise_time": null,
+          "sunset_time": null
+        },
+        "checklist": [
+          {
+            "item": "MetroCard achet\u00e9e/charg\u00e9e",
+            "is_completed": false
+          },
+          {
+            "item": "Billets Intrepid r\u00e9serv\u00e9s",
+            "is_completed": false
+          },
+          {
+            "item": "Billets d'observatoire r\u00e9serv\u00e9s (ESB/SUMMIT)",
+            "is_completed": false
+          },
+          {
+            "item": "V\u00e9rifier l'horaire de retour du ferry",
+            "is_completed": false
+          }
+        ],
+        "mapView": {
+          "center_coordinates": {
+            "lat": 40.755,
+            "lng": -73.985
+          },
+          "zoom_level": 14,
+          "markers": [
+            {
+              "label": "Bryant Park",
+              "coordinates": {
+                "lat": 40.7535,
+                "lng": -73.9832
+              },
+              "icon": "park"
+            },
+            {
+              "label": "NY Public Library",
+              "coordinates": {
+                "lat": 40.7531,
+                "lng": -73.9822
+              },
+              "icon": "library"
+            },
+            {
+              "label": "Intrepid Museum",
+              "coordinates": {
+                "lat": 40.7645,
+                "lng": -74.0012
+              },
+              "icon": "museum"
+            },
+            {
+              "label": "The Halal Guys",
+              "coordinates": {
+                "lat": 40.7578,
+                "lng": -73.9793
+              },
+              "icon": "restaurant"
+            },
+            {
+              "label": "Fifth Avenue",
+              "coordinates": {
+                "lat": 40.758,
+                "lng": -73.9785
+              },
+              "icon": "shopping"
+            },
+            {
+              "label": "Cath\u00e9drale Saint-Patrick",
+              "coordinates": {
+                "lat": 40.7584,
+                "lng": -73.976
+              },
+              "icon": "church"
+            },
+            {
+              "label": "Central Park (Sud)",
+              "coordinates": {
+                "lat": 40.7678,
+                "lng": -73.9716
+              },
+              "icon": "park"
+            },
+            {
+              "label": "Empire State Building",
+              "coordinates": {
+                "lat": 40.7484,
+                "lng": -73.9857
+              },
+              "icon": "building"
+            },
+            {
+              "label": "Times Square",
+              "coordinates": {
+                "lat": 40.7579,
+                "lng": -73.9855
+              },
+              "icon": "landmark"
+            },
+            {
+              "label": "Terminal Ferry Midtown",
+              "coordinates": {
+                "lat": 40.7643,
+                "lng": -74.0016
+              },
+              "icon": "ferry"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "48dc6265-ba52-4507-9daf-1ef5ad3adbde",
+    "trip_id": "157f32c8-94cd-4e22-93db-37f020d84584",
+    "date": "2025-06-16",
+    "title": "Aventure \u00e0 Philadelphie : Journ\u00e9e du Match de Football",
+    "summary": "Journ\u00e9e compl\u00e8te \u00e0 Philadelphie, combinant une exploration historique du centre-ville avec l'apog\u00e9e d'un match de football passionnant au Lincoln Financial Field.",
+    "weather": {
+      "temperature": 26,
+      "condition": "Ensoleill\u00e9",
+      "icon": "01d"
+    },
+    "reminders": [
+      "Acheter les billets de match \u00e0 l'avance",
+      "V\u00e9rifier les horaires des trains/bus pour le trajet Jersey City-Philadelphie",
+      "R\u00e9server les billets pour Independence Hall si n\u00e9cessaire"
+    ],
+    "activities": [
+      {
+        "id": "3c860dca-2139-4489-89e4-fafd13bf92cb",
+        "type": "transport",
+        "title": "D\u00e9part pour Philadelphie",
+        "time": "08:00:00",
+        "status": "pending",
+        "sequence_order": 1,
+        "original_id": "transport-departure-philadelphia-250616",
+        "transport": {
+          "mode": "Train (Amtrak)",
+          "carrier": "Amtrak",
+          "estimated_cost": 30.0,
+          "pickup_location": "New York Penn Station",
+          "notes": "Arriver 30 minutes avant le d\u00e9part pour l'embarquement."
+        },
+        "location": {
+          "name": "New York Penn Station",
+          "latitude": 40.7505,
+          "longitude": -73.9935,
+          "address": "34th St & 7th Ave, New York, NY 10001, USA"
+        }
+      },
+      {
+        "id": "7bf2d15d-d598-4ce4-9ad8-38c282891e35",
+        "type": "activity",
+        "title": "Arriv\u00e9e et visite du centre-ville",
+        "time": "10:30:00",
+        "status": "pending",
+        "sequence_order": 2,
+        "original_id": "activity-arrival-center-250616",
+        "duration": "1h",
+        "notes": "Commencez par une balade dans le quartier historique, pr\u00e8s de l'Independence Hall.",
+        "location": {
+          "name": "Centre Historique de Philadelphie",
+          "latitude": 39.9496,
+          "longitude": -75.1503,
+          "address": "Philadelphia, PA, USA"
+        }
+      },
+      {
+        "id": "408c8a13-4252-4f40-8817-e9a383b3d656",
+        "type": "activity",
+        "title": "Exploration de l'Independence Hall",
+        "time": "11:30:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "original_id": "activity-independencehall-explore-250616",
+        "duration": "1h",
+        "notes": "Site historique o\u00f9 la D\u00e9claration d'Ind\u00e9pendance et la Constitution ont \u00e9t\u00e9 sign\u00e9es. Billets gratuits requis, \u00e0 r\u00e9server \u00e0 l'avance en ligne pour les visites guid\u00e9es. Plus d'infos sur : https://www.nps.gov/inde/index.htm",
+        "location": {
+          "name": "Independence Hall",
+          "latitude": 39.9489,
+          "longitude": -75.15,
+          "address": "520 Chestnut St, Philadelphia, PA 19106, USA"
+        }
+      },
+      {
+        "id": "1cb00937-3f67-44e5-9a37-cf156d228317",
+        "type": "activity",
+        "title": "Visite de la Liberty Bell",
+        "time": "12:30:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "original_id": "activity-libertybell-visit-250616",
+        "duration": "30m",
+        "notes": "Cloche embl\u00e9matique de la libert\u00e9 am\u00e9ricaine, situ\u00e9e en face de l'Independence Hall. Entr\u00e9e gratuite. Plus d'infos sur : https://www.nps.gov/inde/learn/historyculture/libertybell.htm",
+        "location": {
+          "name": "Liberty Bell Center",
+          "latitude": 39.9493,
+          "longitude": -75.1502,
+          "address": "526 Market St, Philadelphia, PA 19106, USA"
+        }
+      },
+      {
+        "id": "fd9c6d59-926e-4fb0-9187-b4bf24fa3b2a",
+        "type": "activity",
+        "title": "D\u00e9couverte de la Betsy Ross House",
+        "time": "13:00:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "original_id": "activity-betsyrosshouse-discover-250616",
+        "duration": "30m",
+        "notes": "Maison de la couturi\u00e8re Betsy Ross, r\u00e9put\u00e9e pour avoir cousu le premier drapeau am\u00e9ricain. Petite visite historique. Plus d'infos sur : https://historicphiladelphia.org/betsy-ross-house/what-to-see/",
+        "location": {
+          "name": "Betsy Ross House",
+          "latitude": 39.9525,
+          "longitude": -75.1456,
+          "address": "239 Arch St, Philadelphia, PA 19106, USA"
+        }
+      },
+      {
+        "id": "2a8a10fe-446c-4762-9f64-7a2e346d40d6",
+        "type": "activity",
+        "title": "Promenade dans Elfreth's Alley",
+        "time": "13:30:00",
+        "status": "pending",
+        "sequence_order": 6,
+        "original_id": "activity-elfreths-alley-stroll-250616",
+        "duration": "30m",
+        "notes": "La plus ancienne rue r\u00e9sidentielle habit\u00e9e des \u00c9tats-Unis. Charmante pour une promenade et des photos. Plus d'infos sur : https://www.elfrethsalley.org/",
+        "location": {
+          "name": "Elfreth's Alley",
+          "latitude": 39.9522,
+          "longitude": -75.1437,
+          "address": "126 Elfreth's Alley, Philadelphia, PA 19106, USA"
+        }
+      },
+      {
+        "id": "c0846a27-019b-4d28-9d17-e666fb5ce43f",
+        "type": "meal",
+        "title": "D\u00e9jeuner au Reading Terminal Market",
+        "time": "14:00:00",
+        "status": "pending",
+        "sequence_order": 7,
+        "original_id": "meal-lunch-readingterminal-250616",
+        "duration": "1h",
+        "notes": "March\u00e9 couvert historique avec une grande vari\u00e9t\u00e9 de stands de nourriture, de produits frais et d'artisanat. Id\u00e9al pour un d\u00e9jeuner d\u00e9contract\u00e9. Plus d'infos sur : https://readingterminalmarket.org/",
+        "location": {
+          "name": "Reading Terminal Market",
+          "latitude": 39.9532,
+          "longitude": -75.1584,
+          "address": "1131 Arch St, Philadelphia, PA 19107, USA"
+        }
+      },
+      {
+        "id": "e568020b-5be8-4e93-b616-45eb62321b58",
+        "type": "transport",
+        "title": "D\u00e9part pour le Lincoln Financial Field",
+        "time": "15:00:00",
+        "status": "pending",
+        "sequence_order": 8,
+        "original_id": "transport-departure-stadium-250616",
+        "transport": {
+          "mode": "M\u00e9tro (SEPTA Broad Street Line)",
+          "carrier": "SEPTA",
+          "estimated_cost": 2.5,
+          "duration_minutes": 20,
+          "pickup_location": "Prendre la ligne Broad Street (Orange Line) direction sud jusqu'\u00e0 la station NRG (derni\u00e8re station) depuis City Hall."
+        },
+        "location": {
+          "name": "Station City Hall (SEPTA)",
+          "latitude": 39.9523,
+          "longitude": -75.1636,
+          "address": "1400 John F Kennedy Blvd, Philadelphia, PA 19107, USA"
+        }
+      },
+      {
+        "id": "641954d1-2f12-490b-b341-07261b48e2a6",
+        "type": "activity",
+        "title": "Temps libre et exploration autour du stade",
+        "time": "15:30:00",
+        "status": "pending",
+        "sequence_order": 9,
+        "original_id": "activity-stadium-explore-250616",
+        "duration": "1h30m",
+        "notes": "Profitez de l'ambiance d'avant-match, des fan zones et des boutiques de souvenirs autour du complexe sportif. Plus d'infos sur : https://www.lincolnfinancialfield.com/",
+        "location": {
+          "name": "Lincoln Financial Field (environs)",
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+        }
+      },
+      {
+        "id": "decb2d49-4386-497c-8d6e-b8b2c93eba09",
+        "type": "meal",
+        "title": "D\u00eener pr\u00e8s du stade / Concessions",
+        "time": "17:00:00",
+        "status": "pending",
+        "sequence_order": 10,
+        "original_id": "meal-dinner-stadium-250616",
+        "notes": "Options de restauration rapide ou concessions \u00e0 l'int\u00e9rieur et autour du stade.",
+        "location": {
+          "name": "Lincoln Financial Field (Concessions)",
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+        }
+      },
+      {
+        "id": "d6ca97e1-b924-4e07-b091-2cd2ae4f49ac",
+        "type": "match",
+        "title": "Match de football : CR Flamengo vs EST",
+        "time": "18:30:00",
+        "status": "confirmed",
+        "sequence_order": 11,
+        "original_id": "match-flamengo-est-250616",
+        "important": true,
+        "duration": "2h",
+        "notes": "Match de football passionnant. Arriver t\u00f4t pour trouver sa place et profiter de l'ambiance.",
+        "location": {
+          "name": "Lincoln Financial Field",
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+        },
+        "attachments": [
+          {
+            "file_name": "Flamengo-EST_ticket.pdf",
+            "file_path": "/documents/tickets/flamengo_est_20250616.pdf",
+            "file_type": "application/pdf"
+          }
+        ]
+      },
+      {
+        "id": "9b8c8cd6-e414-4b6c-b5a5-e011c2c43ff9",
+        "type": "transport",
+        "title": "Retour \u00e0 l'h\u00e9bergement",
+        "time": "20:30:00",
+        "status": "pending",
+        "sequence_order": 12,
+        "original_id": "transport-return-jerseycity-250616",
+        "transport": {
+          "mode": "Uber / Taxi / Train",
+          "estimated_cost": 100.0,
+          "duration_minutes": 90,
+          "pickup_location": "D\u00e9part du Lincoln Financial Field. Les taxis/Uber peuvent \u00eatre difficiles \u00e0 trouver apr\u00e8s le match, pr\u00e9voir un d\u00e9lai. Alternative : m\u00e9tro SEPTA puis PATH train."
+        },
+        "location": {
+          "name": "Lincoln Financial Field",
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA"
+        }
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.492Z",
+      "updated_at": "2025-05-21T09:30:44.492Z",
+      "source": "FIFA_2026_schedule",
+      "version": "2.0",
+      "timezone": "America/New_York",
+      "additional_data": {
+        "tips": [
+          "Transport : L'Uber direct est le plus simple, mais les transports en commun (m\u00e9tro SEPTA \u00e0 Philadelphie) sont \u00e9conomiques pour les d\u00e9placements locaux.",
+          "Jour de match : Arrivez t\u00f4t au stade pour profiter de l'ambiance et \u00e9viter la foule.",
+          "Planification : La journ\u00e9e est dense. Pour Independence Hall, v\u00e9rifiez si des billets gratuits sont n\u00e9cessaires et r\u00e9servez-les \u00e0 l'avance.",
+          "Confort : Portez des chaussures confortables, car la visite du centre-ville implique beaucoup de marche.",
+          "Paiements : Ayez des dollars en esp\u00e8ces et des cartes bancaires pour toutes vos d\u00e9penses.",
+          "Connectivit\u00e9 : Assurez-vous d'avoir une connexion internet pour la navigation et les applications de transport."
+        ]
+      }
+    }
+  },
+  {
+    "id": "a4631f75-4f03-4ae3-8518-d3d85d2e544d",
+    "trip_id": "bd57a5a3-4d1e-4c0e-a428-c138ae29d767",
+    "date": "2025-06-17",
+    "title": "Journ\u00e9e NYC Vibes",
+    "summary": "Une journ\u00e9e d\u00e9di\u00e9e \u00e0 l'exploration de quartiers embl\u00e9matiques de New York (Greenwich Village, SoHo, Harlem, Williamsburg) pour d\u00e9couvrir des lieux non touristiques, beaux et culturels, culminant avec la magie de Times Square la nuit.",
+    "weather": {
+      "temperature": 24,
+      "condition": "Partiellement nuageux",
+      "icon": "04d"
+    },
+    "reminders": [
+      "Assurez-vous que votre MetroCard est charg\u00e9e ou utilisez OMNY pour les transports en commun.",
+      "Portez des chaussures de marche confortables, la journ\u00e9e est longue.",
+      "T\u00e9l\u00e9chargez Google Maps ou Citymapper pour faciliter la navigation.",
+      "Soyez flexible avec l'itin\u00e9raire, il y a beaucoup \u00e0 voir !"
+    ],
+    "activities": [
+      {
+        "id": "47ec187c-adcf-449c-b109-5335bd8c9077",
+        "type": "transport",
+        "title": "D\u00e9part depuis l'h\u00e9bergement vers Manhattan",
+        "time": "08:30:00",
+        "status": "pending",
+        "sequence_order": 1,
+        "original_id": "transport-departure-accommodation-20250617",
+        "notes": "Petit-d\u00e9jeuner rapide \u00e0 l'h\u00e9bergement ou en route. Prenez le PATH train de Jersey City vers Christopher Street ou 9th Street pour Greenwich Village.",
+        "transport": {
+          "mode": "PATH Train / Metro",
+          "carrier": "PATH / MTA",
+          "estimated_cost": 2.75,
+          "pickup_location": "D\u00e9part de la station PATH la plus proche de votre h\u00e9bergement \u00e0 Jersey City."
+        },
+        "location": {
+          "name": "Grove Street PATH Station",
+          "latitude": 40.7196,
+          "longitude": -74.0431,
+          "address": "100 Christopher Columbus Dr, Jersey City, NJ 07302, USA"
+        }
+      },
+      {
+        "id": "e59e62c9-37b4-448c-90ea-4fe7d8c1259c",
+        "type": "activity",
+        "title": "Exploration de Greenwich Village",
+        "time": "09:00:00",
+        "status": "pending",
+        "sequence_order": 2,
+        "original_id": "activity-greenwich-village-20250617",
+        "duration": "1h30",
+        "notes": "Fl\u00e2nez autour de Washington Square Park, d\u00e9couvrez les caf\u00e9s boh\u00e8mes, l'histoire de la musique live et l'ambiance artistique. C'est un quartier charmant pour se promener.",
+        "transport": {
+          "mode": "Metro"
+        },
+        "location": {
+          "name": "Washington Square Park",
+          "latitude": 40.7308,
+          "longitude": -73.9973,
+          "address": "Washington Square N, New York, NY 10012, USA",
+          "website": "https://www.nycgovparks.org/parks/washington-square-park"
+        }
+      },
+      {
+        "id": "5a5e92aa-a223-4d98-9963-c8d7e9736885",
+        "type": "activity",
+        "title": "Shopping et Art \u00e0 SoHo / Nolita",
+        "time": "10:45:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "original_id": "activity-soho-nolita-20250617",
+        "duration": "1h45",
+        "notes": "D\u00e9couvrez les boutiques styl\u00e9es, l'art de rue vibrant, les galeries d'art et l'architecture unique en fonte (cast-iron). Id\u00e9al pour le l\u00e8che-vitrine ou trouver des pi\u00e8ces uniques.",
+        "transport": {
+          "mode": "Walking"
+        },
+        "location": {
+          "name": "SoHo District (Broadway & Prince St area)",
+          "latitude": 40.7248,
+          "longitude": -74.0018,
+          "address": "SoHo, New York, NY, USA",
+          "website": "https://www.nycgo.com/neighborhoods/soho/"
+        }
+      },
+      {
+        "id": "6010de3f-18b5-4568-84a4-be4ff67fbb57",
+        "type": "meal",
+        "title": "D\u00e9jeuner \u00e0 Chinatown + Little Italy",
+        "time": "12:45:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "original_id": "meal-chinatown-littleitaly-20250617",
+        "duration": "1h30",
+        "notes": "D\u00e9jeuner avec des dumplings authentiques \u00e0 Chinatown, suivi d'un espresso et d'un cannoli \u00e0 Little Italy. Profitez de l'ambiance chaotique mais savoureuse de ces quartiers culturels.",
+        "transport": {
+          "mode": "Walking"
+        },
+        "location": {
+          "name": "Chinatown / Little Italy",
+          "latitude": 40.718,
+          "longitude": -73.9971,
+          "address": "Canal St & Mott St, New York, NY, USA",
+          "website": "https://www.nycgo.com/neighborhoods/chinatown-little-italy/"
+        }
+      },
+      {
+        "id": "38e094c5-0640-457f-82e4-f1d81548a2ba",
+        "type": "activity",
+        "title": "D\u00e9couverte de Harlem",
+        "time": "14:30:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "original_id": "activity-harlem-explore-20250617",
+        "duration": "1h30",
+        "notes": "Plongez dans l'histoire et la culture de Harlem. Admirez l'architecture brownstone, et visitez l'embl\u00e9matique Apollo Theater. Si possible, assistez \u00e0 une performance de gospel ou de jazz (v\u00e9rifier les horaires).",
+        "transport": {
+          "mode": "Metro",
+          "estimated_cost": 2.75,
+          "pickup_location": "Prendre le m\u00e9tro (lignes A, B, C, D) depuis Lower Manhattan."
+        },
+        "location": {
+          "name": "Apollo Theater, Harlem",
+          "latitude": 40.8102,
+          "longitude": -73.9496,
+          "address": "253 W 125th St, New York, NY 10027, USA",
+          "website": "https://www.apollotheater.org/"
+        }
+      },
+      {
+        "id": "1f036371-2277-44d4-99e6-31c0f208634b",
+        "type": "activity",
+        "title": "Ambiance branch\u00e9e \u00e0 Williamsburg (Brooklyn)",
+        "time": "16:30:00",
+        "status": "pending",
+        "sequence_order": 6,
+        "original_id": "activity-williamsburg-explore-20250617",
+        "duration": "2h",
+        "notes": "Explorez le quartier branch\u00e9 de Williamsburg \u00e0 Brooklyn. D\u00e9couvrez les friperies, le street art, les galeries ind\u00e9pendantes et l'ambiance d\u00e9contract\u00e9e. Terminez par un verre dans un rooftop bar comme *Westlight* pour une vue imprenable sur Manhattan.",
+        "transport": {
+          "mode": "Metro (L train)",
+          "estimated_cost": 2.75,
+          "pickup_location": "Prendre la ligne L depuis Manhattan (Union Square) jusqu'\u00e0 Bedford Ave."
+        },
+        "location": {
+          "name": "Williamsburg, Brooklyn (Bedford Ave area)",
+          "latitude": 40.7081,
+          "longitude": -73.9571,
+          "address": "Bedford Ave & N 7th St, Brooklyn, NY 11211, USA",
+          "website": "https://www.nycgo.com/neighborhoods/williamsburg/"
+        }
+      },
+      {
+        "id": "b618e795-585a-41ab-a746-b020d2f47d92",
+        "type": "meal",
+        "title": "D\u00eener \u00e0 Hell's Kitchen",
+        "time": "19:00:00",
+        "status": "pending",
+        "sequence_order": 7,
+        "original_id": "meal-dinner-hellskitchen-20250617",
+        "duration": "1h",
+        "notes": "Hell's Kitchen est r\u00e9put\u00e9 pour sa diversit\u00e9 culinaire. Choisissez parmi une multitude de cuisines du monde (tha\u00ef, burgers, mexicain, libanais\u2026). Ambiance d\u00e9contract\u00e9e et anim\u00e9e.",
+        "transport": {
+          "mode": "Metro",
+          "estimated_cost": 2.75,
+          "pickup_location": "Prendre le m\u00e9tro (lignes A, C, E) jusqu'\u00e0 la 42nd Street-Port Authority Bus Terminal."
+        },
+        "location": {
+          "name": "Hell's Kitchen (Restaurant Row)",
+          "latitude": 40.7636,
+          "longitude": -73.9918,
+          "address": "W 46th St, New York, NY, USA",
+          "website": "https://www.nycgo.com/neighborhoods/hells-kitchen/"
+        }
+      },
+      {
+        "id": "9a95b69e-03ed-487c-96e9-004399550d47",
+        "type": "activity",
+        "title": "Final : Times Square de nuit",
+        "time": "20:15:00",
+        "status": "pending",
+        "sequence_order": 8,
+        "original_id": "activity-timessquare-night-20250617",
+        "duration": "1h45",
+        "notes": "Terminez la journ\u00e9e par une immersion spectaculaire dans les n\u00e9ons \u00e9blouissants de Times Square. Id\u00e9al pour une photo collective m\u00e9morable et une balade jusqu'\u00e0 la 42nd Street.",
+        "transport": {
+          "mode": "Walking"
+        },
+        "location": {
+          "name": "Times Square",
+          "latitude": 40.758,
+          "longitude": -73.9855,
+          "address": "Manhattan, NY 10036, USA",
+          "website": "https://www.timessquarenyc.org/"
+        }
+      },
+      {
+        "id": "f502212d-c6b5-4435-9d59-a0865144a910",
+        "type": "transport",
+        "title": "Retour \u00e0 l'h\u00e9bergement (Jersey City)",
+        "time": "22:00:00",
+        "status": "pending",
+        "sequence_order": 9,
+        "original_id": "transport-return-accommodation-20250617",
+        "notes": "Retour \u00e0 Jersey City via le PATH train. V\u00e9rifiez les horaires des derniers trains, surtout en semaine.",
+        "transport": {
+          "mode": "PATH Train",
+          "carrier": "PATH",
+          "estimated_cost": 2.75,
+          "duration_minutes": 20,
+          "pickup_location": "D\u00e9part de la station 33rd Street ou 42nd Street (Port Authority Bus Terminal) \u00e0 Manhattan."
+        },
+        "location": {
+          "name": "Times Square / Port Authority Bus Terminal",
+          "latitude": 40.7575,
+          "longitude": -73.99,
+          "address": "625 8th Ave, New York, NY 10018, USA"
+        }
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.495Z",
+      "updated_at": "2025-05-21T09:30:44.495Z",
+      "source": "json_conversion",
+      "version": "1.0",
+      "timezone": "Europe/Paris",
+      "original_filename": "17-06.json",
+      "additional_data": {
+        "tips": [
+          "Utilisez la carte MetroCard ou le paiement sans contact (OMNY) pour le m\u00e9tro et les bus. C'est le moyen le plus efficace de se d\u00e9placer \u00e0 New York.",
+          "Pr\u00e9voyez des chaussures confortables. Cette journ\u00e9e implique beaucoup de marche.",
+          "T\u00e9l\u00e9chargez les applications de transport (MTA, Citymapper, Google Maps) pour faciliter vos d\u00e9placements.",
+          "Soyez flexible : cet itin\u00e9raire est dense. N'h\u00e9sitez pas \u00e0 adapter selon votre \u00e9nergie et vos d\u00e9couvertes inattendues.",
+          "\u00c0 Chinatown/Little Italy, n'h\u00e9sitez pas \u00e0 essayer plusieurs petits stands pour go\u00fbter diff\u00e9rentes sp\u00e9cialit\u00e9s.",
+          "Pour Williamsburg, si vous visitez un rooftop bar, v\u00e9rifiez les exigences d'\u00e2ge et de tenue."
+        ],
+        "checklist": [
+          {
+            "item": "MetroCard/OMNY charg\u00e9e",
+            "is_completed": false
+          },
+          {
+            "item": "Chaussures de marche confortables",
+            "is_completed": false
+          },
+          {
+            "item": "Applications de transport install\u00e9es",
+            "is_completed": false
+          },
+          {
+            "item": "V\u00e9rifier les horaires du dernier PATH train",
+            "is_completed": false
+          }
+        ],
+        "mapView": {
+          "center_coordinates": {
+            "lat": 40.73,
+            "lng": -73.99
+          },
+          "zoom_level": 12,
+          "markers": [
+            {
+              "label": "Washington Square Park",
+              "coordinates": {
+                "lat": 40.7308,
+                "lng": -73.9973
+              },
+              "icon": "park"
+            },
+            {
+              "label": "SoHo District",
+              "coordinates": {
+                "lat": 40.7248,
+                "lng": -74.0018
+              },
+              "icon": "shopping"
+            },
+            {
+              "label": "Chinatown / Little Italy",
+              "coordinates": {
+                "lat": 40.718,
+                "lng": -73.9971
+              },
+              "icon": "restaurant"
+            },
+            {
+              "label": "Apollo Theater",
+              "coordinates": {
+                "lat": 40.8102,
+                "lng": -73.9496
+              },
+              "icon": "theater"
+            },
+            {
+              "label": "Williamsburg, Brooklyn",
+              "coordinates": {
+                "lat": 40.7081,
+                "lng": -73.9571
+              },
+              "icon": "neighborhood"
+            },
+            {
+              "label": "Hell's Kitchen",
+              "coordinates": {
+                "lat": 40.7636,
+                "lng": -73.9918
+              },
+              "icon": "restaurant"
+            },
+            {
+              "label": "Times Square",
+              "coordinates": {
+                "lat": 40.758,
+                "lng": -73.9855
+              },
+              "icon": "landmark"
+            }
+          ],
+          "routeSuggestions": [
+            {
+              "from_label": "Jersey City (Grove St PATH)",
+              "to_label": "Washington Square Park",
+              "mode": "PATH Train",
+              "estimated_time": "20-25m",
+              "google_map_link": "https://www.google.com/maps/dir/40.7196,-74.0431/Washington+Square+Park,+New+York,+NY",
+              "cost_estimate": {
+                "amount": 2.75,
+                "currency": "USD"
+              },
+              "notes": "Direct PATH train to Christopher St or 9th St, then short walk to Washington Square Park."
+            },
+            {
+              "from_label": "Harlem (Apollo Theater)",
+              "to_label": "Williamsburg (Bedford Ave)",
+              "mode": "Metro (A/C + L lines)",
+              "estimated_time": "40-50m",
+              "google_map_link": "https://www.google.com/maps/dir/Apollo+Theater,+Harlem/Bedford+Ave,+Brooklyn,+NY",
+              "cost_estimate": {
+                "amount": 2.75,
+                "currency": "USD"
+              },
+              "notes": "Take A/C to 14th St-Union Square, then transfer to L train to Bedford Ave."
+            },
+            {
+              "from_label": "Hell's Kitchen",
+              "to_label": "Times Square",
+              "mode": "Walking",
+              "estimated_time": "10-15m",
+              "google_map_link": "https://www.google.com/maps/dir/Hell's+Kitchen,+New+York,+NY/Times+Square,+New+York,+NY",
+              "cost_estimate": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "notes": "Short walk from Restaurant Row to Times Square."
+            },
+            {
+              "from_label": "Times Square",
+              "to_label": "Jersey City (Grove St PATH)",
+              "mode": "PATH Train",
+              "estimated_time": "20-25m",
+              "google_map_link": "https://www.google.com/maps/dir/Times+Square,+New+York,+NY/Grove+Street+PATH+Station,+Jersey+City,+NJ",
+              "cost_estimate": {
+                "amount": 2.75,
+                "currency": "USD"
+              },
+              "notes": "PATH trains run frequently from 33rd St or Port Authority."
+            }
+          ]
+        },
+        "emergency_info": {
+          "local_emergency_number": "911",
+          "embassy_contact": {
+            "country": "Belgique",
+            "phone": "+1-212-586-8800",
+            "notes": "Consulat G\u00e9n\u00e9ral de Belgique \u00e0 New York"
+          },
+          "travel_insurance_contact": {
+            "provider": "Example Insurance",
+            "phone": "+1-800-123-4567",
+            "policy_number": "POL-XYZ-789"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "f449fb70-bdc5-42d0-b813-047c03f5781e",
+    "trip_id": "b920089f-b491-4af6-94b4-807f1897a027",
+    "date": "2025-06-18",
+    "title": "Harlem, Nature & Sunset Rooftop",
+    "summary": "Une journ\u00e9e immersive explorant la richesse culturelle de Harlem, la beaut\u00e9 naturelle du nord de Central Park, et des vues spectaculaires depuis un rooftop new-yorkais, avec une option nocturne \u00e0 Times Square.",
+    "reminders": [
+      "Confirmer la r\u00e9servation du rooftop bar",
+      "V\u00e9rifier le solde OMNY ou charger la MetroCard",
+      "Pr\u00e9voir des chaussures confortables",
+      "V\u00e9rifier la m\u00e9t\u00e9o et adapter la tenue",
+      "Emporter une batterie externe pour le t\u00e9l\u00e9phone"
+    ],
+    "weather": {
+      "temperature": 28,
+      "condition": "Ensoleill\u00e9",
+      "icon": "01d"
+    },
+    "activities": [
+      {
+        "id": "8b3cafdb-341f-4ba0-9135-526643e6c7e0",
+        "type": "transport",
+        "title": "D\u00e9part vers Harlem",
+        "time": "09:00:00",
+        "status": "pending",
+        "sequence_order": 1,
+        "transport": {
+          "mode": "Bus NJ Transit + PATH",
+          "carrier": "NJ Transit",
+          "estimated_cost": 3.5,
+          "notes": "Bus 126 depuis Journal Square \u2192 PATH vers 33rd St"
+        },
+        "location": {
+          "name": "Journal Square Transportation Center",
+          "latitude": 40.7387,
+          "longitude": -74.0597
+        }
+      },
+      {
+        "id": "a053641d-bcbe-4ed1-ad7e-f1325fcd98cf",
+        "type": "activity",
+        "title": "Exploration de Harlem",
+        "time": "10:15:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "duration": "1h45",
+        "notes": "Visite de l'Apollo Theater, d\u00e9jeuner \u00e0 Sylvia's Restaurant, d\u00e9couverte des brownstones et street art",
+        "location": {
+          "name": "Harlem",
+          "latitude": 40.8116,
+          "longitude": -73.9465,
+          "recommendations": [
+            {
+              "name": "Sylvia's Restaurant",
+              "address": "328 Malcolm X Blvd",
+              "notes": "R\u00e9server pour midi"
+            }
+          ]
+        }
+      },
+      {
+        "id": "80b07ebf-5b53-409a-a35a-8c8c77f678dc",
+        "type": "meal",
+        "title": "D\u00e9jeuner soul food",
+        "time": "12:00:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "duration": "1h15",
+        "location": {
+          "name": "Sylvia's Restaurant",
+          "latitude": 40.803,
+          "longitude": -73.9503,
+          "address": "328 Malcolm X Blvd, New York, NY 10027"
+        },
+        "notes": "Budget : $$ (25-45 USD par personne)"
+      },
+      {
+        "id": "d05b2e99-f23d-45da-9614-6f497bb4b41a",
+        "type": "activity",
+        "title": "Fl\u00e2nerie \u00e0 Central Park (entr\u00e9e nord)",
+        "time": "13:30:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "duration": "~45 min",
+        "notes": "D\u00e9couverte du Conservatory Garden, Harlem Meer et North Woods",
+        "location": {
+          "name": "Central Park - Entr\u00e9e Nord",
+          "latitude": 40.7961,
+          "longitude": -73.9554
+        }
+      },
+      {
+        "id": "7de150e1-d027-464e-af23-fd7067aaf177",
+        "type": "activity",
+        "title": "\ud83c\udf78 Rooftop Sunset & Cocktails",
+        "time": "18:30:00",
+        "status": "pending",
+        "sequence_order": 8,
+        "important": true,
+        "duration": "1h30",
+        "location": {
+          "name": "230 Fifth Rooftop Bar",
+          "latitude": 40.7484,
+          "longitude": -73.9857,
+          "address": "230 5th Ave, New York, NY 10001",
+          "recommendations": [
+            {
+              "name": "The Press Lounge",
+              "notes": "Dress code strict, r\u00e9servation essentielle"
+            }
+          ]
+        },
+        "notes": "Budget : $$$ (cocktails 18-25 USD)"
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.498Z",
+      "updated_at": "2025-05-21T09:30:44.498Z",
+      "source": "json_conversion",
+      "version": "1.0",
+      "timezone": "America/New_York",
+      "additional_data": {
+        "tips": [
+          "Utiliser Google Maps en mode offline pour les d\u00e9placements",
+          "\u00c9viter de marcher dans Central Park apr\u00e8s la tomb\u00e9e de la nuit",
+          "Pr\u00e9voir 20 USD en esp\u00e8ces pour les pourboires et petits achats"
+        ],
+        "weather_contingency": {
+          "rain": "Alternative : Visite du MoMA ou du MET Breuer",
+          "heat": "Hydratation r\u00e9guli\u00e8re et pauses dans les commerces climatis\u00e9s"
+        }
+      }
+    }
+  },
+  {
+    "id": "2c5b9d3a-6e4f-1a2b-3c4d-5e6f7a8b9c0d",
+    "trip_id": "b920089f-b491-4af6-94b4-807f1897a027",
+    "date": "2025-06-19",
+    "title": "Dernier jour \u00e0 NYC : Chelsea, High Line & Vol vers Nashville",
+    "summary": "Journ\u00e9e de transition avec exploration de Manhattan, retour \u00e0 Jersey City, et vol domestique vers Nashville.",
+    "reminders": [
+      "V\u00e9rifier l'\u00e9tat du service PATH et moyen de paiement (TAPP/SmartLink)",
+      "Pr\u00e9parer pi\u00e8ce d'identit\u00e9 et carte d'embarquement",
+      "Planifier r\u00e9cup\u00e9ration des bagages avant transfert \u00e0 EWR"
+    ],
+    "weather": {
+      "temperature": 27,
+      "condition": "Ensoleill\u00e9",
+      "icon": "01d"
+    },
+    "activities": [
+      {
+        "id": "641954d1-2f12-490b-b341-07261b48e2a6",
+        "type": "activity",
+        "title": "Petit-d\u00e9jeuner + check-out",
+        "time": "07:00:00",
+        "status": "pending",
+        "sequence_order": 1,
+        "duration": "1h",
+        "notes": "Stocker les bagages \u00e0 l'h\u00f4tel ou consigne s\u00e9curis\u00e9e",
+        "location": {
+          "name": "H\u00f4tel \u00e0 Jersey City",
+          "latitude": 40.7195,
+          "longitude": -74.0537
+        }
+      },
+      {
+        "id": "c0846a27-019b-4d28-9d17-e666fb5ce43f",
+        "type": "transport",
+        "title": "Transfert vers Manhattan",
+        "time": "08:30:00",
+        "status": "pending",
+        "sequence_order": 2,
+        "duration": "30m",
+        "transport": {
+          "mode": "PATH Train",
+          "carrier": "PATH",
+          "estimated_cost": 2.75,
+          "notes": "Direction World Trade Center, puis transfert \u00e0 14th St Station"
+        }
+      },
+      {
+        "id": "decb2d49-4386-497c-8d6e-b8b2c93eba09",
+        "type": "activity",
+        "title": "Exploration Chelsea + High Line",
+        "time": "09:15:00",
+        "status": "pending",
+        "sequence_order": 3,
+        "duration": "2h",
+        "notes": "Parcours depuis Gansevoort St jusqu'\u00e0 34th St avec arr\u00eats photo",
+        "location": {
+          "name": "High Line",
+          "latitude": 40.748,
+          "longitude": -74.0048
+        }
+      },
+      {
+        "id": "d6ca97e1-b924-4e07-b091-2cd2ae4f49ac",
+        "type": "meal",
+        "title": "D\u00e9jeuner \u00e0 Chelsea Market",
+        "time": "11:30:00",
+        "status": "pending",
+        "sequence_order": 4,
+        "duration": "1h",
+        "notes": "$$ (variable selon les stands)",
+        "location": {
+          "name": "Chelsea Market",
+          "latitude": 40.7425,
+          "longitude": -74.0063
+        }
+      },
+      {
+        "id": "e568020b-5be8-4e93-b616-45eb62321b58",
+        "type": "transport",
+        "title": "Retour \u00e0 Jersey City",
+        "time": "12:45:00",
+        "status": "pending",
+        "sequence_order": 5,
+        "duration": "1h15m",
+        "transport": {
+          "mode": "PATH + Bus",
+          "notes": "Retour \u00e0 Journal Square pour r\u00e9cup\u00e9ration des bagages"
+        }
+      },
+      {
+        "id": "9b8c8cd6-e414-4b6c-b5a5-e011c2c43ff9",
+        "type": "transport",
+        "title": "Transfert vers Liberty State Park",
+        "time": "14:15:00",
+        "status": "pending",
+        "sequence_order": 6,
+        "duration": "40m",
+        "transport": {
+          "mode": "Light Rail",
+          "carrier": "NJ Transit",
+          "estimated_cost": 3.25
+        }
+      },
+      {
+        "id": "3c860dca-2139-4489-89e4-fafd13bf92cb",
+        "type": "activity",
+        "title": "Liberty State Park",
+        "time": "15:00:00",
+        "status": "pending",
+        "sequence_order": 7,
+        "duration": "1h45m",
+        "notes": "Vue sur la skyline de NYC et Statue de la Libert\u00e9",
+        "location": {
+          "name": "Liberty State Park",
+          "latitude": 40.7145,
+          "longitude": -74.0329
+        }
+      },
+      {
+        "id": "7bf2d15d-d598-4ce4-9ad8-38c282891e35",
+        "type": "meal",
+        "title": "D\u00eener rapide \u00e0 Jersey City",
+        "time": "17:00:00",
+        "status": "pending",
+        "sequence_order": 8,
+        "duration": "45m",
+        "location": {
+          "name": "Restaurant local",
+          "latitude": 40.72,
+          "longitude": -74.055
+        }
+      },
+      {
+        "id": "408c8a13-4252-4f40-8817-e9a383b3d656",
+        "type": "transport",
+        "title": "Transfert vers EWR",
+        "time": "18:00:00",
+        "status": "pending",
+        "sequence_order": 9,
+        "duration": "45m",
+        "transport": {
+          "mode": "NJ Transit Train + AirTrain",
+          "estimated_cost": 15.0
+        }
+      },
+      {
+        "id": "1cb00937-3f67-44e5-9a37-cf156d228317",
+        "type": "activity",
+        "title": "Vol UA2038 \u2192 Nashville",
+        "time": "21:42:00",
+        "status": "confirmed",
+        "sequence_order": 10,
+        "duration": "2h30m",
+        "important": true,
+        "location": {
+          "name": "A\u00e9roport de Newark (EWR)",
+          "latitude": 40.6925,
+          "longitude": -74.1686
+        },
+        "notes": "Arriv\u00e9e \u00e0 Nashville (BNA) \u00e0 23:12 CDT"
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.492Z",
+      "updated_at": "2025-05-21T09:30:44.492Z",
+      "source": "json_conversion",
+      "version": "1.0",
+      "timezone": "America/New_York",
+      "additional_data": {
+        "tips": [
+          "\u00c9viter les heures de pointe sur les routes vers EWR (17h-19h)",
+          "Pr\u00e9voir 2h avant le vol pour le check-in et la s\u00e9curit\u00e9",
+          "Utiliser les consignes de l'a\u00e9roport si n\u00e9cessaire"
+        ],
+        "transportNotes": "PATH accepte TAPP (carte sans contact) et SmartLink",
+        "concludingRemarks": "Profitez des derni\u00e8res vues de NYC depuis Liberty State Park"
+      }
+    }
+  },
+  {
+    "id": "274b4681-f041-475f-aac8-e8b05d9cbee3",
+    "trip_id": "6e5ec677-0c1d-4cd4-b2a0-fe7bfdf3a69b",
+    "date": "2025-06-20",
+    "title": "Nashville Express & World Cup Match",
+    "summary": "A memorable day blending Nashville's vibrant culture with international football. This itinerary includes exploring downtown Nashville, enjoying local cuisine, and attending a World Cup match at GEODIS Park, followed by a late-night departure from Nashville International Airport (BNA).",
+    "weather": {
+      "temperature": 31,
+      "condition": "Sunny",
+      "icon": "01d",
+      "notes": "Expect hot and humid weather typical for Nashville in June. Stay hydrated and dress in light clothing."
+    },
+    "reminders": [
+      "Check Johnny Cash Museum hours & consider pre-booking tickets online if planning an internal visit.",
+      "Verify brunch spot hours & reservation policy; make a reservation if possible, especially for popular places.",
+      "GEODIS Park: Confirm bag policy, gate opening times (typically 90 minutes before kickoff), and explore pre-purchased parking options.",
+      "Ensure phone is fully charged for e-tickets, navigation, and photos. Consider a portable power bank.",
+      "Pack essential overnight items (toothbrush, change of clothes) in a carry-on due to late flight and potential airport wait.",
+      "Confirm rental car return procedure, location, and operating hours at BNA. Allow ample time for drop-off and shuttle to terminal."
+    ],
+    "documents": [
+      {
+        "file_name": "GEODIS_Park_Tickets.pdf",
+        "file_path": "path/to/documents/GEODIS_Park_Tickets.pdf",
+        "file_type": "application/pdf"
+      },
+      {
+        "file_name": "BNA_Rental_Car_Confirmation.pdf",
+        "file_path": "path/to/documents/BNA_Rental_Car_Confirmation.pdf",
+        "file_type": "application/pdf"
+      }
+    ],
+    "activities": [
+      {
+        "id": "da506f4c-d036-4141-bb67-b3fd5cbff4ba",
+        "type": "transport",
+        "title": "Hotel Departure to Downtown Nashville",
+        "time": "09:30:00",
+        "duration": "30m",
+        "notes": "Depart from your hotel (e.g., The Hermitage or hotel area) towards downtown Nashville. Plan for luggage storage for the day if you are checking out before the match. Utilize hotel's baggage hold or consider a luggage storage service in downtown.",
+        "status": "pending",
+        "sequence_order": 1,
+        "location": {
+          "name": "Downtown Nashville",
+          "latitude": 36.1627,
+          "longitude": -86.7816,
+          "address": "Broadway, Nashville, TN"
+        },
+        "transport": {
+          "mode": "Car",
+          "estimated_cost": 15.0,
+          "notes": "Parking downtown can be expensive. Consider public parking garages or ride-sharing services."
+        }
+      },
+      {
+        "id": "6fb8d99a-0eea-4ef4-bbc4-2f5132b3cf42",
+        "type": "activity",
+        "title": "Downtown Nashville Express Visit",
+        "time": "10:00:00",
+        "duration": "2h00m",
+        "notes": "Focus on walking Broadway to experience the Honky-Tonk atmosphere and a quick photo opportunity at popular murals (e.g., 'What Lifts You' wings mural at The Gulch) or museum exteriors if time is limited for internal visits. Immerse in the live music scene.",
+        "status": "pending",
+        "sequence_order": 2,
+        "location": {
+          "name": "Broadway Street & Surrounding Area",
+          "address": "119 3rd Ave S, Nashville, TN 37201 (Johnny Cash Museum - for reference)",
+          "latitude": 36.16,
+          "longitude": -86.776,
+          "venue_type": "Cultural/Entertainment District"
+        },
+        "transport": {
+          "mode": "Walking",
+          "notes": "The core downtown area is highly walkable. Wear comfortable shoes."
+        },
+        "estimated_cost": 0.0
+      },
+      {
+        "id": "65435dbc-b1df-4cde-baa8-5c4e7e5f40a8",
+        "type": "meal",
+        "title": "Southern Brunch Experience",
+        "time": "12:00:00",
+        "duration": "1h30m",
+        "notes": "A must-try for those who enjoy biscuits, bacon, and syrup. Loveless Cafe requires significant travel time (approx. 30-40 min drive each way) - choose alternatives if the schedule is tight. Biscuit Love Gulch is a popular option walkable/short ride from downtown.",
+        "status": "pending",
+        "sequence_order": 3,
+        "location": {
+          "name": "Biscuit Love Gulch (Recommended)",
+          "address": "316 11th Ave S, Nashville, TN 37203",
+          "latitude": 36.1517,
+          "longitude": -86.7865,
+          "contact": "+1-615-499-4700",
+          "website": "https://biscuitlove.com",
+          "venue_type": "Restaurant",
+          "notes": "Expect a wait, but worth it. The Gulch area is vibrant."
+        },
+        "transport": {
+          "mode": "Walking / Ride-share",
+          "notes": "Biscuit Love Gulch is about a 15-20 min walk from central Broadway, or a short ride-share."
+        },
+        "estimated_cost": 30.0
+      },
+      {
+        "id": "a9e5b8c1-d2f3-4e0a-b1c2-3d4e5f6a7b8c",
+        "type": "activity",
+        "title": "Afternoon Leisure / Further Exploration",
+        "time": "14:00:00",
+        "duration": "2h30m",
+        "notes": "This afternoon offers flexibility: Options include the Country Music Hall of Fame and Museum for a deeper dive into Nashville's musical heritage, a tour of the historic Ryman Auditorium, shopping in The Gulch, or simply relaxing before heading to the stadium. Choose based on interest and energy levels.",
+        "status": "pending",
+        "sequence_order": 4,
+        "location": {
+          "name": "Downtown / The Gulch Area Options",
+          "address": "222 5th Ave S, Nashville, TN 37203 (Country Music Hall of Fame and Museum)",
+          "latitude": 36.1593,
+          "longitude": -86.7788,
+          "venue_type": "Cultural/Shopping District"
+        },
+        "transport": {
+          "mode": "Walking / Ride-share",
+          "notes": "Most attractions are relatively close within downtown/Gulch, but ride-sharing can save time and energy."
+        },
+        "estimated_cost": 30.0
+      },
+      {
+        "id": "6cab746c-1bc6-493e-a3b9-37897b749ca7",
+        "type": "transport",
+        "title": "Travel to GEODIS Park",
+        "time": "17:00:00",
+        "duration": "30m",
+        "notes": "Drive to GEODIS Park. Ample parking is available on-site, but check parking cost and consider pre-booking online to secure a spot and potentially save time on match day.",
+        "status": "pending",
+        "sequence_order": 5,
+        "location": {
+          "name": "GEODIS Park",
+          "address": "501 Benton Ave, Nashville, TN 37203",
+          "latitude": 36.130426502994894,
+          "longitude": -86.76556832575382,
+          "venue_type": "Stadium",
+          "website": "https://www.geodispark.com/"
+        },
+        "transport": {
+          "mode": "Car",
+          "estimated_cost": 25.0,
+          "notes": "Parking can vary from $20-40. Arrive early to navigate traffic and parking."
+        }
+      },
+      {
+        "id": "b8c40ffb-1d22-4f97-88ac-918635ea64d2",
+        "type": "match",
+        "title": "\u26bd FIFA World Cup Match: Club Le\u00f3n vs EST",
+        "time": "18:00:00",
+        "duration": "2h00m",
+        "notes": "Experience the vibrant international and local atmosphere! The 2-hour duration is for the match itself; allow extra time for entry, finding seats, and post-match exit. Gates typically open 90 minutes before kickoff.",
+        "status": "confirmed",
+        "sequence_order": 6,
+        "important": true,
+        "is_group_event": true,
+        "location": {
+          "name": "GEODIS Park",
+          "address": "501 Benton Ave, Nashville, TN 37203",
+          "latitude": 36.130426502994894,
+          "longitude": -86.76556832575382,
+          "venue_type": "Stadium",
+          "website": "https://www.geodispark.com/",
+          "confirmation_number": "GEODISTIX87654"
+        },
+        "attachments": [
+          {
+            "file_name": "Match_Tickets.jpg",
+            "file_path": "path/to/attachments/Match_Tickets.jpg",
+            "file_type": "image/jpeg"
+          }
+        ]
+      },
+      {
+        "id": "97e3468d-baff-49b4-a91c-02ded047c3e0",
+        "type": "meal",
+        "title": "Post-Match Dinner",
+        "time": "20:30:00",
+        "duration": "1h30m",
+        "notes": "Grab a quick dinner after the match. Hattie B's Hot Chicken is a Nashville staple, or explore other local spots near the stadium or en route to the airport.",
+        "status": "pending",
+        "sequence_order": 7,
+        "location": {
+          "name": "Hattie B's Hot Chicken - Melrose (Suggested)",
+          "address": "2222 8th Ave S, Nashville, TN 37204",
+          "latitude": 36.1187,
+          "longitude": -86.7824,
+          "venue_type": "Restaurant",
+          "contact": "+1-615-678-4795"
+        },
+        "transport": {
+          "mode": "Car",
+          "notes": "A short drive from GEODIS Park, offers authentic Nashville cuisine."
+        },
+        "estimated_cost": 25.0
+      },
+      {
+        "id": "31d46e27-e794-4cc9-a036-0ffdbb81c29b",
+        "type": "transport",
+        "title": "Return to Nashville International Airport (BNA)",
+        "time": "22:30:00",
+        "duration": "30m",
+        "notes": "Proceed to BNA for rental car return and flight check-in. Your JetBlue flight B61074 departs at 06:00 on June 21st. Aim to arrive at the airport at least 2 hours before your flight for car return, check-in, and security clearance, especially for an international flight.",
+        "status": "pending",
+        "sequence_order": 8,
+        "important": true,
+        "location": {
+          "name": "Nashville International Airport (BNA)",
+          "address": "1 Terminal Dr, Nashville, TN 37214",
+          "latitude": 36.1264,
+          "longitude": -86.6782,
+          "venue_type": "Airport",
+          "website": "https://flynashville.com/"
+        },
+        "transport": {
+          "mode": "Car",
+          "carrier": "JetBlue",
+          "booking_reference": "JETBLUEABC123",
+          "flight_number": "B61074",
+          "notes": "Check-in for flight B61074 departing BNA to [Next Destination] at 06:00 AM on June 21st. Rental car return is typically well-marked upon arrival at the airport."
+        },
+        "attachments": [
+          {
+            "file_name": "JetBlue_Boarding_Pass.pdf",
+            "file_path": "path/to/attachments/JetBlue_Boarding_Pass.pdf",
+            "file_type": "application/pdf"
+          }
+        ]
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+        "name": "Passport",
+        "category": "Documents",
+        "packed": false
+      },
+      {
+        "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+        "name": "E-tickets (Match & Flight)",
+        "category": "Documents",
+        "packed": false
+      },
+      {
+        "id": "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+        "name": "Portable Phone Charger",
+        "category": "Electronics",
+        "packed": false
+      },
+      {
+        "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+        "name": "Comfortable Walking Shoes",
+        "category": "Clothing",
+        "packed": false
+      },
+      {
+        "id": "6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+        "name": "Lightweight Clothing (for warm weather)",
+        "category": "Clothing",
+        "packed": false
+      },
+      {
+        "id": "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e",
+        "name": "Small Backpack/Crossbody Bag",
+        "category": "Accessories",
+        "packed": false
+      },
+      {
+        "id": "8c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+        "name": "Water Bottle (refillable)",
+        "category": "Health & Safety",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.504Z",
+      "updated_at": "2025-05-21T21:03:20.000Z",
+      "source": "json_conversion_and_enhancement",
+      "version": "1.1",
+      "timezone": "America/Chicago",
+      "original_filename": "20_21-06.json",
+      "additional_data": {
+        "tips": [
+          "Pack smart: a carry-on with essentials is key for airport overnight stays and quick transitions.",
+          "Nashville is spread out; a rental car or strategic use of ride-shares is highly recommended. Always account for parking costs and availability.",
+          "Stay well-hydrated, especially with walking and outdoor activities in potentially hot weather.",
+          "For car safety, always lock doors and keep valuables out of sight when parking in public areas."
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Emergency Services (USA)",
+            "phone": "911",
+            "notes": "For Police, Fire, or Medical emergencies. Always dial 911 in the United States."
+          },
+          {
+            "name": "French Embassy in Washington D.C.",
+            "phone": "+1-202-944-6000",
+            "website": "https://fr.usembassy.gov/",
+            "notes": "Nearest consular services for French citizens in case of extreme emergency."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "3d3891b3-ea6d-4af7-93f0-24e2e9b1d4a0",
+    "trip_id": "6e5ec677-0c1d-4cd4-b2a0-fe7bfdf3a69b",
+    "date": "2025-06-21",
+    "title": "NYC Arrival & Jersey Gardens Outlet Shopping",
+    "summary": "After an early morning flight from Nashville, arrive in New York and head straight for a productive shopping spree at Jersey Gardens Outlet. This itinerary optimizes your return day by combining practical travel with a popular shopping destination before settling into your New York accommodation.",
+    "weather": {
+      "temperature": 25,
+      "condition": "Partly cloudy",
+      "icon": "04d",
+      "notes": "Expected weather for New York/New Jersey area in late June. Comfortable for shopping, but be prepared for potential humidity."
+    },
+    "reminders": [
+      "Confirm flight arrival terminal at JFK and plan your transfer method in advance (AirTrain to LIRR/Subway, taxi/ride-share).",
+      "If dropping bags at accommodation, confirm check-in time or early bag drop policy.",
+      "Jersey Gardens: Check opening hours (usually 10 AM - 9 PM) and consider the 'discount book' available at customer service.",
+      "Allocate sufficient time for travel to/from Jersey Gardens, especially considering NYC traffic.",
+      "Wear comfortable shoes for extensive walking at the outlet.",
+      "Keep shopping receipts organized for potential tax refund if applicable."
+    ],
+    "documents": [
+      {
+        "file_name": "JFK_Transfer_Info.pdf",
+        "file_path": "path/to/documents/JFK_Transfer_Info.pdf",
+        "file_type": "application/pdf"
+      },
+      {
+        "file_name": "Jersey_Gardens_Map.pdf",
+        "file_path": "path/to/documents/Jersey_Gardens_Map.pdf",
+        "file_type": "application/pdf"
+      }
+    ],
+    "activities": [
+      {
+        "id": "77c0cd9e-d1e4-40d4-88a4-3fc979bbb4f1",
+        "type": "transport",
+        "title": "Arrival at JFK & Transfer to Jersey City/Accommodation",
+        "time": "09:30:00",
+        "duration": "1h00m",
+        "notes": "Arrive at JFK from Nashville (flight B61074 landed around 08:30 AM). Proceed with customs/baggage claim if applicable, then transfer to Jersey City or your accommodation in NYC for a quick bag drop. Options: AirTrain to Jamaica Station, then LIRR to Penn Station for connections to Jersey City, or direct taxi/ride-share. Consider pre-booking if arriving with heavy luggage.",
+        "status": "pending",
+        "sequence_order": 1,
+        "location": {
+          "name": "JFK International Airport to Jersey City / NYC Accommodation",
+          "address": "JFK Airport, Queens, NY",
+          "latitude": 40.6413,
+          "longitude": -73.7781,
+          "venue_type": "Airport"
+        },
+        "transport": {
+          "mode": "AirTrain + Train/Subway or Taxi/Ride-share",
+          "estimated_cost": 20.0,
+          "notes": "Cost varies based on chosen mode. AirTrain + public transport is cheapest. Taxi/Uber can be $60-80+."
+        }
+      },
+      {
+        "id": "d5edc1b7-4098-4688-bede-dc656e212b1f",
+        "type": "transport",
+        "title": "Departure for The Mills at Jersey Gardens Outlet",
+        "time": "11:00:00",
+        "duration": "30m",
+        "notes": "Depart from Jersey City/NYC towards The Mills at Jersey Gardens. This outlet is conveniently located near Newark Liberty International Airport (EWR).",
+        "status": "pending",
+        "sequence_order": 2,
+        "location": {
+          "name": "The Mills at Jersey Gardens",
+          "address": "651 Kapkowski Rd, Elizabeth, NJ 07201",
+          "latitude": 40.6669,
+          "longitude": -74.1802,
+          "venue_type": "Shopping Mall"
+        },
+        "transport": {
+          "mode": "Bus (NJ Transit) or Rental Car/Taxi",
+          "estimated_cost": 7.0,
+          "notes": "NJ Transit Bus #111 or #115 from Port Authority Bus Terminal (NYC) or various points in Jersey City. Driving offers more flexibility but consider tolls and parking (free at Jersey Gardens)."
+        }
+      },
+      {
+        "id": "abad95d1-8425-4d54-8c24-e724dbbec5aa",
+        "type": "activity",
+        "title": "Shopping at The Mills at Jersey Gardens",
+        "time": "11:30:00",
+        "duration": "3h30m",
+        "notes": "Explore The Mills at Jersey Gardens, a large indoor outlet mall offering significant discounts. Popular brands include Nike, Levi's, Michael Kors, Coach, Tommy Hilfiger, and more. Remember to visit customer service for a coupon book with additional savings.",
+        "status": "pending",
+        "sequence_order": 3,
+        "important": true,
+        "location": {
+          "name": "The Mills at Jersey Gardens",
+          "address": "651 Kapkowski Rd, Elizabeth, NJ 07201",
+          "latitude": 40.6669,
+          "longitude": -74.1802,
+          "website": "https://www.simon.com/mall/the-mills-at-jersey-gardens",
+          "venue_type": "Shopping Mall"
+        },
+        "estimated_cost": 0.0
+      },
+      {
+        "id": "d1e2f3a4-b5c6-7d8e-9f0a-1b2c3d4e5f6a",
+        "type": "meal",
+        "title": "Lunch at Jersey Gardens Food Court",
+        "time": "15:00:00",
+        "duration": "45m",
+        "notes": "Quick and convenient lunch within the outlet mall's food court or one of its casual dining options.",
+        "status": "pending",
+        "sequence_order": 4,
+        "location": {
+          "name": "Jersey Gardens Food Court",
+          "address": "651 Kapkowski Rd, Elizabeth, NJ 07201",
+          "venue_type": "Food Court"
+        },
+        "estimated_cost": 20.0
+      },
+      {
+        "id": "292f309f-afcb-4ec0-b4c1-5a13bd55fd0f",
+        "type": "transport",
+        "title": "Return to Accommodation / NYC City Center",
+        "time": "16:00:00",
+        "duration": "1h00m",
+        "notes": "Travel back to your accommodation in Jersey City or Manhattan. Depending on traffic, this could take longer, especially during peak hours. Plan your route using public transport apps or ride-share services.",
+        "status": "pending",
+        "sequence_order": 5,
+        "location": {
+          "name": "Your Accommodation in Jersey City or NYC",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "transport": {
+          "mode": "Bus / Car / Taxi",
+          "estimated_cost": 10.0,
+          "notes": "Bus travel may be slower than a taxi/ride-share but more economical."
+        }
+      },
+      {
+        "id": "e0a1b2c3-d4e5-6f7a-8b9c-0d1e2f3a4b5c",
+        "type": "activity",
+        "title": "Unpack & Relax at Accommodation",
+        "time": "17:00:00",
+        "duration": "2h00m",
+        "notes": "Settle into your accommodation, unpack your shopping, and relax after a long day of travel and shopping. Prepare for the next day's activities in New York.",
+        "status": "pending",
+        "sequence_order": 6,
+        "location": {
+          "name": "Your Accommodation in Jersey City",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "estimated_cost": 0.0
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "c1d2e3f4-a5b6-c7d8-e9f0-a1b2c3d4e5f6",
+        "name": "JFK/NYC Metro Card (if using public transport)",
+        "category": "Documents & Travel",
+        "packed": false
+      },
+      {
+        "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+        "name": "Comfortable Shopping Shoes",
+        "category": "Clothing",
+        "packed": false
+      },
+      {
+        "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+        "name": "Empty Shopping Bag (collapsible)",
+        "category": "Accessories",
+        "packed": false
+      },
+      {
+        "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+        "name": "Light Jacket/Sweater (for air-conditioned outlets)",
+        "category": "Clothing",
+        "packed": false
+      },
+      {
+        "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8a9",
+        "name": "Small Power Bank",
+        "category": "Electronics",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.504Z",
+      "updated_at": "2025-05-21T22:45:51.000Z",
+      "source": "json_enhancement",
+      "version": "1.1",
+      "timezone": "America/New_York",
+      "original_filename": "20_21-06.json",
+      "additional_data": {
+        "tips": [
+          "Given the early flight arrival, prioritize a quick bag drop to maximize shopping time.",
+          "Consider downloading the Simon app for The Mills at Jersey Gardens for deals and navigation.",
+          "If traveling during rush hour, factor in potential traffic delays on the return trip to NYC.",
+          "New York sales tax on clothing and footwear under $110 is exempt. New Jersey (where Jersey Gardens is) has no sales tax on clothing and footwear, which is a key advantage for shopping there."
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Emergency Services (USA)",
+            "phone": "911",
+            "notes": "For Police, Fire, or Medical emergencies. Dial 911 anywhere in the US."
+          },
+          {
+            "name": "French Consulate General in New York",
+            "phone": "+1-212-606-3600",
+            "website": "https://newyork.consulfrance.org/",
+            "notes": "For consular assistance in New York."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "ade907df-9390-46c5-9b7a-9fd5e5732488",
+    "trip_id": "6befa61c-dd73-4ac3-9536-8d92eb832005",
+    "date": "2025-06-22",
+    "title": "Dimanche \"New York Hors-Cadre\" : Bronx + Roosevelt Island",
+    "summary": "Une journ\u00e9e d\u00e9di\u00e9e \u00e0 l'exploration de facettes moins touristiques mais culturellement riches de New York, incluant la s\u00e9r\u00e9nit\u00e9 des jardins botaniques du Bronx, l'authenticit\u00e9 de la Little Italy locale, et des vues imprenables depuis Roosevelt Island.",
+    "weather": {
+      "temperature": 27,
+      "condition": "Ensoleill\u00e9 avec quelques nuages",
+      "icon": "02d",
+      "notes": "Journ\u00e9e typique de fin juin \u00e0 NYC, potentiellement chaude et humide. Pr\u00e9voyez de l'eau et des v\u00eatements l\u00e9gers."
+    },
+    "reminders": [
+      "Rechargez votre MetroCard/OMNY ou assurez-vous d'avoir une carte de cr\u00e9dit/d\u00e9bit compatible pour les transports en commun.",
+      "Achetez vos billets pour le New York Botanical Garden en ligne \u00e0 l'avance pour \u00e9viter les files d'attente.",
+      "Si vous envisagez le Yankee Stadium Tour, v\u00e9rifiez les horaires et r\u00e9servez \u00e0 l'avance, surtout le week-end.",
+      "Portez des chaussures confortables, car cette journ\u00e9e implique beaucoup de marche et de d\u00e9placements.",
+      "N'oubliez pas la cr\u00e8me solaire, un chapeau et des lunettes de soleil pour les activit\u00e9s en ext\u00e9rieur.",
+      "Pensez \u00e0 prendre une batterie externe pour votre t\u00e9l\u00e9phone."
+    ],
+    "documents": [
+      {
+        "file_name": "NYBG_Tickets.pdf",
+        "file_path": "chemin/vers/documents/NYBG_Tickets.pdf",
+        "file_type": "application/pdf"
+      },
+      {
+        "file_name": "NYC_Metro_Map.pdf",
+        "file_path": "chemin/vers/documents/NYC_Metro_Map.pdf",
+        "file_type": "application/pdf"
+      }
+    ],
+    "activities": [
+      {
+        "id": "28bf843e-2dec-409d-921c-2f7d97a410c1",
+        "type": "transport",
+        "title": "D\u00e9part pour le Bronx (New York Botanical Garden)",
+        "time": "09:00:00",
+        "duration": "45m",
+        "notes": "Prenez le PATH depuis Journal Square (Jersey City) jusqu'\u00e0 Manhattan (station 33rd St ou WTC), puis changez pour le m\u00e9tro (lignes B, D ou 4) jusqu'\u00e0 la station 'Botanical Garden'. V\u00e9rifiez les correspondances sur Google Maps ou l'application MTA.",
+        "status": "pending",
+        "sequence_order": 1,
+        "location": {
+          "name": "De l'h\u00e9bergement \u00e0 Jersey City au Jardin Botanique de New York",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "transport": {
+          "mode": "PATH + M\u00e9tro",
+          "carrier": "PATH / MTA NYC Transit",
+          "estimated_cost": 5.65,
+          "notes": "Co\u00fbt bas\u00e9 sur 1 trajet PATH (~2.75$) et 1 trajet m\u00e9tro (~2.90$ avec OMNY/MetroCard)."
+        }
+      },
+      {
+        "id": "13435532-444d-4c43-9fad-8ec95a410192",
+        "type": "activity",
+        "title": "\ud83c\udf3f Visite du New York Botanical Garden",
+        "time": "10:00:00",
+        "duration": "2h00m",
+        "notes": "Explorez l'un des plus grands jardins botaniques du monde, offrant une \u00e9vasion paisible de l'agitation de la ville. Ne manquez pas le Conservatoire Enid A. Haupt et le Thain Family Forest. Id\u00e9al pour un matin tranquille. Pr\u00e9voyez d'acheter vos billets en ligne \u00e0 l'avance pour gagner du temps et potentiellement \u00e9conomiser.",
+        "status": "pending",
+        "sequence_order": 2,
+        "location": {
+          "name": "New York Botanical Garden",
+          "address": "2900 Southern Blvd, Bronx, NY 10458, USA",
+          "latitude": 40.8624,
+          "longitude": -73.8824,
+          "website": "https://www.nybg.org/",
+          "venue_type": "Jardin botanique"
+        },
+        "estimated_cost": 30.0
+      },
+      {
+        "id": "5f8aee9b-7098-4105-a690-f43f97fb495a",
+        "type": "meal",
+        "title": "\ud83c\udf5d D\u00e9jeuner sur Arthur Avenue (Little Italy du Bronx)",
+        "time": "12:00:00",
+        "duration": "1h30m",
+        "notes": "D\u00e9couvrez l'authentique Little Italy du Bronx. Arthur Avenue est r\u00e9put\u00e9e pour son ambiance old-school et ses trattorias italiennes. Suggestions de restaurants : Roberto's Restaurant (pour une exp\u00e9rience plus haut de gamme) ou Mario's Restaurant (plus traditionnel). N'oubliez pas les boulangeries et les march\u00e9s locaux.",
+        "status": "pending",
+        "sequence_order": 3,
+        "location": {
+          "name": "Arthur Avenue, Bronx (Little Italy)",
+          "address": "2344 Arthur Ave, Bronx, NY 10458, USA (adresse approximative du c\u0153ur du quartier)",
+          "latitude": 40.8587,
+          "longitude": -73.8833,
+          "venue_type": "Quartier gastronomique"
+        },
+        "transport": {
+          "mode": "Marche / Taxi local",
+          "notes": "Arthur Avenue est \u00e0 une courte distance en taxi ou \u00e0 15-20 minutes \u00e0 pied du Jardin Botanique."
+        },
+        "estimated_cost": 40.0
+      },
+      {
+        "id": "d50d8259-a5f4-49eb-b803-35dbb7caaafc",
+        "type": "activity",
+        "title": "\u26be Yankee Stadium Tour (optionnel)",
+        "time": "14:00:00",
+        "duration": "1h30m",
+        "notes": "Pour les amateurs de sport ou d'histoire am\u00e9ricaine. Visitez ce stade embl\u00e9matique, domicile des New York Yankees. V\u00e9rifiez les horaires des visites guid\u00e9es et r\u00e9servez en ligne, surtout un dimanche, car les places peuvent \u00eatre limit\u00e9es.",
+        "status": "pending",
+        "sequence_order": 4,
+        "requires_confirmation": true,
+        "location": {
+          "name": "Yankee Stadium",
+          "address": "1 E 161st St, Bronx, NY 10451, USA",
+          "latitude": 40.8292,
+          "longitude": -73.9262,
+          "website": "https://www.mlb.com/yankees/ballpark/tours",
+          "venue_type": "Stade de baseball"
+        },
+        "transport": {
+          "mode": "M\u00e9tro / Marche",
+          "notes": "Accessible en m\u00e9tro (lignes B, D ou 4) depuis Arthur Avenue ou en taxi. Environ 15-20 min de m\u00e9tro."
+        },
+        "estimated_cost": 35.0
+      },
+      {
+        "id": "80551e6e-0a96-4da5-9871-064f64effdaf",
+        "type": "transport",
+        "title": "M\u00e9tro du Bronx vers Midtown East (T\u00e9l\u00e9ph\u00e9rique Roosevelt Island)",
+        "time": "15:30:00",
+        "duration": "45m",
+        "notes": "Prenez le m\u00e9tro (lignes 4, 5 ou 6) depuis le Bronx (par exemple, station 161 St-Yankee Stadium si vous avez fait le tour, ou depuis une station plus au sud si non) jusqu'\u00e0 la station 'Lexington Av / 59 St' \u00e0 Midtown East, o\u00f9 se trouve le d\u00e9part du t\u00e9l\u00e9ph\u00e9rique de Roosevelt Island.",
+        "status": "pending",
+        "sequence_order": 5,
+        "location": {
+          "name": "De Yankee Stadium/Bronx \u00e0 la station de t\u00e9l\u00e9ph\u00e9rique Roosevelt Island",
+          "address": "591 E 59th St, New York, NY 10022, USA (d\u00e9part du t\u00e9l\u00e9ph\u00e9rique)",
+          "latitude": 40.7583,
+          "longitude": -73.9632
+        },
+        "transport": {
+          "mode": "M\u00e9tro",
+          "carrier": "MTA NYC Transit",
+          "estimated_cost": 2.9
+        }
+      },
+      {
+        "id": "d4e9da2a-f9f7-4b5c-915b-9e4c206655e0",
+        "type": "activity",
+        "title": "\ud83d\udea1 D\u00e9couverte de Roosevelt Island en t\u00e9l\u00e9ph\u00e9rique",
+        "time": "16:30:00",
+        "duration": "1h30m",
+        "notes": "Empruntez le t\u00e9l\u00e9ph\u00e9rique de Roosevelt Island pour une travers\u00e9e spectaculaire offrant des vues a\u00e9riennes uniques sur l\u2019East River, le Queensboro Bridge et le skyline de Manhattan. Une fois sur l'\u00eele, baladez-vous au calme vers le Franklin D. Roosevelt Four Freedoms Park au sud ou le phare au nord, et profitez de la tranquillit\u00e9.",
+        "status": "pending",
+        "sequence_order": 6,
+        "location": {
+          "name": "Roosevelt Island Tramway & Roosevelt Island",
+          "address": "591 E 59th St, New York, NY 10022, USA (d\u00e9part du t\u00e9l\u00e9ph\u00e9rique)",
+          "latitude": 40.7583,
+          "longitude": -73.9632,
+          "website": "https://rioc.ny.gov/302/Tramway",
+          "venue_type": "Ile / Attraction touristique"
+        },
+        "transport": {
+          "mode": "T\u00e9l\u00e9ph\u00e9rique",
+          "notes": "Le t\u00e9l\u00e9ph\u00e9rique est accessible avec une MetroCard/OMNY, comme un trajet de m\u00e9tro standard."
+        },
+        "estimated_cost": 2.9
+      },
+      {
+        "id": "11d65d4d-2fe7-4412-bb16-e286dbc466b5",
+        "type": "meal",
+        "title": "\ud83c\udf7d\ufe0f D\u00eener sur Roosevelt Island ou \u00e0 Long Island City",
+        "time": "18:00:00",
+        "duration": "1h30m",
+        "notes": "Profitez d'une ambiance \u00e9l\u00e9gante et potentiellement d'un coucher de soleil. Le Panorama Room rooftop sur Roosevelt Island offre une vue incroyable sur la skyline. Alternativement, de nombreux restaurants \u00e0 Long Island City (juste de l'autre c\u00f4t\u00e9 de l'eau, accessible via le pont ou le m\u00e9tro) proposent une grande vari\u00e9t\u00e9 de cuisines et sont parfaits pour le d\u00eener.",
+        "status": "pending",
+        "sequence_order": 7,
+        "location": {
+          "name": "Panorama Room (Roosevelt Island) ou Long Island City",
+          "address": "455 Main St, Roosevelt Island, NY 10044, USA (Panorama Room)",
+          "latitude": 40.7629,
+          "longitude": -73.951,
+          "website": "https://panoramaroom.com/",
+          "venue_type": "Restaurant / Bar rooftop"
+        },
+        "transport": {
+          "mode": "Marche / T\u00e9l\u00e9ph\u00e9rique / M\u00e9tro",
+          "notes": "Le Panorama Room est \u00e0 quelques minutes \u00e0 pied de la station de t\u00e9l\u00e9ph\u00e9rique sur Roosevelt Island. Pour Long Island City, prenez le F train depuis Roosevelt Island."
+        },
+        "estimated_cost": 70.0
+      },
+      {
+        "id": "0886238c-9542-4fe9-82b1-bde3b056a74c",
+        "type": "transport",
+        "title": "Retour \u00e0 Jersey City",
+        "time": "19:30:00",
+        "duration": "1h00m",
+        "notes": "Depuis Roosevelt Island (ou Long Island City), retournez \u00e0 Manhattan via le m\u00e9tro (ligne F depuis Roosevelt Island, ou E/M/R/N/W depuis LIC). De Manhattan, reprenez le PATH jusqu'\u00e0 Journal Square ou la station la plus proche de votre h\u00e9bergement \u00e0 Jersey City.",
+        "status": "pending",
+        "sequence_order": 8,
+        "location": {
+          "name": "De Roosevelt Island \u00e0 l'h\u00e9bergement \u00e0 Jersey City",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "transport": {
+          "mode": "T\u00e9l\u00e9ph\u00e9rique + M\u00e9tro + PATH",
+          "carrier": "MTA NYC Transit / PATH",
+          "estimated_cost": 5.65,
+          "notes": "Le trajet peut \u00eatre long, assurez-vous d'avoir suffisamment de cr\u00e9dit sur votre MetroCard/OMNY ou un pass journalier si vous en utilisez un."
+        }
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "abc1d2e3-f4a5-b6c7-d8e9-f0a1b2c3d4e5",
+        "name": "MetroCard ou carte de cr\u00e9dit/d\u00e9bit OMNY compatible",
+        "category": "Transport",
+        "packed": false
+      },
+      {
+        "id": "def6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+        "name": "Chaussures de marche confortables",
+        "category": "V\u00eatements",
+        "packed": false
+      },
+      {
+        "id": "u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6",
+        "name": "Cr\u00e8me solaire et lunettes de soleil",
+        "category": "Sant\u00e9 & S\u00e9curit\u00e9",
+        "packed": false
+      },
+      {
+        "id": "k7l8m9n0-o1p2-q3r4-s5t6-u7v8w9x0y1z2",
+        "name": "Bouteille d'eau r\u00e9utilisable",
+        "category": "Sant\u00e9 & S\u00e9curit\u00e9",
+        "packed": false
+      },
+      {
+        "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+        "name": "Batterie externe pour t\u00e9l\u00e9phone",
+        "category": "\u00c9lectronique",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.509Z",
+      "updated_at": "2025-05-21T22:55:55.000Z",
+      "source": "json_enhancement",
+      "version": "1.1",
+      "timezone": "America/New_York",
+      "original_filename": "22-06.json",
+      "additional_data": {
+        "tips": [
+          "Pour optimiser les d\u00e9placements, utilisez Google Maps ou l'application MTA (MyMTA) pour les itin\u00e9raires en temps r\u00e9el.",
+          "Le New York Pass ou d'autres pass touristiques peuvent inclure l'entr\u00e9e au Jardin Botanique, v\u00e9rifiez si cela est avantageux pour votre s\u00e9jour global.",
+          "Le dimanche, les transports peuvent \u00eatre moins fr\u00e9quents ou subir des travaux, v\u00e9rifiez les avis de service de la MTA.",
+          "N'h\u00e9sitez pas \u00e0 demander de l'aide aux locaux si vous \u00eates perdu ou avez besoin de recommandations, les New-Yorkais sont souvent serviables."
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Services d'Urgence (USA)",
+            "phone": "911",
+            "notes": "Pour la police, les pompiers ou les urgences m\u00e9dicales. Composez toujours le 911 aux \u00c9tats-Unis."
+          },
+          {
+            "name": "Consulat G\u00e9n\u00e9ral de France \u00e0 New York",
+            "phone": "+1-212-606-3600",
+            "website": "https://newyork.consulfrance.org/",
+            "notes": "Pour l'assistance consulaire aux citoyens fran\u00e7ais \u00e0 New York."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "ad168299-f2ac-4c52-ae50-67163c18d178",
+    "trip_id": "a95a3b03-b1fd-420b-a22f-253361cc0e1e",
+    "date": "2025-06-23",
+    "title": "Hoboken & Weehawken : D\u00e9tente sur le Waterfront du New Jersey",
+    "summary": "Profitez d'une journ\u00e9e relaxante et pittoresque en explorant Hoboken et Weehawken. Au programme : brunch local, balade sur le front de mer avec des vues imprenables sur Manhattan, et d\u00eener au bord de l'eau dans une ambiance d\u00e9contract\u00e9e.",
+    "weather": {
+      "temperature": 26,
+      "condition": "Ensoleill\u00e9",
+      "icon": "01d",
+      "notes": "Journ\u00e9e agr\u00e9able et ensoleill\u00e9e attendue. Id\u00e9al pour les balades en bord de l'eau. Pr\u00e9voyez des protections solaires."
+    },
+    "reminders": [
+      "Portez des chaussures confortables pour la marche le long du waterfront et dans les parcs.",
+      "Si vous choisissez un brunch populaire, envisagez de r\u00e9server \u00e0 l'avance, surtout un dimanche.",
+      "V\u00e9rifiez les horaires et les arr\u00eats des bus locaux (NJ Transit) si vous pr\u00e9voyez de les utiliser entre Hoboken et Weehawken/Jersey City Heights.",
+      "N'oubliez pas votre appareil photo ou votre t\u00e9l\u00e9phone pour capturer les vues magnifiques sur Manhattan."
+    ],
+    "documents": [],
+    "activities": [
+      {
+        "id": "96c9e0aa-ff97-4b0f-b750-01521731c39b",
+        "type": "meal",
+        "title": "Brunch \u00e0 Hoboken",
+        "time": "10:00:00",
+        "duration": "1h30m",
+        "notes": "D\u00e9butez la journ\u00e9e avec un brunch dans une ambiance locale, chic et d\u00e9tendue. Anthony David\u2019s est r\u00e9put\u00e9 pour son brunch italien raffin\u00e9, tandis que La Isla offre des saveurs cubaines authentiques. R\u00e9servation fortement recommand\u00e9e le dimanche.",
+        "status": "pending",
+        "sequence_order": 1,
+        "location": {
+          "name": "Anthony David\u2019s ou La Isla (Hoboken)",
+          "address": "953 Bloomfield St, Hoboken, NJ 07030 (Anthony David\u2019s) ou 104 Washington St, Hoboken, NJ 07030 (La Isla)",
+          "latitude": 40.7505,
+          "longitude": -74.027,
+          "contact": "+1-201-222-8399 (Anthony David\u2019s)",
+          "website": "https://anthonydavids.com/",
+          "venue_type": "Restaurant"
+        },
+        "transport": {
+          "mode": "Marche",
+          "notes": "Facilement accessible \u00e0 pied depuis votre h\u00e9bergement \u00e0 Jersey City si proche de la limite Hoboken/JC, ou un court trajet en VTC."
+        },
+        "estimated_cost": 40.0
+      },
+      {
+        "id": "38c0bb2e-82c9-4177-a896-b0e5f0e69f8e",
+        "type": "activity",
+        "title": "Balade sur le Hoboken Waterfront Walkway",
+        "time": "11:30:00",
+        "duration": "1h30m",
+        "notes": "Profitez d'une balade paisible le long du front de mer de Hoboken. La promenade offre des vues \u00e9poustouflantes et ininterrompues sur le skyline de Manhattan et l'Hudson River. Parfait pour des photos, la d\u00e9tente ou une pause lecture au bord de l'eau.",
+        "status": "pending",
+        "sequence_order": 2,
+        "location": {
+          "name": "Hoboken Waterfront Walkway (autour de Pier A Park)",
+          "address": "100 Sinatra Dr, Hoboken, NJ 07030 (Pier A Park)",
+          "latitude": 40.7381,
+          "longitude": -74.0298,
+          "venue_type": "Sentier p\u00e9destre / Parc"
+        },
+        "transport": {
+          "mode": "Marche",
+          "notes": "La promenade est directement accessible depuis le centre d'Hoboken."
+        },
+        "estimated_cost": 0.0
+      },
+      {
+        "id": "55e36cf4-1b3a-4ffb-bbed-e29074cf80c7",
+        "type": "meal",
+        "title": "D\u00e9jeuner l\u00e9ger ou caf\u00e9 au Blue Eyes Caf\u00e9",
+        "time": "13:30:00",
+        "duration": "1h30m",
+        "notes": "Profitez d'un d\u00e9jeuner l\u00e9ger ou d'un caf\u00e9 au Blue Eyes Caf\u00e9, un spot pris\u00e9 avec une vue imprenable sur la skyline de Manhattan. Ils proposent des pizzas, des p\u00e2tes et des desserts dans une ambiance d\u00e9contract\u00e9e.",
+        "status": "pending",
+        "sequence_order": 3,
+        "location": {
+          "name": "Blue Eyes Caf\u00e9",
+          "address": "525 Sinatra Dr, Hoboken, NJ 07030, USA",
+          "latitude": 40.741,
+          "longitude": -74.029,
+          "contact": "+1-201-683-6861",
+          "website": "https://blueeyesrestaurant.com/",
+          "venue_type": "Caf\u00e9 / Restaurant"
+        },
+        "transport": {
+          "mode": "Marche",
+          "notes": "Situ\u00e9 directement sur le Waterfront Walkway \u00e0 Hoboken."
+        },
+        "estimated_cost": 25.0
+      },
+      {
+        "id": "e9f0a1b2-c3d4-e5f6-a7b8-c9d0e1f2a3b4",
+        "type": "transport",
+        "title": "Transport Hoboken vers Hamilton Park (Jersey City Heights)",
+        "time": "15:00:00",
+        "duration": "15m",
+        "notes": "Prenez un taxi/VTC ou un bus local (ex: NJ Transit bus 88 ou 89, v\u00e9rifiez les horaires de dimanche) depuis Hoboken pour rejoindre Hamilton Park. Le trajet est court et offre d\u00e9j\u00e0 de belles vues en montant vers les hauteurs de Jersey City.",
+        "status": "pending",
+        "sequence_order": 4,
+        "location": {
+          "name": "De Hoboken \u00e0 Hamilton Park",
+          "address": "Hoboken, NJ, USA vers 499 Manhattan Ave, Jersey City, NJ 07307, USA",
+          "latitude": 40.7441,
+          "longitude": -74.0324
+        },
+        "transport": {
+          "mode": "Taxi / VTC / Bus",
+          "carrier": "NJ Transit (Bus)",
+          "estimated_cost": 8.0,
+          "notes": "Le co\u00fbt peut varier entre 5-15$ pour un taxi/VTC ou environ 2$ pour le bus local."
+        }
+      },
+      {
+        "id": "5d5075cd-496d-40fb-a29e-8d79568f07ff",
+        "type": "activity",
+        "title": "Hamilton Park & Weehawken Viewpoints",
+        "time": "15:30:00",
+        "duration": "1h30m",
+        "notes": "Explorez Hamilton Park, un petit parc 'suspendu' qui offre une vue panoramique \u00e0 180\u00b0 sur la skyline de Manhattan, incluant l'Empire State Building, le Chrysler Building et le One World Trade Center. C'est l'un des points de vue les plus photographi\u00e9s de la r\u00e9gion. D'autres points de vue le long de Weehawken Blvd valent \u00e9galement le d\u00e9tour.",
+        "status": "pending",
+        "sequence_order": 5,
+        "location": {
+          "name": "Hamilton Park",
+          "address": "499 Manhattan Ave, Jersey City, NJ 07307, USA",
+          "latitude": 40.7431,
+          "longitude": -74.0409,
+          "venue_type": "Parc / Point de vue"
+        },
+        "estimated_cost": 0.0
+      },
+      {
+        "id": "c45967b5-fa42-4d7d-9b99-ab17f5140a1e",
+        "type": "meal",
+        "title": "Ap\u00e9ro / D\u00eener rooftop ou bord de l\u2019eau",
+        "time": "17:00:00",
+        "duration": "1h30m",
+        "notes": "Terminez la journ\u00e9e avec un ap\u00e9ritif ou un d\u00eener d\u00e9contract\u00e9. City Bistro \u00e0 Hoboken propose un agr\u00e9able rooftop. Pour une ambiance plus festive en plein air, Pier 13 \u00e0 Hoboken est un 'biergarten' avec food trucks et une superbe vue sur l'eau, id\u00e9al pour un coucher de soleil.",
+        "status": "pending",
+        "sequence_order": 6,
+        "location": {
+          "name": "City Bistro (Hoboken) ou Pier 13 (Hoboken)",
+          "address": "56 14th St, Hoboken, NJ 07030, USA (City Bistro) ou 1301 Sinatra Dr N, Hoboken, NJ 07030, USA (Pier 13)",
+          "latitude": 40.751,
+          "longitude": -74.0264,
+          "contact": "+1-201-963-8200 (City Bistro)",
+          "website": "https://citybistrohoboken.com/ / http://www.pier13hoboken.com/",
+          "venue_type": "Restaurant / Bar / Biergarten"
+        },
+        "transport": {
+          "mode": "Taxi / VTC / Bus",
+          "notes": "Accessible en taxi/VTC ou bus depuis Hamilton Park vers Hoboken."
+        },
+        "estimated_cost": 60.0
+      },
+      {
+        "id": "6ae7b207-8970-4c28-b741-9927d3d916ec",
+        "type": "transport",
+        "title": "Retour \u00e0 Jersey City",
+        "time": "19:00:00",
+        "duration": "15m",
+        "notes": "Fin paisible de la journ\u00e9e et retour \u00e0 votre h\u00e9bergement. Le trajet est court et facile, soit \u00e0 pied si votre h\u00e9bergement est proche du centre d'Hoboken, soit en bus local (NJ Transit bus) si plus \u00e9loign\u00e9 ou si vous pr\u00e9f\u00e9rez ne pas marcher.",
+        "status": "pending",
+        "sequence_order": 7,
+        "location": {
+          "name": "De Hoboken \u00e0 l'h\u00e9bergement \u00e0 Jersey City",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "transport": {
+          "mode": "Marche / Bus local",
+          "carrier": "NJ Transit (Bus)",
+          "estimated_cost": 2.0
+        }
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6",
+        "name": "Chaussures de marche confortables",
+        "category": "V\u00eatements",
+        "packed": false
+      },
+      {
+        "id": "u7v8w9x0-y1z2-a3b4-c5d6-e7f8g9h0i1j2",
+        "name": "Cr\u00e8me solaire et lunettes de soleil",
+        "category": "Sant\u00e9 & S\u00e9curit\u00e9",
+        "packed": false
+      },
+      {
+        "id": "k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8",
+        "name": "Batterie externe pour t\u00e9l\u00e9phone",
+        "category": "\u00c9lectronique",
+        "packed": false
+      },
+      {
+        "id": "a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4",
+        "name": "Appareil photo",
+        "category": "\u00c9lectronique",
+        "packed": false
+      },
+      {
+        "id": "q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0",
+        "name": "Petite bouteille d'eau r\u00e9utilisable",
+        "category": "Sant\u00e9 & S\u00e9curit\u00e9",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.520Z",
+      "updated_at": "2025-05-21T22:58:03.000Z",
+      "source": "json_enhancement",
+      "version": "1.1",
+      "timezone": "America/New_York",
+      "original_filename": "23-06.json",
+      "additional_data": {
+        "tips": [
+          "Les vues sur Manhattan sont les meilleures depuis le New Jersey, surtout au lever et au coucher du soleil. Pr\u00e9parez-vous \u00e0 prendre de superbes photos.",
+          "Hoboken est tr\u00e8s agr\u00e9able \u00e0 explorer \u00e0 pied. De nombreux petits commerces et caf\u00e9s se trouvent le long de Washington Street.",
+          "Le PATH et les bus NJ Transit sont des moyens de transport efficaces entre Jersey City et Hoboken.",
+          "N'h\u00e9sitez pas \u00e0 explorer les rues secondaires de Hoboken pour d\u00e9couvrir son architecture charmante et ses boutiques locales."
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Services d'Urgence (USA)",
+            "phone": "911",
+            "notes": "Pour la police, les pompiers ou les urgences m\u00e9dicales. Composez toujours le 911 aux \u00c9tats-Unis."
+          },
+          {
+            "name": "Consulat G\u00e9n\u00e9ral de France \u00e0 New York",
+            "phone": "+1-212-606-3600",
+            "website": "https://newyork.consulfrance.org/",
+            "notes": "Pour l'assistance consulaire aux citoyens fran\u00e7ais \u00e0 New York."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "26b4c715-a3b8-4225-8aa6-dc37788e38a5",
+    "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
+    "date": "2025-06-24",
+    "title": "Match de cl\u00f4ture \u00e0 Philadelphie : EST vs Chelsea FC",
+    "summary": "Une journ\u00e9e \u00e9pique pour cl\u00f4turer le s\u00e9jour : r\u00e9cup\u00e9ration d'une voiture de location, trajet vers Philadelphie pour explorer ses sites historiques, puis un d\u00eener pr\u00e9-match vibrant avant d'assister \u00e0 l'affrontement entre l'EST et Chelsea FC au Lincoln Financial Field, couronnant ainsi votre voyage par une exp\u00e9rience sportive inoubliable.",
+    "weather": {
+      "temperature": 30,
+      "condition": "Ensoleill\u00e9 et chaud",
+      "icon": "01d",
+      "notes": "Journ\u00e9e tr\u00e8s ensoleill\u00e9e et chaude attendue \u00e0 Philadelphie. Hydratez-vous et prot\u00e9gez-vous du soleil, surtout l'apr\u00e8s-midi."
+    },
+    "reminders": [
+      "Ayez votre permis de conduire et la confirmation de r\u00e9servation de la voiture \u00e0 port\u00e9e de main.",
+      "Pr\u00e9voyez de la monnaie ou une carte de cr\u00e9dit pour les p\u00e9ages sur la route de Philadelphie.",
+      "Si vous visitez des sites historiques \u00e0 Philadelphie comme l'Independence Hall, r\u00e9servez vos billets \u00e0 l'avance.",
+      "V\u00e9rifiez la politique des sacs et articles interdits au Lincoln Financial Field avant de partir.",
+      "Assurez-vous d'avoir vos billets de match (version num\u00e9rique sur votre t\u00e9l\u00e9phone ou imprim\u00e9e) pr\u00eats.",
+      "Hydratez-vous r\u00e9guli\u00e8rement tout au long de la journ\u00e9e, surtout avec la chaleur."
+    ],
+    "documents": [
+      {
+        "file_name": "Car_Rental_Confirmation.pdf",
+        "file_path": "chemin/vers/documents/Car_Rental_Confirmation.pdf",
+        "file_type": "application/pdf"
+      },
+      {
+        "file_name": "Match_Tickets_EST_Chelsea.pdf",
+        "file_path": "chemin/vers/documents/Match_Tickets_EST_Chelsea.pdf",
+        "file_type": "application/pdf"
+      }
+    ],
+    "activities": [
+      {
+        "id": "b2c8b099-d268-4ce0-9ad9-ccfb60e3d8da",
+        "type": "activity",
+        "title": "Location de voiture \u00e0 Jersey City",
+        "time": "10:00:00",
+        "duration": "1h00m",
+        "notes": "R\u00e9cup\u00e9ration de la voiture de location. Il est conseill\u00e9 de choisir une agence proche de votre h\u00e9bergement pour plus de commodit\u00e9. Arriver t\u00f4t vous permettra de partir sereinement et d'\u00e9viter les files d'attente. V\u00e9rifiez l'\u00e9tat du v\u00e9hicule avant de partir.",
+        "status": "pending",
+        "sequence_order": 1,
+        "requires_confirmation": true,
+        "location": {
+          "name": "Agence de location de voiture (Jersey City)",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA (point de d\u00e9part approximatif)",
+          "latitude": 40.7178,
+          "longitude": -74.0431,
+          "venue_type": "Agence de location"
+        },
+        "estimated_cost": 120.0
+      },
+      {
+        "id": "b079be8e-eaac-40aa-bece-d82d9881a8b6",
+        "type": "transport",
+        "title": "Trajet en voiture vers Philadelphie",
+        "time": "11:00:00",
+        "duration": "1h45m",
+        "notes": "D\u00e9part de Jersey City en direction de Philadelphie. Le trajet prend environ 1h45 \u00e0 2h15 sans trafic intense. Pr\u00e9voyez des p\u00e9ages (environ 15-25$ aller-retour, notamment le Delaware Memorial Bridge ou des portions du New Jersey Turnpike). Une pause d\u00e9jeuner rapide en route ou d\u00e8s votre arriv\u00e9e \u00e0 Philly peut \u00eatre envisag\u00e9e.",
+        "status": "pending",
+        "sequence_order": 2,
+        "location": {
+          "name": "De Jersey City au centre de Philadelphie",
+          "address": "Jersey City, NJ, USA vers Philadelphie, PA, USA",
+          "latitude": 39.9526,
+          "longitude": -75.1652
+        },
+        "transport": {
+          "mode": "Voiture de location",
+          "estimated_cost": 20.0
+        }
+      },
+      {
+        "id": "f80ac768-f8ae-40c5-ae8f-02b18abd8332",
+        "type": "activity",
+        "title": "Temps libre et exploration \u00e0 Philadelphie",
+        "time": "13:00:00",
+        "duration": "4h00m",
+        "notes": "Profitez de l'apr\u00e8s-midi pour explorer le c\u0153ur historique de Philadelphie. Visitez l'Independence Hall (r\u00e9servez vos billets \u00e0 l'avance), la Liberty Bell et le National Constitution Center \u00e0 Old City. Alternativement, fl\u00e2nez \u00e0 Reading Terminal Market pour d\u00e9couvrir des sp\u00e9cialit\u00e9s locales et des options de d\u00e9jeuner, ou visitez le 'Rocky Steps' au Philadelphia Museum of Art. N'oubliez pas de go\u00fbter un authentique 'Philly Cheesesteak' !",
+        "status": "pending",
+        "sequence_order": 3,
+        "location": {
+          "name": "Center City ou Old City, Philadelphie",
+          "address": "Independence Hall, 520 Chestnut St, Philadelphia, PA 19106, USA",
+          "latitude": 39.9489,
+          "longitude": -75.15,
+          "website": "https://www.nps.gov/inde/index.htm",
+          "venue_type": "Quartier historique / Culturel"
+        },
+        "estimated_cost": 15.0
+      },
+      {
+        "id": "ac86f87a-7adc-4841-bd9c-2e11ad220e3e",
+        "type": "meal",
+        "title": "D\u00eener pr\u00e9-match \u00e0 Xfinity Live!",
+        "time": "17:00:00",
+        "duration": "1h30m",
+        "notes": "Dirigez-vous vers Xfinity Live! pour un d\u00eener et une immersion dans l'ambiance pr\u00e9-match. Ce complexe de divertissement situ\u00e9 juste \u00e0 c\u00f4t\u00e9 du stade propose plusieurs restaurants, bars et un grand food court. L'atmosph\u00e8re est \u00e9lectrique et id\u00e9ale pour se pr\u00e9parer \u00e0 l'\u00e9v\u00e9nement sportif.",
+        "status": "pending",
+        "sequence_order": 4,
+        "location": {
+          "name": "Xfinity Live!",
+          "address": "1100 Pattison Ave, Philadelphia, PA 19148, USA",
+          "latitude": 39.9022,
+          "longitude": -75.1746,
+          "website": "https://www.xfinitylive.com/",
+          "venue_type": "Complexe de divertissement / Food court"
+        },
+        "transport": {
+          "mode": "Voiture de location",
+          "notes": "Court trajet en voiture depuis Center City/Old City jusqu'au complexe sportif du sud de Philadelphie. Pr\u00e9voyez un parking payant sur place."
+        },
+        "estimated_cost": 55.0
+      },
+      {
+        "id": "58c13d52-da5b-4459-965b-a2b945d9004a",
+        "type": "match",
+        "title": "\u26bd Match : EST vs Chelsea FC",
+        "time": "21:00:00",
+        "duration": "2h00m",
+        "notes": "Le bouquet final de votre s\u00e9jour ! Assurez-vous d'arriver au Lincoln Financial Field au moins 1 heure avant le coup d'envoi pour trouver votre place, profiter de l'ambiance et passer les contr\u00f4les de s\u00e9curit\u00e9. V\u00e9rifiez la politique du stade concernant les sacs et objets autoris\u00e9s. Pr\u00e9parez-vous \u00e0 une ambiance \u00e9lectrique !",
+        "status": "confirmed",
+        "sequence_order": 5,
+        "important": true,
+        "location": {
+          "name": "Lincoln Financial Field",
+          "address": "1 Lincoln Financial Field Way, Philadelphia, PA 19148, USA",
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "website": "https://www.lincolnfinancialfield.com/",
+          "venue_type": "Stade de football am\u00e9ricain"
+        },
+        "estimated_cost": 100.0
+      },
+      {
+        "id": "3a48a42b-4a99-4680-a469-23e990e103bb",
+        "type": "transport",
+        "title": "Retour en voiture \u00e0 Jersey City",
+        "time": "23:15:00",
+        "duration": "1h45m",
+        "notes": "D\u00e9part du stade apr\u00e8s le match pour un retour en voiture vers Jersey City. Le trajet de nuit peut \u00eatre long apr\u00e8s une journ\u00e9e charg\u00e9e et un match intense. Assurez-vous que le conducteur d\u00e9sign\u00e9 est bien repos\u00e9. Pr\u00e9voyez quelques snacks et bouteilles d'eau pour la route. Le trafic devrait \u00eatre minime \u00e0 cette heure.",
+        "status": "pending",
+        "sequence_order": 6,
+        "location": {
+          "name": "Du Lincoln Financial Field \u00e0 l'h\u00e9bergement \u00e0 Jersey City",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "transport": {
+          "mode": "Voiture de location",
+          "estimated_cost": 20.0
+        }
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "c1d2e3f4-a5b6-c7d8-e9f0-a1b2c3d4e5f6",
+        "name": "Permis de conduire valide",
+        "category": "Documents & Voyage",
+        "packed": false
+      },
+      {
+        "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+        "name": "Confirmation de location de voiture",
+        "category": "Documents & Voyage",
+        "packed": false
+      },
+      {
+        "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+        "name": "Billets de match (num\u00e9rique ou imprim\u00e9)",
+        "category": "Documents & Voyage",
+        "packed": false
+      },
+      {
+        "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+        "name": "Chargeur de t\u00e9l\u00e9phone portable / Batterie externe",
+        "category": "\u00c9lectronique",
+        "packed": false
+      },
+      {
+        "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8a9",
+        "name": "Bouteille d'eau et quelques snacks pour le trajet",
+        "category": "Nourriture & Boissons",
+        "packed": false
+      },
+      {
+        "id": "e5f6a7b8-c9d0-e1f2-a3b4-c5d6e7f8a9b0",
+        "name": "Cr\u00e8me solaire et chapeau",
+        "category": "Sant\u00e9 & S\u00e9curit\u00e9",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.524Z",
+      "updated_at": "2025-05-21T23:02:26.000Z",
+      "source": "json_enhancement",
+      "version": "1.1",
+      "timezone": "America/New_York",
+      "original_filename": "24_25-06.json",
+      "additional_data": {
+        "tips": [
+          "Pr\u00e9parez quelques snacks et bouteilles d\u2019eau pour le trajet retour \u2014 la route de nuit peut \u00eatre longue !",
+          "Le parking autour du Lincoln Financial Field est vaste mais peut \u00eatre co\u00fbteux. Arrivez t\u00f4t pour trouver une place plus facilement.",
+          "Si vous explorez Philadelphie avant le match, envisagez de vous garer dans un parking central et d'utiliser un service de VTC ou le m\u00e9tro vers le complexe sportif, ou de pr\u00e9voir un parking pr\u00e8s du stade pour la journ\u00e9e."
+        ],
+        "practicalActions": [
+          {
+            "action": "\ud83d\ude97 R\u00e9server voiture pour le 24 juin",
+            "details": "Location 1 jour, prise et retour \u00e0 Jersey City. Confirmez la politique de carburant et d'assurance."
+          },
+          {
+            "action": "\ud83c\udf9f\ufe0f Confirmer et t\u00e9l\u00e9charger les billets du match EST vs Chelsea",
+            "details": "V\u00e9rifiez bien le QR code, l\u2019entr\u00e9e exacte du stade et la politique des sacs."
+          },
+          {
+            "action": "\u23f0 Organiser le timing du retour (nuit du 24 au 25)",
+            "details": "Fatigue potentielle + circulation \u00e0 anticiper. D\u00e9signez un conducteur repos\u00e9."
+          },
+          {
+            "action": "\ud83e\uddf3 Organiser les valises le 25 matin",
+            "details": "Vous pouvez demander un **late check-out** \u00e0 votre h\u00e9bergement ou un **stockage temporaire des bagages** si n\u00e9cessaire."
+          },
+          {
+            "action": "\ud83d\ude95 R\u00e9server \u00e0 l\u2019avance un Uber/Taxi pour JFK (si d\u00e9part le 25)",
+            "details": "Depuis Jersey City jusqu\u2019au Terminal 4 JFK (environ 80\u2013100$ selon l'heure et le trafic)."
+          }
+        ],
+        "concludingRemarks": [
+          "\ud83e\udd42 Le 24 juin, vous c\u00e9l\u00e9brez **deux semaines de d\u00e9couvertes, d\u2019\u00e9motions sportives et de souvenirs inoubliables**.",
+          "\u2708\ufe0f Le 25 juin, vous repartez **avec l\u2019Am\u00e9rique dans les yeux et dans la valise.**"
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Services d'Urgence (USA)",
+            "phone": "911",
+            "notes": "Pour la police, les pompiers ou les urgences m\u00e9dicales. Composez toujours le 911 aux \u00c9tats-Unis."
+          },
+          {
+            "name": "Consulat G\u00e9n\u00e9ral de France \u00e0 New York",
+            "phone": "+1-212-606-3600",
+            "website": "https://newyork.consulfrance.org/",
+            "notes": "Pour l'assistance consulaire aux citoyens fran\u00e7ais \u00e0 New York."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "9968f398-00d6-4aec-9a11-40f49c79b262",
+    "trip_id": "99f2a96f-17aa-4633-b554-5a46266e5fba",
+    "date": "2025-06-25",
+    "title": "Derniers instants \u00e0 New York & Vol retour (JFK)",
+    "summary": "Profitez de vos derni\u00e8res heures \u00e0 New York avant de prendre votre vol retour depuis JFK. L'itin\u00e9raire pr\u00e9voit un petit-d\u00e9jeuner tranquille, la restitution de la voiture de location (si applicable), et un transfert ais\u00e9 vers l'a\u00e9roport, vous laissant suffisamment de temps pour vous d\u00e9tendre ou faire quelques achats de derni\u00e8re minute avant votre d\u00e9part.",
+    "weather": {
+      "temperature": 28,
+      "condition": "Partiellement nuageux",
+      "icon": "03d",
+      "notes": "M\u00e9t\u00e9o cl\u00e9mente pour votre d\u00e9part. Temp\u00e9rature agr\u00e9able, mais quelques nuages pourraient \u00eatre pr\u00e9sents."
+    },
+    "reminders": [
+      "Confirmez l'heure limite de check-out \u00e0 votre h\u00e9bergement et organisez le stockage de vos bagages si n\u00e9cessaire.",
+      "Si vous avez lou\u00e9 une voiture, v\u00e9rifiez l'adresse et les horaires de l'agence de restitution.",
+      "R\u00e9servez votre transfert vers JFK \u00e0 l'avance pour \u00e9viter le stress de derni\u00e8re minute.",
+      "Consultez le statut de votre vol (DL0140) pour d'\u00e9ventuels retards ou changements de terminal.",
+      "Pr\u00e9parez vos documents de voyage (passeport, billet d'avion) et assurez-vous qu'ils sont facilement accessibles.",
+      "Pr\u00e9voyez une marge de temps confortable \u00e0 l'a\u00e9roport pour l'enregistrement, la s\u00e9curit\u00e9 et les \u00e9ventuels achats de derni\u00e8re minute."
+    ],
+    "documents": [],
+    "activities": [
+      {
+        "id": "61eb0857-1f16-4bfb-bb42-e89827181e8e",
+        "type": "activity",
+        "title": "Petit-d\u00e9jeuner & Pr\u00e9paration des bagages",
+        "time": "09:00:00",
+        "duration": "1h30m",
+        "notes": "Profitez d'un dernier petit-d\u00e9jeuner tranquille \u00e0 Jersey City. Organisez vos bagages et pr\u00e9parez-vous pour le check-out (pr\u00e9vu avant 11h00). Vous pouvez demander un late check-out ou un stockage temporaire de vos bagages si n\u00e9cessaire.",
+        "status": "pending",
+        "sequence_order": 1,
+        "location": {
+          "name": "Votre h\u00e9bergement \u00e0 Jersey City",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA",
+          "latitude": 40.7178,
+          "longitude": -74.0431
+        },
+        "estimated_cost": 15.0
+      },
+      {
+        "id": "6776b36f-b254-4091-ba54-6da8ad13ff42",
+        "type": "activity",
+        "title": "Restitution de la voiture de location (si applicable)",
+        "time": "10:30:00",
+        "duration": "1h00m",
+        "notes": "Si vous avez lou\u00e9 une voiture, restituez-la \u00e0 l'agence de location \u00e0 Jersey City. Alternativement, vous pouvez la restituer directement \u00e0 l'a\u00e9roport JFK pour gagner du temps, mais cela pourrait affecter votre timing de transfert. V\u00e9rifiez les conditions de votre contrat de location.",
+        "status": "pending",
+        "sequence_order": 2,
+        "requires_confirmation": true,
+        "location": {
+          "name": "Agence de location de voiture (Jersey City)",
+          "address": "35 Dwight St, 1st floor, Jersey City, NJ, 07305, USA (point de d\u00e9part approximatif)",
+          "latitude": 40.7178,
+          "longitude": -74.0431,
+          "venue_type": "Agence de location"
+        },
+        "estimated_cost": 0.0
+      },
+      {
+        "id": "d59e17c4-dca5-4f38-92e3-e9bf7b58c5c6",
+        "type": "transport",
+        "title": "Transfert vers l'a\u00e9roport JFK",
+        "time": "12:00:00",
+        "duration": "2h30m",
+        "notes": "Pr\u00e9voyez un transfert confortable vers l'a\u00e9roport JFK. Le trajet dure g\u00e9n\u00e9ralement entre 1h15 et 2h, mais le trafic peut \u00eatre impr\u00e9visible. Un Uber ou un service de navette r\u00e9serv\u00e9 \u00e0 l'avance est recommand\u00e9. Le co\u00fbt estim\u00e9 est d'environ 80-100$ depuis Jersey City.",
+        "status": "pending",
+        "sequence_order": 3,
+        "location": {
+          "name": "De Jersey City \u00e0 l'a\u00e9roport JFK (Terminal 4)",
+          "address": "Jersey City, NJ, USA vers JFK Airport, Queens, NY 11430, USA (Terminal 4)",
+          "latitude": 40.6413,
+          "longitude": -73.7781
+        },
+        "transport": {
+          "mode": "Uber / Navette",
+          "estimated_cost": 90.0
+        }
+      },
+      {
+        "id": "d2b42975-be70-430c-95b1-baab883f6b47",
+        "type": "activity",
+        "title": "Derni\u00e8re pause \u00e0 JFK (Terminal 4)",
+        "time": "15:00:00",
+        "duration": "2h00m",
+        "notes": "Apr\u00e8s l'enregistrement de vos bagages et le passage de la s\u00e9curit\u00e9, profitez de votre temps libre au Terminal 4 de JFK. Vous pouvez vous d\u00e9tendre, manger un morceau, faire quelques achats de derni\u00e8re minute au duty-free, ou simplement vous pr\u00e9parer pour votre vol.",
+        "status": "pending",
+        "sequence_order": 4,
+        "location": {
+          "name": "JFK Terminal 4",
+          "address": "JFK Airport, Queens, NY 11430, USA",
+          "latitude": 40.6413,
+          "longitude": -73.7781,
+          "venue_type": "Terminal d'a\u00e9roport"
+        },
+        "estimated_cost": 20.0
+      },
+      {
+        "id": "452605ea-8c96-45fb-b963-a437576aa92c",
+        "type": "transport",
+        "title": "\u2708\ufe0f Vol retour DL0140 (JFK \u2192 BRU)",
+        "time": "18:55:00",
+        "duration": "8h00m",
+        "notes": "Embarquement et d\u00e9part de votre vol retour vers Bruxelles (BRU) avec Delta Air Lines (DL0140). Profitez de votre vol et des souvenirs de votre voyage.",
+        "status": "confirmed",
+        "sequence_order": 5,
+        "important": true,
+        "location": {
+          "name": "JFK Terminal 4",
+          "address": "JFK Airport, Queens, NY 11430, USA",
+          "latitude": 40.6413,
+          "longitude": -73.7781
+        },
+        "transport": {
+          "mode": "Avion",
+          "carrier": "Delta Air Lines",
+          "flight_number": "DL0140",
+          "departure_time": "18:55:00",
+          "arrival_time": "08:55:00+1"
+        },
+        "estimated_cost": 0.0
+      }
+    ],
+    "travel_essentials": [
+      {
+        "id": "f1g2h3i4-j5k6-l7m8-n9o0-p1q2r3s4t5u6",
+        "name": "Passeport",
+        "category": "Documents & Voyage",
+        "packed": false
+      },
+      {
+        "id": "v7w8x9y0-z1a2-b3c4-d5e6-f7g8h9i0j1k2",
+        "name": "Billet d'avion (num\u00e9rique ou imprim\u00e9)",
+        "category": "Documents & Voyage",
+        "packed": false
+      },
+      {
+        "id": "l3m4n5o6-p7q8-r9s0-t1u2-v3w4x5y6z7a8",
+        "name": "Chargeur de t\u00e9l\u00e9phone portable / Adaptateur",
+        "category": "\u00c9lectronique",
+        "packed": false
+      },
+      {
+        "id": "b9c0d1e2-f3g4-h5i6-j7k8-l9m0n1o2p3q4",
+        "name": "Adaptateur de prise (si n\u00e9cessaire)",
+        "category": "\u00c9lectronique",
+        "packed": false
+      }
+    ],
+    "metadata": {
+      "created_at": "2025-05-21T09:30:44.524Z",
+      "updated_at": "2025-05-21T23:04:12.000Z",
+      "source": "json_enhancement",
+      "version": "1.1",
+      "timezone": "America/New_York",
+      "original_filename": "24_25-06.json",
+      "additional_data": {
+        "practicalActions": [
+          {
+            "action": "\ud83d\ude97 Confirmer la restitution de la voiture de location (si applicable)",
+            "details": "V\u00e9rifiez l'heure et le lieu de restitution, ainsi que la politique de carburant."
+          },
+          {
+            "action": "\ud83d\ude95 R\u00e9server \u00e0 l\u2019avance un Uber/Taxi ou une navette pour JFK",
+            "details": "Surtout si vous avez des bagages volumineux ou si vous voyagez en groupe. Indiquez votre heure de prise en charge et votre terminal (Terminal 4)."
+          },
+          {
+            "action": "\ud83e\uddf3 Organiser les valises et v\u00e9rifier le poids autoris\u00e9",
+            "details": "\u00c9vitez les surprises \u00e0 l'a\u00e9roport."
+          }
+        ],
+        "concludingRemarks": [
+          "\ud83e\udd42 Le 24 juin, vous avez c\u00e9l\u00e9br\u00e9 **deux semaines de d\u00e9couvertes, d\u2019\u00e9motions sportives et de souvenirs inoubliables**.",
+          "\u2708\ufe0f Le 25 juin, vous repartez **avec l\u2019Am\u00e9rique dans les yeux et dans la valise.**"
+        ],
+        "emergency_contacts": [
+          {
+            "name": "Services d'Urgence (USA)",
+            "phone": "911",
+            "notes": "Pour la police, les pompiers ou les urgences m\u00e9dicales. Composez toujours le 911 aux \u00c9tats-Unis."
+          },
+          {
+            "name": "Consulat G\u00e9n\u00e9ral de France \u00e0 New York",
+            "phone": "+1-212-606-3600",
+            "website": "https://newyork.consulfrance.org/",
+            "notes": "Pour l'assistance consulaire aux citoyens fran\u00e7ais \u00e0 New York."
+          }
+        ]
+      }
+    }
+  }
+]

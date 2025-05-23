@@ -13,9 +13,10 @@ interface ItineraryTimelineProps {
   activities: Activity[];
   className?: string;
   onStatusChange?: (id: string, status: Activity['status']) => void;
+  itineraryDate: string;
 }
 
-export function ItineraryTimeline({ activities, className, onStatusChange }: ItineraryTimelineProps) {
+export function ItineraryTimeline({ activities, className, onStatusChange, itineraryDate }: ItineraryTimelineProps) {
   // Sort activities by time
   const sortedActivities = [...activities].sort((a, b) => {
     return a.time.localeCompare(b.time);
@@ -42,6 +43,7 @@ export function ItineraryTimeline({ activities, className, onStatusChange }: Iti
                 <ActivityCard
                   activity={activity}
                   onStatusChange={onStatusChange}
+                  itineraryDate={itineraryDate}
                 />
               </div>
             </div>

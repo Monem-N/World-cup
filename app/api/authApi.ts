@@ -58,11 +58,11 @@ export async function signIn({ email, password }: SignInCredentials) {
 export async function signOut() {
   try {
     const { error } = await supabase.auth.signOut();
-    
+
     if (error) {
       throw error;
     }
-    
+
     return true;
   } catch (error) {
     console.error('Error signing out:', error);
@@ -73,13 +73,13 @@ export async function signOut() {
 export async function resetPassword(email: string) {
   try {
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`,
+      redirectTo: `${window.location.origin}/auth/reset-password`,
     });
-    
+
     if (error) {
       throw error;
     }
-    
+
     return true;
   } catch (error) {
     console.error('Error resetting password:', error);
@@ -92,17 +92,19 @@ export async function updatePassword(newPassword: string) {
     const { error } = await supabase.auth.updateUser({
       password: newPassword,
     });
-    
+
     if (error) {
       throw error;
     }
-    
+
     return true;
   } catch (error) {
     console.error('Error updating password:', error);
     throw error;
   }
 }
+
+
 
 export async function updateProfile(profile: {
   firstName?: string;
@@ -111,13 +113,13 @@ export async function updateProfile(profile: {
 }) {
   try {
     const { data: userData, error: userError } = await supabase.auth.getUser();
-    
+
     if (userError || !userData.user) {
       throw userError || new Error('User not found');
     }
-    
+
     const userId = userData.user.id;
-    
+
     // Update auth metadata
     await supabase.auth.updateUser({
       data: {
@@ -125,7 +127,7 @@ export async function updateProfile(profile: {
         last_name: profile.lastName,
       },
     });
-    
+
     // Update profile in the profiles table
     const { error } = await supabase
       .from('profiles')
@@ -136,14 +138,143 @@ export async function updateProfile(profile: {
         updated_at: new Date().toISOString(),
       })
       .eq('id', userId);
-    
+
     if (error) {
       throw error;
     }
-    
+
     return true;
   } catch (error) {
     console.error('Error updating profile:', error);
     throw error;
+  }
+}
+
+/**
+ * Gets the current user's profile
+ *
+ * @returns Promise resolving to the user's profile
+ */
+export async function getProfile() {
+  try {
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+
+    if (userError || !userData.user) {
+      throw userError || new Error('User not found');
+    }
+
+    const userId = userData.user.id;
+
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .single();
+
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error getting profile:', error);
+    throw error;
+  }
+}
+
+/**
+ * Uploads an avatar image for the user
+ *
+ * @param file - The file to upload
+ * @returns Promise resolving to the avatar URL
+ */
+export async function uploadAvatar(file: File) {
+  try {
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+
+    if (userError || !userData.user) {
+      throw userError || new Error('User not found');
+    }
+
+    const userId = userData.user.id;
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${userId}-${Date.now()}.${fileExt}`;
+    const filePath = `avatars/${fileName}`;
+
+    // Upload the file to Supabase Storage
+    const { error: uploadError } = await supabase.storage
+      .from('avatars')
+      .upload(filePath, file);
+
+    if (uploadError) {
+      throw uploadError;
+    }
+
+    // Get the public URL
+    const { data: urlData } = supabase.storage
+      .from('avatars')
+      .getPublicUrl(filePath);
+
+    const avatarUrl = urlData.publicUrl;
+
+    // Update the profile with the new avatar URL
+    await updateProfile({ avatarUrl });
+
+    return avatarUrl;
+  } catch (error) {
+    console.error('Error uploading avatar:', error);
+    throw error;
+  }
+}
+
+/**
+ * Checks if the user is authenticated
+ *
+ * @returns Promise resolving to a boolean indicating if the user is authenticated
+ */
+export async function isAuthenticated() {
+  try {
+    const { data, error } = await supabase.auth.getSession();
+
+    if (error) {
+      throw error;
+    }
+
+    return !!data.session;
+  } catch (error) {
+    console.error('Error checking authentication:', error);
+    return false;
+  }
+}
+
+/**
+ * Sends a magic link to the user's email
+ *
+ * @param email - The email to send the magic link to
+ * @returns Promise resolving to a success message
+ */
+export async function signInWithMagicLink(email: string) {
+  try {
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      throw error;
+    }
+
+    return {
+      success: true,
+      message: `Magic link sent to ${email}`,
+    };
+  } catch (error: any) {
+    console.error('Error sending magic link:', error);
+    return {
+      success: false,
+      message: error.message || 'Failed to send magic link',
+    };
   }
 }

@@ -12,6 +12,7 @@ import { ItineraryTimeline } from '../../components/itinerary/ItineraryTimeline'
 import { Button } from '../../components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Card, CardContent } from '../../components/ui/card';
+import { ActivityFormDialog } from '../../components/dialogs/ActivityFormDialog';
 import ItineraryMapView from './components/ItineraryMapView';
 import {
   CalendarIcon,
@@ -176,6 +177,7 @@ export default function DayProgramPage() {
             <ItineraryTimeline
               activities={data.items}
               onStatusChange={handleStatusChange}
+              itineraryDate={date as string}
             />
           ) : (
             <Card>
@@ -187,10 +189,15 @@ export default function DayProgramPage() {
                 <p className="text-muted-foreground mb-4">
                   {t('itinerary.timelineEmpty', 'No activities planned for this day yet.')}
                 </p>
-                <Button>
-                  <PlusIcon className="h-4 w-4 mr-2" />
-                  Add Your First Activity
-                </Button>
+                <ActivityFormDialog
+                  itineraryDate={date as string}
+                  trigger={
+                    <Button>
+                      <PlusIcon className="h-4 w-4 mr-2" />
+                      Add Your First Activity
+                    </Button>
+                  }
+                />
               </CardContent>
             </Card>
           )}
@@ -246,22 +253,46 @@ export default function DayProgramPage() {
                 {t('itinerary.addActivity', 'Create a new activity for your itinerary.')}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-md mx-auto">
-                <Button variant="outline" className="flex flex-col h-auto py-4">
-                  <CalendarIcon className="h-6 w-6 mb-2" />
-                  <span>Event</span>
-                </Button>
-                <Button variant="outline" className="flex flex-col h-auto py-4">
-                  <MapIcon className="h-6 w-6 mb-2" />
-                  <span>Transport</span>
-                </Button>
-                <Button variant="outline" className="flex flex-col h-auto py-4">
-                  <FileTextIcon className="h-6 w-6 mb-2" />
-                  <span>Meal</span>
-                </Button>
-                <Button variant="outline" className="flex flex-col h-auto py-4">
-                  <PlusIcon className="h-6 w-6 mb-2" />
-                  <span>Other</span>
-                </Button>
+                <ActivityFormDialog
+                  itineraryDate={date as string}
+                  activityType="activity"
+                  trigger={
+                    <Button variant="outline" className="flex flex-col h-auto py-4">
+                      <CalendarIcon className="h-6 w-6 mb-2" />
+                      <span>Event</span>
+                    </Button>
+                  }
+                />
+                <ActivityFormDialog
+                  itineraryDate={date as string}
+                  activityType="transport"
+                  trigger={
+                    <Button variant="outline" className="flex flex-col h-auto py-4">
+                      <MapIcon className="h-6 w-6 mb-2" />
+                      <span>Transport</span>
+                    </Button>
+                  }
+                />
+                <ActivityFormDialog
+                  itineraryDate={date as string}
+                  activityType="meal"
+                  trigger={
+                    <Button variant="outline" className="flex flex-col h-auto py-4">
+                      <FileTextIcon className="h-6 w-6 mb-2" />
+                      <span>Meal</span>
+                    </Button>
+                  }
+                />
+                <ActivityFormDialog
+                  itineraryDate={date as string}
+                  activityType="hotel"
+                  trigger={
+                    <Button variant="outline" className="flex flex-col h-auto py-4">
+                      <PlusIcon className="h-6 w-6 mb-2" />
+                      <span>Hotel</span>
+                    </Button>
+                  }
+                />
               </div>
             </CardContent>
           </Card>

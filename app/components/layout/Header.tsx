@@ -26,12 +26,14 @@ const navigationItems = [
     icon: Trophy,
     label: "nav.dashboard",
     defaultText: "Dashboard",
-    description: "View your personalized dashboard with upcoming matches and events",
-    badge: "New",
+    description: "nav.dashboardDescription",
+    defaultDescription: "View your personalized dashboard with upcoming matches and events",
+    badge: "nav.badgeNew",
+    defaultBadge: "New",
     quickLinks: [
-      { path: "/dashboard/overview", label: "Overview" },
-      { path: "/dashboard/itinerary", label: "Itinerary" },
-      { path: "/dashboard/essentials", label: "Essentials" },
+      { path: "/dashboard/overview", label: "nav.overview", defaultLabel: "Overview" },
+      { path: "/dashboard/itinerary", label: "nav.itineraryQuickLink", defaultLabel: "Itinerary" },
+      { path: "/dashboard/essentials", label: "nav.essentials", defaultLabel: "Essentials" },
     ]
   },
   {
@@ -39,12 +41,13 @@ const navigationItems = [
     icon: Calendar,
     label: "nav.itinerary",
     defaultText: "Itinerary",
-    description: "Plan and manage your daily schedule during the tournament",
+    description: "nav.itineraryDescription",
+    defaultDescription: "Plan and manage your daily schedule during the tournament",
     quickLinks: [
-      { path: "/itinerary/2025-06-14", label: "June 14, 2025 (Arrival)" },
-      { path: "/itinerary/2025-06-16", label: "June 16, 2025 (Match Day)" },
-      { path: "/itinerary/2025-06-20", label: "June 20, 2025 (Match Day)" },
-      { path: "/itinerary/2025-06-24", label: "June 24, 2025 (Match Day)" },
+      { path: "/itinerary/2025-06-14", label: "nav.itineraryDate1", defaultLabel: "June 14, 2025 (Arrival)" },
+      { path: "/itinerary/2025-06-16", label: "nav.itineraryDate2", defaultLabel: "June 16, 2025 (Match Day)" },
+      { path: "/itinerary/2025-06-20", label: "nav.itineraryDate3", defaultLabel: "June 20, 2025 (Match Day)" },
+      { path: "/itinerary/2025-06-24", label: "nav.itineraryDate4", defaultLabel: "June 24, 2025 (Match Day)" },
     ]
   },
   {
@@ -52,14 +55,16 @@ const navigationItems = [
     icon: MapPin,
     label: "nav.venues",
     defaultText: "Venues",
-    description: "Explore stadiums and locations hosting World Cup matches"
+    description: "nav.venuesDescription",
+    defaultDescription: "Explore stadiums and locations hosting World Cup matches"
   },
   {
     path: "/teams",
     icon: Users,
     label: "nav.teams",
     defaultText: "Teams",
-    description: "Browse participating teams, players, and match statistics"
+    description: "nav.teamsDescription",
+    defaultDescription: "Browse participating teams, players, and match statistics"
   },
 ];
 
@@ -73,7 +78,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-yellow-500 to-red-500 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo and navigation */}
         <div className="flex items-center gap-6 md:gap-10">
@@ -110,7 +115,7 @@ export function Header() {
                       <span>{t(item.label, item.defaultText)}</span>
                       {item.badge && (
                         <Badge variant="outline" className="ml-1 px-1 py-0 h-4 text-[10px] font-medium border-primary-foreground/30 text-primary-foreground/90">
-                          {item.badge}
+                          {t(item.badge, item.defaultBadge)}
                         </Badge>
                       )}
                     </NavigationMenuTrigger>
@@ -127,7 +132,7 @@ export function Header() {
                                 {t(item.label, item.defaultText)}
                               </div>
                               <p className="text-sm leading-tight text-muted-foreground">
-                                {item.description}
+                                {t(item.description, item.defaultDescription)}
                               </p>
                             </Link>
                           </NavigationMenuLink>
@@ -144,7 +149,7 @@ export function Header() {
                                         to={link.path}
                                         className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                                       >
-                                        {link.label}
+                                        {t(link.label, link.defaultLabel)}
                                       </Link>
                                     </NavigationMenuLink>
                                   </li>

@@ -46,5 +46,71 @@
       "purpose": "Objectif",
       "dietary": "Régime alimentaire",
       "interests": "Intérêts"
+    },
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "venues": "Lieux",
+      "teams": "Équipes",
+      "dashboardDescription": "Consultez votre tableau de bord personnalisé avec les matchs et événements à venir",
+      "badgeNew": "Nouveau",
+      "overview": "Aperçu",
+      "itinerary": "Itinéraire",
+      "itineraryQuickLink": "Itinéraire",
+      "essentials": "Essentiels",
+      "itineraryDescription": "Planifiez et gérez votre emploi du temps quotidien pendant le tournoi",
+      "itineraryDate1": "14 juin 2025 (Arrivée)",
+      "itineraryDate2": "16 juin 2025 (Jour de match)",
+      "itineraryDate3": "20 juin 2025 (Jour de match)",
+      "itineraryDate4": "24 juin 2025 (Jour de match)",
+      "venuesDescription": "Explorez les stades et les lieux accueillant les matchs de la Coupe du Monde",
+      "teamsDescription": "Parcourez les équipes participantes, les joueurs et les statistiques des matchs"
+    },
+    "footer": {
+      "description": "Votre compagnon ultime pour planifier et organiser votre expérience de la Coupe du Monde. Ne manquez jamais un match, trouvez les meilleurs itinéraires et découvrez les attractions locales.",
+      "about": "À propos",
+      "aboutUs": "À propos de nous",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "features": "Fonctionnalités",
+      "itinerary": "Itinéraire",
+      "venues": "Lieux",
+      "teams": "Équipes",
+      "legal": "Mentions légales",
+      "terms": "Conditions d'utilisation",
+      "privacy": "Politique de confidentialité",
+      "allRightsReserved": "Tous droits réservés"
+    },
+    "meta": {
+      "title": "Itinéraire de la Coupe du Monde - Votre Compagnon Ultime pour la Coupe du Monde",
+      "description": "Gérez votre expérience de la Coupe du Monde avec notre planificateur d'itinéraire"
+    },
+    "auth": {
+      "signIn": "Se connecter",
+      "signUp": "S'inscrire",
+      "signOut": "Se déconnecter",
+      "account": "Compte",
+      "loading": "Chargement..."
+    },
+    "user": {
+      "account": "Compte",
+      "profile": "Profil",
+      "settings": "Paramètres",
+      "logout": "Se déconnecter"
+    },
+    "landing": {
+      "heroTitle": "Planifiez Votre Expérience Ultime de la Coupe du Monde",
+      "heroSubtitle": "Organisez vos matchs, transports, hébergements et activités en un seul endroit. Ne manquez jamais un moment de l'action.",
+      "getStarted": "Commencer",
+      "viewDemo": "Voir la démo",
+      "features": "Fonctionnalités",
+      "feature1Title": "Suivi des matchs",
+      "feature1Description": "Gardez une trace de tous vos matchs avec des informations détaillées sur les lieux, les équipes et les heures de coup d'envoi.",
+      "feature2Title": "Planification des transports",
+      "feature2Description": "Planifiez vos itinéraires entre les lieux, les hébergements et les attractions avec des informations de transit en temps réel.",
+      "feature3Title": "Attractions locales",
+      "feature3Description": "Découvrez les restaurants, les musées et les sites culturels près de chaque lieu pour profiter au maximum de votre voyage à la Coupe du Monde.",
+      "ctaTitle": "Prêt pour la Coupe du Monde ?",
+      "ctaDescription": "Rejoignez des milliers de fans qui utilisent World Cup Itinerary pour planifier leur expérience parfaite du tournoi.",
+      "signUp": "S'inscrire maintenant"
     }
   }

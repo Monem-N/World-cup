@@ -46,5 +46,67 @@
     "purpose": "Purpose",
     "dietary": "Dietary",
     "interests": "Interests"
+  },
+  "nav": {
+    "dashboardDescription": "View your personalized dashboard with upcoming matches and events",
+    "badgeNew": "New",
+    "overview": "Overview",
+    "itineraryQuickLink": "Itinerary",
+    "essentials": "Essentials",
+    "itineraryDescription": "Plan and manage your daily schedule during the tournament",
+    "itineraryDate1": "June 14, 2025 (Arrival)",
+    "itineraryDate2": "June 16, 2025 (Match Day)",
+    "itineraryDate3": "June 20, 2025 (Match Day)",
+    "itineraryDate4": "June 24, 2025 (Match Day)",
+    "venuesDescription": "Explore stadiums and locations hosting World Cup matches",
+    "teamsDescription": "Browse participating teams, players, and match statistics"
+  },
+  "footer": {
+    "description": "Your ultimate companion for planning and organizing your World Cup experience. Never miss a match, find the best routes, and discover local attractions.",
+    "about": "About",
+    "aboutUs": "About Us",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "features": "Features",
+    "itinerary": "Itinerary",
+    "venues": "Venues",
+    "teams": "Teams",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved"
+  },
+  "meta": {
+    "title": "World Cup Itinerary - Your Ultimate World Cup Companion",
+    "description": "Manage your World Cup experience with our itinerary planner"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "account": "Account",
+    "loading": "Loading..."
+  },
+  "user": {
+    "account": "Account",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "landing": {
+    "heroTitle": "Plan Your Ultimate World Cup Experience",
+    "heroSubtitle": "Organize your matches, transportation, accommodations, and activities in one place. Never miss a moment of the action.",
+    "getStarted": "Get Started",
+    "viewDemo": "View Demo",
+    "features": "Features",
+    "feature1Title": "Match Tracking",
+    "feature1Description": "Keep track of all your matches with detailed information about venues, teams, and kickoff times.",
+    "feature2Title": "Transportation Planning",
+    "feature2Description": "Plan your routes between venues, accommodations, and attractions with real-time transit information.",
+    "feature3Title": "Local Attractions",
+    "feature3Description": "Discover restaurants, museums, and cultural sites near each venue to make the most of your World Cup journey.",
+    "ctaTitle": "Ready for the World Cup?",
+    "ctaDescription": "Join thousands of fans who are using World Cup Itinerary to plan their perfect tournament experience.",
+    "signUp": "Sign Up Now"
   }
 }

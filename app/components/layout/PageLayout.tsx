@@ -13,7 +13,7 @@ export const PageLayout = React.memo(function PageLayout({ children, showBreadcr
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container py-6">
+        <div className="container mx-auto py-6">
           {showBreadcrumbs && <Breadcrumbs />}
           {children}
         </div>

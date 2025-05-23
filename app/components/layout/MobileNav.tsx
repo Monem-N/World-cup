@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Sheet,
@@ -22,12 +22,17 @@ import {
   ChevronRight,
   Bell,
   Search,
-  Home
+  Home,
+  LogIn,
+  UserPlus,
+  UserCircle
 } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { Badge } from "~/components/ui/badge";
 import { Separator } from "~/components/ui/separator";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "~/components/ui/collapsible";
+import { useAuth } from "~/api/authContext";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 
 // Define the types for navigation items
 type NavChild = {
@@ -94,10 +99,22 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, profile, isAuthenticated, isLoading, signOut } = useAuth();
 
   const handleLinkClick = useCallback(() => {
     setOpen(false);
   }, []);
+
+  const handleSignOut = useCallback(async () => {
+    try {
+      await signOut();
+      setOpen(false);
+      navigate('/');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  }, [signOut, navigate]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -113,11 +130,28 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-[80%] sm:w-[350px] p-0">
         <SheetHeader className="border-b p-6 bg-gradient-to-r from-primary/10 to-secondary/10">
-          <SheetTitle className="flex items-center gap-2">
+          <SheetTitle className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
               <Trophy className="h-5 w-5 text-primary" />
             </div>
-            <span>{t('app.title', 'World Cup Itinerary')}</span>
+            <div className="flex-1">
+              <div className="text-base font-semibold">{t('app.title', 'World Cup Itinerary')}</div>
+              {isAuthenticated && user && (
+                <div className="text-xs text-muted-foreground mt-0.5">
+                  {profile?.first_name && profile?.last_name
+                    ? `${profile.first_name} ${profile.last_name}`
+                    : user.email?.split('@')[0] || 'User'}
+                </div>
+              )}
+            </div>
+            {isAuthenticated && profile?.avatar_url && (
+              <Avatar className="h-8 w-8">
+                <AvatarImage src={profile.avatar_url} alt="Profile" />
+                <AvatarFallback>
+                  {profile?.first_name?.[0]}{profile?.last_name?.[0]}
+                </AvatarFallback>
+              </Avatar>
+            )}
           </SheetTitle>
         </SheetHeader>
 
@@ -242,27 +276,84 @@ export function MobileNav() {
                 <Globe className="h-4 w-4" />
                 <span>{t('nav.language', 'Language')}</span>
               </Link>
-              <Link
-                to="/settings/account"
-                onClick={handleLinkClick}
-                className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
-              >
-                <Settings className="h-4 w-4" />
-                <span>{t('nav.account', 'Account')}</span>
-              </Link>
+
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    to="/auth/profile"
+                    onClick={handleLinkClick}
+                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    <UserCircle className="h-4 w-4" />
+                    <span>{t('user.profile', 'Profile')}</span>
+                  </Link>
+                  <Link
+                    to="/settings/account"
+                    onClick={handleLinkClick}
+                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    <Settings className="h-4 w-4" />
+                    <span>{t('nav.account', 'Account')}</span>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/auth/login"
+                    onClick={handleLinkClick}
+                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    <LogIn className="h-4 w-4" />
+                    <span>{t('auth.signIn', 'Sign In')}</span>
+                  </Link>
+                  <Link
+                    to="/auth/register"
+                    onClick={handleLinkClick}
+                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    <UserPlus className="h-4 w-4" />
+                    <span>{t('auth.signUp', 'Sign Up')}</span>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
 
         <SheetFooter className="mt-auto border-t p-4">
-          <Button
-            variant="outline"
-            className="w-full justify-start gap-2"
-            onClick={handleLinkClick}
-          >
-            <LogOut className="h-4 w-4" />
-            {t('user.logout', 'Log out')}
-          </Button>
+          {isAuthenticated ? (
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2 text-destructive hover:text-destructive"
+              onClick={handleSignOut}
+            >
+              <LogOut className="h-4 w-4" />
+              {t('user.logout', 'Log out')}
+            </Button>
+          ) : (
+            <div className="flex gap-2 w-full">
+              <Button
+                asChild
+                variant="outline"
+                className="flex-1 justify-center gap-2"
+              >
+                <Link to="/auth/login" onClick={handleLinkClick}>
+                  <LogIn className="h-4 w-4" />
+                  {t('auth.signIn', 'Sign In')}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="default"
+                className="flex-1 justify-center gap-2"
+              >
+                <Link to="/auth/register" onClick={handleLinkClick}>
+                  <UserPlus className="h-4 w-4" />
+                  {t('auth.signUp', 'Sign Up')}
+                </Link>
+              </Button>
+            </div>
+          )}
         </SheetFooter>
       </SheetContent>
     </Sheet>

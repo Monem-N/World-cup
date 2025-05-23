@@ -9,7 +9,7 @@ export const Footer = React.memo(function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-muted/40 mt-12">
+    <footer className="border-t bg-gradient-to-r from-yellow-500 to-red-500 mt-12">
       <div className="container py-10 md:py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8 pb-8">
           {/* Logo and description */}
