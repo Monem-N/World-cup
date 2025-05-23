@@ -108,5 +108,71 @@
       "ctaTitle": "هل أنت مستعد لكأس العالم؟",
       "ctaDescription": "انضم إلى الآلاف من المشجعين الذين يستخدمون جدول كأس العالم لتخطيط تجربتهم المثالية في البطولة.",
       "signUp": "سجل الآن"
+    },
+    "common": {
+      "error": "خطأ",
+      "retry": "إعادة المحاولة",
+      "somethingWentWrong": "حدث خطأ ما.",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "deleting": "جاري الحذف...",
+      "reset": "إعادة تعيين",
+      "save": "حفظ",
+      "saving": "جاري الحفظ..."
+    },
+    "forms": {
+      "activityType": "نوع النشاط",
+      "selectActivityType": "اختر نوع النشاط",
+      "status": "الحالة",
+      "selectStatus": "اختر الحالة",
+      "title": "العنوان",
+      "activityTitle": "عنوان النشاط",
+      "time": "الوقت",
+      "timeFormat": "الوقت بصيغة 24 ساعة (HH:MM)",
+      "duration": "المدة",
+      "durationPlaceholder": "مثال: 1س30د",
+      "durationFormat": "صيغة المدة: 1س30د، 45د، إلخ.",
+      "notes": "ملاحظات",
+      "notesPlaceholder": "ملاحظات إضافية حول هذا النشاط",
+      "markImportant": "وضع علامة كمهم",
+      "importantDescription": "تمييز هذا النشاط كمهم",
+      "requiresConfirmation": "يتطلب تأكيد",
+      "confirmationDescription": "هذا النشاط يحتاج إلى تأكيد",
+      "groupEvent": "حدث جماعي",
+      "groupDescription": "هذا نشاط جماعي",
+      "locationName": "اسم الموقع",
+      "address": "العنوان",
+      "latitude": "خط العرض",
+      "longitude": "خط الطول",
+      "transportMode": "وسيلة النقل",
+      "carrier": "الناقل",
+      "bookingReference": "مرجع الحجز"
+    },
+    "activityTypes": {
+      "activity": "نشاط",
+      "transport": "نقل",
+      "match": "مباراة",
+      "meal": "وجبة",
+      "hotel": "فندق"
+    },
+    "statusOptions": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "completed": "مكتمل"
+    },
+    "weather": {
+      "forecast": "توقعات الطقس",
+      "forecastLabel": "التوقعات:",
+      "temperatureLabel": "درجة الحرارة:",
+      "windLabel": "الرياح:",
+      "dataNotAvailable": "بيانات الطقس غير متوفرة."
+    },
+    "reminders": {
+      "title": "تذكيرات"
+    },
+    "itinerary": {
+      "noActivitiesYet": "لا توجد أنشطة بعد",
+      "addFirstActivity": "أضف نشاطك الأول",
+      "dayDetails": "تفاصيل اليوم"
     }
   }

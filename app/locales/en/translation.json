@@ -108,5 +108,71 @@
     "ctaTitle": "Ready for the World Cup?",
     "ctaDescription": "Join thousands of fans who are using World Cup Itinerary to plan their perfect tournament experience.",
     "signUp": "Sign Up Now"
+  },
+  "common": {
+    "error": "Error",
+    "retry": "Retry",
+    "somethingWentWrong": "Something went wrong.",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "reset": "Reset",
+    "save": "Save",
+    "saving": "Saving..."
+  },
+  "forms": {
+    "activityType": "Activity Type",
+    "selectActivityType": "Select activity type",
+    "status": "Status",
+    "selectStatus": "Select status",
+    "title": "Title",
+    "activityTitle": "Activity title",
+    "time": "Time",
+    "timeFormat": "Time in 24-hour format (HH:MM)",
+    "duration": "Duration",
+    "durationPlaceholder": "e.g. 1h30m",
+    "durationFormat": "Duration format: 1h30m, 45m, etc.",
+    "notes": "Notes",
+    "notesPlaceholder": "Additional notes about this activity",
+    "markImportant": "Mark as important",
+    "importantDescription": "Highlight this activity as important",
+    "requiresConfirmation": "Requires confirmation",
+    "confirmationDescription": "This activity needs to be confirmed",
+    "groupEvent": "Group event",
+    "groupDescription": "This is a group activity",
+    "locationName": "Location Name",
+    "address": "Address",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "transportMode": "Transport Mode",
+    "carrier": "Carrier",
+    "bookingReference": "Booking Reference"
+  },
+  "activityTypes": {
+    "activity": "Activity",
+    "transport": "Transport",
+    "match": "Match",
+    "meal": "Meal",
+    "hotel": "Hotel"
+  },
+  "statusOptions": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "completed": "Completed"
+  },
+  "weather": {
+    "forecast": "Weather Forecast",
+    "forecastLabel": "Forecast:",
+    "temperatureLabel": "Temperature:",
+    "windLabel": "Wind:",
+    "dataNotAvailable": "Weather data not available."
+  },
+  "reminders": {
+    "title": "Reminders"
+  },
+  "itinerary": {
+    "noActivitiesYet": "No Activities Yet",
+    "addFirstActivity": "Add Your First Activity",
+    "dayDetails": "Day Details"
   }
 }

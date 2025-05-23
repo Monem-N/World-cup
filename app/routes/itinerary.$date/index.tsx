@@ -185,7 +185,7 @@ export default function DayProgramPage() {
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
                   <CalendarIcon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-medium mb-2">No Activities Yet</h3>
+                <h3 className="text-lg font-medium mb-2">{t('itinerary.noActivitiesYet', 'No Activities Yet')}</h3>
                 <p className="text-muted-foreground mb-4">
                   {t('itinerary.timelineEmpty', 'No activities planned for this day yet.')}
                 </p>
@@ -194,7 +194,7 @@ export default function DayProgramPage() {
                   trigger={
                     <Button>
                       <PlusIcon className="h-4 w-4 mr-2" />
-                      Add Your First Activity
+                      {t('itinerary.addFirstActivity', 'Add Your First Activity')}
                     </Button>
                   }
                 />
@@ -248,7 +248,7 @@ export default function DayProgramPage() {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
                 <PlusIcon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-lg font-medium mb-2">Add New Activity</h3>
+              <h3 className="text-lg font-medium mb-2">{t('itinerary.addNewActivity', 'Add New Activity')}</h3>
               <p className="text-muted-foreground mb-4">
                 {t('itinerary.addActivity', 'Create a new activity for your itinerary.')}
               </p>
@@ -259,7 +259,7 @@ export default function DayProgramPage() {
                   trigger={
                     <Button variant="outline" className="flex flex-col h-auto py-4">
                       <CalendarIcon className="h-6 w-6 mb-2" />
-                      <span>Event</span>
+                      <span>{t('activityTypes.activity', 'Event')}</span>
                     </Button>
                   }
                 />
@@ -269,7 +269,7 @@ export default function DayProgramPage() {
                   trigger={
                     <Button variant="outline" className="flex flex-col h-auto py-4">
                       <MapIcon className="h-6 w-6 mb-2" />
-                      <span>Transport</span>
+                      <span>{t('activityTypes.transport', 'Transport')}</span>
                     </Button>
                   }
                 />
@@ -279,7 +279,7 @@ export default function DayProgramPage() {
                   trigger={
                     <Button variant="outline" className="flex flex-col h-auto py-4">
                       <FileTextIcon className="h-6 w-6 mb-2" />
-                      <span>Meal</span>
+                      <span>{t('activityTypes.meal', 'Meal')}</span>
                     </Button>
                   }
                 />
@@ -289,7 +289,7 @@ export default function DayProgramPage() {
                   trigger={
                     <Button variant="outline" className="flex flex-col h-auto py-4">
                       <PlusIcon className="h-6 w-6 mb-2" />
-                      <span>Hotel</span>
+                      <span>{t('activityTypes.hotel', 'Hotel')}</span>
                     </Button>
                   }
                 />

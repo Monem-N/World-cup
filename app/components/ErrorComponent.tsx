@@ -2,6 +2,7 @@ import React from 'react';
 import { AlertCircleIcon, RefreshCwIcon } from 'lucide-react';
 import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '~/components/ui/card';
+import { useTranslation } from "react-i18next";
 
 interface ErrorComponentProps {
   message: string;
@@ -9,13 +10,14 @@ interface ErrorComponentProps {
 }
 
 export default function ErrorComponent({ message, onRetry }: ErrorComponentProps) {
+  const { t } = useTranslation();
   return (
     <div className="container mx-auto px-4 py-6 max-w-4xl flex items-center justify-center min-h-[50vh]">
       <Card className="w-full max-w-md">
         <CardHeader className="bg-destructive/10 text-destructive">
           <div className="flex items-center gap-2">
             <AlertCircleIcon className="h-5 w-5" />
-            <CardTitle>Error</CardTitle>
+            <CardTitle>{t('common.error', 'Error')}</CardTitle>
           </div>
         </CardHeader>
         <CardContent className="pt-6">
@@ -25,7 +27,7 @@ export default function ErrorComponent({ message, onRetry }: ErrorComponentProps
           <CardFooter className="flex justify-end">
             <Button onClick={onRetry} variant="outline" className="gap-2">
               <RefreshCwIcon className="h-4 w-4" />
-              Retry
+              {t('common.retry', 'Retry')}
             </Button>
           </CardFooter>
         )}

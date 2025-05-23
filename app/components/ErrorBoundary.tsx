@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -24,10 +25,11 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
   }
 
   render() {
+    const { t } = useTranslation();
     if (this.state.hasError) {
       return (
         <div className="p-4 bg-red-50 border border-red-200 rounded">
-          <h2 className="text-red-700 font-bold">Something went wrong.</h2>
+          <h2 className="text-red-700 font-bold">{t('common.somethingWentWrong', 'Something went wrong.')}</h2>
           <p className="text-red-600">{this.state.error?.message}</p>
         </div>
       );

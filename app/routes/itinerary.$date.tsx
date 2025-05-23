@@ -1,6 +1,8 @@
 import { Outlet } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export function handle() {
+  const { t } = useTranslation();
   return {
     breadcrumb: (data: any) => {
       // Format the date for the breadcrumb
@@ -11,7 +13,7 @@ export function handle() {
         });
         return formattedDate;
       }
-      return "Day Details";
+      return t('itinerary.dayDetails', 'Day Details');
     },
   };
 }

@@ -111,6 +111,73 @@
       "feature3Description": "Découvrez les restaurants, les musées et les sites culturels près de chaque lieu pour profiter au maximum de votre voyage à la Coupe du Monde.",
       "ctaTitle": "Prêt pour la Coupe du Monde ?",
       "ctaDescription": "Rejoignez des milliers de fans qui utilisent World Cup Itinerary pour planifier leur expérience parfaite du tournoi.",
-      "signUp": "S'inscrire maintenant"
+      "signUp": "S'inscrire maintenant",
+      "viewDashboard": "tableau de bord"
+    },
+    "common": {
+      "error": "Erreur",
+      "retry": "Réessayer",
+      "somethingWentWrong": "Quelque chose s'est mal passé.",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleting": "Suppression...",
+      "reset": "Réinitialiser",
+      "save": "Enregistrer",
+      "saving": "Enregistrement..."
+    },
+    "forms": {
+      "activityType": "Type d'activité",
+      "selectActivityType": "Sélectionner le type d'activité",
+      "status": "Statut",
+      "selectStatus": "Sélectionner le statut",
+      "title": "Titre",
+      "activityTitle": "Titre de l'activité",
+      "time": "Heure",
+      "timeFormat": "Heure au format 24 heures (HH:MM)",
+      "duration": "Durée",
+      "durationPlaceholder": "ex: 1h30m",
+      "durationFormat": "Format de durée: 1h30m, 45m, etc.",
+      "notes": "Notes",
+      "notesPlaceholder": "Notes supplémentaires sur cette activité",
+      "markImportant": "Marquer comme important",
+      "importantDescription": "Mettre en évidence cette activité comme importante",
+      "requiresConfirmation": "Nécessite une confirmation",
+      "confirmationDescription": "Cette activité doit être confirmée",
+      "groupEvent": "Événement de groupe",
+      "groupDescription": "Ceci est une activité de groupe",
+      "locationName": "Nom du lieu",
+      "address": "Adresse",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "transportMode": "Mode de transport",
+      "carrier": "Transporteur",
+      "bookingReference": "Référence de réservation"
+    },
+    "activityTypes": {
+      "activity": "Activité",
+      "transport": "Transport",
+      "match": "Match",
+      "meal": "Repas",
+      "hotel": "Hôtel"
+    },
+    "statusOptions": {
+      "pending": "En attente",
+      "confirmed": "Confirmé",
+      "completed": "Terminé"
+    },
+    "weather": {
+      "forecast": "Prévisions météorologiques",
+      "forecastLabel": "Prévisions:",
+      "temperatureLabel": "Température:",
+      "windLabel": "Vent:",
+      "dataNotAvailable": "Données météorologiques non disponibles."
+    },
+    "reminders": {
+      "title": "Rappels"
+    },
+    "itinerary": {
+      "noActivitiesYet": "Aucune activité pour l'instant",
+      "addFirstActivity": "Ajoutez votre première activité",
+      "dayDetails": "Détails du jour"
     }
   }
