@@ -51,7 +51,7 @@
     "react-hook-form": "^7.56.4",
     "react-i18next": "^15.5.1",
     "react-router": "^7.5.3",
-    "react-router-dom": "^7.6.0",
+    "react-router-dom": "^7.5.3",
     "tailwind-merge": "^3.3.0",
     "utf-8-validate": "^6.0.5",
     "uuid": "^11.1.0",
