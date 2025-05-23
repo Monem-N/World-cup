@@ -79,7 +79,6 @@
   },
   "version": "1.0.0",
   "description": "A modern, production-ready template for building full-stack React applications using React Router.",
-  "main": "convert_itineraries.js",
   "directories": {
     "doc": "doc"
   },
