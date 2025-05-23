@@ -1,4 +1,10 @@
 {
+    "app": {
+    "title": "Itinéraire World Cup",
+    "subtitle": "Votre compagnon de Voyage",
+    "description": "Plan your World Cup experience with our itinerary planner",
+    "keywords": "World Cup, Itinerary, Planning, Transportation, Accommodations, Activities, Match Tracking, Local Attractions"
+    },
     "dashboard": {
       "title": "Centre de voyage pour la Coupe du Monde des Clubs de la FIFA 2025",
       "overview": "Aperçu rapide",
@@ -89,39 +95,35 @@
       "itineraryDate3": "20 juin 2025 (Jour de match)",
       "itineraryDate4": "24 juin 2025 (Jour de match)",
       "venuesDescription": "Explorez les stades et les lieux accueillant les matchs de la Coupe du Monde",
-      "teamsDescription": "Parcourez les équipes participantes, les joueurs et les statistiques des matchs"
+      "teamsDescription": "Parcourez les équipes participantes, les joueurs et les statistiques des matchs",
+      "dashboardDefaultText": "Tableau de bord",
+      "dashboardDefaultDescription": "Votre centre de commande personnalisé avec des mises à jour de match en direct et des recommandations intelligentes",
+      "dashboardDefaultBadge": "Nouveau",
+      "overviewDefaultLabel": "Aperçu",
+      "itineraryQuickLinkDefaultLabel": "Mon itinéraire",
+      "essentialsDefaultLabel": "Matchs essentiels",
+      "analyticsDefaultLabel": "Analyse des performances",
+      "itineraryDefaultText": "Itinéraire",
+      "itineraryDefaultDescription": "Optimisation de l'horaire basée sur l'IA pour une expérience ultime de la Coupe du Monde",
+      "itineraryDefaultBadge": "Chaud",
+      "itineraryDate1DefaultLabel": "14 juin - Grande Arrivée",
+      "itineraryDate2DefaultLabel": "16 juin - Match d'ouverture",
+      "itineraryDate3DefaultLabel": "20 juin - Phase de groupes",
+      "itineraryDate4DefaultLabel": "24 juin - Tour éliminatoire",
+      "venuesDefaultText": "Lieux",
+      "venuesDefaultDescription": "Explorez les stades emblématiques avec des visites virtuelles à 360° et des guides d'initiés",
+      "teamsDefaultText": "Équipes",
+      "teamsDefaultDescription": "Plongez en profondeur dans les statistiques des équipes, les profils des joueurs et l'analyse tactique"
     },
-    "footer": {
-      "description": "Votre compagnon ultime pour planifier et organiser votre expérience de la Coupe du Monde. Ne manquez jamais un match, trouvez les meilleurs itinéraires et découvrez les attractions locales.",
-      "about": "À propos",
-      "aboutUs": "À propos de nous",
-      "faq": "FAQ",
-      "contact": "Contact",
-      "features": "Fonctionnalités",
-      "itinerary": "Itinéraire",
-      "venues": "Lieux",
-      "teams": "Équipes",
-      "legal": "Mentions légales",
-      "terms": "Conditions d'utilisation",
-      "privacy": "Politique de confidentialité",
-      "allRightsReserved": "Tous droits réservés"
+    "meta": {
     },
     "meta": {
       "title": "Itinéraire de la Coupe du Monde - Votre Compagnon Ultime pour la Coupe du Monde",
       "description": "Gérez votre expérience de la Coupe du Monde avec notre planificateur d'itinéraire"
     },
     "auth": {
-      "signIn": "Se connecter",
-      "signUp": "S'inscrire",
-      "signOut": "Se déconnecter",
-      "account": "Compte",
-      "loading": "Chargement..."
     },
     "user": {
-      "account": "Compte",
-      "profile": "Profil",
-      "settings": "Paramètres",
-      "logout": "Se déconnecter"
     },
     "landing": {
       "heroTitle": "Planifiez Votre Expérience Ultime de la Coupe du Monde",
@@ -138,7 +140,26 @@
       "ctaTitle": "Prêt pour la Coupe du Monde ?",
       "ctaDescription": "Rejoignez des milliers de fans qui utilisent World Cup Itinerary pour planifier leur expérience parfaite du tournoi.",
       "signUp": "S'inscrire maintenant",
-      "viewDashboard": "tableau de bord"
+      "viewDashboard": "tableau de bord",
+      "heroAltText": "Stade rempli de fans en liesse",
+      "ctaTitle": "Rejoins la Légende",
+      "ctaDescription": "Rejoignez des millions de supporters qui vivent la passion rouge et or. Accède à du contenu exclusif, connecte-toi avec la communauté taraji et ne rate jamais un moment de gloire.",
+      "joinCommunity": "Rejoindre la Famille",
+      "viewStats": "Voir les Stats",
+      "feature1Title": "Palmarès & Trophées",
+      "feature1Description": "Découvrez l'histoire glorieuse d'Espérance avec ses 30+ championnats nationaux, ses titres continentaux et ses moments légendaires.",
+      "feature2Title": "Équipe & Joueurs",
+      "feature2Description": "Suivez nos stars, découvrez les statistiques détaillées, les transferts et les performances de chaque joueur taraji.",
+      "feature3Title": "Calendrier & Matchs",
+      "feature3Description": "Ne ratez aucun match ! Calendrier complet, résultats en temps réel, et toutes les informations sur les rencontres.",
+      "excellenceSportive": "Excellence Sportive",
+      "features": "Univers Taraji",
+      "featuresDescription": "Plongez dans l'univers complet d'Espérance Sportive de Tunis avec des fonctionnalités exclusives conçues pour les vrais supporters taraji.",
+      "joinFamilyTaraji": "Rejoindre la Famille Taraji"
+    },
+    "common": {
+    },
+    "common": {
     },
     "common": {
       "error": "Erreur",

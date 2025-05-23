@@ -1,4 +1,11 @@
 {
+
+  "app": {
+    "title": "World Cup Itinerary",
+    "subtitle": "Your Ultimate World Cup Companion",
+    "description": "Plan your World Cup experience with our itinerary planner",
+    "keywords": "World Cup, Itinerary, Planning, Transportation, Accommodations, Activities, Match Tracking, Local Attractions"
+  },
   "dashboard": {
     "title": "FIFA Club World Cup 2025 Trip Hub",
     "overview": "Quick Overview",
@@ -64,6 +71,12 @@
       "readyForAdventure": "Ready for adventure",
       "people": "People"
     }
+  },
+  "countdown": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
   },
   "trip_info": {
     "dates": "Trip Dates",
