@@ -1,18 +1,8 @@
-import { Outlet, redirect } from "react-router";
-import type { LoaderFunctionArgs } from "react-router";
+import { Outlet } from "react-router";
 import { PageLayout } from "~/components/layout/PageLayout";
-import { isAuthenticated } from "~/api/authApi";
 
-export async function loader({ request }: LoaderFunctionArgs) {
-  const authenticated = await isAuthenticated();
-
-  if (!authenticated) {
-    // Store the attempted location for redirect after login
-    const url = new URL(request.url);
-    const from = encodeURIComponent(url.pathname + url.search);
-    return redirect(`/auth/login?from=${from}`);
-  }
-
+// No authentication required - simplified loader
+export async function loader() {
   return null;
 }
 

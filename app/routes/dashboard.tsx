@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, redirect } from 'react-router';
+import { useNavigate } from 'react-router';
 import { Outlet, useLocation } from 'react-router';
-import type { LoaderFunctionArgs } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useTripInfo } from '../lib/tripContext';
 import type { TripInformation } from '../lib/types';
 import { PageLayout } from '~/components/layout/PageLayout';
-import { isAuthenticated } from '~/api/authApi';
 
 // UI Components
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/ui/tabs';
@@ -39,16 +37,8 @@ import { EnhancedDashboardHeader } from '../components/dashboard/EnhancedDashboa
 import { CountdownTimer } from '../components/dashboard/CountdownTimer';
 import { TripProgressTracker } from '../components/dashboard/TripProgressTracker';
 
-export async function loader({ request }: LoaderFunctionArgs) {
-  const authenticated = await isAuthenticated();
-
-  if (!authenticated) {
-    // Store the attempted location for redirect after login
-    const url = new URL(request.url);
-    const from = encodeURIComponent(url.pathname + url.search);
-    return redirect(`/auth/login?from=${from}`);
-  }
-
+// No authentication required - simplified loader
+export async function loader() {
   return null;
 }
 

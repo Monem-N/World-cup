@@ -44,32 +44,6 @@ export default [
     ]
   },
   {
-    path: "/auth",
-    file: "routes/auth.tsx",
-    children: [
-      {
-        path: "login",
-        file: "routes/auth.login.tsx",
-      },
-      {
-        path: "register",
-        file: "routes/auth.register.tsx",
-      },
-      {
-        path: "profile",
-        file: "routes/auth.profile.tsx",
-      },
-      {
-        path: "reset-password",
-        file: "routes/auth.reset-password.tsx",
-      },
-      {
-        path: "callback",
-        file: "routes/auth.callback.tsx",
-      },
-    ]
-  },
-  {
     path: "/venues",
     file: "routes/venues.tsx",
   },
@@ -84,10 +58,6 @@ export default [
   {
     path: "/supabase-test",
     file: "routes/supabase-test.tsx",
-  },
-  {
-    path: "/auth-test",
-    file: "routes/auth-test.tsx",
   },
   {
     path: "/api/itineraries/dates",

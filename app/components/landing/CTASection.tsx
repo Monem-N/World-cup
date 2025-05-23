@@ -19,7 +19,7 @@ export function CTASection() {
           "mt-8 px-8 py-3 text-lg",
           "bg-white text-primary hover:bg-gray-200 transition-colors duration-300"
         )}>
-          <Link to="/register">{t('landing.signUp', 'Sign Up Now')}</Link>
+          <Link to="/itinerary">{t('landing.viewItinerary', 'View Itinerary')}</Link>
         </Button>
       </div>
     </section>

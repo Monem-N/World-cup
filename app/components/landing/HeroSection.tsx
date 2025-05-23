@@ -25,13 +25,13 @@ export function HeroSection() {
             "px-8 py-3 text-lg",
             "bg-white text-primary hover:bg-gray-200 transition-colors duration-300"
           )}>
-            <Link to="/register">{t('landing.getStarted', 'Get Started')}</Link>
+            <Link to="/itinerary">{t('landing.getStarted', 'Get Started')}</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className={cn(
             "px-8 py-3 text-lg",
             "border-white text-white hover:bg-white hover:text-primary transition-colors duration-300"
           )}>
-            <Link to="/demo">{t('landing.viewDemo', 'View Demo')}</Link>
+            <Link to="/dashboard">{t('landing.viewDashboard', 'View Dashboard')}</Link>
           </Button>
         </div>
       </div>

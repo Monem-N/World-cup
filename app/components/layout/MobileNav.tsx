@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import {
   Sheet,
@@ -18,21 +18,15 @@ import {
   Users,
   Globe,
   Settings,
-  LogOut,
   ChevronRight,
   Bell,
   Search,
-  Home,
-  LogIn,
-  UserPlus,
-  UserCircle
+  Home
 } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { Badge } from "~/components/ui/badge";
 import { Separator } from "~/components/ui/separator";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "~/components/ui/collapsible";
-import { useAuth } from "~/api/authContext";
-import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 
 // Define the types for navigation items
 type NavChild = {
@@ -99,22 +93,10 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
-  const navigate = useNavigate();
-  const { user, profile, isAuthenticated, isLoading, signOut } = useAuth();
 
   const handleLinkClick = useCallback(() => {
     setOpen(false);
   }, []);
-
-  const handleSignOut = useCallback(async () => {
-    try {
-      await signOut();
-      setOpen(false);
-      navigate('/');
-    } catch (error) {
-      console.error('Error signing out:', error);
-    }
-  }, [signOut, navigate]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -136,22 +118,10 @@ export function MobileNav() {
             </div>
             <div className="flex-1">
               <div className="text-base font-semibold">{t('app.title', 'World Cup Itinerary')}</div>
-              {isAuthenticated && user && (
-                <div className="text-xs text-muted-foreground mt-0.5">
-                  {profile?.first_name && profile?.last_name
-                    ? `${profile.first_name} ${profile.last_name}`
-                    : user.email?.split('@')[0] || 'User'}
-                </div>
-              )}
+              <div className="text-xs text-muted-foreground mt-0.5">
+                {t('user.worldCupFan', 'World Cup Fan')}
+              </div>
             </div>
-            {isAuthenticated && profile?.avatar_url && (
-              <Avatar className="h-8 w-8">
-                <AvatarImage src={profile.avatar_url} alt="Profile" />
-                <AvatarFallback>
-                  {profile?.first_name?.[0]}{profile?.last_name?.[0]}
-                </AvatarFallback>
-              </Avatar>
-            )}
           </SheetTitle>
         </SheetHeader>
 
@@ -269,6 +239,14 @@ export function MobileNav() {
             </h3>
             <div className="grid gap-1 px-2">
               <Link
+                to="/settings"
+                onClick={handleLinkClick}
+                className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
+              >
+                <Settings className="h-4 w-4" />
+                <span>{t('nav.settings', 'Settings')}</span>
+              </Link>
+              <Link
                 to="/settings/language"
                 onClick={handleLinkClick}
                 className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
@@ -276,84 +254,33 @@ export function MobileNav() {
                 <Globe className="h-4 w-4" />
                 <span>{t('nav.language', 'Language')}</span>
               </Link>
-
-              {isAuthenticated ? (
-                <>
-                  <Link
-                    to="/auth/profile"
-                    onClick={handleLinkClick}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  >
-                    <UserCircle className="h-4 w-4" />
-                    <span>{t('user.profile', 'Profile')}</span>
-                  </Link>
-                  <Link
-                    to="/settings/account"
-                    onClick={handleLinkClick}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  >
-                    <Settings className="h-4 w-4" />
-                    <span>{t('nav.account', 'Account')}</span>
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/auth/login"
-                    onClick={handleLinkClick}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  >
-                    <LogIn className="h-4 w-4" />
-                    <span>{t('auth.signIn', 'Sign In')}</span>
-                  </Link>
-                  <Link
-                    to="/auth/register"
-                    onClick={handleLinkClick}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  >
-                    <UserPlus className="h-4 w-4" />
-                    <span>{t('auth.signUp', 'Sign Up')}</span>
-                  </Link>
-                </>
-              )}
             </div>
           </div>
         </div>
 
         <SheetFooter className="mt-auto border-t p-4">
-          {isAuthenticated ? (
+          <div className="flex gap-2 w-full">
             <Button
+              asChild
               variant="outline"
-              className="w-full justify-start gap-2 text-destructive hover:text-destructive"
-              onClick={handleSignOut}
+              className="flex-1 justify-center gap-2"
             >
-              <LogOut className="h-4 w-4" />
-              {t('user.logout', 'Log out')}
+              <Link to="/dashboard" onClick={handleLinkClick}>
+                <Trophy className="h-4 w-4" />
+                {t('nav.dashboard', 'Dashboard')}
+              </Link>
             </Button>
-          ) : (
-            <div className="flex gap-2 w-full">
-              <Button
-                asChild
-                variant="outline"
-                className="flex-1 justify-center gap-2"
-              >
-                <Link to="/auth/login" onClick={handleLinkClick}>
-                  <LogIn className="h-4 w-4" />
-                  {t('auth.signIn', 'Sign In')}
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="default"
-                className="flex-1 justify-center gap-2"
-              >
-                <Link to="/auth/register" onClick={handleLinkClick}>
-                  <UserPlus className="h-4 w-4" />
-                  {t('auth.signUp', 'Sign Up')}
-                </Link>
-              </Button>
-            </div>
-          )}
+            <Button
+              asChild
+              variant="default"
+              className="flex-1 justify-center gap-2"
+            >
+              <Link to="/itinerary" onClick={handleLinkClick}>
+                <Calendar className="h-4 w-4" />
+                {t('nav.itinerary', 'Itinerary')}
+              </Link>
+            </Button>
+          </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>
