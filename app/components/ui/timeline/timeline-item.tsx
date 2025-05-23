@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '~/lib/utils';
@@ -41,9 +39,9 @@ export const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>((
   ref
 ) => {
   // Get context values
-  const { 
-    animate = true, 
-    defaultIconColor, 
+  const {
+    animate = true,
+    defaultIconColor,
     defaultStatus,
     clickable: contextClickable,
   } = useTimelineContext();
@@ -121,7 +119,7 @@ export const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>((
             {date}
           </time>
         )}
-        
+
         {hasDetailedContent ? (
           <TimelineCard
             data={data}

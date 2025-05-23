@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "remix",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "functions": {
+    "app/entry.server.tsx": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

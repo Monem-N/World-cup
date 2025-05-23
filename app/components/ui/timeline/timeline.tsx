@@ -1,9 +1,7 @@
-'use client';
-
 import * as React from 'react';
 import { cn } from '../../../lib/utils';
 import { cva } from 'class-variance-authority';
-import { AlertCircle, Loader2 } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { TimelineProvider, useTimelineContext } from './context';
 import type { TimelineProps } from './types';
 import type { TimelineColor } from '../../../lib/types';
