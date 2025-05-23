@@ -1,70 +1,24 @@
 import type { RouteConfig } from "@react-router/dev/routes";
+import { route, index } from "@react-router/dev/routes";
 
 export default [
-  {
-    path: "/",
-    file: "routes/index.tsx",
-  },
-  {
-    path: "/dashboard",
-    file: "routes/dashboard.tsx",
-    children: [
-      {
-        index: true,
-        file: "routes/dashboard/overview.tsx",
-      },
-      {
-        path: "itinerary",
-        file: "routes/dashboard/itinerary-overview.tsx",
-      },
-      {
-        path: "essentials",
-        file: "routes/dashboard/essentials.tsx",
-      },
-    ],
-  },
-  {
-    path: "/itinerary",
-    file: "routes/itinerary.tsx",
-    children: [
-      {
-        index: true,
-        file: "routes/itinerary/index.tsx",
-      },
-      {
-        path: ":date",
-        file: "routes/itinerary.$date.tsx",
-        children: [
-          {
-            index: true,
-            file: "routes/itinerary.$date/index.tsx",
-          }
-        ]
-      }
-    ]
-  },
-  {
-    path: "/venues",
-    file: "routes/venues.tsx",
-  },
-  {
-    path: "/teams",
-    file: "routes/teams.tsx",
-  },
-  {
-    path: "/settings",
-    file: "routes/settings.tsx",
-  },
-  {
-    path: "/supabase-test",
-    file: "routes/supabase-test.tsx",
-  },
-  {
-    path: "/api/itineraries/dates",
-    file: "routes/api.itineraries.dates.ts",
-  },
-  {
-    path: "/api/itineraries/:date",
-    file: "routes/api.itineraries.$date.ts",
-  },
+  index("routes/index.tsx"),
+  route("/dashboard", "routes/dashboard.tsx", [
+    index("routes/dashboard/overview.tsx"),
+    route("itinerary", "routes/dashboard/itinerary-overview.tsx"),
+    route("essentials", "routes/dashboard/essentials.tsx"),
+  ]),
+  route("/itinerary", "routes/itinerary.tsx", [
+    index("routes/itinerary/index.tsx"),
+    route(":date", "routes/itinerary.$date.tsx", [
+      index("routes/itinerary.$date/index.tsx"),
+    ]),
+  ]),
+  route("/venues", "routes/venues.tsx"),
+  route("/teams", "routes/teams.tsx"),
+  route("/settings", "routes/settings.tsx"),
+  route("/supabase-test", "routes/supabase-test.tsx"),
+  route("/admin-setup", "routes/admin-setup.tsx"),
+  route("/api/itineraries/dates", "routes/api.itineraries.dates.ts"),
+  route("/api/itineraries/:date", "routes/api.itineraries.$date.ts"),
 ] satisfies RouteConfig;
