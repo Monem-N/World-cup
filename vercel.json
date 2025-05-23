@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "build/server/nodejs_*/index.js": {
-      "maxDuration": 30
-    }
-  }
-}
