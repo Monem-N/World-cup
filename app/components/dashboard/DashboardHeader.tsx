@@ -47,7 +47,7 @@ export default function DashboardHeader({ dashboardData, mousePosition }: Dashbo
         <div className="relative mb-10">
           <div className="absolute inset-0 hero-title-bg blur-3xl" />
           <h1 className="hero-title relative text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black mb-8 leading-none tracking-tight text-center">
-            {dashboardData?.tripOverview.destination || t('dashboard.tournament.fallbackDestination')}
+            {t('dashboard.tournament.fallbackDestination')}
           </h1>
           {/* Enhanced Decorative Elements */}
           <div className="flex items-center justify-center space-x-4 mb-4">

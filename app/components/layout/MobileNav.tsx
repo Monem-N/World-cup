@@ -104,21 +104,53 @@ export function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary/10"
+          className="mobile-nav-trigger md:hidden transition-all duration-300 hover:scale-110"
+          style={{
+            color: "rgba(255, 255, 255, 0.9)"
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#FFFFFF";
+            e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "rgba(255, 255, 255, 0.9)";
+            e.currentTarget.style.background = "transparent";
+          }}
         >
           <Menu className="h-5 w-5" />
           <span className="sr-only">{t('nav.menu', 'Menu')}</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[80%] sm:w-[350px] p-0">
-        <SheetHeader className="border-b p-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <SheetContent
+        side="left"
+        className="mobile-nav-content w-[80%] sm:w-[350px] p-0"
+        style={{
+          background: "rgba(0, 0, 0, 0.95)",
+          backdropFilter: "blur(20px) saturate(180%)",
+          border: "1px solid rgba(255, 255, 255, 0.1)"
+        }}
+      >
+        <SheetHeader
+          className="border-b p-6"
+          style={{
+            background: "linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%)",
+            borderColor: "rgba(255, 255, 255, 0.1)"
+          }}
+        >
           <SheetTitle className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-              <Trophy className="h-5 w-5 text-primary" />
+            <div
+              className="flex h-8 w-8 items-center justify-center rounded-full"
+              style={{
+                background: "rgba(255, 215, 0, 0.1)"
+              }}
+            >
+              <Trophy className="h-5 w-5" style={{ color: "#FFD700" }} />
             </div>
             <div className="flex-1">
-              <div className="text-base font-semibold">{t('app.title', 'World Cup Itinerary')}</div>
-              <div className="text-xs text-muted-foreground mt-0.5">
+              <div className="text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                {t('app.title', 'World Cup Itinerary')}
+              </div>
+              <div className="text-xs mt-0.5" style={{ color: "rgba(255, 255, 255, 0.6)" }}>
                 {t('user.worldCupFan', 'World Cup Fan')}
               </div>
             </div>
@@ -126,19 +158,53 @@ export function MobileNav() {
         </SheetHeader>
 
         <div className="px-1 py-4 overflow-y-auto max-h-[calc(100vh-10rem)]">
-          {/* Quick actions */}
+          {/* Quick actions following design system */}
           <div className="flex justify-between px-4 py-2 mb-2">
-            <Button variant="outline" size="sm" className="w-[48%]">
+            <Button
+              variant="outline"
+              size="sm"
+              className="mobile-nav-quick-action w-[48%]"
+              style={{
+                borderColor: "rgba(255, 215, 0, 0.3)",
+                color: "#FFD700",
+                background: "rgba(255, 215, 0, 0.1)"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(255, 215, 0, 0.2)";
+                e.currentTarget.style.borderColor = "#FFD700";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "rgba(255, 215, 0, 0.1)";
+                e.currentTarget.style.borderColor = "rgba(255, 215, 0, 0.3)";
+              }}
+            >
               <Search className="h-4 w-4 mr-2" />
               {t('nav.search', 'Search')}
             </Button>
-            <Button variant="outline" size="sm" className="w-[48%]">
+            <Button
+              variant="outline"
+              size="sm"
+              className="mobile-nav-quick-action w-[48%]"
+              style={{
+                borderColor: "rgba(220, 38, 38, 0.3)",
+                color: "#DC2626",
+                background: "rgba(220, 38, 38, 0.1)"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(220, 38, 38, 0.2)";
+                e.currentTarget.style.borderColor = "#DC2626";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "rgba(220, 38, 38, 0.1)";
+                e.currentTarget.style.borderColor = "rgba(220, 38, 38, 0.3)";
+              }}
+            >
               <Bell className="h-4 w-4 mr-2" />
               {t('nav.notifications', 'Notifications')}
             </Button>
           </div>
 
-          <Separator className="my-2" />
+          <Separator className="my-2" style={{ background: "rgba(255, 255, 255, 0.1)" }} />
 
           {/* Main navigation */}
           <div className="grid gap-1 px-2">
