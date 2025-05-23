@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Users, MapPin, Plane, Hotel, Ticket, Clock, CloudRain, Sun, Cloud, Luggage, ArrowRight, Star, Compass, Camera, Globe, Heart, Hourglass, Sparkles, Trophy, Map, Navigation, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import { loadDashboardData, type DashboardData } from '../api/dashboardDataLoader';
 
 const Dashboard = () => {
+  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -76,11 +78,11 @@ const Dashboard = () => {
             </div>
           </div>
           <h2 className="loading-title text-4xl md:text-5xl font-black mb-6 animate-pulse">
-            Preparing Your Journey...
+            {t('dashboard.loading.preparingJourney')}
           </h2>
           <div className="flex items-center justify-center space-x-3 text-white/80 mb-4">
             <Globe className="w-6 h-6 animate-spin loading-icon" />
-            <span className="text-lg font-medium">Loading FIFA Club World Cup 2025™ experience...</span>
+            <span className="text-lg font-medium">{t('dashboard.loading.loadingExperience')}</span>
           </div>
           <div className="w-64 h-2 bg-white/10 rounded-full mx-auto overflow-hidden">
             <div className="h-full loading-progress animate-pulse rounded-full" style={{ width: '60%' }} />
@@ -96,13 +98,13 @@ const Dashboard = () => {
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
         <div className="text-center z-10 max-w-md mx-auto px-6">
           <AlertCircle className="w-16 h-16 error-icon mx-auto mb-4" />
-          <h2 className="text-3xl font-bold text-white mb-4">Unable to Load Trip Data</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">{t('dashboard.error.unableToLoad')}</h2>
           <p className="text-white/70 mb-6">{dataError}</p>
           <button
             onClick={() => window.location.reload()}
             className="error-button text-black px-6 py-3 rounded-full font-semibold transition-all duration-300"
           >
-            Try Again
+            {t('dashboard.error.tryAgain')}
           </button>
         </div>
       </div>
@@ -150,8 +152,8 @@ const Dashboard = () => {
                     <div className="absolute -inset-4 premium-icon-glow-outer rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }} />
                   </div>
                   <div className="flex flex-col items-start">
-                    <span className="text-white font-bold text-xl tracking-wide">FIFA Club World Cup 2025™</span>
-                    <span className="premium-subtitle text-sm font-medium">Official Tournament Experience</span>
+                    <span className="text-white font-bold text-xl tracking-wide">{t('dashboard.tournament.name')}</span>
+                    <span className="premium-subtitle text-sm font-medium">{t('dashboard.tournament.officialExperience')}</span>
                   </div>
                   {dashboardData && (
                     <div className="flex items-center space-x-2 ml-4">
@@ -160,7 +162,7 @@ const Dashboard = () => {
                         <div className="absolute -inset-1 live-indicator-glow rounded-full blur-sm animate-pulse" />
                       </div>
                       <span className="live-data-badge px-4 py-2 rounded-full text-sm font-semibold border live-data-border backdrop-blur-sm">
-                        Live Data
+                        {t('dashboard.tournament.liveData')}
                       </span>
                     </div>
                   )}
@@ -172,7 +174,7 @@ const Dashboard = () => {
             <div className="relative mb-10">
               <div className="absolute inset-0 hero-title-bg blur-3xl" />
               <h1 className="hero-title relative text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black mb-8 leading-none tracking-tight text-center">
-                {dashboardData?.tripOverview.destination || 'USA 2025'}
+                {dashboardData?.tripOverview.destination || t('dashboard.tournament.fallbackDestination')}
               </h1>
               {/* Enhanced Decorative Elements */}
               <div className="flex items-center justify-center space-x-4 mb-4">
@@ -187,10 +189,10 @@ const Dashboard = () => {
             {/* Enhanced Subtitle with Better Typography */}
             <div className="max-w-5xl mx-auto mb-10">
               <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light leading-relaxed mb-4">
-                {dashboardData?.tripOverview.title || 'Your ultimate football journey awaits'}
+                {dashboardData?.tripOverview.title || t('dashboard.tournament.fallbackTitle')}
               </p>
               <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed">
-                Get ready for an unforgettable experience at the world's most prestigious club tournament
+                {t('dashboard.tournament.description')}
               </p>
             </div>
 
@@ -204,11 +206,11 @@ const Dashboard = () => {
                     <div className="absolute -inset-1 trip-dates-icon-glow rounded-full blur-sm animate-pulse" />
                   </div>
                   <div className="flex flex-col items-start">
-                    <span className="text-white/60 text-sm font-medium uppercase tracking-wider">Tournament Dates</span>
+                    <span className="text-white/60 text-sm font-medium uppercase tracking-wider">{t('dashboard.tournament.tournamentDates')}</span>
                     <span className="text-white font-bold text-xl">
                       {dashboardData?.tripOverview.startDate && dashboardData?.tripOverview.endDate
                         ? `${new Date(dashboardData.tripOverview.startDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} - ${new Date(dashboardData.tripOverview.endDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`
-                        : 'June 15 - 28, 2025'
+                        : t('dashboard.tournament.fallbackDates')
                       }
                     </span>
                   </div>
@@ -242,13 +244,13 @@ const Dashboard = () => {
 
                   <div className="space-y-4">
                     <div>
-                      <p className="text-white font-bold text-lg mb-2">Days Left</p>
-                      <p className="text-white/60 text-sm">Until tournament begins</p>
+                      <p className="text-white font-bold text-lg mb-2">{t('dashboard.stats.daysLeft')}</p>
+                      <p className="text-white/60 text-sm">{t('dashboard.stats.untilTournament')}</p>
                     </div>
 
                     <div className="space-y-2">
                       <div className="flex justify-between text-xs text-white/50">
-                        <span>Progress</span>
+                        <span>{t('dashboard.stats.progress')}</span>
                         <span>{Math.max(10, 100 - (daysLeft / 200) * 100).toFixed(0)}%</span>
                       </div>
                       <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -282,14 +284,14 @@ const Dashboard = () => {
                     </div>
                     <div className="text-right">
                       <span className="text-5xl font-black stats-number-red group-hover:scale-110 transition-transform duration-300 inline-block">{dashboardData?.tripOverview.travelers || 4}</span>
-                      <div className="text-xs text-white/50 font-medium uppercase tracking-wider">People</div>
+                      <div className="text-xs text-white/50 font-medium uppercase tracking-wider">{t('dashboard.stats.people')}</div>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <p className="text-white font-bold text-lg mb-2">Travelers</p>
-                      <p className="text-white/60 text-sm">Ready for adventure</p>
+                      <p className="text-white font-bold text-lg mb-2">{t('dashboard.stats.travelers')}</p>
+                      <p className="text-white/60 text-sm">{t('dashboard.stats.readyForAdventure')}</p>
                     </div>
 
                     <div className="flex items-center space-x-2">
@@ -871,592 +873,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          33% { transform: translateY(-10px) rotate(120deg); }
-          66% { transform: translateY(10px) rotate(240deg); }
-        }
-
-        @keyframes pulse-glow {
-          0%, 100% {
-            opacity: 1;
-            filter: brightness(1) drop-shadow(0 0 8px var(--color-gold));
-          }
-          50% {
-            opacity: 0.8;
-            filter: brightness(1.2) drop-shadow(0 0 16px var(--color-gold));
-          }
-        }
-
-        @keyframes gradient-shift {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-pulse-glow {
-          animation: pulse-glow 2s ease-in-out infinite;
-        }
-
-        .animate-gradient-shift {
-          background-size: 200% 200%;
-          animation: gradient-shift 3s ease infinite;
-        }
-
-        /* Hero Title Gradient Text with Fallback */
-        .hero-title {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 25%, #FFD700 50%, #DC2626 75%, #FFD700 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          animation: gradient-shift 4s ease infinite;
-        }
-
-        /* Fallback for browsers that don't support background-clip: text */
-        @supports not (-webkit-background-clip: text) {
-          .hero-title {
-            background: none;
-            color: #FFD700;
-            text-shadow:
-              0 0 10px rgba(255, 215, 0, 0.5),
-              0 0 20px rgba(220, 38, 38, 0.3),
-              0 0 30px rgba(255, 215, 0, 0.2);
-          }
-        }
-
-        /* Footer Title Gradient Text */
-        .footer-title {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 50%, #FFD700 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          animation: gradient-shift 3s ease infinite;
-        }
-
-        /* Fallback for footer title */
-        @supports not (-webkit-background-clip: text) {
-          .footer-title {
-            background: none;
-            color: #FFD700;
-            text-shadow:
-              0 0 8px rgba(255, 215, 0, 0.4),
-              0 0 16px rgba(220, 38, 38, 0.2);
-          }
-        }
-
-        /* Action Button Styles with Hardcoded Colors */
-        .action-button-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #FFD700 30%, #DC2626 100%);
-          background-size: 200% 200%;
-          animation: gradient-shift 3s ease infinite;
-        }
-
-        .action-button-gold:hover {
-          background: linear-gradient(135deg, #FFF700 0%, #FFE55C 30%, #EF4444 100%);
-          background-size: 200% 200%;
-        }
-
-        .action-button-re
-          background: linear-gradient(135deg, #DC2626 0%, #DC2626 30%, #FFD700 100%);
-          background-size: 200% 200%;
-          animation: gradient-shift 3s ease infinite;
-        }
-
-        .action-button-red:hover {
-          background: linear-gradient(135deg, #EF4444 0%, #F87171 30%, #FFF700 100%);
-          background-size: 200% 200%;
-        }
-
-        /* Button Glow Effects */
-        .button-glow-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 50%, #FFD700 100%);
-        }
-
-        .button-glow-gold-inner {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.4) 0%, rgba(220, 38, 38, 0.4) 100%);
-        }
-
-        .button-glow-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 50%, #DC2626 100%);
-        }
-
-        .button-glow-red-inner {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.4) 0%, rgba(255, 215, 0, 0.4) 100%);
-        }
-
-        /* Footer Line Effects */
-        .footer-line-left {
-          background: linear-gradient(to right, transparent, #FFD700);
-        }
-
-        .footer-line-right {
-          background: linear-gradient(to right, #FFD700, transparent);
-        }
-
-        /* Loading State Styles */
-        .loading-particle {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
-        }
-
-        .loading-spinner {
-          border-color: #FFD700;
-        }
-
-        .loading-icon {
-          color: #FFD700;
-        }
-
-        .loading-title {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          animation: gradient-shift 3s ease infinite;
-        }
-
-        @supports not (-webkit-background-clip: text) {
-          .loading-title {
-            background: none;
-            color: #FFD700;
-          }
-        }
-
-        .loading-progress {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        /* Error State Styles */
-        .error-icon {
-          color: #DC2626;
-        }
-
-        .error-button {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .error-button:hover {
-          background: linear-gradient(135deg, #FFF700 0%, #EF4444 100%);
-        }
-
-        /* Premium Badge Styles */
-        .premium-badge-glow {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(220, 38, 38, 0.3) 50%, rgba(255, 215, 0, 0.3) 100%);
-        }
-
-        .premium-badge-bg {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(220, 38, 38, 0.15) 100%);
-        }
-
-        .premium-badge-border {
-          border-color: rgba(255, 215, 0, 0.4);
-        }
-
-        .premium-icon {
-          color: #FFD700;
-        }
-
-        .premium-icon-glow {
-          background: rgba(255, 215, 0, 0.3);
-        }
-
-        .premium-icon-glow-outer {
-          background: rgba(255, 215, 0, 0.1);
-        }
-
-        .premium-subtitle {
-          color: rgba(255, 215, 0, 0.8);
-        }
-
-        .live-indicator {
-          background: #FFD700;
-        }
-
-        .live-indicator-glow {
-          background: rgba(255, 215, 0, 0.5);
-        }
-
-        .live-data-badge {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
-          color: #FFD700;
-        }
-
-        .live-data-border {
-          border-color: rgba(255, 215, 0, 0.5);
-        }
-
-        /* Hero Title Background and Decorative Elements */
-        .hero-title-bg {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%, rgba(220, 38, 38, 0.1) 100%);
-        }
-
-        .hero-line-left {
-          background: linear-gradient(to right, transparent, #FFD700);
-        }
-
-        .hero-line-right {
-          background: linear-gradient(to right, #DC2626, transparent);
-        }
-
-        .hero-center-icon {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        /* Trip Dates Styles */
-        .trip-dates-glow {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
-        }
-
-        .trip-dates-icon {
-          color: #FFD700;
-        }
-
-        .trip-dates-icon-glow {
-          background: rgba(255, 215, 0, 0.2);
-        }
-
-        /* Stats Cards Styles */
-        .stats-card-glow-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 50%, #FFD700 100%);
-        }
-
-        .stats-card-glow-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 50%, #DC2626 100%);
-        }
-
-        .stats-card-border-gold:hover {
-          border-color: rgba(255, 215, 0, 0.6);
-        }
-
-        .stats-card-border-red:hover {
-          border-color: rgba(220, 38, 38, 0.6);
-        }
-
-        .stats-card-bg-gold {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
-        }
-
-        .stats-card-bg-red {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, transparent 100%);
-        }
-
-        .stats-icon-glow-gold {
-          background: rgba(255, 215, 0, 0.2);
-        }
-
-        .stats-icon-glow-red {
-          background: rgba(220, 38, 38, 0.2);
-        }
-
-        .stats-icon-bg-gold {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
-        }
-
-        .stats-icon-bg-red {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
-        }
-
-        .stats-icon-border-gold {
-          border-color: rgba(255, 215, 0, 0.3);
-        }
-
-        .stats-icon-border-red {
-          border-color: rgba(220, 38, 38, 0.3);
-        }
-
-        .stats-icon-gold {
-          color: #FFD700;
-        }
-
-        .stats-icon-red {
-          color: #DC2626;
-        }
-
-        .stats-number-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        }
-
-        .stats-number-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        }
-
-        @supports not (-webkit-background-clip: text) {
-          .stats-number-gold {
-            background: none;
-            color: #FFD700;
-          }
-          .stats-number-red {
-            background: none;
-            color: #DC2626;
-          }
-        }
-
-        .stats-progress-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 50%, #FFD700 100%);
-        }
-
-        .stats-progress-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 50%, #DC2626 100%);
-        }
-
-        /* Additional Stats Card Elements */
-        .traveler-dot {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-        }
-
-        .traveler-dot-glow {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(255, 215, 0, 0.3) 100%);
-        }
-
-        .destination-nav-icon {
-          color: #FFD700;
-        }
-
-        .destination-nav-glow {
-          background: rgba(255, 215, 0, 0.2);
-        }
-
-        .weather-orb {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
-        }
-
-        .weather-star {
-          color: #FFD700;
-        }
-
-        /* Countdown Timer Styles */
-        .countdown-bg {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(220, 38, 38, 0.2) 50%, rgba(255, 215, 0, 0.2) 100%);
-        }
-
-        .countdown-particle {
-          background: rgba(255, 215, 0, 0.3);
-        }
-
-        .countdown-icon {
-          color: #FFD700;
-        }
-
-        .countdown-icon-glow {
-          background: rgba(255, 215, 0, 0.2);
-        }
-
-        .countdown-title {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          animation: gradient-shift 4s ease infinite;
-        }
-
-        @supports not (-webkit-background-clip: text) {
-          .countdown-title {
-            background: none;
-            color: #FFD700;
-          }
-        }
-
-        .countdown-glow-countdown-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .countdown-glow-countdown-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-        }
-
-        .countdown-number-countdown-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        }
-
-        .countdown-number-countdown-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        }
-
-        @supports not (-webkit-background-clip: text) {
-          .countdown-number-countdown-gold {
-            background: none;
-            color: #FFD700;
-          }
-          .countdown-number-countdown-red {
-            background: none;
-            color: #DC2626;
-          }
-        }
-
-        .countdown-progress {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        /* Tab Navigation Styles */
-        .tab-nav-glow {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(220, 38, 38, 0.3) 100%);
-        }
-
-        .tab-active {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        /* Tab Content Styles */
-        .tab-content-icon-gold {
-          color: #FFD700;
-        }
-
-        .tab-content-icon-red {
-          color: #DC2626;
-        }
-
-        .tab-progress-bar {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .itinerary-day-number {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .match-day-badge {
-          background: rgba(220, 38, 38, 0.2);
-          color: #DC2626;
-        }
-
-        /* Essential Categories Styles */
-        .essential-icon-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .essential-icon-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-        }
-
-        .essential-category-gold {
-          background: linear-gradient(135deg, #FFD700 0%, #DC2626 100%);
-        }
-
-        .essential-category-red {
-          background: linear-gradient(135deg, #DC2626 0%, #FFD700 100%);
-        }
-
-        .essential-check-icon {
-          color: #FFD700;
-        }
-
-        /* Footer Styles */
-        .footer-bg-primary {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(220, 38, 38, 0.15) 50%, rgba(255, 215, 0, 0.15) 100%);
-        }
-
-        .footer-bg-secondary {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%, rgba(220, 38, 38, 0.1) 100%);
-        }
-
-        .footer-particle {
-          background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(220, 38, 38, 0.3) 100%);
-        }
-
-        .footer-heart-glow {
-          background: rgba(220, 38, 38, 0.2);
-        }
-
-        .footer-heart-bg {
-          background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
-        }
-
-        .footer-heart-border {
-          border-color: rgba(220, 38, 38, 0.4);
-        }
-
-        .footer-heart-icon {
-          color: #DC2626;
-        }
-
-        .footer-action-dot {
-          background: #FFD700;
-        }
-
-        .footer-action-text {
-          color: rgba(255, 215, 0, 0.8);
-        }
-
-        .footer-sparkles {
-          color: #FFD700;
-        }
-
-        .footer-premium-text {
-          color: #FFD700;
-        }
-
-        /* Enhanced glassmorphism utilities */
-        .glass-premium {
-          background: rgba(0, 0, 0, 0.4);
-          backdrop-filter: blur(20px) saturate(180%);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .glass-card-hover:hover {
-          background: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(24px) saturate(200%);
-          border: 1px solid rgba(255, 215, 0, 0.3);
-          transform: translateY(-4px) scale(1.02);
-        }
-
-        /* Custom rounded corners for premium look */
-        .rounded-4xl {
-          border-radius: 2rem;
-        }
-
-        /* Enhanced shadow utilities */
-        .shadow-premium {
-          box-shadow:
-            0 25px 50px -12px rgba(0, 0, 0, 0.5),
-            0 0 0 1px rgba(255, 255, 255, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .shadow-glow-gold {
-          box-shadow:
-            0 0 20px rgba(255, 215, 0, 0.3),
-            0 0 40px rgba(255, 215, 0, 0.1),
-            0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .shadow-glow-red {
-          box-shadow:
-            0 0 20px rgba(220, 38, 38, 0.3),
-            0 0 40px rgba(220, 38, 38, 0.1),
-            0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-      `}</style>
     </div>
   );
 };

@@ -37,7 +37,33 @@
       "camera": "Appareil photo",
       "emergency_contacts": "Contacts d'urgence",
       "add_emergency_contacts": "Ajouter des contacts d'urgence",
-      "add_contact": "Ajouter un contact"
+      "add_contact": "Ajouter un contact",
+      "loading": {
+        "preparingJourney": "Préparation de votre voyage...",
+        "loadingExperience": "Chargement de l'expérience Coupe du Monde des Clubs de la FIFA 2025™..."
+      },
+      "error": {
+        "unableToLoad": "Impossible de charger les données du voyage",
+        "tryAgain": "Réessayer"
+      },
+      "tournament": {
+        "name": "Coupe du Monde des Clubs de la FIFA 2025™",
+        "officialExperience": "Expérience officielle du tournoi",
+        "liveData": "Données en direct",
+        "fallbackDestination": "États-Unis 2025",
+        "fallbackTitle": "Votre voyage de football ultime vous attend",
+        "description": "Préparez-vous pour une expérience inoubliable au tournoi de clubs le plus prestigieux au monde",
+        "tournamentDates": "Dates du tournoi",
+        "fallbackDates": "15 - 28 juin 2025"
+      },
+      "stats": {
+        "daysLeft": "Jours restants",
+        "untilTournament": "Jusqu'au début du tournoi",
+        "progress": "Progrès",
+        "travelers": "Voyageurs",
+        "readyForAdventure": "Prêts pour l'aventure",
+        "people": "Personnes"
+      }
     },
     "trip_info": {
       "dates": "Dates du voyage",

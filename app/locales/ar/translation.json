@@ -37,7 +37,33 @@
       "camera": "الكاميرا",
       "emergency_contacts": "جهات الاتصال في حالات الطوارئ",
       "add_emergency_contacts": "إضافة جهات الاتصال في حالات الطوارئ",
-      "add_contact": "إضافة جهة اتصال"
+      "add_contact": "إضافة جهة اتصال",
+      "loading": {
+        "preparingJourney": "جاري تحضير رحلتك...",
+        "loadingExperience": "جاري تحميل تجربة كأس العالم للأندية 2025™..."
+      },
+      "error": {
+        "unableToLoad": "تعذر تحميل بيانات الرحلة",
+        "tryAgain": "حاول مرة أخرى"
+      },
+      "tournament": {
+        "name": "كأس العالم للأندية 2025™",
+        "officialExperience": "التجربة الرسمية للبطولة",
+        "liveData": "بيانات مباشرة",
+        "fallbackDestination": "الولايات المتحدة 2025",
+        "fallbackTitle": "رحلة كرة القدم المثالية في انتظارك",
+        "description": "استعد لتجربة لا تُنسى في أعرق بطولة أندية في العالم",
+        "tournamentDates": "تواريخ البطولة",
+        "fallbackDates": "15 - 28 يونيو 2025"
+      },
+      "stats": {
+        "daysLeft": "الأيام المتبقية",
+        "untilTournament": "حتى بداية البطولة",
+        "progress": "التقدم",
+        "travelers": "المسافرون",
+        "readyForAdventure": "جاهزون للمغامرة",
+        "people": "أشخاص"
+      }
     },
     "trip_info": {
       "dates": "تواريخ الرحلة",

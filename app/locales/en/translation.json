@@ -37,7 +37,33 @@
     "camera": "Camera",
     "emergency_contacts": "Emergency Contacts",
     "add_emergency_contacts": "Add emergency contacts",
-    "add_contact": "Add Contact"
+    "add_contact": "Add Contact",
+    "loading": {
+      "preparingJourney": "Preparing Your Journey...",
+      "loadingExperience": "Loading FIFA Club World Cup 2025™ experience..."
+    },
+    "error": {
+      "unableToLoad": "Unable to Load Trip Data",
+      "tryAgain": "Try Again"
+    },
+    "tournament": {
+      "name": "FIFA Club World Cup 2025™",
+      "officialExperience": "Official Tournament Experience",
+      "liveData": "Live Data",
+      "fallbackDestination": "USA 2025",
+      "fallbackTitle": "Your ultimate football journey awaits",
+      "description": "Get ready for an unforgettable experience at the world's most prestigious club tournament",
+      "tournamentDates": "Tournament Dates",
+      "fallbackDates": "June 15 - 28, 2025"
+    },
+    "stats": {
+      "daysLeft": "Days Left",
+      "untilTournament": "Until tournament begins",
+      "progress": "Progress",
+      "travelers": "Travelers",
+      "readyForAdventure": "Ready for adventure",
+      "people": "People"
+    }
   },
   "trip_info": {
     "dates": "Trip Dates",
